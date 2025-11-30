@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anagha – Smart City Services</title>
+  <title>Smart City Services - Anagha</title>
+  <link rel="stylesheet" href="project.css" />
 
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0d1b2a;
+      background: #0f172a;
       color: white;
+      padding-bottom: 100px;
     }
 
     /* NAVBAR */
     .navbar {
-      background: #1b263b;
+      background: #1e293b;
       padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 15px;
     }
 
     .navbar .logo {
@@ -38,118 +39,158 @@
     .nav-links a {
       text-decoration: none;
       color: white;
-      transition: 0.3s;
+      font-weight: 500;
     }
 
-    .nav-links a:hover {
-      color: #3dbbf4;
-    }
-
-    /* HERO SECTION */
-    .hero {
+    /* MAIN CONTENT BOX */
+    .content-box {
+      width: 80%;
+      margin: 60px auto;
+      background: #1e293b;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
       text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(135deg, #1b263b, #0d1b2a);
     }
 
-    .hero h1 {
-      font-size: 45px;
-      font-weight: 700;
+    .content-box h1 {
+      font-size: 40px;
       margin-bottom: 10px;
     }
 
-    .hero p {
-      color: #9db4c0;
-      font-size: 18px;
+    .content-box h2 {
+      font-size: 22px;
+      color: #38bdf8;
+      margin-bottom: 30px;
     }
 
-    /* SERVICE CARDS */
-    .grid {
-      width: 85%;
-      margin: 40px auto;
+    /* BUTTON GRID */
+    .btn-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 20px;
     }
 
-    .card {
-      background: #1b263b;
+    .idea-btn {
+      background: #0ea5e9;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+      transition: 0.3s;
+    }
+
+    .idea-btn:hover {
+      background: #0284c7;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 1);
+      transform: translateY(-3px);
+    }
+
+    /* SECTION BOXES */
+    .idea-section {
+      width: 75%;
+      margin: 40px auto;
+      background: #1e293b;
       padding: 25px;
       border-radius: 15px;
-      border: 1px solid #415a77;
-      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #3dbbf4;
-    }
-
-    .card h3 {
-      color: #3dbbf4;
+    .idea-section h3 {
+      color: #38bdf8;
+      font-size: 22px;
       margin-bottom: 10px;
-      font-size: 20px;
     }
 
-    .card p {
-      color: #c6d7e0;
-      font-size: 15px;
-      line-height: 1.6;
+    html {
+      scroll-behavior: smooth;
     }
-
   </style>
+
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="navbar">
-    <div class="logo">CITY DESIGN</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="Project.html">Project</a></li>
-      <li><a href="Pooja.html">Pooja</a></li>
-      <li><a href="Krupa.html">Krupa</a></li>
-      <li><a href="Shreya.html">Shreya</a></li>
-      <li><a href="Anagha.html">Anagha</a></li>
-      <li><a href="collab.html">Collab</a></li>
-    </ul>
-  </nav>
 
-  <!-- HEADER -->
-  <section class="hero">
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">CITY DESIGN</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Project.html">Project</a></li>
+        <li><a href="Pooja.html">Pooja</a></li>
+        <li><a href="Krupa.html">Krupa</a></li>
+        <li><a href="Shreya.html">Shreya</a></li>
+        <li><a href="Anagha.html">Anagha</a></li>
+        <li><a href="collab.html">Collab</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN BOX -->
+  <div class="content-box">
     <h1>Anagha</h1>
-    <p>Smart City Services of Maharajpur</p>
-  </section>
+    <h2>Smart City – Digital Services & Public Safety</h2>
 
-  <!-- SERVICE CARDS -->
-  <div class="grid">
-
-    <div class="card">
-      <h3>Recreation & Lifestyle</h3>
-      <p>Parks, activity zones, cycling tracks, and community centers designed to support healthy and active living for all age groups.</p>
+    <div class="btn-container">
+      <button class="idea-btn" onclick="location.href='#idea1'">Recreation & Lifestyle</button>
+      <button class="idea-btn" onclick="location.href='#idea2'">Public Safety</button>
+      <button class="idea-btn" onclick="location.href='#idea3'">Digital Services</button>
+      <button class="idea-btn" onclick="location.href='#idea4'">Senior Citizen Support</button>
+      <button class="idea-btn" onclick="location.href='#idea5'">Smart Water System</button>
     </div>
-
-    <div class="card">
-      <h3>Public Safety & Surveillance</h3>
-      <p>AI-based cameras, drone monitoring, smart streetlights, and quick-response emergency systems improving city safety.</p>
-    </div>
-
-    <div class="card">
-      <h3>Digital Services</h3>
-      <p>Citizen portal, smart parking, traffic updates, online grievance redressal, and centralized city information access.</p>
-    </div>
-
-    <div class="card">
-      <h3>Senior & Disability Support</h3>
-      <p>Barrier-free pathways, priority seating, digital health tracking, and assisted service centers across Maharajpur.</p>
-    </div>
-
-    <div class="card">
-      <h3>Smart Water Management</h3>
-      <p>Automated leak detection, real-time water quality monitoring, and efficient distribution powered by IoT sensors.</p>
-    </div>
-
   </div>
+
+  <!-- SECTION 1 -->
+  <div id="idea1" class="idea-section">
+    <h3>Recreation & Lifestyle</h3>
+    <p>
+      The city features community parks, open-air gyms, walking trails, weekend markets, and activity centers.
+      These spaces are designed to improve physical wellbeing and support social interaction.
+    </p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div id="idea2" class="idea-section">
+    <h3>Public Safety & Services</h3>
+    <p>
+      AI-powered CCTV cameras, drone monitoring, emergency response systems, and smart streetlights ensure a safer
+      living environment. SOS stations are placed across the city for immediate help.
+    </p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div id="idea3" class="idea-section">
+    <h3>Digital Services</h3>
+    <p>
+      A unified citizen portal, smart parking system, digital ID services, and traffic monitoring apps make the city
+      more connected and user-friendly. Residents can access all services from a single platform.
+    </p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div id="idea4" class="idea-section">
+    <h3>Senior Citizen & Accessibility Services</h3>
+    <p>
+      The city offers ramps, voice-assisted kiosks, low-floor transport, and priority medical support to ensure
+      accessibility and comfort for senior citizens and individuals with disabilities.
+    </p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div id="idea5" class="idea-section">
+    <h3>Smart Water Management</h3>
+    <p>
+      Automated leak detection, water quality monitoring, rainwater harvesting, and greywater recycling help
+      maintain a sustainable and efficient water supply throughout the city.
+    </p>
+  </div>
+
 </body>
 </html>
