@@ -142,17 +142,12 @@ table:hover {
 }
 /* --- Global & Background Styling (Retained from previous example) --- */
 body {
-  /* Retaining the stylish animated background */
   background: radial-gradient(circle at 20% 20%, #6235ff 0%, rgba(30, 7, 77, 0.9) 30%, #080b18 80%);
   background-color: #0a0f1f;
   background-attachment: fixed;
-  background-size: 400% 400%; /* For the subtle animation */
-  animation: gradientShift 15s ease infinite alternate; 
-  
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align content to the top */
-  min-height: 100vh; /* Use min-height so content can push the height */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite alternate;
+  min-height: 100vh;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -160,6 +155,7 @@ body {
   font-family: sans-serif;
   overflow-x: hidden;
 }
+
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
