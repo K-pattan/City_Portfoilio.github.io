@@ -1,3 +1,38 @@
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: transparent;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
 /* --- Global & Background Styling (Retained from previous example) --- */
 body {
   /* Retaining the stylish animated background */
