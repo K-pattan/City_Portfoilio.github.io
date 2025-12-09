@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Business Ideas - Krupa</title>
   <link rel="stylesheet" href="project.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0f172a;
+      
       color: white;
       padding-bottom: 100px;
     }
@@ -60,7 +61,7 @@
 
     .content-box h2 {
       font-size: 22px;
-      color: #38bdf8;
+      color: white;
       margin-bottom: 30px;
     }
 
@@ -73,11 +74,11 @@
     }
 
     .idea-btn {
-      background: #0ea5e9;
+      background: lightsteelblue;
       border: none;
       padding: 15px;
       border-radius: 12px;
-      color: white;
+      color: black;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
@@ -103,7 +104,7 @@
 
     .idea-section h3 {
       color: #38bdf8;
-      font-size: 22px;
+      font-size: 25px;
       margin-bottom: 10px;
     }
 
@@ -148,12 +149,172 @@
   <!-- DETAILS SECTION -->
   <div id="idea1" class="idea-section">
     <h3>Telecommunication Services</h3>
-    <p>Telecommunication services involve the transmission of information over long distances using technologies such as phones, internet networks, satellites, and wireless systems.</p>
+    <p>Telecommunication services involve the transmission of information over long distances
+      using technologies such as phones, internet networks, satellites, and wireless systems.
+        <br><br>
+        <b>1.	High speed Fiber & 5G network:</b>
+          This idea aligns with the United Nations Sustainable Development Goal (SDG) 9 – Industry,
+          Innovation & Infrastructure.<br>
+          It also indirectly supports:<br>
+          •	SDG 8 – Decent Work & Economic Growth<br>
+          •	SDG 11 – Sustainable Cities & Communities<br>
+          •	SDG 4 – Quality Education (through digital learning access)<br>
+          <br>
+          
+          <b>How It Solves Citizens and Local Business Problems:</b><br>
+          <br>
+          <ul>
+            <li>Provide reliable high-speed connectivity enabling online education, remote work & IT jobs</li>
+              <li>Fast connection enables e-commerce, digital payments, online marketing</li>
+              <li>Network infrastructure attracts startups & investors </li>
+              <li>5G supports real-time response, IoT safety systems, surveillance</li>
+              <li>New opportunities encourage jobs & entrepreneurship locally</li>
+              <li>Enables smart governance, e-health, online documentation</li>
+          </ul>
+          <br><br>
+          <center>
+          <img width="500" src="https://uploads.onecompiler.io/445vtyxqe/4473f2njn/Step%201Divide%20the%20city%20into%20small%20network%20zones%20and%20map%20all%20key%20locations%20(towers,%20routers,%20streets,%20institutions)%20using%20Graph%20data%20structure.%20Each%20zone%20is%20planned%20separately%20using%20Divide%20&%20Conquer.png" alt="ADS steps"> 
+                        </center><br>
+          <b>Algorithm/data structure used: </b><br><br>
+          
+            <ul>
+              <li><b>Arrays: </b> <br>An array is a linear data structure that stores elements of the same data type at contiguous memory locations.
+              <br> Stores network nodes, IP allocations, bandwidth usage records.<br>
+              <b>Space Efficiency:</b>Low
+              <br>
+              <b>Time Efficiency: </b> 0(1) fast access
+              <br>
+              </li>
+              <br>
+              <li>
+                <b>Linked list: </b><br>A linked list is a data structure made of nodes, where each node has: data (the value) and pointer (link to next node).<br>
+                maintain dynamic list of active users/devices connected to a tower<br>
+                <b>Space Efficiency:</b> Efficient for insert/delete <br>
+                <b>Time Efficiency: </b> 0(n) <br>
+              </li>
+              <br>
+              
+              <li>
+                <b>Hashing:</b><br> Hashing maps input (like text, numbers, files) to a fixed-length of string.<br>
+                Customer ID, billing and IP mapping lookups.
+                <b>Space Efficiency:</b>Extra space<br>
+                <b>Time Efficiency:</b> O(1) average <br> 
+              </li>
+              <br>
+              
+              <li>
+                <b>Graph:</b><br> A graph in DAA is a non-linear data structure made of: <br>Vertices (nodes) represent entities <br>
+                Edges (links) represent connections<br>
+                Network topology representation <br>
+                <b>Space Efficiency: </b>Moderate<br>
+                <b>Time Efficiency:</b> Optimal path computation.<br>
+              </li>
+              <br>
+              
+              <li>
+                <b>Dijikstra:  </b><br>Dijkstra’s algorithm finds the shortest path from a source node to all other nodes in a weighted graph.<br>
+                Find shortest route between routers/fiber nodes<br>
+                <b>Space Efficiency:</b>Low <br>
+                <b>Time Efficiency:</b>O(E log V) <br>
+              </li>
+              <br>
+              <li>
+                <b>Prim’s: </b><br>Prim’s algorithm builds a Minimum Spanning Tree (MST) by starting from one vertex and repeatedly adding the smallest edge that connects a new vertex to the growing tree, until all vertices are included.
+                <br> Build Minimum Spanning Tree for fiber layout<br>
+                <b>Space Efficiency:</b>Moderate<br>
+                <b>Time Efficiency: </b>O(E log V) <br>
+              </li>
+              <br>
+              
+              <li>
+                <b>Kruskal’s</b><br>Kruskal’s algorithm builds a Minimum Spanning Tree (MST) by sorting all edges by weight and then adding them one by one, as long as they don’t form a cycle.
+                  <br>Cost-efficient tower placement & wiring route.
+                  <b>Space Efficiency:</b>Moderate<br>
+                  <b>Time Efficiency: </b>O(E log V) <br>
+              </li>
+              <br>
+              
+              <li>
+                <b>Quick Sort / Merge Sort:</b><br> Sorting algorithms are fundamental algorithms used to arrange elements in a specific order (usually in ascending or descending order).<br>
+                Sort tower distances, bandwidth, user database. <br>
+                <b>Space Efficiency:</b>Low <br>
+                <b>Time Efficiency: </b>O( n log n) <br>                
+              </li>
+              <br>
+              </ul>
+              <br>
+              <b> Techniques used:</b>
+              <br><br>
+              <ul>
+                <li><b>Divide & Conquer :</b><br>Divide and Conquer is an algorithmic strategy that breaks a problem into smaller subproblems, solves them recursively, and then combines their solutions.<br>
+                  Divide city into zones and  optimize routing zone-wise.<br.
+                </li><br>
+                <li><b>Greedy Technique:</b><br>The Greedy technique is an algorithmic approach that makes the locally optimal choice at each step.<br>
+                  Choose lowest-cost next tower while laying fiber (Prim/Kruskal)<br>
+                </li><br>
+                <li><b>Backtracking: </b><br>Backtracking is an algorithmic technique used to solve problems by exploring all possible solutions step by step and undoing (backtracking) choices when they lead to a dead end.<br>
+                When path fails, find alternative routing path. <br>
+                </li>
+              </ul>
+              <br>
+              
+              <b> Principles  used:</b>
+              <br><br>
+              <ul>
+                <li><b>Brave & Cautious Travel (DFS & BFS)</b><br> DFS (Depth‑First Search) explores paths deeply, like a brave traveler venturing far before backtracking.
+                  BFS (Breadth‑First Search) explores level by level, cautiously covering all nearby nodes before moving outward.<br>
+
+                </li><br>
+                <li><b>Pruning:</b><br> Pruning means cutting off unnecessary branches in a search tree.
+                  It avoids exploring paths that cannot lead to a valid or optimal solution.
+                   <br>
+                </li><br>
+                <li><b>Edge Relaxation: </b>- Edge relaxation updates the shortest path estimate between two vertices.
+                  It’s the key step in algorithms like Dijkstra’s and Bellman‑Ford.
+                 <br>
+                </li>
+              </ul>
+              
+            
+          
+    </p>
   </div>
 
   <div id="idea2" class="idea-section">
     <h3>Agriculture</h3>
-    <p>Agriculture is the practice of cultivating crops, raising animals, and managing natural resources to produce food and raw materials.</p>
+    <p>Agriculture is the practice of cultivating crops, raising animals, and managing natural resources to produce food and raw materials.
+    <br><br>
+    <b>1. Drone Based Crop Monitoring and spraying: </b>This idea aligns with the United nations Sustainable Development Goal (SDG) SDG 2 – Zero Hunger, SDG 12 – Responsible Consumption & Production, SDG 9 – Industry, Innovation & Infrastructure , SDG 15 – Life on Land
+      <br><br>
+      
+      <b>How it Solves Citizens and Local Business Problems:</b><br>
+      <ul>
+        <li>Detects crop disease, nutrient deficiency, pest infection early via aerial survey</li>
+        <li>Saves time, labour & cost by automated pesticide and fertilizer spraying</li>
+        <li>Reduces chemical usage up to 50% using targeted spraying</li>
+        <li> Prevents crop loss → Higher yield & higher income</li>
+        <li>Helps government & farmers track agricultural productivity & weather impact</li>
+        <li> Enables smart farming & data-driven decisions</li>
+      </ul>
+      <br><br>
+      
+      <b>Algorithms/data structures used:</b>
+      <ul>
+        <li><b>Structures:</b><br>Store crop info: location, health status, moisture, spray level.<br>
+        <b>Space Efficiency:</b>Efficient<br>
+        <b>Time Efficiency: </b>Fast record handling <br>
+        </li><br>
+        
+        <li><b>Heap (Priority Queue):</b><br>A heap is a special tree-based structure where the parent node is ordered relative to its children.
+        A priority queue uses a heap to efficiently access and remove the element with the highest (or lowest) priority.<br>
+        Prioritize affected crop zones to spray first.<br>
+        <b>Space Efficiency:</b>Moderate<br>
+        <b>Time Efficiency: </b>0(log n) <br>
+        </li><br>
+        
+      </ul>
+      
+      </p>
   </div>
 
   <div id="idea3" class="idea-section">
