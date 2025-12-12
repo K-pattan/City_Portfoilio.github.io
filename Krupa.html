@@ -481,7 +481,7 @@
 </table>
 <br>
 <center>
-<b>Working Flow diagram</b><br></center>
+<b>Working Fow diagram</b><br></center>
 <center>
           
           <img width="500" src="https://uploads.onecompiler.io/445vtyxqe/447cd77y2/%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%E2%94%82%20INPUT%20Crop%20Field%20Data%20%E2%94%82%20%E2%94%82%20(Images,%20GPS,%20Moisture)%20%E2%94%82%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%98%20%E2%94%82%20%E2%96%BC%20%E2%94%8C%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%90%20%E2%94%82%20Structures%20Used%20%E2%94%82%20%E2%94%82(Structs,%20LUT,%20Hash)%E2%94%82%20%E2%94%94%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%AC%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80.png"
@@ -496,7 +496,76 @@
 
   <div id="idea3" class="idea-section">
     <h3>Population & Data Management</h3>
-    <p>Population & data management involves collecting, analyzing, and using information about people for planning, development, and decision-making.</p>
+    <p>Population & data management involves collecting, analyzing, and using information about people for planning, development, and decision-making.
+    <br><b>Smart Citizen Id System</b><br>
+    The Smart Citizen ID system aligns with multiple SDGs, acting as a crucial enabler for almost all digital services in the city.<br>
+    <ul>
+      <li><b>SDG 16.9 (Primary Target): </b>Provide legal identity for all, including birth registration, by 2030.<br></li>
+      <li><b>SDG 1 :</b>Poverty: End poverty in all its forms everywhere.<br></li>
+      <li><b>SDG 10 :</b>Reduced Inequalities: Reduce inequality within and among countries.<br></li>
+      <li><b>SDG 11 :</b>Sustainable Cities and Communities: Make cities inclusive, safe, and resilient.<br></li>
+    </ul><br>
+    <br>
+    <b>How it solves citizens problems :</b><br>
+    <ul>
+      <li>Provides a secure legal identity for marginalized groups, enabling access to banking, healthcare, and education.<br></li>
+      <li>Enables a “Tell Us Once” system that removes repeated document submissions and reduces bureaucratic delays.<br></li>
+      <li>Allows secure remote authentication through mobile or online platforms, eliminating the need for physical visits.<br></li>
+      <li>Enhances security by replacing fragile physical documents with robust digital and biometric credentials.<br></li>
+    </ul><br><br>
+    <b>Algorithms/data structures used :</b><br>
+    <ul>
+      <li><b>Hash Table :</b><br> Primary Indexing & Real-time Validation. Maps UIN to record location for O(1) lookup speed.<br>
+      <b>Space Efficiency:</b>O(n)<br>
+      <b>Time Efficiency :</b>O(1) Average (Lookup/Insertion)<br>
+      </li><br>
+      <li><b>Red-Black Tree :</b><br>Secondary Indexing & Ordered Search. Manages records ordered by Name, Address, or DOB; ensures scalable, ordered retrieval<br>
+      <b>Space Efficiency:</b>O(n)<br>
+      <b>Time Efficiency :</b>O(log n) <br>
+      </li><br>
+      <li><b>Arrays :</b><br>Foundational Data Storage. The basic physical block of data (records) and the linear storage medium for them.<br>
+      <b>Space Efficiency:</b>O(n)<br>
+      <b>Time Efficiency :</b>O(1)(Accessing fields)<br>
+      </li><br>
+      <li><b>Adjacency List :</b><br>Fraud & Relationship Mapping. Nodes = UINs, Edges = shared attributes (addresses, accounts). Used for detecting hidden fraud rings.<br>
+      <b>Space Efficiency:</b>O(V+E)<br>
+      <b>Time Efficiency :</b>O(V+E) (traversal)<br>
+      </li><br>
+      <li><b>Merge/Quick sort :</b>Reporting & Data Audit. Batch processes millions of records to generate ordered reports, check for duplication, and optimize storage.<br>
+      <b>Space Efficiency:</b>O(n) or O(log n)<br>
+      <b>Time Efficiency :</b>O(n log n) <br>
+      </li><br>
+      <li><b>Trie:</b><br>Prefix Search. Enables instant suggestions and search for partial names or UINs during data entry or user interaction.<br>
+      <b>Space Efficiency:</b>O(Total Characters)<br>
+      <b>Time Efficiency :</b>O(L) <br>
+      </li><br>
+      <li><b>Knuth-Morris-Pratt (KMP) :</b><br>Efficiently searching for patterns within long text fields, such as searching for a partial name or address component within the database.<br>
+      <b>Space Efficiency:</b>O(m)<br>
+      <b>Time Efficiency :</b>O(n+m) <br>
+      </li><br>
+    </ul><br>
+    
+    <b>Techniques used :</b><br>
+    <ul>
+      <li><b>Transform and Conquer :</b><br>Transforming raw biometric data into a hashed, indexed template for fast comparison, making the data non-reversible and highly searchable.<br>
+      </li><br>
+      <li><b>Backtracking</b><br>Used in debugging and security audits to trace the sequence of authenticated steps or transactions that led to an error or a potential breach.<br>
+      </li><br>
+      
+    </ul><br>
+    
+    <b>Principles used :</b><br>
+    <ul>
+      <li><b>Invariants :</b><br>Maintaining the invariant that the Unique Identification Number (UIN), once issued, never changes and is always linked to its original biometric record, ensuring data consistency.<br>
+      </li><br>
+      <li><b>Prefix and Suffix :</b><br>Using Tries to enable fast prefix-based search for partial UINs or names, accelerating the retrieval process.<br>
+      </li><br>
+      <li><b>Pre-Computing :</b><br>Pre-calculating frequently used access tokens, cryptographic keys, and the most common name/ID lookup ranges to minimize latency during peak usage hours.<br></li>
+    </ul><br>
+    
+    
+    
+    </p>
   </div>
 
   <div id="idea4" class="idea-section">
