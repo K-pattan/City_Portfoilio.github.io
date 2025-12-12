@@ -111,7 +111,68 @@
     html {
       scroll-behavior: smooth;
     }
+  
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 14px;
+      background-color: lightsteelblue;
+      color: white;
+      
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    
+    .back-btn:hover {
+      background-color: #0056b3;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+    }
+    
 
+    #top {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .styled-table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .styled-table thead tr {
+        background: linear-gradient(135deg, #4b79a1, #283e51);
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .styled-table tbody tr {
+        background-color: #ffffff;
+        border-bottom: 1px solid #dddddd;
+        transition: 0.3s;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f6f9;
+    }
+
+    .styled-table tbody tr:hover {
+        background-color: #e2ecf5;
+        transform: scale(1.01);
+    }
   </style>
 </head>
 
@@ -274,6 +335,7 @@
                  <br>
                 </li>
               </ul>
+              <a href="#top" class="back-btn">Back to Top</a>
               
             
           
@@ -312,7 +374,121 @@
         <b>Time Efficiency: </b>0(log n) <br>
         </li><br>
         
+        
+        <li><b>Lookup table:</b><br>A lookup table (LUT) is a precomputed list of values that a program can quickly “look up” instead of recalculating them every time.
+        <br>
+        Quick lookup for spray levels and crop types.<br>
+        <b>Space Efficiency:</b>0(n)<br>
+        <b>Time Efficiency: </b>0(1) <br>
+        </li><br>
+        
+        <li><b>Hashing :</b><br>Hashing is the process of converting data into a fixed‑size value called a hash using a hash function.
+        <br>
+        Used for obstacle-free path exploration.<br>
+        <b>Space Efficiency:</b>O(V + E)<br>
+        <b>Time Efficiency: </b> 0(1) average<br>
+        </li><br>
+        
+        
+        <li><b>BFS :</b><br>Breadth‑First Search is a graph traversal algorithm that explores level by level, starting from a source node.
+        <br>
+        Store visited positions and avoid re-scanning.<br>
+        <b>Space Efficiency:</b>0(n)<br>
+        <b>Time Efficiency: </b> O(V + E) <br>
+        </li><br>
+        
+        <li><b>Dijkstra</b> :</b><br>Dijkstra’s Algorithm is used to find the shortest path from a source node to all other nodes in a weighted graph (with non‑negative weights).
+        <br>
+        For shortest path from base → field → recharge point.<br>
+        <b>Space Efficiency:</b>O(V + E)<br>
+        <b>Time Efficiency: </b>O(V + E) <br>
+        </li><br>
+      </ul><br>
+      
+      
+      <b>Techniques used:</b><br>
+      <ul>
+        <li>
+          <b>Divide and conquer :</b><br>The divide‑and‑conquer technique is used to split the agricultural field into smaller sections to ensure efficient coverage.<br>
+        </li><br>
+        <li>
+          <b>Greedy :</b><br>A greedy strategy selects the nearest grid cell at each step to plan the drone’s movement path.<br>
+        </li><br>
+        <li>
+          <b>Dynamic Programming: </b><br>Dynamic programming helps predict crop health by storing and reusing solutions to repeated subproblems.<br>
+        </li><br>
+        <li>
+          <b>Space–Time Tradeof: </b>A space–time tradeoff is applied by using structures like Grid HashMaps or Segment Trees to speed up field data queries.<br>
+        </li><br>
       </ul>
+      
+      <b>Principles used:</b><br>
+      <ul>
+        <li>
+          <b>Pruning: </b><br>Pruning eliminates unnecessary or unproductive grid visits to optimize the drone’s traversal.<br>
+        </li><br>
+        <li>
+          <b>Hierarchical Data :</b><br>Hierarchical data structures organize the farm into a Zone → Field → Grid tree for efficient navigation and analysis.<br>
+        </li><br>
+        <li>
+          <b>Edge Relaxation :</b><br>Edge relaxation is used in Dijkstra’s algorithm to compute the shortest path for drone movement.<br>
+        </li><br>
+        <li>
+          <b>Memoization :</b><br>Memoization saves repeated crop‑health calculations to avoid redundant processing.<br>
+        </li><br>
+        <li>
+          <b>Sliding Window:</b><br>The sliding‑window technique monitors crop‑health time‑series data by analyzing continuous intervals efficiently.<br>
+        </li><br>
+      </ul>
+      
+ <table class="styled-table">
+   <thead>
+    <tr>
+        <th>Feature</th>
+        <th>Manual Spraying</th>
+        <th>Drone Spraying</th>
+    </tr>
+
+    <tr>
+        <td>Time Required</td>
+        <td>High</td>
+        <td>Very Low</td>
+    </tr>
+
+    <tr>
+        <td>Accuracy</td>
+        <td>Low</td>
+        <td>High</td>
+    </tr>
+
+    <tr>
+        <td>Cost</td>
+        <td>Moderate</td>
+        <td>Low</td>
+    </tr>
+
+    <tr>
+        <td>Safety</td>
+        <td>Risky</td>
+        <td>Safe</td>
+    </tr>
+
+    <tr>
+        <td>Coverage</td>
+        <td>Limited</td>
+        <td>Large</td>
+    </tr>
+</table>
+<br>
+<center>
+<b>Working Flow diagram</b><br></center>
+<center>
+          
+          <img width="500" src="agri.jpg"
+
+
+
+      <a href="#top" class="back-btn">Back to Top</a>
       
       </p>
   </div>
