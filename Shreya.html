@@ -15,7 +15,6 @@
   --accent:#38bdf8;
   --accent2:#22d3ee;
   --text:#e5e7eb;
-  --muted:#94a3b8;
 }
 *{box-sizing:border-box;}
 body{
@@ -56,23 +55,26 @@ nav a:hover{color:var(--accent);}
   border:1px solid #1e293b;
 }
 .card h3{color:var(--accent2);}
+
+/* PIE CHART FIX */
 .chart-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
-  margin-top:30px;
 }
 .chart-card{
   background:#020617;
-  padding:20px;
   border-radius:16px;
-  text-align:center;
+  padding:20px;
   border:1px solid #1e293b;
+  text-align:center;
 }
-.chart-card h3{
-  color:#22d3ee;
-  margin-bottom:15px;
+.chart-card h3{color:#22d3ee;margin-bottom:10px;}
+.chart-card canvas{
+  width:100% !important;
+  height:260px !important;
 }
+
 footer{text-align:center;color:#94a3b8;margin:40px 0;}
 </style>
 </head>
@@ -93,73 +95,50 @@ footer{text-align:center;color:#94a3b8;margin:40px 0;}
 <!-- INTRO -->
 <div class="hero" id="intro">
 <h1>Smart City Management System</h1>
-<p>
-A single-file <b>DAA Project</b> demonstrating Tourism, Industry, Waste,
-Solar Energy & Government using Algorithms.
-</p>
+<p>Unified DAA Project using Algorithms for Smart City Applications</p>
 </div>
 
 <!-- SYSTEMS -->
 <div class="section" id="systems">
 <h2>1. Smart City Scenarios</h2>
 <div class="cards">
-<div class="card">
-<h3>🌍 Tourism & Culture</h3>
-<p>Manages tourist flow and routes efficiently to avoid congestion and improve visitor experience.</p>
-<p>Optimizes travel paths and promotes lesser-known attractions.</p>
-</div>
-<div class="card">
-<h3>🏭 Industries</h3>
-<p>Improves logistics and infrastructure planning to reduce operational cost.</p>
-<p>Supports scalable industrial growth and efficient transportation.</p>
-</div>
-<div class="card">
-<h3>♻️ Waste Management</h3>
-<p>Ensures timely waste collection and efficient routing of vehicles.</p>
-<p>Reduces fuel usage and keeps the city clean.</p>
-</div>
-<div class="card">
-<h3>☀️ Solar Energy</h3>
-<p>Optimizes energy generation and transmission across the city.</p>
-<p>Minimizes power loss and infrastructure cost.</p>
-</div>
-<div class="card">
-<h3>🏛️ Government & Tax</h3>
-<p>Provides fast access to citizen records and services.</p>
-<p>Improves transparency and administrative efficiency.</p>
-</div>
+<div class="card"><h3>🌍 Tourism</h3><p>Optimizes visitor movement and improves travel experience.</p><p>Reduces congestion and promotes attractions.</p></div>
+<div class="card"><h3>🏭 Industry</h3><p>Enhances logistics planning and infrastructure usage.</p><p>Reduces operational cost.</p></div>
+<div class="card"><h3>♻️ Waste</h3><p>Ensures timely waste collection.</p><p>Improves city cleanliness.</p></div>
+<div class="card"><h3>☀️ Solar</h3><p>Optimizes energy generation and flow.</p><p>Reduces power loss.</p></div>
+<div class="card"><h3>🏛️ Government</h3><p>Speeds up citizen services.</p><p>Improves transparency.</p></div>
 </div>
 </div>
 
 <!-- PIE CHARTS -->
 <div class="section" id="charts">
-<h2>2. Algorithm Usage – Pie Charts</h2>
+<h2>2. Algorithm Usage Distribution</h2>
 
 <div class="chart-grid">
 
 <div class="chart-card">
 <h3>Tourism</h3>
-<canvas id="tourismChart" width="300" height="300"></canvas>
+<canvas id="tourismChart"></canvas>
 </div>
 
 <div class="chart-card">
 <h3>Industry</h3>
-<canvas id="industryChart" width="300" height="300"></canvas>
+<canvas id="industryChart"></canvas>
 </div>
 
 <div class="chart-card">
-<h3>Waste Management</h3>
-<canvas id="wasteChart" width="300" height="300"></canvas>
+<h3>Waste</h3>
+<canvas id="wasteChart"></canvas>
 </div>
 
 <div class="chart-card">
-<h3>Solar Energy</h3>
-<canvas id="solarChart" width="300" height="300"></canvas>
+<h3>Solar</h3>
+<canvas id="solarChart"></canvas>
 </div>
 
 <div class="chart-card">
 <h3>Government</h3>
-<canvas id="govChart" width="300" height="300"></canvas>
+<canvas id="govChart"></canvas>
 </div>
 
 </div>
@@ -172,61 +151,38 @@ Solar Energy & Government using Algorithms.
 <li>Dijkstra – O(E log V)</li>
 <li>Prim / Kruskal – O(E log V)</li>
 <li>BFS / DFS – O(V + E)</li>
-<li>Hashing – O(1) average</li>
-<li>Sorting – O(n log n)</li>
+<li>Hashing – O(1)</li>
 </ul>
 </div>
 
-<footer>
-© 2025 Smart City Management System | DAA Project
-</footer>
+<footer>© 2025 Smart City DAA Project</footer>
 
 </div>
 
 <script>
-function drawPie(id, labels, values){
-  new Chart(document.getElementById(id), {
-    type: 'pie',
-    data: {
-      labels: labels,
-      datasets: [{
-        data: values,
-        backgroundColor: [
-          '#38bdf8',
-          '#22d3ee',
-          '#facc15',
-          '#f97316'
-        ]
-      }]
-    },
-    options: {
-      responsive: false,
-      plugins: {
-        legend: { labels: { color: 'white' } }
-      }
-    }
-  });
+function pie(id, labels, data){
+new Chart(document.getElementById(id),{
+type:'pie',
+data:{
+labels:labels,
+datasets:[{
+data:data,
+backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']
+}]
+},
+options:{
+responsive:true,
+maintainAspectRatio:false,
+plugins:{legend:{labels:{color:'white'}}}
+}
+});
 }
 
-drawPie('tourismChart',
- ['Routing','Crowd Control','Promotion','Monitoring'],
- [35,25,20,20]);
-
-drawPie('industryChart',
- ['Production','Logistics','Infrastructure','Management'],
- [30,25,25,20]);
-
-drawPie('wasteChart',
- ['Collection','Transport','Processing','Monitoring'],
- [30,25,25,20]);
-
-drawPie('solarChart',
- ['Generation','Transmission','Storage','Maintenance'],
- [35,25,20,20]);
-
-drawPie('govChart',
- ['Citizen Services','Tax','Records','Administration'],
- [40,25,20,15]);
+pie('tourismChart',['Routing','Crowd','Promotion','Monitoring'],[35,25,20,20]);
+pie('industryChart',['Production','Logistics','Infra','Mgmt'],[30,25,25,20]);
+pie('wasteChart',['Collection','Transport','Process','Monitor'],[30,25,25,20]);
+pie('solarChart',['Generation','Transmission','Storage','Maintenance'],[35,25,20,20]);
+pie('govChart',['Services','Tax','Records','Admin'],[40,25,20,15]);
 </script>
 
 </body>
