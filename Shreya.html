@@ -189,16 +189,41 @@ Solar Energy and Governance using Data Structures & Algorithms.
 <div class="chart-box"><canvas id="pieChart"></canvas></div>
 </div>
 
-<!-- COMPLEXITY -->
+<!-- ALGORITHMS & TECHNIQUES -->
 <div class="section" id="analysis">
-<h2>3. Time Complexity Summary</h2>
+<h2>3. Algorithms, Techniques & Principles Used</h2>
+
+<h3>🔹 Algorithms / Data Structures Used</h3>
 <ul>
-<li><b>Dijkstra:</b> O(E log V)</li>
-<li><b>Prim / Kruskal:</b> O(E log V)</li>
-<li><b>BFS / DFS:</b> O(V + E)</li>
-<li><b>Hashing:</b> O(1) average</li>
-<li><b>Heap Operations:</b> O(log n)</li>
-<li><b>Sorting:</b> O(n log n)</li>
+<li><b>Arrays:</b> Linear structure storing same-type elements in contiguous memory. Used to store network nodes, IP allocations, and bandwidth records. <br><b>Space:</b> Low efficiency <b>Time:</b> O(1) fast access</li>
+
+<li><b>Linked List:</b> Nodes connected using pointers. Used to maintain dynamic lists of active users/devices. <br><b>Space:</b> Efficient insertion/deletion <b>Time:</b> O(n)</li>
+
+<li><b>Hashing:</b> Maps keys to fixed-size values. Used for customer ID, billing, and IP lookups. <br><b>Space:</b> Extra space <b>Time:</b> O(1) average</li>
+
+<li><b>Graph:</b> Vertices represent routers/towers and edges represent connections. Used for network topology. <br><b>Space:</b> Moderate <b>Time:</b> Efficient path computation</li>
+
+<li><b>Dijkstra’s Algorithm:</b> Finds shortest path from a source node. Used for optimal routing between routers/fiber nodes. <br><b>Space:</b> Low <b>Time:</b> O(E log V)</li>
+
+<li><b>Prim’s Algorithm:</b> Builds minimum spanning tree by expanding from a node. Used for fiber layout planning. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
+
+<li><b>Kruskal’s Algorithm:</b> Builds MST by selecting lowest-weight edges without cycles. Used for cost‑efficient tower wiring. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
+
+<li><b>Quick Sort / Merge Sort:</b> Sorting techniques to organize bandwidth, distance, and user data. <br><b>Space:</b> Low <b>Time:</b> O(n log n)</li>
+</ul>
+
+<h3>🔹 Techniques Used</h3>
+<ul>
+<li><b>Divide & Conquer:</b> Breaks city into zones and optimizes routing in each zone independently.</li>
+<li><b>Greedy Technique:</b> Selects lowest‑cost edge/tower at each step (used in Prim & Kruskal).</li>
+<li><b>Backtracking:</b> Explores alternate routing paths when a selected path fails.</li>
+</ul>
+
+<h3>🔹 Principles Used</h3>
+<ul>
+<li><b>Brave & Cautious Travel (DFS & BFS):</b> DFS explores deeply like a brave traveler, BFS explores level‑wise like a cautious traveler.</li>
+<li><b>Pruning:</b> Eliminates unnecessary paths that cannot produce optimal solutions.</li>
+<li><b>Edge Relaxation:</b> Updates shortest distances between nodes, core principle of Dijkstra’s algorithm.</li>
 </ul>
 </div>
 
