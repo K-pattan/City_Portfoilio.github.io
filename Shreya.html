@@ -18,90 +18,62 @@
   --muted:#94a3b8;
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
   background:linear-gradient(180deg,#020617,#0f172a);
   color:var(--text);
 }
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:40px 20px 80px;
-}
+.container{max-width:1300px;margin:auto;padding:40px 20px;}
 nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#020617ee;
-  padding:15px;
-  border-bottom:1px solid #1e293b;
+  position:sticky;top:0;z-index:10;
+  background:#020617ee;padding:15px;
 }
-nav ul{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-nav a{
-  color:#cfeeff;
-  text-decoration:none;
-  font-weight:600;
-}
+nav ul{display:flex;justify-content:center;gap:25px;list-style:none;padding:0;}
+nav a{color:#cfeeff;text-decoration:none;font-weight:600;}
 nav a:hover{color:var(--accent);}
-.hero{
-  text-align:center;
-  padding:60px 20px;
-}
+.hero{text-align:center;padding:50px 20px;}
 .hero h1{
   font-size:44px;
   background:linear-gradient(90deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p{
-  max-width:900px;
-  margin:auto;
-  color:var(--muted);
-  font-size:18px;
+  -webkit-background-clip:text;color:transparent;
 }
 .section{
   background:var(--panel);
   border-radius:20px;
   padding:30px;
   margin-bottom:40px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
-.section h2{color:var(--accent);}
-.section p,li{color:#d1d5db;line-height:1.8;font-size:15px;}
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 .card{
   background:#020617;
-  border-radius:18px;
-  padding:22px;
+  border-radius:16px;
+  padding:20px;
   border:1px solid #1e293b;
 }
 .card h3{color:var(--accent2);}
-.chart-box{max-width:420px;margin:30px auto;}
-button{
-  background:var(--accent);
-  color:#020617;
-  border:none;
-  padding:10px 16px;
-  margin:6px;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
+.chart-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:30px;
 }
-button:hover{background:var(--accent2);}
-footer{text-align:center;color:#94a3b8;margin-top:60px;}
+.chart-card{
+  background:#020617;
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+  border:1px solid #1e293b;
+}
+.chart-card h3{
+  color:#22d3ee;
+  margin-bottom:15px;
+}
+footer{text-align:center;color:#94a3b8;margin:40px 0;}
 </style>
 </head>
 
@@ -109,83 +81,152 @@ footer{text-align:center;color:#94a3b8;margin-top:60px;}
 
 <nav>
 <ul>
-<li><a href="#intro">Introduction</a></li>
+<li><a href="#intro">Intro</a></li>
 <li><a href="#systems">Systems</a></li>
-<li><a href="#charts">Visualization</a></li>
+<li><a href="#charts">Charts</a></li>
 <li><a href="#analysis">Complexity</a></li>
 </ul>
 </nav>
 
 <div class="container">
 
-<!-- HERO -->
+<!-- INTRO -->
 <div class="hero" id="intro">
 <h1>Smart City Management System</h1>
 <p>
-A <b>single unified DAA-based project</b> demonstrating Tourism, Industry, Waste,
-Solar Energy and Governance using Data Structures & Algorithms.
+A single-file <b>DAA Project</b> demonstrating Tourism, Industry, Waste,
+Solar Energy & Government using Algorithms.
 </p>
 </div>
 
 <!-- SYSTEMS -->
 <div class="section" id="systems">
-<h2>1. Smart City Systems – Scenario Explanation</h2>
+<h2>1. Smart City Scenarios</h2>
 <div class="cards">
-<div class="card"><h3>🌍 Tourism & Culture</h3><p>Graphs model tourist locations. Dijkstra finds shortest paths. Sorting ranks attractions. BFS/DFS enable guided tours while MST algorithms minimize infrastructure cost.</p></div>
-<div class="card"><h3>🏭 Industries & Commercial</h3><p>Trees manage business registries. Graphs optimize logistics. Prim/Kruskal minimize wiring cost. Hashing enables fast verification and lookup.</p></div>
-<div class="card"><h3>♻️ Waste Management</h3><p>Queues schedule trucks. BFS ensures zone coverage. Greedy routing reduces fuel usage. Hashing tracks smart bins.</p></div>
-<div class="card"><h3>☀️ Solar Energy</h3><p>Graphs model grids. Dijkstra optimizes power flow. MST minimizes wiring. Heaps prioritize energy distribution.</p></div>
-<div class="card"><h3>🏛️ Government & Tax</h3><p>Hash tables store citizen data. Graph workflows route services. Sorting ranks tax records. O(1) access ensures transparency.</p></div>
+<div class="card">
+<h3>🌍 Tourism & Culture</h3>
+<p>Manages tourist flow and routes efficiently to avoid congestion and improve visitor experience.</p>
+<p>Optimizes travel paths and promotes lesser-known attractions.</p>
+</div>
+<div class="card">
+<h3>🏭 Industries</h3>
+<p>Improves logistics and infrastructure planning to reduce operational cost.</p>
+<p>Supports scalable industrial growth and efficient transportation.</p>
+</div>
+<div class="card">
+<h3>♻️ Waste Management</h3>
+<p>Ensures timely waste collection and efficient routing of vehicles.</p>
+<p>Reduces fuel usage and keeps the city clean.</p>
+</div>
+<div class="card">
+<h3>☀️ Solar Energy</h3>
+<p>Optimizes energy generation and transmission across the city.</p>
+<p>Minimizes power loss and infrastructure cost.</p>
+</div>
+<div class="card">
+<h3>🏛️ Government & Tax</h3>
+<p>Provides fast access to citizen records and services.</p>
+<p>Improves transparency and administrative efficiency.</p>
+</div>
 </div>
 </div>
 
-<!-- PIE CHART -->
+<!-- PIE CHARTS -->
 <div class="section" id="charts">
 <h2>2. Algorithm Usage – Pie Charts</h2>
-<p>Each chart below shows approximate contribution of techniques used in that city service.</p>
-<div class="chart-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
-<div class="card"><h3>🌍 Tourism</h3><canvas id="tourismChart" height="260"></canvas></div>
-<div class="card"><h3>🏭 Industry</h3><canvas id="industryChart" height="260"></canvas></div>
-<div class="card"><h3>♻️ Waste</h3><canvas id="wasteChart" height="260"></canvas></div>
-<div class="card"><h3>☀️ Solar</h3><canvas id="solarChart" height="260"></canvas></div>
-<div class="card"><h3>🏛️ Government</h3><canvas id="govChart" height="260"></canvas></div>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+<h3>Tourism</h3>
+<canvas id="tourismChart" width="300" height="300"></canvas>
 </div>
+
+<div class="chart-card">
+<h3>Industry</h3>
+<canvas id="industryChart" width="300" height="300"></canvas>
 </div>
-<div class="chart-box"><canvas id="pieChart"></canvas></div>
+
+<div class="chart-card">
+<h3>Waste Management</h3>
+<canvas id="wasteChart" width="300" height="300"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Solar Energy</h3>
+<canvas id="solarChart" width="300" height="300"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Government</h3>
+<canvas id="govChart" width="300" height="300"></canvas>
+</div>
+
+</div>
 </div>
 
 <!-- COMPLEXITY -->
 <div class="section" id="analysis">
-<h2>3. Time Complexity Summary</h2>
+<h2>3. Time Complexity</h2>
 <ul>
-<li><b>Dijkstra:</b> O(E log V)</li>
-<li><b>Prim / Kruskal:</b> O(E log V)</li>
-<li><b>BFS / DFS:</b> O(V + E)</li>
-<li><b>Hashing:</b> O(1) average</li>
-<li><b>Heap Operations:</b> O(log n)</li>
-<li><b>Sorting:</b> O(n log n)</li>
+<li>Dijkstra – O(E log V)</li>
+<li>Prim / Kruskal – O(E log V)</li>
+<li>BFS / DFS – O(V + E)</li>
+<li>Hashing – O(1) average</li>
+<li>Sorting – O(n log n)</li>
 </ul>
 </div>
 
-<footer>© 2025 Smart City Management System | Unified DAA Project</footer>
+<footer>
+© 2025 Smart City Management System | DAA Project
+</footer>
 
 </div>
 
 <script>
-let chart;
-function loadChart(type){
-const dataMap={
-  tourism:{labels:['Graph','Dijkstra','Sorting','DFS/BFS'],data:[35,30,20,15]},
-  industry:{labels:['Trees','Graph','Prim/Kruskal','Hashing'],data:[25,30,25,20]},
-  waste:{labels:['Queue','BFS','Greedy','Hashing'],data:[30,25,25,20]},
-  solar:{labels:['Graph','Dijkstra','MST','Heap'],data:[30,25,25,20]},
-  gov:{labels:['Hashing','Sorting','Graph','Queue'],data:[40,25,20,15]}
-};
-const ctx=document.getElementById('pieChart');
-if(chart) chart.destroy();
-chart=new Chart(ctx,{type:'pie',data:{labels:dataMap[type].labels,datasets:[{data:dataMap[type].data,backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']}]},options:{plugins:{legend:{labels:{color:'white'}}}}});
+function drawPie(id, labels, values){
+  new Chart(document.getElementById(id), {
+    type: 'pie',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: values,
+        backgroundColor: [
+          '#38bdf8',
+          '#22d3ee',
+          '#facc15',
+          '#f97316'
+        ]
+      }]
+    },
+    options: {
+      responsive: false,
+      plugins: {
+        legend: { labels: { color: 'white' } }
+      }
+    }
+  });
 }
-loadChart('tourism');
+
+drawPie('tourismChart',
+ ['Routing','Crowd Control','Promotion','Monitoring'],
+ [35,25,20,20]);
+
+drawPie('industryChart',
+ ['Production','Logistics','Infrastructure','Management'],
+ [30,25,25,20]);
+
+drawPie('wasteChart',
+ ['Collection','Transport','Processing','Monitoring'],
+ [30,25,25,20]);
+
+drawPie('solarChart',
+ ['Generation','Transmission','Storage','Maintenance'],
+ [35,25,20,20]);
+
+drawPie('govChart',
+ ['Citizen Services','Tax','Records','Administration'],
+ [40,25,20,15]);
 </script>
 
 </body>
