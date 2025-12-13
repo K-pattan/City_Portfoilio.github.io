@@ -1,122 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City Management System | Unified DAA Project</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-:root{
-  --bg:#0f172a;
-  --panel:#020617;
-  --accent:#38bdf8;
-  --accent2:#22d3ee;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#020617,#0f172a);
-  color:var(--text);
-}
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:40px 20px 80px;
-}
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#020617ee;
-  padding:15px;
-  border-bottom:1px solid #1e293b;
-}
-nav ul{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-nav a{
-  color:#cfeeff;
-  text-decoration:none;
-  font-weight:600;
-}
-nav a:hover{color:var(--accent);}
-.hero{
-  text-align:center;
-  padding:60px 20px;
-}
-.hero h1{
-  font-size:44px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p{
-  max-width:900px;
-  margin:auto;
-  color:var(--muted);
-  font-size:18px;
-}
-.section{
-  background:var(--panel);
-  border-radius:20px;
-  padding:30px;
-  margin-bottom:40px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
-}
-.section h2{color:var(--accent);}
-.section p,li{color:#d1d5db;line-height:1.8;font-size:15px;}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.card{
-  background:#020617;
-  border-radius:18px;
-  padding:22px;
-  border:1px solid #1e293b;
-}
-.card h3{color:var(--accent2);}
-.chart-box{max-width:420px;margin:30px auto;}
-button{
-  background:var(--accent);
-  color:#020617;
-  border:none;
-  padding:10px 16px;
-  margin:6px;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
-}
-button:hover{background:var(--accent2);}
-footer{text-align:center;color:#94a3b8;margin-top:60px;}
-</style>
-</head>
-
-<body>
-
-<nav>
-<ul>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#systems">Systems</a></li>
+OCTYPE html>
 <li><a href="#charts">Visualization</a></li>
 <li><a href="#analysis">Complexity</a></li>
 </ul>
 </nav>
 
+
 <div class="container">
+
 
 <!-- HERO -->
 <div class="hero" id="intro">
@@ -126,6 +16,7 @@ A <b>single unified DAA-based project</b> demonstrating Tourism, Industry, Waste
 Solar Energy and Governance using Data Structures & Algorithms.
 </p>
 </div>
+
 
 <!-- SYSTEMS -->
 <div class="section" id="systems">
@@ -138,6 +29,7 @@ Solar Energy and Governance using Data Structures & Algorithms.
 <div class="card"><h3>🏛️ Government & Tax</h3><p>Hash tables store citizen data. Graph workflows route services. Sorting ranks tax records. O(1) access ensures transparency.</p></div>
 </div>
 </div>
+
 
 <!-- PIE CHART -->
 <div class="section" id="charts">
@@ -153,6 +45,7 @@ Solar Energy and Governance using Data Structures & Algorithms.
 <div class="chart-box"><canvas id="pieChart"></canvas></div>
 </div>
 
+
 <!-- COMPLEXITY -->
 <div class="section" id="analysis">
 <h2>3. Time Complexity Summary</h2>
@@ -166,19 +59,22 @@ Solar Energy and Governance using Data Structures & Algorithms.
 </ul>
 </div>
 
+
 <footer>© 2025 Smart City Management System | Unified DAA Project</footer>
 
+
 </div>
+
 
 <script>
 let chart;
 function loadChart(type){
 const dataMap={
-  tourism:{labels:['Graph','Dijkstra','Sorting','DFS/BFS'],data:[35,30,20,15]},
-  industry:{labels:['Trees','Graph','Prim/Kruskal','Hashing'],data:[25,30,25,20]},
-  waste:{labels:['Queue','BFS','Greedy','Hashing'],data:[30,25,25,20]},
-  solar:{labels:['Graph','Dijkstra','MST','Heap'],data:[30,25,25,20]},
-  gov:{labels:['Hashing','Sorting','Graph','Queue'],data:[40,25,20,15]}
+tourism:{labels:['Graph','Dijkstra','Sorting','DFS/BFS'],data:[35,30,20,15]},
+industry:{labels:['Trees','Graph','Prim/Kruskal','Hashing'],data:[25,30,25,20]},
+waste:{labels:['Queue','BFS','Greedy','Hashing'],data:[30,25,25,20]},
+solar:{labels:['Graph','Dijkstra','MST','Heap'],data:[30,25,25,20]},
+gov:{labels:['Hashing','Sorting','Graph','Queue'],data:[40,25,20,15]}
 };
 const ctx=document.getElementById('pieChart');
 if(chart) chart.destroy();
@@ -186,6 +82,7 @@ chart=new Chart(ctx,{type:'pie',data:{labels:dataMap[type].labels,datasets:[{dat
 }
 loadChart('tourism');
 </script>
+
 
 </body>
 </html>
