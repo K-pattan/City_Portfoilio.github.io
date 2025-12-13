@@ -1,287 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maharajpur Smart City – Anagha</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharajpur Smart City – Anagha</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#020617,#0f172a);
-  color:white;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
 
-.navbar{
-  background:#020617;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #1e293b;
-}
+    .navbar {
+      background-color: #0f172a;
+      padding: 15px 40px;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-.logo{
-  font-size:22px;
-  font-weight:700;
-  color:#38bdf8;
-}
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 50px 0;
+    }
 
-.hero{
-  padding:80px 20px;
-  text-align:center;
-}
+    h1 {
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
 
-.hero h1{
-  font-size:48px;
-}
+    h2 {
+      text-align: center;
+      color: #475569;
+      font-weight: 400;
+      margin-bottom: 50px;
+    }
 
-.hero p{
-  max-width:900px;
-  margin:auto;
-  color:#94a3b8;
-}
+    .section {
+      background: white;
+      padding: 30px 35px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
 
-.section{
-  width:85%;
-  margin:60px auto;
-}
+    .section h3 {
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
 
-.section h2{
-  color:#38bdf8;
-  margin-bottom:25px;
-}
+    ul {
+      padding-left: 20px;
+    }
 
-/* ACCORDION */
-.accordion{
-  background:#020617;
-  border:1px solid #1e293b;
-  border-radius:16px;
-  margin-bottom:20px;
-}
+    ul li {
+      margin-bottom: 10px;
+    }
 
-.accordion-header{
-  padding:18px 25px;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-weight:600;
-}
+    .algo {
+      margin-top: 15px;
+      padding: 12px 18px;
+      background-color: #f1f5f9;
+      border-left: 4px solid #0ea5e9;
+      font-size: 14px;
+    }
 
-.accordion-header:hover{
-  background:#0f172a;
-}
-
-.accordion-content{
-  max-height:0;
-  overflow:hidden;
-  transition:0.4s ease;
-  padding:0 25px;
-}
-
-.accordion-content p{
-  font-size:14px;
-  color:#cbd5f5;
-  line-height:1.7;
-  padding-bottom:20px;
-}
-
-.icon{
-  color:#38bdf8;
-  font-size:20px;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#94a3b8;
-}
-</style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-  <div class="logo">MAHARAJPUR SMART CITY</div>
-</nav>
+<div class="navbar">
+  MAHARAJPUR SMART CITY DESIGN
+</div>
 
-<section class="hero">
+<div class="container">
   <h1>Anagha</h1>
-  <p>
-    Smart City Service Design for Maharajpur using
-    Design and Analysis of Algorithms (DAA).
-    Each service is decomposed into smaller functional modules.
-  </p>
-</section>
+  <h2>Smart City Services – Digital Infrastructure & Public Welfare</h2>
 
-<!-- ================= RECREATION ================= -->
-<section class="section">
-<h2>1. Recreation & Lifestyle</h2>
-
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Park Accessibility Planning
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h3>1. Recreation & Lifestyle Services</h3>
     <p>
-      Residential zones in Maharajpur are treated as graph nodes.
-      BFS traversal ensures equal access to parks and gyms.
-      <br><br>
-      <b>Algorithm:</b> BFS<br>
+      In Maharajpur, recreational facilities are planned to ensure equal access
+      across all residential zones. Parks, walking tracks, and community spaces
+      are distributed such that no household is isolated from lifestyle amenities.
+    </p>
+
+    <ul>
+      <li>Community parks and open gyms</li>
+      <li>Walking and cycling paths</li>
+      <li>Local activity and cultural centers</li>
+    </ul>
+
+    <div class="algo">
+      <b>Algorithm Used:</b> Breadth First Search (BFS)<br>
+      <b>Why:</b> Ensures uniform accessibility across all zones<br>
       <b>Time Complexity:</b> O(V + E)
-    </p>
+    </div>
   </div>
-</div>
 
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Community Activity Scheduling
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h3>2. Public Safety & Emergency Services</h3>
     <p>
-      Events are queued and processed efficiently.
-      <br><br>
-      <b>Algorithm:</b> Queue<br>
-      <b>Time Complexity:</b> O(n)
+      Public safety in Maharajpur is designed using layered monitoring.
+      Surveillance systems and emergency services are placed strategically
+      to reduce response time and cover critical regions.
     </p>
-  </div>
-</div>
-</section>
 
-<!-- ================= PUBLIC SAFETY ================= -->
-<section class="section">
-<h2>2. Public Safety & Services</h2>
+    <ul>
+      <li>Smart CCTV surveillance</li>
+      <li>Emergency response units</li>
+      <li>Well-lit streets and public areas</li>
+    </ul>
 
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    CCTV & Drone Surveillance
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
-    <p>
-      DFS is used to deeply scan critical zones and blind spots.
-      <br><br>
-      <b>Algorithm:</b> DFS<br>
-      <b>Time Complexity:</b> O(V + E)
-    </p>
-  </div>
-</div>
-
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Emergency Response Optimization
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
-    <p>
-      Greedy technique ensures nearest emergency unit responds first.
-      <br><br>
-      <b>Algorithm:</b> Greedy<br>
+    <div class="algo">
+      <b>Algorithm Used:</b> Dijkstra’s Algorithm<br>
+      <b>Why:</b> Finds the shortest response path during emergencies<br>
       <b>Time Complexity:</b> O(E log V)
-    </p>
+    </div>
   </div>
-</div>
-</section>
 
-<!-- ================= DIGITAL SERVICES ================= -->
-<section class="section">
-<h2>3. Digital Citizen Services</h2>
-
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Fast Service Lookup
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h3>3. Digital Citizen Services</h3>
     <p>
-      Hash tables enable instant access to citizen services.
-      <br><br>
-      <b>Algorithm:</b> Hashing<br>
+      Maharajpur’s digital services aim to minimize manual effort and provide
+      fast access to essential services through a unified digital platform.
+    </p>
+
+    <ul>
+      <li>Single digital portal for citizens</li>
+      <li>Online service request management</li>
+      <li>Digital identity and records</li>
+    </ul>
+
+    <div class="algo">
+      <b>Algorithm Used:</b> Hashing<br>
+      <b>Why:</b> Enables constant-time service lookup<br>
       <b>Time Complexity:</b> O(1)
-    </p>
+    </div>
   </div>
-</div>
 
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Request Handling System
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h3>4. Senior Citizen & Accessibility Support</h3>
     <p>
-      Requests are processed in arrival order.
-      <br><br>
-      <b>Algorithm:</b> Queue<br>
-      <b>Time Complexity:</b> O(n)
+      Special emphasis is placed on senior citizens and differently-abled individuals.
+      Services are prioritized to ensure comfort, safety, and faster assistance.
     </p>
-  </div>
-</div>
-</section>
 
-<!-- ================= SENIOR SUPPORT ================= -->
-<section class="section">
-<h2>4. Senior Citizen & Accessibility Services</h2>
+    <ul>
+      <li>Priority medical access</li>
+      <li>Accessible public infrastructure</li>
+      <li>Support kiosks</li>
+    </ul>
 
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Priority Medical Assistance
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
-    <p>
-      Priority queues ensure critical citizens are served first.
-      <br><br>
-      <b>Algorithm:</b> Heap<br>
+    <div class="algo">
+      <b>Algorithm Used:</b> Priority Queue (Heap)<br>
+      <b>Why:</b> Ensures urgent needs are addressed first<br>
       <b>Time Complexity:</b> O(log n)
-    </p>
+    </div>
   </div>
-</div>
-</section>
 
-<!-- ================= WATER MANAGEMENT ================= -->
-<section class="section">
-<h2>5. Smart Water Management</h2>
-
-<div class="accordion">
-  <div class="accordion-header" onclick="toggle(this)">
-    Leak Detection & Monitoring
-    <span class="icon">+</span>
-  </div>
-  <div class="accordion-content">
+  <!-- SECTION 5 -->
+  <div class="section">
+    <h3>5. Smart Water Management</h3>
     <p>
-      Graph-based routing optimizes monitoring paths.
-      <br><br>
-      <b>Algorithm:</b> Dijkstra<br>
-      <b>Time Complexity:</b> O(E log V)
+      Water management in Maharajpur focuses on sustainability and reliability.
+      Monitoring and distribution systems ensure consistent supply and early
+      detection of inefficiencies.
     </p>
+
+    <ul>
+      <li>Leak detection mechanisms</li>
+      <li>Consumption monitoring</li>
+      <li>Efficient distribution planning</li>
+    </ul>
+
+    <div class="algo">
+      <b>Algorithm Used:</b> Greedy Strategy<br>
+      <b>Why:</b> Allocates water resources efficiently<br>
+      <b>Time Complexity:</b> O(n)
+    </div>
   </div>
 </div>
-</section>
 
 <footer>
-Maharajpur Smart City | Designed using DAA Principles
+Design & Analysis of Algorithms | Maharajpur Smart City
 </footer>
-
-<script>
-function toggle(header){
-  const content = header.nextElementSibling;
-  const icon = header.querySelector(".icon");
-
-  if(content.style.maxHeight){
-    content.style.maxHeight = null;
-    icon.innerText = "+";
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-    icon.innerText = "−";
-  }
-}
-</script>
 
 </body>
 </html>
