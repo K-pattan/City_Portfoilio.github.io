@@ -80,12 +80,20 @@
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 15px;
 
-      /* NEW: blend white backgrounds with page */
+      /* Blend white backgrounds with page */
       background-color: #f0f3f7;
       mix-blend-mode: multiply;
+
+      /* Hover effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -116,8 +124,8 @@
     </p>
     <p>
       <b>Purpose:</b> Promote health, eco-friendly habits, and social interaction.<br>
-      <b>Implementation:</b> Place parks optimally using city mapping, IoT-enabled lighting, and fitness stations.<br>
-      <b>Extra Point:</b> Green zones improve air quality and biodiversity, making the city healthier overall.
+      <b>Implementation:</b> Smart mapping ensures equal access, IoT-enabled lighting improves safety, and fitness stations encourage activity.<br>
+      <b>Extra Point:</b> Green zones also improve air quality and biodiversity, making the city healthier overall.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Breadth First Search (BFS)<br>
@@ -131,12 +139,11 @@
     <img src="images/safety.jpg" alt="Public safety services">
     <h3>Public Safety & Services</h3>
     <p>
-      Includes AI cameras, drone monitoring, emergency units, and service centers.
-      Ensures rapid response to incidents anywhere in the city.
+      AI cameras, drone monitoring, and emergency units ensure rapid response to incidents anywhere in the city.
     </p>
     <p>
-      <b>Purpose:</b> Minimize response time, monitor traffic and events.<br>
-      <b>Implementation:</b> AI detection, drone surveillance, panic buttons, and shortest path routing.<br>
+      <b>Purpose:</b> Minimize response time and monitor traffic/events.<br>
+      <b>Implementation:</b> AI detection, drone surveillance, panic buttons, and optimized routing for emergency vehicles.<br>
       <b>Extra Point:</b> Predictive analytics forecast crowd density during festivals or traffic jams to prevent accidents.
     </p>
     <div class="algorithm-box">
@@ -151,12 +158,11 @@
     <img src="images/digital.jpg" alt="Digital services">
     <h3>Digital Services</h3>
     <p>
-      Centralized platforms: citizen portal, traffic app, smart parking, metro scheduling.
-      Residents can report issues, check schedules, and book services.
+      Centralized platforms like citizen portals, traffic apps, smart parking, and metro scheduling make services efficient and transparent.
     </p>
     <p>
-      <b>Purpose:</b> Efficient and transparent service delivery.<br>
-      <b>Implementation:</b> Digital dashboard with AI chatbots, multilingual support, and secure blockchain records.<br>
+      <b>Purpose:</b> Deliver services quickly and transparently.<br>
+      <b>Implementation:</b> Digital dashboards with AI chatbots, multilingual support, and secure blockchain records.<br>
       <b>Extra Point:</b> Voice-enabled services ensure accessibility for seniors and differently-abled citizens.
     </p>
     <div class="algorithm-box">
@@ -171,8 +177,7 @@
     <img src="images/senior.jpg" alt="Senior citizen services">
     <h3>Senior Citizen & Disabled-Friendly Services</h3>
     <p>
-      Priority service systems ensure elderly and differently-abled individuals
-      receive timely assistance, e.g., accessible transport, medical services, dedicated queues.
+      Priority systems ensure elderly and differently-abled individuals receive timely assistance with accessible transport, medical services, and dedicated queues.
     </p>
     <p>
       <b>Purpose:</b> Inclusivity and prompt attention.<br>
@@ -191,8 +196,7 @@
     <img src="images/water.jpg" alt="Smart water management">
     <h3>Smart Water Management</h3>
     <p>
-      Monitors water supply, detects leaks, and distributes water efficiently.
-      Sensors collect data to allocate resources optimally.
+      Monitors water supply, detects leaks, and distributes water efficiently using sensors and smart valves.
     </p>
     <p>
       <b>Purpose:</b> Sustainable water usage, reduce wastage, ensure supply.<br>
