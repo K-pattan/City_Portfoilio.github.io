@@ -6,7 +6,6 @@
 <title>Smart City Development System</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 body{
@@ -19,6 +18,7 @@ header{
   background:#1e293b;
   padding:15px 40px;
 }
+header h1{margin:0;}
 .container{
   width:85%;
   margin:40px auto;
@@ -30,26 +30,9 @@ header{
   margin-bottom:40px;
   box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
-h2{color:#38bdf8;}
-h3{color:#9ddcff;}
-pre{
-  background:#020617;
-  padding:15px;
-  border-radius:10px;
-  overflow-x:auto;
-  color:#c7d2fe;
-}
-.chart-box{width:420px;margin:30px auto;}
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-th,td{
-  border:1px solid #475569;
-  padding:12px;
-  text-align:center;
-}
-th{background:#334155;}
+.section h2{color:#38bdf8;}
+.section h3{color:#9ddcff;}
+p{line-height:1.8;color:#e5e7eb;}
 .back{
   display:inline-block;
   margin-top:20px;
@@ -67,7 +50,7 @@ html{scroll-behavior:smooth;}
 
 <header>
 <h1>Smart City Development System</h1>
-<p>Tourism • Waste • Industry • Solar • Government (DAA Based)</p>
+<p>Tourism • Waste • Industry • Solar (Efficiency-Oriented Systems)</p>
 </header>
 
 <div class="container">
@@ -75,162 +58,119 @@ html{scroll-behavior:smooth;}
 <!-- TOURISM -->
 <div class="section">
 <h2>🌍 Tourism & Culture System</h2>
+
 <p>
-This system improves tourist experience using optimized routing and data management.
-Tourist locations are nodes and roads are edges in a graph.
-Dijkstra finds shortest travel routes.
-Prim/Kruskal builds low-cost heritage circuits.
-Sorting ranks destinations to control crowding.
+The Tourism and Culture system manages tourist locations, visitor flow, and cultural events in an organized manner.
+Information about places and visitors is stored in a way that allows instant access and quick updates.
+Tourist routes are optimized so visitors reach destinations in minimum time while avoiding congestion.
+Popular locations are ranked to control overcrowding and improve visitor experience.
+The system adapts dynamically to festivals and seasonal tourism demand.
+Overall, it improves travel efficiency, cultural preservation, and economic growth.
 </p>
 
-<h3>Pseudo-Code</h3>
-<pre>
-Input: TouristGraph, Source
-Apply Dijkstra(Source)
-Display shortest path to all locations
-Sort locations by visitor count
-</pre>
+<h3>Efficiency Analysis</h3>
+<p>
+Access operations are very fast, ensuring real-time responses.
+Route calculations scale efficiently as the city grows.
+Extra memory is used to achieve higher speed and reliability.
+</p>
 
-<div class="chart-box"><canvas id="tourismChart"></canvas></div>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- WASTE -->
 <div class="section">
 <h2>♻️ Waste Management System</h2>
+
 <p>
-Ensures efficient waste collection and routing.
-Bins are stored in arrays and hashed by ID.
-Graphs represent city roads.
-Dijkstra finds optimal truck routes.
-Greedy prioritizes full bins.
+The Waste Management system focuses on collecting, transporting, and processing waste efficiently.
+Bin status is continuously monitored to prevent overflow and health hazards.
+Collection routes are optimized to reduce fuel usage and collection time.
+Priority handling ensures that critical areas are serviced first.
+The system dynamically adjusts routes during traffic or roadblocks.
+This leads to cleaner surroundings and sustainable urban living.
 </p>
 
-<h3>Pseudo-Code</h3>
-<pre>
-For each bin:
-  If binLevel > threshold
-    Add to priority list
-Compute shortest route using Dijkstra
-Collect waste
-</pre>
+<h3>Efficiency Analysis</h3>
+<p>
+Decision-making is fast due to quick access to bin data.
+Route optimization works efficiently for large city areas.
+Slightly higher memory usage enables real-time monitoring.
+</p>
 
-<div class="chart-box"><canvas id="wasteChart"></canvas></div>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- INDUSTRY -->
 <div class="section">
 <h2>🏭 Industries & Commercial Sector</h2>
+
 <p>
-Supports economic growth with optimized logistics.
-Industries stored using hashing.
-Graph models transport network.
-Dijkstra optimizes goods movement.
-Prim/Kruskal minimizes infrastructure cost.
+The Industries and Commercial system supports business operations and infrastructure planning.
+Business records are maintained for quick verification and expansion.
+Transport and logistics routes are optimized to reduce operational costs.
+Infrastructure planning ensures minimum investment with maximum connectivity.
+Industry performance is analyzed to support economic decisions.
+This system strengthens productivity, employment, and economic growth.
 </p>
 
-<h3>Pseudo-Code</h3>
-<pre>
-Store industries in hash table
-Build transport graph
-Run Dijkstra for logistics
-Apply MST for infrastructure planning
-</pre>
+<h3>Efficiency Analysis</h3>
+<p>
+Data retrieval is extremely fast even for large datasets.
+Connectivity planning scales well with industrial expansion.
+Moderate memory usage supports long-term growth and stability.
+</p>
 
-<div class="chart-box"><canvas id="industryChart"></canvas></div>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- SOLAR -->
 <div class="section">
 <h2>☀️ Solar Energy System</h2>
+
 <p>
-Optimizes renewable energy generation.
-Panels stored in arrays and hashed.
-Graph models power grid.
-Dijkstra optimizes energy flow.
-Prim/Kruskal builds minimum cost grid.
+The Solar Energy system manages power generation and distribution efficiently.
+Energy output is continuously monitored to ensure optimal performance.
+Transmission paths are optimized to reduce energy loss.
+Faulty or inefficient units are isolated automatically.
+Planning ensures maximum coverage at minimum infrastructure cost.
+This system promotes sustainability and reduced carbon emissions.
 </p>
 
-<h3>Pseudo-Code</h3>
-<pre>
-Read panel outputs
-Create power grid graph
-Apply Dijkstra for transmission
-Apply MST for grid optimization
-</pre>
+<h3>Efficiency Analysis</h3>
+<p>
+Energy flow decisions are computed quickly.
+Optimization works efficiently for expanding power grids.
+Additional memory improves reliability and fault tolerance.
+</p>
 
-<div class="chart-box"><canvas id="solarChart"></canvas></div>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- GOVERNMENT -->
 <div class="section">
 <h2>🏛️ Government & Tax System</h2>
+
 <p>
-Provides transparent digital governance.
-Citizen data stored in hash tables.
-Graphs model department workflow.
-Sorting prioritizes services.
-Dijkstra optimizes service routing.
+The Government and Tax system ensures transparent and efficient public services.
+Citizen records are managed for instant access and updates.
+Service requests are processed dynamically based on urgency.
+Department coordination is optimized to reduce delays.
+Tax collection and grievance handling become faster and more reliable.
+This system improves governance efficiency and citizen satisfaction.
 </p>
 
-<h3>Pseudo-Code</h3>
-<pre>
-Store citizen records using hashing
-Sort requests by priority
-Route service using shortest path
-Update status
-</pre>
+<h3>Efficiency Analysis</h3>
+<p>
+Record access and updates occur with minimal delay.
+Service processing time is significantly reduced.
+Extra storage ensures system reliability and scalability.
+</p>
 
-<div class="chart-box"><canvas id="govChart"></canvas></div>
-</div>
-
-<!-- COMPLEXITY -->
-<div class="section">
-<h2>📊 Complexity Analysis</h2>
-
-<table>
-<tr>
-<th>Algorithm</th><th>Usage</th><th>Time</th><th>Space</th>
-</tr>
-<tr><td>Array</td><td>Data storage</td><td>O(1)</td><td>O(n)</td></tr>
-<tr><td>Hashing</td><td>Fast lookup</td><td>O(1)</td><td>O(n)</td></tr>
-<tr><td>Dijkstra</td><td>Shortest path</td><td>O(E log V)</td><td>O(V)</td></tr>
-<tr><td>Prim / Kruskal</td><td>MST</td><td>O(E log V)</td><td>O(V)</td></tr>
-<tr><td>Sorting</td><td>Ranking</td><td>O(n log n)</td><td>O(1)</td></tr>
-</table>
-</div>
-
-<!-- FLOW -->
-<div class="section">
-<h2>🔁 Overall System Flow</h2>
-<pre>
-Input Data
-   ↓
-Store using Arrays / Hash Tables
-   ↓
-Model City as Graph
-   ↓
-Apply Dijkstra / Prim / Kruskal
-   ↓
-Optimized Smart City Services
-</pre>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 </div>
-
-<script>
-function pie(id, labels, data){
-new Chart(document.getElementById(id),{
-type:'pie',
-data:{labels:labels,datasets:[{data:data}]},
-options:{plugins:{legend:{labels:{color:'white'}}}}
-});
-}
-pie('tourismChart',['Graph','Dijkstra','MST','Sorting'],[40,25,20,15]);
-pie('wasteChart',['Graph','Greedy','Dijkstra','Hashing'],[30,25,25,20]);
-pie('industryChart',['Graph','MST','Hashing','Sorting'],[35,25,20,20]);
-pie('solarChart',['Graph','Dijkstra','MST','Hashing'],[35,25,25,15]);
-pie('govChart',['Hashing','Sorting','Graph','Dijkstra'],[30,25,25,20]);
-</script>
 
 </body>
 </html>
