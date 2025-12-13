@@ -3,174 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City Development System</title>
+<title>Smart City Management System | DAA Project</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --bg:#0f172a;
+  --panel:#020617;
+  --accent:#38bdf8;
+  --accent2:#22d3ee;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#0f172a;
-  color:white;
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:var(--text);
 }
-header{
-  background:#1e293b;
-  padding:15px 40px;
-}
-header h1{margin:0;}
 .container{
-  width:85%;
-  margin:40px auto;
+  max-width:1300px;
+  margin:auto;
+  padding:40px 20px 80px;
+}
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#020617ee;
+  padding:15px;
+  border-bottom:1px solid #1e293b;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+nav a{
+  color:#cfeeff;
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:var(--accent);}
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
+.hero h1{
+  font-size:44px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p{
+  max-width:900px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
 }
 .section{
-  background:#1e293b;
+  background:var(--panel);
+  border-radius:20px;
   padding:30px;
-  border-radius:18px;
   margin-bottom:40px;
-  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
-.section h2{color:#38bdf8;}
-.section h3{color:#9ddcff;}
-p{line-height:1.8;color:#e5e7eb;}
-.back{
-  display:inline-block;
+.section h2{color:var(--accent);}
+.section p,li{
+  color:#d1d5db;
+  line-height:1.8;
+  font-size:15px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.card{
+  background:#020617;
+  border-radius:18px;
+  padding:22px;
+  border:1px solid #1e293b;
+}
+.card h3{color:var(--accent2);}
+table{
+  width:100%;
+  border-collapse:collapse;
   margin-top:20px;
-  padding:8px 14px;
-  background:lightsteelblue;
-  color:black;
-  text-decoration:none;
-  border-radius:6px;
 }
-html{scroll-behavior:smooth;}
+th,td{
+  border:1px solid #334155;
+  padding:12px;
+}
+th{background:#020617;color:var(--accent);}
+td{background:#020617bb;}
+footer{
+  text-align:center;
+  color:#94a3b8;
+  margin-top:60px;
+}
 </style>
 </head>
 
-<body id="top">
+<body>
 
-<header>
-<h1>Smart City Development System</h1>
-<p>Tourism • Waste • Industry • Solar (Efficiency-Oriented Systems)</p>
-</header>
+<nav>
+<ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#systems">Systems</a></li>
+<li><a href="#algorithms">Algorithms</a></li>
+<li><a href="#analysis">Complexity</a></li>
+</ul>
+</nav>
 
 <div class="container">
 
-<!-- TOURISM -->
+<!-- HERO -->
+<div class="hero" id="intro">
+<h1>Smart City Management System</h1>
+<p>
+A complete <b>Data Structures & Algorithms (DAA)</b> based smart city solution
+covering tourism, industries, waste, solar energy and governance.
+</p>
+</div>
+
+<!-- SYSTEMS -->
+<div class="section" id="systems">
+<h2>1. Smart City Systems – Scenario Explanation</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌍 Tourism & Culture</h3>
+<p>
+Tourist locations are managed efficiently using structured storage.
+Visitor movement is optimized through shortest-path routing.
+Overcrowded locations are detected early and alternate routes are suggested.
+Dynamic ranking helps promote less-visited cultural sites.
+The system improves tourist experience while preserving heritage.
+</p>
+</div>
+
+<div class="card">
+<h3>🏭 Industries & Commercial</h3>
+<p>
+Industrial zones and businesses are organized for fast access and verification.
+Logistics routes are optimized to reduce transportation cost.
+Infrastructure planning minimizes wiring and road expenses.
+Sector-wise growth ensures scalability and economic stability.
+This system boosts productivity and investment.
+</p>
+</div>
+
+<div class="card">
+<h3>♻️ Waste Management</h3>
+<p>
+Bin levels are monitored in real time to avoid overflow.
+Collection vehicles dynamically change routes based on priority.
+Processing units are optimally connected to reduce fuel cost.
+Congested or blocked paths trigger automatic rerouting.
+The city remains clean and sustainable.
+</p>
+</div>
+
+<div class="card">
+<h3>☀️ Solar Energy</h3>
+<p>
+Energy output from solar panels is continuously tracked.
+Efficient transmission paths reduce power loss.
+Faulty panels are isolated automatically.
+Grid planning minimizes infrastructure cost.
+The system supports renewable energy adoption.
+</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Government & Tax</h3>
+<p>
+Citizen records are stored securely for instant access.
+Tax payments and service requests are processed efficiently.
+Workflow routing minimizes delays.
+Priority handling ensures emergency services.
+Transparency and accountability are improved.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- ALGORITHMS -->
+<div class="section" id="algorithms">
+<h2>2. Algorithms & Data Structures Used</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Graphs</h3>
+<ul>
+<li>City zones as vertices</li>
+<li>Roads, grids, networks as edges</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Dijkstra</h3>
+<ul>
+<li>Tourist routes</li>
+<li>Waste collection paths</li>
+<li>Energy transmission</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Prim & Kruskal</h3>
+<ul>
+<li>Minimum cost infrastructure</li>
+<li>Grid & network planning</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Hashing</h3>
+<ul>
+<li>Citizen ID lookup</li>
+<li>Tax & service records</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Sorting</h3>
+<ul>
+<li>Tourist popularity</li>
+<li>Industry ranking</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- ANALYSIS -->
+<div class="section" id="analysis">
+<h2>3. Time Complexity Analysis</h2>
+
+<table>
+<tr>
+<th>System</th>
+<th>Algorithm</th>
+<th>Purpose</th>
+<th>Time Complexity</th>
+</tr>
+<tr>
+<td>Tourism</td>
+<td>Dijkstra</td>
+<td>Shortest routes</td>
+<td>O(E log V)</td>
+</tr>
+<tr>
+<td>Waste</td>
+<td>BFS</td>
+<td>Area coverage</td>
+<td>O(V + E)</td>
+</tr>
+<tr>
+<td>Industry</td>
+<td>Prim/Kruskal</td>
+<td>Cost optimization</td>
+<td>O(E log V)</td>
+</tr>
+<tr>
+<td>Solar</td>
+<td>Dijkstra</td>
+<td>Energy routing</td>
+<td>O(E log V)</td>
+</tr>
+<tr>
+<td>Gov & Tax</td>
+<td>Hashing</td>
+<td>Record lookup</td>
+<td>O(1)</td>
+</tr>
+</table>
+</div>
+
+<!-- CONCLUSION -->
 <div class="section">
-<h2>🌍 Tourism & Culture System</h2>
-
+<h2>4. Conclusion</h2>
 <p>
-The Tourism and Culture system manages tourist locations, visitor flow, and cultural events in an organized manner.
-Information about places and visitors is stored in a way that allows instant access and quick updates.
-Tourist routes are optimized so visitors reach destinations in minimum time while avoiding congestion.
-Popular locations are ranked to control overcrowding and improve visitor experience.
-The system adapts dynamically to festivals and seasonal tourism demand.
-Overall, it improves travel efficiency, cultural preservation, and economic growth.
+This Smart City Management System demonstrates how
+<b>Data Structures and Algorithms</b> can solve real-world urban challenges.
+By applying graphs, shortest-path algorithms, hashing and greedy techniques,
+the system ensures efficiency, scalability, transparency and sustainability.
 </p>
-
-<h3>Efficiency Analysis</h3>
-<p>
-Access operations are very fast, ensuring real-time responses.
-Route calculations scale efficiently as the city grows.
-Extra memory is used to achieve higher speed and reliability.
-</p>
-
-<a href="#top" class="back">Back to Top</a>
 </div>
 
-<!-- WASTE -->
-<div class="section">
-<h2>♻️ Waste Management System</h2>
-
-<p>
-The Waste Management system focuses on collecting, transporting, and processing waste efficiently.
-Bin status is continuously monitored to prevent overflow and health hazards.
-Collection routes are optimized to reduce fuel usage and collection time.
-Priority handling ensures that critical areas are serviced first.
-The system dynamically adjusts routes during traffic or roadblocks.
-This leads to cleaner surroundings and sustainable urban living.
-</p>
-
-<h3>Efficiency Analysis</h3>
-<p>
-Decision-making is fast due to quick access to bin data.
-Route optimization works efficiently for large city areas.
-Slightly higher memory usage enables real-time monitoring.
-</p>
-
-<a href="#top" class="back">Back to Top</a>
-</div>
-
-<!-- INDUSTRY -->
-<div class="section">
-<h2>🏭 Industries & Commercial Sector</h2>
-
-<p>
-The Industries and Commercial system supports business operations and infrastructure planning.
-Business records are maintained for quick verification and expansion.
-Transport and logistics routes are optimized to reduce operational costs.
-Infrastructure planning ensures minimum investment with maximum connectivity.
-Industry performance is analyzed to support economic decisions.
-This system strengthens productivity, employment, and economic growth.
-</p>
-
-<h3>Efficiency Analysis</h3>
-<p>
-Data retrieval is extremely fast even for large datasets.
-Connectivity planning scales well with industrial expansion.
-Moderate memory usage supports long-term growth and stability.
-</p>
-
-<a href="#top" class="back">Back to Top</a>
-</div>
-
-<!-- SOLAR -->
-<div class="section">
-<h2>☀️ Solar Energy System</h2>
-
-<p>
-The Solar Energy system manages power generation and distribution efficiently.
-Energy output is continuously monitored to ensure optimal performance.
-Transmission paths are optimized to reduce energy loss.
-Faulty or inefficient units are isolated automatically.
-Planning ensures maximum coverage at minimum infrastructure cost.
-This system promotes sustainability and reduced carbon emissions.
-</p>
-
-<h3>Efficiency Analysis</h3>
-<p>
-Energy flow decisions are computed quickly.
-Optimization works efficiently for expanding power grids.
-Additional memory improves reliability and fault tolerance.
-</p>
-
-<a href="#top" class="back">Back to Top</a>
-</div>
-
-<!-- GOVERNMENT -->
-<div class="section">
-<h2>🏛️ Government & Tax System</h2>
-
-<p>
-The Government and Tax system ensures transparent and efficient public services.
-Citizen records are managed for instant access and updates.
-Service requests are processed dynamically based on urgency.
-Department coordination is optimized to reduce delays.
-Tax collection and grievance handling become faster and more reliable.
-This system improves governance efficiency and citizen satisfaction.
-</p>
-
-<h3>Efficiency Analysis</h3>
-<p>
-Record access and updates occur with minimal delay.
-Service processing time is significantly reduced.
-Extra storage ensures system reliability and scalability.
-</p>
-
-<a href="#top" class="back">Back to Top</a>
-</div>
+<footer>
+© 2025 Smart City Management System | DAA Project
+</footer>
 
 </div>
-
 </body>
 </html>
