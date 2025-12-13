@@ -2,80 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>City Design | Anagha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maharajpur Smart City – Anagha</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #1f2937;
     }
 
+    /* NAVBAR */
     .navbar {
       background-color: #0f172a;
-      padding: 15px 40px;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: white;
-      font-weight: 600;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
       letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
     }
 
     .container {
       width: 85%;
       margin: auto;
-      padding: 50px 0;
+      padding: 40px 0;
     }
 
     h1 {
       text-align: center;
-      color: #0f172a;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     h2 {
       text-align: center;
+      font-weight: normal;
       color: #475569;
-      font-weight: 400;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .section {
       background: white;
-      padding: 30px 35px;
+      padding: 25px 30px;
       margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
     .section h3 {
-      color: #0f172a;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
       margin-bottom: 10px;
+      color: #0f172a;
     }
 
-    .algo {
+    .algorithm-box {
       margin-top: 15px;
-      padding: 12px 18px;
-      background-color: #f1f5f9;
-      border-left: 4px solid #0ea5e9;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
+      padding: 12px;
+      background: #eef2ff;
+      border-left: 4px solid #2563eb;
       font-size: 14px;
     }
   </style>
@@ -83,126 +79,98 @@
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-  MAHARAJPUR SMART CITY DESIGN
+  <div class="logo">CITY DESIGN</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Krupa.html">Krupa</a>
+    <a href="Anagha.html">Anagha</a>
+    <a href="Shreya.html">Shreya</a>
+  </div>
 </div>
 
 <div class="container">
   <h1>Anagha</h1>
-  <h2>Smart City Services – Digital Infrastructure & Public Welfare</h2>
+  <h2>Smart City Services – Maharajpur</h2>
 
-  <!-- SECTION 1 -->
+  <!-- 1 -->
   <div class="section">
-    <h3>1. Recreation & Lifestyle Services</h3>
+    <h3>Recreation & Lifestyle</h3>
     <p>
-      In Maharajpur, recreational facilities are planned to ensure equal access
-      across all residential zones. Parks, walking tracks, and community spaces
-      are distributed such that no household is isolated from lifestyle amenities.
+      Maharajpur includes parks, walking tracks, and community spaces to improve
+      mental and physical well-being. These facilities are distributed evenly
+      across the city to ensure accessibility for all residents.
     </p>
 
-    <ul>
-      <li>Community parks and open gyms</li>
-      <li>Walking and cycling paths</li>
-      <li>Local activity and cultural centers</li>
-    </ul>
-
-    <div class="algo">
-      <b>Algorithm Used:</b> Breadth First Search (BFS)<br>
-      <b>Why:</b> Ensures uniform accessibility across all zones<br>
+    <div class="algorithm-box">
+      <b>Algorithm:</b> Breadth First Search (BFS)<br>
+      <b>Usage:</b> Ensures equal reachability of recreation spaces from all zones<br>
       <b>Time Complexity:</b> O(V + E)
     </div>
   </div>
 
-  <!-- SECTION 2 -->
+  <!-- 2 -->
   <div class="section">
-    <h3>2. Public Safety & Emergency Services</h3>
+    <h3>Public Safety & Services</h3>
     <p>
-      Public safety in Maharajpur is designed using layered monitoring.
-      Surveillance systems and emergency services are placed strategically
-      to reduce response time and cover critical regions.
+      Surveillance systems, emergency units, and service centers are positioned
+      to minimize response time during emergencies and ensure city-wide safety.
     </p>
 
-    <ul>
-      <li>Smart CCTV surveillance</li>
-      <li>Emergency response units</li>
-      <li>Well-lit streets and public areas</li>
-    </ul>
-
-    <div class="algo">
-      <b>Algorithm Used:</b> Dijkstra’s Algorithm<br>
-      <b>Why:</b> Finds the shortest response path during emergencies<br>
+    <div class="algorithm-box">
+      <b>Algorithm:</b> Dijkstra’s Algorithm<br>
+      <b>Usage:</b> Computes shortest emergency response paths<br>
       <b>Time Complexity:</b> O(E log V)
     </div>
   </div>
 
-  <!-- SECTION 3 -->
+  <!-- 3 -->
   <div class="section">
-    <h3>3. Digital Citizen Services</h3>
+    <h3>Digital Services</h3>
     <p>
-      Maharajpur’s digital services aim to minimize manual effort and provide
-      fast access to essential services through a unified digital platform.
+      A centralized digital platform allows residents to access services such as
+      applications, complaints, and records efficiently.
     </p>
 
-    <ul>
-      <li>Single digital portal for citizens</li>
-      <li>Online service request management</li>
-      <li>Digital identity and records</li>
-    </ul>
-
-    <div class="algo">
-      <b>Algorithm Used:</b> Hashing<br>
-      <b>Why:</b> Enables constant-time service lookup<br>
+    <div class="algorithm-box">
+      <b>Algorithm:</b> Hashing<br>
+      <b>Usage:</b> Fast retrieval of citizen records and services<br>
       <b>Time Complexity:</b> O(1)
     </div>
   </div>
 
-  <!-- SECTION 4 -->
+  <!-- 4 -->
   <div class="section">
-    <h3>4. Senior Citizen & Accessibility Support</h3>
+    <h3>Senior Citizen & Disabled-Friendly Services</h3>
     <p>
-      Special emphasis is placed on senior citizens and differently-abled individuals.
-      Services are prioritized to ensure comfort, safety, and faster assistance.
+      Priority-based service systems ensure elderly and differently-abled
+      individuals receive timely assistance.
     </p>
 
-    <ul>
-      <li>Priority medical access</li>
-      <li>Accessible public infrastructure</li>
-      <li>Support kiosks</li>
-    </ul>
-
-    <div class="algo">
-      <b>Algorithm Used:</b> Priority Queue (Heap)<br>
-      <b>Why:</b> Ensures urgent needs are addressed first<br>
+    <div class="algorithm-box">
+      <b>Algorithm:</b> Priority Queue (Heap)<br>
+      <b>Usage:</b> Handles service requests based on urgency<br>
       <b>Time Complexity:</b> O(log n)
     </div>
   </div>
 
-  <!-- SECTION 5 -->
+  <!-- 5 -->
   <div class="section">
-    <h3>5. Smart Water Management</h3>
+    <h3>Smart Water Management</h3>
     <p>
-      Water management in Maharajpur focuses on sustainability and reliability.
-      Monitoring and distribution systems ensure consistent supply and early
-      detection of inefficiencies.
+      Efficient monitoring and distribution strategies ensure sustainable water
+      supply throughout Maharajpur.
     </p>
 
-    <ul>
-      <li>Leak detection mechanisms</li>
-      <li>Consumption monitoring</li>
-      <li>Efficient distribution planning</li>
-    </ul>
-
-    <div class="algo">
-      <b>Algorithm Used:</b> Greedy Strategy<br>
-      <b>Why:</b> Allocates water resources efficiently<br>
+    <div class="algorithm-box">
+      <b>Algorithm:</b> Greedy Technique<br>
+      <b>Usage:</b> Optimal allocation of water resources<br>
       <b>Time Complexity:</b> O(n)
     </div>
   </div>
-</div>
 
-<footer>
-Design & Analysis of Algorithms | Maharajpur Smart City
-</footer>
+</div>
 
 </body>
 </html>
