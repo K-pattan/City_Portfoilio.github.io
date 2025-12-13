@@ -9,11 +9,10 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
+      background-color: #f0f3f7; /* Page background: light grey-blue */
       color: #1f2937;
     }
 
-    /* NAVBAR */
     .navbar {
       background-color: #0f172a;
       padding: 15px 30px;
@@ -55,7 +54,7 @@
     }
 
     .section {
-      background: #eef1f5; /* subtle light grey-blue for uniqueness */
+      background: #cfd9e8; /* Section background: slightly darker grey-blue */
       padding: 25px 30px;
       margin-bottom: 30px;
       border-radius: 10px;
@@ -67,21 +66,27 @@
       color: #0f172a;
     }
 
-    /* Unique Algorithm box inspired by Krupa.html */
     .algorithm-box {
       margin-top: 15px;
       padding: 14px;
-      background: #dce7ff; /* soft light blue, slightly different than Krupa */
-      border-left: 5px solid #4c6ef5; /* deeper blue for contrast */
+      background: #d5e2ff; /* Algorithm box: soft blue */
+      border-left: 5px solid #4c6ef5;
       font-size: 14px;
       border-radius: 6px;
+    }
+
+    .section img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">CITY DESIGN</div>
   <div class="nav-links">
@@ -96,78 +101,94 @@
   <h1>Anagha</h1>
   <h2>Smart City Services – Maharajpur</h2>
 
-  <!-- 1 -->
+  <!-- 1. Recreation & Lifestyle -->
   <div class="section">
+    <img src="Downloads/park.jpg" alt="Parks and recreation">
     <h3>Recreation & Lifestyle</h3>
     <p>
-      Maharajpur includes parks, walking tracks, and community spaces to improve
-      mental and physical well-being. These facilities are distributed evenly
-      across the city to ensure accessibility for all residents.
+      Parks, walking tracks, and community spaces improve physical and mental well-being.
+      Facilities are distributed evenly across city zones to ensure accessibility.
     </p>
-
+    <p><b>Purpose:</b> Promote health and social interaction. <b>Implementation:</b> Place parks optimally using city mapping.</p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Breadth First Search (BFS)<br>
-      <b>Usage:</b> Ensures equal reachability of recreation spaces from all zones<br>
+      <b>Usage:</b> Ensures equal reachability from residential zones.<br>
       <b>Time Complexity:</b> O(V + E)
     </div>
   </div>
 
-  <!-- 2 -->
+  <!-- 2. Public Safety & Services -->
   <div class="section">
+    <img src="Downloads/safety.jpg" alt="Public safety services">
     <h3>Public Safety & Services</h3>
     <p>
-      Surveillance systems, emergency units, and service centers are positioned
-      to minimize response time during emergencies and ensure city-wide safety.
+      Includes AI cameras, drone monitoring, emergency units, and service centers.
+      The system ensures rapid response to incidents anywhere in the city.
     </p>
-
+    <p>
+      <b>Purpose:</b> Minimize response time, monitor traffic and events.<br>
+      <b>Implementation:</b> AI cameras for real-time detection, drones for surveillance, shortest path routing for emergency vehicles.
+    </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Dijkstra’s Algorithm<br>
-      <b>Usage:</b> Computes shortest emergency response paths<br>
+      <b>Usage:</b> Computes shortest paths for emergency and drone routing.<br>
       <b>Time Complexity:</b> O(E log V)
     </div>
   </div>
 
-  <!-- 3 -->
+  <!-- 3. Digital Services -->
   <div class="section">
+    <img src="Downloads/digital.jpg" alt="Digital services">
     <h3>Digital Services</h3>
     <p>
-      A centralized digital platform allows residents to access services such as
-      applications, complaints, and records efficiently.
+      Centralized platforms: citizen portal, traffic app, smart parking, metro scheduling.
+      Allows residents to report issues, check schedules, and book services.
     </p>
-
+    <p>
+      <b>Purpose:</b> Efficient and transparent service delivery.<br>
+      <b>Implementation:</b> Digital dashboard integrating all city services.
+    </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Hashing<br>
-      <b>Usage:</b> Fast retrieval of citizen records and services<br>
+      <b>Usage:</b> Fast retrieval of citizen records, traffic updates, and metro schedules.<br>
       <b>Time Complexity:</b> O(1)
     </div>
   </div>
 
-  <!-- 4 -->
+  <!-- 4. Senior Citizen & Disabled-Friendly Services -->
   <div class="section">
+    <img src="Downloads/senior.jpg" alt="Senior citizen services">
     <h3>Senior Citizen & Disabled-Friendly Services</h3>
     <p>
-      Priority-based service systems ensure elderly and differently-abled
-      individuals receive timely assistance.
+      Priority service systems ensure elderly and differently-abled individuals
+      receive timely assistance, e.g., accessible transport, medical services, dedicated queues.
     </p>
-
+    <p>
+      <b>Purpose:</b> Inclusivity and prompt attention.<br>
+      <b>Implementation:</b> Requests handled based on urgency and priority.
+    </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Priority Queue (Heap)<br>
-      <b>Usage:</b> Handles service requests based on urgency<br>
+      <b>Usage:</b> Handles service requests by urgency.<br>
       <b>Time Complexity:</b> O(log n)
     </div>
   </div>
 
-  <!-- 5 -->
+  <!-- 5. Smart Water Management -->
   <div class="section">
+    <img src="Downloads/water.jpg" alt="Smart water management">
     <h3>Smart Water Management</h3>
     <p>
-      Efficient monitoring and distribution strategies ensure sustainable water
-      supply throughout Maharajpur.
+      Monitors supply, detects leaks, and distributes water efficiently.
+      Sensors collect data to allocate resources optimally.
     </p>
-
+    <p>
+      <b>Purpose:</b> Sustainable water usage, reduce wastage, ensure supply.<br>
+      <b>Implementation:</b> Sensors, smart valves, and predictive analysis for allocation.
+    </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Greedy Technique<br>
-      <b>Usage:</b> Optimal allocation of water resources<br>
+      <b>Usage:</b> Allocates water based on demand and priority.<br>
       <b>Time Complexity:</b> O(n)
     </div>
   </div>
