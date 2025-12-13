@@ -3,271 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City Development System</title>
+<title>Smart City Systems</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#0f1a2b;
-  --panel:rgba(255,255,255,0.05);
-  --glass-border:rgba(255,255,255,0.1);
-  --muted:#a3b9e0;
-  --accent:#3ad7ff;
-  --accent-2:#6ab3ff;
-  --neon:#00f6ff;
-  --card-radius:16px;
-  --max-width:1200px;
-}
-*{box-sizing:border-box;}
-body, html{
+body{
   margin:0;
-  height:100%;
-  font-family:"Inter",sans-serif;
-  background: linear-gradient(180deg,#0f1a2b,#1a2e4c);
-  color:#d9e7ff;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:white;
 }
-.wrap{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:28px 18px 80px;
-}
-
-/* NAV */
-nav{
+.navbar{
+  background:#1e293b;
+  padding:15px 40px;
   display:flex;
-  justify-content:center;
-  gap:36px;
-  padding:12px;
-  border-radius:28px;
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.05);
-  backdrop-filter:blur(8px);
-  margin-bottom:22px;
+  justify-content:space-between;
 }
-nav a{
-  color:#cfe6ff;
-  text-decoration:none;
-  font-weight:600;
-}
-nav a:hover{color:var(--accent);}
+.nav-links{list-style:none;display:flex;gap:20px;}
+.nav-links a{color:white;text-decoration:none;}
 
-/* HERO */
-.hero{
+.content-box{
+  width:80%;
+  margin:60px auto;
+  background:#1e293b;
+  padding:40px;
+  border-radius:20px;
   text-align:center;
-  margin-bottom:30px;
 }
-.hero h1{
-  font-size:34px;
-  font-weight:800;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p{color:var(--muted);}
-
-/* CARDS */
-.cards-container{
+.btn-container{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-.card{
-  background:var(--panel);
-  border-radius:var(--card-radius);
-  padding:18px;
-  border:1px solid var(--glass-border);
-  backdrop-filter:blur(10px);
-  box-shadow:0 8px 26px rgba(0,0,0,0.55);
-}
-.card h2{color:var(--accent-2);}
-
-/* DROPDOWN */
-.alg-toggle{display:none;}
-.alg-btn{
-  display:inline-flex;
-  gap:6px;
-  background:linear-gradient(90deg,var(--neon),#3bf3ff);
-  color:#001f20;
-  padding:8px 14px;
+.idea-btn{
+  padding:15px;
+  background:lightsteelblue;
+  border:none;
   border-radius:10px;
-  font-weight:800;
+  font-weight:600;
   cursor:pointer;
 }
-.alg-dropdown{
-  margin-top:10px;
-  background:rgba(6,10,14,0.96);
-  padding:10px;
-  border-radius:10px;
-  max-height:0;
-  opacity:0;
-  overflow:hidden;
-  transition:.3s;
+.idea-section{
+  width:75%;
+  margin:40px auto;
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
 }
-.alg-toggle:checked + .alg-btn + .alg-dropdown{
-  max-height:300px;
-  opacity:1;
-}
-.alg-dropdown a{
-  display:block;
-  padding:6px;
-  color:#cfeeff;
+.idea-section h3{color:#38bdf8;}
+html{scroll-behavior:smooth;}
+.back-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 14px;
+  background:lightsteelblue;
+  color:black;
   text-decoration:none;
-}
-
-/* TABLE */
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-th,td{
-  border:1px solid rgba(255,255,255,0.1);
-  padding:10px;
-}
-th{background:rgba(58,215,255,0.1);}
-td{background:rgba(255,255,255,0.03);}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .cards-container{grid-template-columns:1fr;}
+  border-radius:5px;
 }
 </style>
 </head>
 
 <body>
-<div class="wrap">
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Smart City Development System</h1>
-  <p>Scenario-based urban planning using Data Structures & Algorithms</p>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a href="#tourism">Tourism</a>
-  <a href="#industry">Industry</a>
-  <a href="#waste">Waste</a>
-  <a href="#solar">Solar</a>
-  <a href="#gov">Governance</a>
+<header>
+<nav class="navbar">
+  <div class="logo">CITY DESIGN</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Project.html">Project</a></li>
+  </ul>
 </nav>
+</header>
 
-<!-- OVERVIEW -->
-<div class="card">
-  <h2>System Overview</h2>
-  <p>
-    This system models smart city development using graphs, queues, heaps,
-    greedy algorithms and hashing to efficiently manage tourism, industries,
-    waste, renewable energy and digital governance.
-  </p>
+<div class="content-box" id="top">
+<h1>Smart City Development System</h1>
+<h2>Tourism • Industry • Waste • Solar • Governance</h2>
+
+<div class="btn-container">
+<button class="idea-btn" onclick="location.href='#tourism'">Tourism & Culture</button>
+<button class="idea-btn" onclick="location.href='#industry'">Industries & Commercial</button>
+<button class="idea-btn" onclick="location.href='#waste'">Waste Management</button>
+<button class="idea-btn" onclick="location.href='#solar'">Solar Energy</button>
+<button class="idea-btn" onclick="location.href='#gov'">Government & Tax</button>
 </div>
-
-<!-- MODULES -->
-<div class="cards-container">
+</div>
 
 <!-- TOURISM -->
-<div class="card" id="tourism">
-<h2>🌍 Tourism & Culture</h2>
+<div id="tourism" class="idea-section">
+<h3>🌍 Tourism & Culture System</h3>
+<p>
+<b>Scenario:</b> Tourist places are modeled as graph nodes to optimize routes and reduce travel cost.
+<br><br>
+<b>How it helps:</b>
 <ul>
-<li>Tourist spots modeled as graph nodes.</li>
-<li>Minimum cost connectivity ensured.</li>
-<li>Efficient route planning for visitors.</li>
+<li>Optimized tourist routes</li>
+<li>Reduced congestion at heritage sites</li>
+<li>Improved visitor experience</li>
 </ul>
-<input type="checkbox" id="alg1" class="alg-toggle">
-<label for="alg1" class="alg-btn">Algorithms ▾</label>
-<div class="alg-dropdown">
-<a>Graph</a>
-<a>Prim’s Algorithm</a>
-<a>Kruskal’s Algorithm</a>
-</div>
+
+<b>Algorithms Used:</b>
+<ul>
+<li><b>Graph:</b> Tourist locations as vertices</li>
+<li><b>Prim’s Algorithm:</b> Minimum cost connectivity</li>
+<li><b>Kruskal’s Algorithm:</b> Cost-efficient cultural trail planning</li>
+</ul>
+
+<b>Techniques:</b> Greedy, Divide & Conquer  
+<br>
+<b>Principles:</b> Minimum Spanning Tree, Edge Optimization
+</p>
+<a href="#top" class="back-btn">Back to Top</a>
 </div>
 
 <!-- INDUSTRY -->
-<div class="card" id="industry">
-<h2>🏭 Industries & Commercial</h2>
+<div id="industry" class="idea-section">
+<h3>🏭 Industries & Commercial System</h3>
+<p>
+<b>Scenario:</b> Industrial zones are dynamically allocated for optimal resource use.
+<br><br>
+<b>Benefits:</b>
 <ul>
-<li>Industrial zones stored in balanced trees.</li>
-<li>Fast allocation of resources.</li>
-<li>Optimized commercial planning.</li>
+<li>Faster industrial approvals</li>
+<li>Balanced commercial growth</li>
+<li>Improved employment</li>
 </ul>
-<input type="checkbox" id="alg2" class="alg-toggle">
-<label for="alg2" class="alg-btn">Algorithms ▾</label>
-<div class="alg-dropdown">
-<a>Binary Search Tree</a>
-<a>AVL Tree</a>
-</div>
+
+<b>Algorithms Used:</b>
+<ul>
+<li><b>AVL Tree:</b> Balanced zone allocation</li>
+<li><b>Binary Search:</b> Fast industrial lookup</li>
+</ul>
+
+<b>Techniques:</b> Balancing, Greedy  
+<br>
+<b>Principles:</b> Height balancing, Logarithmic access
+</p>
+<a href="#top" class="back-btn">Back to Top</a>
 </div>
 
 <!-- WASTE -->
-<div class="card" id="waste">
-<h2>♻️ Waste Management</h2>
+<div id="waste" class="idea-section">
+<h3>♻️ Waste Management System</h3>
+<p>
+<b>Scenario:</b> Smart bins send real-time fill data to optimize collection.
+<br><br>
+<b>Benefits:</b>
 <ul>
-<li>Waste collection routes optimized.</li>
-<li>Priority-based garbage pickup.</li>
-<li>Landfill load minimized.</li>
+<li>Reduced landfill load</li>
+<li>Optimized garbage routes</li>
+<li>Cleaner city</li>
 </ul>
-<input type="checkbox" id="alg3" class="alg-toggle">
-<label for="alg3" class="alg-btn">Algorithms ▾</label>
-<div class="alg-dropdown">
-<a>Greedy Algorithm</a>
-<a>Priority Queue</a>
-</div>
+
+<b>Algorithms Used:</b>
+<ul>
+<li><b>Priority Queue:</b> Urgent waste pickup</li>
+<li><b>Greedy Algorithm:</b> Minimum route collection</li>
+</ul>
+
+<b>Techniques:</b> Greedy  
+<br>
+<b>Principles:</b> Priority handling, Optimization
+</p>
+<a href="#top" class="back-btn">Back to Top</a>
 </div>
 
 <!-- SOLAR -->
-<div class="card" id="solar">
-<h2>☀️ Solar Energy</h2>
+<div id="solar" class="idea-section">
+<h3>☀️ Solar Energy System</h3>
+<p>
+<b>Scenario:</b> Solar panels distributed to maximize energy output.
+<br><br>
+<b>Benefits:</b>
 <ul>
-<li>Solar units mapped geographically.</li>
-<li>Energy output tracked efficiently.</li>
-<li>Load distribution optimized.</li>
+<li>Reduced power cost</li>
+<li>Green energy usage</li>
+<li>Efficient power distribution</li>
 </ul>
-<input type="checkbox" id="alg4" class="alg-toggle">
-<label for="alg4" class="alg-btn">Algorithms ▾</label>
-<div class="alg-dropdown">
-<a>Segment Tree</a>
-<a>Greedy Optimization</a>
-</div>
+
+<b>Algorithms Used:</b>
+<ul>
+<li><b>Segment Tree:</b> Energy monitoring</li>
+<li><b>Greedy:</b> Optimal panel placement</li>
+</ul>
+
+<b>Techniques:</b> Optimization  
+<br>
+<b>Principles:</b> Range queries, Resource allocation
+</p>
+<a href="#top" class="back-btn">Back to Top</a>
 </div>
 
 <!-- GOVERNMENT -->
-<div class="card" id="gov">
-<h2>🏛 Government & Tax</h2>
-<ul>
-<li>Citizen data stored securely.</li>
-<li>Instant tax lookup.</li>
-<li>Transparent digital governance.</li>
-</ul>
-<input type="checkbox" id="alg5" class="alg-toggle">
-<label for="alg5" class="alg-btn">Algorithms ▾</label>
-<div class="alg-dropdown">
-<a>Hash Table</a>
-<a>Lookup Table</a>
-</div>
-</div>
-
-</div>
-
-<!-- SUMMARY -->
-<h2>Summary Table</h2>
-<table>
-<tr><th>Module</th><th>Algorithms</th><th>Purpose</th><th>Complexity</th></tr>
-<tr><td>Tourism</td><td>Prim, Kruskal</td><td>Route optimization</td><td>O(E log V)</td></tr>
-<tr><td>Industry</td><td>AVL Tree</td><td>Resource allocation</td><td>O(log n)</td></tr>
-<tr><td>Waste</td><td>Greedy, PQ</td><td>Efficient collection</td><td>O(n log n)</td></tr>
-<tr><td>Solar</td><td>Segment Tree</td><td>Energy monitoring</td><td>O(log n)</td></tr>
-<tr><td>Government</td><td>Hashing</td><td>Fast access</td><td>O(1)</td></tr>
-</table>
-
-<div class="card">
-<h2>Conclusion</h2>
+<div id="gov" class="idea-section">
+<h3>🏛 Government & Tax System</h3>
 <p>
-This Smart City Development System demonstrates how real-world urban planning
-can be optimized using Data Structures and Algorithms to build sustainable,
-efficient and citizen-friendly cities.
+<b>Scenario:</b> Citizen records stored digitally for instant services.
+<br><br>
+<b>Benefits:</b>
+<ul>
+<li>Fast tax payment</li>
+<li>Transparent governance</li>
+<li>Reduced corruption</li>
+</ul>
+
+<b>Algorithms Used:</b>
+<ul>
+<li><b>Hash Table:</b> O(1) record lookup</li>
+<li><b>Trie:</b> Fast citizen search</li>
+</ul>
+
+<b>Techniques:</b> Hashing  
+<br>
+<b>Principles:</b> Constant time access, Data integrity
 </p>
+<a href="#top" class="back-btn">Back to Top</a>
 </div>
 
-</div>
 </body>
 </html>
