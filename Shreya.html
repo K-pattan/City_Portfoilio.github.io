@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City Systems</title>
-
+<title>Smart City Systems - Algorithm Implementation</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -14,211 +12,191 @@ body{
   background:#0f172a;
   color:white;
 }
-.navbar{
-  background:#1e293b;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-}
-.nav-links{list-style:none;display:flex;gap:20px;}
-.nav-links a{color:white;text-decoration:none;}
-
-.content-box{
+.section{
   width:80%;
-  margin:60px auto;
-  background:#1e293b;
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-}
-.btn-container{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.idea-btn{
-  padding:15px;
-  background:lightsteelblue;
-  border:none;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
-}
-.idea-section{
-  width:75%;
   margin:40px auto;
   background:#1e293b;
-  padding:25px;
+  padding:30px;
   border-radius:15px;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
-.idea-section h3{color:#38bdf8;}
-html{scroll-behavior:smooth;}
-.back-btn{
+.section h2{color:#38bdf8;}
+.section h3{color:#9ddcff;}
+.back{
   display:inline-block;
-  margin-top:15px;
+  margin-top:20px;
   padding:8px 14px;
   background:lightsteelblue;
   color:black;
   text-decoration:none;
-  border-radius:5px;
+  border-radius:6px;
 }
+ul{line-height:1.8;}
+html{scroll-behavior:smooth;}
 </style>
 </head>
 
-<body>
-
-<header>
-<nav class="navbar">
-  <div class="logo">CITY DESIGN</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="Project.html">Project</a></li>
-  </ul>
-</nav>
-</header>
-
-<div class="content-box" id="top">
-<h1>Smart City Development System</h1>
-<h2>Tourism • Industry • Waste • Solar • Governance</h2>
-
-<div class="btn-container">
-<button class="idea-btn" onclick="location.href='#tourism'">Tourism & Culture</button>
-<button class="idea-btn" onclick="location.href='#industry'">Industries & Commercial</button>
-<button class="idea-btn" onclick="location.href='#waste'">Waste Management</button>
-<button class="idea-btn" onclick="location.href='#solar'">Solar Energy</button>
-<button class="idea-btn" onclick="location.href='#gov'">Government & Tax</button>
-</div>
-</div>
+<body id="top">
 
 <!-- TOURISM -->
-<div id="tourism" class="idea-section">
-<h3>🌍 Tourism & Culture System</h3>
-<p>
-<b>Scenario:</b> Tourist places are modeled as graph nodes to optimize routes and reduce travel cost.
-<br><br>
-<b>How it helps:</b>
+<div class="section" id="tourism">
+<h2>🌍 Tourism & Culture System</h2>
+
+<h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li>Optimized tourist routes</li>
-<li>Reduced congestion at heritage sites</li>
-<li>Improved visitor experience</li>
+<li><b>Arrays:</b> Store tourist locations, visitor count, entry timings  
+<br><b>Space:</b> Low | <b>Time:</b> O(1)</li>
+
+<li><b>Linked List:</b> Maintain dynamic list of cultural events  
+<br><b>Space:</b> Efficient | <b>Time:</b> O(n)</li>
+
+<li><b>Hashing:</b> Tourist ID → booking & ticket lookup  
+<br><b>Space:</b> Extra | <b>Time:</b> O(1)</li>
+
+<li><b>Graph:</b> Tourist spots as vertices, roads as edges</li>
+
+<li><b>Dijkstra’s:</b> Shortest path between attractions  
+<br><b>Time:</b> O(E log V)</li>
+
+<li><b>Prim’s:</b> Minimum cost heritage connectivity</li>
+
+<li><b>Kruskal’s:</b> Cost-efficient tourism infrastructure</li>
+
+<li><b>Quick / Merge Sort:</b> Sort tourist sites by popularity</li>
 </ul>
 
-<b>Algorithms Used:</b>
+<h3>Techniques Used</h3>
 <ul>
-<li><b>Graph:</b> Tourist locations as vertices</li>
-<li><b>Prim’s Algorithm:</b> Minimum cost connectivity</li>
-<li><b>Kruskal’s Algorithm:</b> Cost-efficient cultural trail planning</li>
+<li>Divide & Conquer – Zone-wise tourism planning</li>
+<li>Greedy – Nearest & lowest-cost route selection</li>
+<li>Backtracking – Alternate routes during congestion</li>
 </ul>
 
-<b>Techniques:</b> Greedy, Divide & Conquer  
-<br>
-<b>Principles:</b> Minimum Spanning Tree, Edge Optimization
-</p>
-<a href="#top" class="back-btn">Back to Top</a>
-</div>
-
-<!-- INDUSTRY -->
-<div id="industry" class="idea-section">
-<h3>🏭 Industries & Commercial System</h3>
-<p>
-<b>Scenario:</b> Industrial zones are dynamically allocated for optimal resource use.
-<br><br>
-<b>Benefits:</b>
+<h3>Principles Used</h3>
 <ul>
-<li>Faster industrial approvals</li>
-<li>Balanced commercial growth</li>
-<li>Improved employment</li>
+<li>DFS & BFS – Deep and level-wise site exploration</li>
+<li>Pruning – Remove overcrowded locations</li>
+<li>Edge Relaxation – Update shortest tourist paths</li>
 </ul>
 
-<b>Algorithms Used:</b>
-<ul>
-<li><b>AVL Tree:</b> Balanced zone allocation</li>
-<li><b>Binary Search:</b> Fast industrial lookup</li>
-</ul>
-
-<b>Techniques:</b> Balancing, Greedy  
-<br>
-<b>Principles:</b> Height balancing, Logarithmic access
-</p>
-<a href="#top" class="back-btn">Back to Top</a>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- WASTE -->
-<div id="waste" class="idea-section">
-<h3>♻️ Waste Management System</h3>
-<p>
-<b>Scenario:</b> Smart bins send real-time fill data to optimize collection.
-<br><br>
-<b>Benefits:</b>
+<div class="section" id="waste">
+<h2>♻️ Waste Management System</h2>
+
+<h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li>Reduced landfill load</li>
-<li>Optimized garbage routes</li>
-<li>Cleaner city</li>
+<li><b>Arrays:</b> Store bin fill levels  
+<br><b>Time:</b> O(1)</li>
+
+<li><b>Linked List:</b> Dynamic garbage vehicle list</li>
+
+<li><b>Hashing:</b> Bin ID → fill status lookup  
+<br><b>Time:</b> O(1)</li>
+
+<li><b>Graph:</b> City map for garbage routing</li>
+
+<li><b>Dijkstra’s:</b> Shortest path for trucks</li>
+
+<li><b>Prim’s / Kruskal’s:</b> Optimal landfill connectivity</li>
+
+<li><b>Sorting:</b> Prioritize fullest bins</li>
 </ul>
 
-<b>Algorithms Used:</b>
+<h3>Techniques Used</h3>
 <ul>
-<li><b>Priority Queue:</b> Urgent waste pickup</li>
-<li><b>Greedy Algorithm:</b> Minimum route collection</li>
+<li>Greedy – Collect highest-priority waste first</li>
+<li>Divide & Conquer – Zone-wise waste handling</li>
+<li>Backtracking – Alternate routes if blocked</li>
 </ul>
 
-<b>Techniques:</b> Greedy  
-<br>
-<b>Principles:</b> Priority handling, Optimization
-</p>
-<a href="#top" class="back-btn">Back to Top</a>
+<h3>Principles Used</h3>
+<ul>
+<li>BFS – Area-wise collection</li>
+<li>Pruning – Ignore empty bins</li>
+<li>Edge Relaxation – Route optimization</li>
+</ul>
+
+<a href="#top" class="back">Back to Top</a>
+</div>
+
+<!-- INDUSTRY -->
+<div class="section" id="industry">
+<h2>🏭 Industries & Commercial Sector</h2>
+
+<h3>Algorithms / Data Structures Used</h3>
+<ul>
+<li><b>Arrays:</b> Store industry data  
+<br><b>Time:</b> O(1)</li>
+
+<li><b>Linked List:</b> Business registration records</li>
+
+<li><b>Hashing:</b> Company ID → license lookup</li>
+
+<li><b>Graph:</b> Industrial zone connectivity</li>
+
+<li><b>Dijkstra’s:</b> Logistics optimization</li>
+
+<li><b>Prim’s / Kruskal’s:</b> Infrastructure planning</li>
+
+<li><b>Sorting:</b> Rank industries by output</li>
+</ul>
+
+<h3>Techniques Used</h3>
+<ul>
+<li>Divide & Conquer – Sector-wise planning</li>
+<li>Greedy – Minimum cost expansion</li>
+<li>Backtracking – Alternate logistics routes</li>
+</ul>
+
+<h3>Principles Used</h3>
+<ul>
+<li>DFS & BFS – Network traversal</li>
+<li>Pruning – Remove non-viable zones</li>
+<li>Edge Relaxation – Cost reduction</li>
+</ul>
+
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- SOLAR -->
-<div id="solar" class="idea-section">
-<h3>☀️ Solar Energy System</h3>
-<p>
-<b>Scenario:</b> Solar panels distributed to maximize energy output.
-<br><br>
-<b>Benefits:</b>
+<div class="section" id="solar">
+<h2>☀️ Solar Energy System</h2>
+
+<h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li>Reduced power cost</li>
-<li>Green energy usage</li>
-<li>Efficient power distribution</li>
+<li><b>Arrays:</b> Store panel energy output</li>
+
+<li><b>Linked List:</b> Active solar grids</li>
+
+<li><b>Hashing:</b> Panel ID → maintenance data</li>
+
+<li><b>Graph:</b> Solar plants & power grid</li>
+
+<li><b>Dijkstra’s:</b> Optimal energy transmission</li>
+
+<li><b>Prim’s / Kruskal’s:</b> Minimum cost grid layout</li>
+
+<li><b>Sorting:</b> Rank panels by efficiency</li>
 </ul>
 
-<b>Algorithms Used:</b>
+<h3>Techniques Used</h3>
 <ul>
-<li><b>Segment Tree:</b> Energy monitoring</li>
-<li><b>Greedy:</b> Optimal panel placement</li>
+<li>Divide & Conquer – Sector-wise energy planning</li>
+<li>Greedy – Maximum output placement</li>
+<li>Backtracking – Backup power routing</li>
 </ul>
 
-<b>Techniques:</b> Optimization  
-<br>
-<b>Principles:</b> Range queries, Resource allocation
-</p>
-<a href="#top" class="back-btn">Back to Top</a>
-</div>
-
-<!-- GOVERNMENT -->
-<div id="gov" class="idea-section">
-<h3>🏛 Government & Tax System</h3>
-<p>
-<b>Scenario:</b> Citizen records stored digitally for instant services.
-<br><br>
-<b>Benefits:</b>
+<h3>Principles Used</h3>
 <ul>
-<li>Fast tax payment</li>
-<li>Transparent governance</li>
-<li>Reduced corruption</li>
+<li>DFS & BFS – Grid traversal</li>
+<li>Pruning – Disable low-output panels</li>
+<li>Edge Relaxation – Efficient energy flow</li>
 </ul>
 
-<b>Algorithms Used:</b>
-<ul>
-<li><b>Hash Table:</b> O(1) record lookup</li>
-<li><b>Trie:</b> Fast citizen search</li>
-</ul>
-
-<b>Techniques:</b> Hashing  
-<br>
-<b>Principles:</b> Constant time access, Data integrity
-</p>
-<a href="#top" class="back-btn">Back to Top</a>
+<a href="#top" class="back">Back to Top</a>
 </div>
 
 </body>
