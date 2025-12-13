@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Smart City Systems - Algorithm Implementation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart City Development System</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 body{
@@ -12,16 +15,28 @@ body{
   background:#0f172a;
   color:white;
 }
-.section{
-  width:80%;
+header{
+  background:#1e293b;
+  padding:15px 40px;
+}
+header h1{margin:0;}
+.container{
+  width:85%;
   margin:40px auto;
+}
+.section{
   background:#1e293b;
   padding:30px;
-  border-radius:15px;
-  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  border-radius:18px;
+  margin-bottom:40px;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
 .section h2{color:#38bdf8;}
 .section h3{color:#9ddcff;}
+.chart-box{
+  width:420px;
+  margin:30px auto;
+}
 .back{
   display:inline-block;
   margin-top:20px;
@@ -38,78 +53,69 @@ html{scroll-behavior:smooth;}
 
 <body id="top">
 
+<header>
+<h1>Smart City Development System</h1>
+<p>Tourism • Waste • Industry • Solar (DAA Based)</p>
+</header>
+
+<div class="container">
+
 <!-- TOURISM -->
-<div class="section" id="tourism">
+<div class="section">
 <h2>🌍 Tourism & Culture System</h2>
 
 <h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li><b>Arrays:</b> Store tourist locations, visitor count, entry timings  
-<br><b>Space:</b> Low | <b>Time:</b> O(1)</li>
-
-<li><b>Linked List:</b> Maintain dynamic list of cultural events  
-<br><b>Space:</b> Efficient | <b>Time:</b> O(n)</li>
-
-<li><b>Hashing:</b> Tourist ID → booking & ticket lookup  
-<br><b>Space:</b> Extra | <b>Time:</b> O(1)</li>
-
-<li><b>Graph:</b> Tourist spots as vertices, roads as edges</li>
-
-<li><b>Dijkstra’s:</b> Shortest path between attractions  
-<br><b>Time:</b> O(E log V)</li>
-
-<li><b>Prim’s:</b> Minimum cost heritage connectivity</li>
-
-<li><b>Kruskal’s:</b> Cost-efficient tourism infrastructure</li>
-
-<li><b>Quick / Merge Sort:</b> Sort tourist sites by popularity</li>
+<li><b>Arrays:</b> Store tourist locations, visitor counts (O(1))</li>
+<li><b>Linked List:</b> Dynamic cultural events (O(n))</li>
+<li><b>Hashing:</b> Tourist ID & ticket lookup (O(1))</li>
+<li><b>Graph:</b> Tourist spots as nodes, roads as edges</li>
+<li><b>Dijkstra:</b> Shortest tourist routes (O(E log V))</li>
+<li><b>Prim / Kruskal:</b> Minimum cost heritage connectivity</li>
+<li><b>Sorting:</b> Rank tourist sites by popularity</li>
 </ul>
 
 <h3>Techniques Used</h3>
 <ul>
 <li>Divide & Conquer – Zone-wise tourism planning</li>
-<li>Greedy – Nearest & lowest-cost route selection</li>
-<li>Backtracking – Alternate routes during congestion</li>
+<li>Greedy – Lowest cost route selection</li>
+<li>Backtracking – Alternate route discovery</li>
 </ul>
 
 <h3>Principles Used</h3>
 <ul>
-<li>DFS & BFS – Deep and level-wise site exploration</li>
+<li>DFS & BFS – Deep and level-wise exploration</li>
 <li>Pruning – Remove overcrowded locations</li>
-<li>Edge Relaxation – Update shortest tourist paths</li>
+<li>Edge Relaxation – Update shortest paths</li>
 </ul>
+
+<div class="chart-box">
+<canvas id="tourismChart"></canvas>
+</div>
 
 <a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- WASTE -->
-<div class="section" id="waste">
+<div class="section">
 <h2>♻️ Waste Management System</h2>
 
 <h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li><b>Arrays:</b> Store bin fill levels  
-<br><b>Time:</b> O(1)</li>
-
-<li><b>Linked List:</b> Dynamic garbage vehicle list</li>
-
-<li><b>Hashing:</b> Bin ID → fill status lookup  
-<br><b>Time:</b> O(1)</li>
-
-<li><b>Graph:</b> City map for garbage routing</li>
-
-<li><b>Dijkstra’s:</b> Shortest path for trucks</li>
-
-<li><b>Prim’s / Kruskal’s:</b> Optimal landfill connectivity</li>
-
-<li><b>Sorting:</b> Prioritize fullest bins</li>
+<li><b>Arrays:</b> Bin fill levels</li>
+<li><b>Linked List:</b> Garbage vehicles</li>
+<li><b>Hashing:</b> Bin ID lookup</li>
+<li><b>Graph:</b> City road network</li>
+<li><b>Dijkstra:</b> Shortest truck route</li>
+<li><b>Prim / Kruskal:</b> Optimal processing unit placement</li>
+<li><b>Sorting:</b> Bin priority ordering</li>
 </ul>
 
 <h3>Techniques Used</h3>
 <ul>
-<li>Greedy – Collect highest-priority waste first</li>
-<li>Divide & Conquer – Zone-wise waste handling</li>
-<li>Backtracking – Alternate routes if blocked</li>
+<li>Greedy – Full bins collected first</li>
+<li>Divide & Conquer – Zone-wise handling</li>
+<li>Backtracking – Route recovery</li>
 </ul>
 
 <h3>Principles Used</h3>
@@ -119,85 +125,107 @@ html{scroll-behavior:smooth;}
 <li>Edge Relaxation – Route optimization</li>
 </ul>
 
+<div class="chart-box">
+<canvas id="wasteChart"></canvas>
+</div>
+
 <a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- INDUSTRY -->
-<div class="section" id="industry">
+<div class="section">
 <h2>🏭 Industries & Commercial Sector</h2>
 
 <h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li><b>Arrays:</b> Store industry data  
-<br><b>Time:</b> O(1)</li>
-
-<li><b>Linked List:</b> Business registration records</li>
-
-<li><b>Hashing:</b> Company ID → license lookup</li>
-
-<li><b>Graph:</b> Industrial zone connectivity</li>
-
-<li><b>Dijkstra’s:</b> Logistics optimization</li>
-
-<li><b>Prim’s / Kruskal’s:</b> Infrastructure planning</li>
-
-<li><b>Sorting:</b> Rank industries by output</li>
+<li><b>Arrays:</b> Industry data</li>
+<li><b>Linked List:</b> Business registrations</li>
+<li><b>Hashing:</b> Company ID lookup</li>
+<li><b>Graph:</b> Industrial connectivity</li>
+<li><b>Dijkstra:</b> Logistics routing</li>
+<li><b>Prim / Kruskal:</b> Infrastructure planning</li>
+<li><b>Sorting:</b> Industry ranking</li>
 </ul>
 
 <h3>Techniques Used</h3>
 <ul>
 <li>Divide & Conquer – Sector-wise planning</li>
 <li>Greedy – Minimum cost expansion</li>
-<li>Backtracking – Alternate logistics routes</li>
+<li>Backtracking – Alternate logistics paths</li>
 </ul>
 
 <h3>Principles Used</h3>
 <ul>
 <li>DFS & BFS – Network traversal</li>
-<li>Pruning – Remove non-viable zones</li>
-<li>Edge Relaxation – Cost reduction</li>
+<li>Pruning – Non-viable zone removal</li>
+<li>Edge Relaxation – Cost optimization</li>
 </ul>
+
+<div class="chart-box">
+<canvas id="industryChart"></canvas>
+</div>
 
 <a href="#top" class="back">Back to Top</a>
 </div>
 
 <!-- SOLAR -->
-<div class="section" id="solar">
+<div class="section">
 <h2>☀️ Solar Energy System</h2>
 
 <h3>Algorithms / Data Structures Used</h3>
 <ul>
-<li><b>Arrays:</b> Store panel energy output</li>
-
-<li><b>Linked List:</b> Active solar grids</li>
-
-<li><b>Hashing:</b> Panel ID → maintenance data</li>
-
-<li><b>Graph:</b> Solar plants & power grid</li>
-
-<li><b>Dijkstra’s:</b> Optimal energy transmission</li>
-
-<li><b>Prim’s / Kruskal’s:</b> Minimum cost grid layout</li>
-
-<li><b>Sorting:</b> Rank panels by efficiency</li>
+<li><b>Arrays:</b> Panel output data</li>
+<li><b>Linked List:</b> Active grids</li>
+<li><b>Hashing:</b> Panel ID monitoring</li>
+<li><b>Graph:</b> Energy grid connectivity</li>
+<li><b>Dijkstra:</b> Optimal transmission</li>
+<li><b>Prim / Kruskal:</b> Minimum cost grid</li>
+<li><b>Sorting:</b> Efficiency ranking</li>
 </ul>
 
 <h3>Techniques Used</h3>
 <ul>
-<li>Divide & Conquer – Sector-wise energy planning</li>
+<li>Divide & Conquer – Sector-wise planning</li>
 <li>Greedy – Maximum output placement</li>
-<li>Backtracking – Backup power routing</li>
+<li>Backtracking – Backup routing</li>
 </ul>
 
 <h3>Principles Used</h3>
 <ul>
 <li>DFS & BFS – Grid traversal</li>
-<li>Pruning – Disable low-output panels</li>
-<li>Edge Relaxation – Efficient energy flow</li>
+<li>Pruning – Disable inefficient panels</li>
+<li>Edge Relaxation – Energy flow optimization</li>
 </ul>
+
+<div class="chart-box">
+<canvas id="solarChart"></canvas>
+</div>
 
 <a href="#top" class="back">Back to Top</a>
 </div>
+
+</div>
+
+<script>
+function pie(id, labels, data){
+new Chart(document.getElementById(id),{
+type:'pie',
+data:{
+labels:labels,
+datasets:[{
+data:data,
+backgroundColor:['#38bdf8','#22c55e','#facc15','#f97316']
+}]
+},
+options:{plugins:{legend:{labels:{color:'white'}}}}
+});
+}
+
+pie('tourismChart',['Graph','Dijkstra','Prim/Kruskal','Hashing'],[40,25,25,10]);
+pie('wasteChart',['Priority','Graph','Dijkstra','Greedy'],[30,30,25,15]);
+pie('industryChart',['Hashing','Graph','Prim/Kruskal','Sorting'],[25,35,25,15]);
+pie('solarChart',['Graph','Dijkstra','Prim/Kruskal','Hashing'],[35,25,25,15]);
+</script>
 
 </body>
 </html>
