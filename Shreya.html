@@ -18,234 +18,207 @@
   --muted:#94a3b8;
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
   background:linear-gradient(180deg,#020617,#0f172a);
   color:var(--text);
 }
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:40px 20px 80px;
-}
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#020617ee;
-  padding:15px;
-  border-bottom:1px solid #1e293b;
-}
-nav ul{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-nav a{
-  color:#cfeeff;
-  text-decoration:none;
-  font-weight:600;
-}
-nav a:hover{color:var(--accent);}
-.hero{
-  text-align:center;
-  padding:60px 20px;
-}
-.hero h1{
-  font-size:44px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p{
-  max-width:900px;
-  margin:auto;
-  color:var(--muted);
-  font-size:18px;
-}
+.container{max-width:1300px;margin:auto;padding:40px 20px;}
 .section{
   background:var(--panel);
   border-radius:20px;
   padding:30px;
   margin-bottom:40px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
 }
-.section h2{color:var(--accent);}
-.section p,li{color:#d1d5db;line-height:1.8;font-size:15px;}
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 .card{
   background:#020617;
-  border-radius:18px;
-  padding:22px;
+  border-radius:16px;
+  padding:20px;
   border:1px solid #1e293b;
 }
 .card h3{color:var(--accent2);}
-.chart-box{max-width:420px;margin:30px auto;}
-button{
-  background:var(--accent);
-  color:#020617;
-  border:none;
-  padding:10px 16px;
-  margin:6px;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
+.chart-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
-button:hover{background:var(--accent2);}
-footer{text-align:center;color:#94a3b8;margin-top:60px;}
+.chart-card{
+  background:#020617;
+  border-radius:16px;
+  padding:20px;
+  border:1px solid #1e293b;
+}
+.chart-card canvas{
+  width:100%!important;
+  height:260px!important;
+}
+footer{text-align:center;color:#94a3b8;margin:40px 0;}
 </style>
 </head>
 
 <body>
-
-<nav>
-<ul>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#systems">Systems</a></li>
-<li><a href="#charts">Visualization</a></li>
-<li><a href="#analysis">Complexity</a></li>
-</ul>
-</nav>
-
 <div class="container">
 
-<!-- HERO -->
-<div class="hero" id="intro">
-<h1>Smart City Management System</h1>
-<p>
-A <b>single unified DAA-based project</b> demonstrating Tourism, Industry, Waste,
-Solar Energy and Governance using Data Structures & Algorithms.
+<!-- INTRO -->
+<div class="section">
+<h1 style="text-align:center;color:#38bdf8;">Smart City Management System</h1>
+<p style="text-align:center;color:#94a3b8;">
+Unified DAA Project demonstrating real-world use of algorithms across city services
 </p>
 </div>
 
-<!-- SYSTEMS -->
-<div class="section" id="systems">
-<h2>1. Smart City Systems – Scenario Explanation</h2>
+<!-- TOPIC EXPLANATION -->
+<div class="section">
+<h2>1. Smart City Modules – Algorithmic Explanation</h2>
+
 <div class="cards">
-<div class="card"><h3>🌍 Tourism & Culture</h3><p>Graphs model tourist locations. Dijkstra finds shortest paths. Sorting ranks attractions. BFS/DFS enable guided tours while MST algorithms minimize infrastructure cost.</p></div>
-<div class="card"><h3>🏭 Industries & Commercial</h3><p>Trees manage business registries. Graphs optimize logistics. Prim/Kruskal minimize wiring cost. Hashing enables fast verification and lookup.</p></div>
-<div class="card"><h3>♻️ Waste Management</h3><p>Queues schedule trucks. BFS ensures zone coverage. Greedy routing reduces fuel usage. Hashing tracks smart bins.</p></div>
-<div class="card"><h3>☀️ Solar Energy</h3><p>Graphs model grids. Dijkstra optimizes power flow. MST minimizes wiring. Heaps prioritize energy distribution.</p></div>
-<div class="card"><h3>🏛️ Government & Tax</h3><p>Hash tables store citizen data. Graph workflows route services. Sorting ranks tax records. O(1) access ensures transparency.</p></div>
-</div>
-</div>
 
-<!-- PIE CHART -->
-<div class="section" id="charts">
-<h2>2. Algorithm Usage – Pie Charts</h2>
-<p>Each chart below shows approximate contribution of techniques used in that city service.</p>
-<div class="chart-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
 <div class="card">
-<h3>🌍 Tourism</h3>
-<p>Optimizes visitor movement and improves travel experience.</p>
-<p>Reduces congestion and promotes attractions.</p>
-<p><b>Algorithms/Data Structures:</b> Graphs, Shortest Path</p>
-<p><b>Techniques Used:</b> Path optimization, ranking</p>
-<p><b>Principles:</b> Efficiency, scalability</p>
+<h3>🌍 Tourism & Culture</h3>
+<p><b>Algorithms / Data Structures Used:</b><br>
+Graphs represent tourist spots and roads. Arrays store visitor statistics.
+Dijkstra’s algorithm identifies shortest travel routes.</p>
+
+<p><b>Techniques Applied:</b><br>
+Greedy approach selects nearest attractions. Divide & Conquer splits city zones.</p>
+
+<p><b>Principles Followed:</b><br>
+DFS explores deep cultural routes, BFS ensures nearby attractions are covered.
+Edge relaxation improves route efficiency.</p>
 </div>
+
 <div class="card">
-<h3>🏭 Industry</h3>
-<p>Enhances logistics planning and infrastructure usage.</p>
-<p>Reduces operational cost.</p>
-<p><b>Algorithms/Data Structures:</b> Trees, Graphs</p>
-<p><b>Techniques Used:</b> Cost optimization</p>
-<p><b>Principles:</b> Resource minimization</p>
+<h3>🏭 Industries & Commercial Sector</h3>
+<p><b>Algorithms / Data Structures Used:</b><br>
+Trees organize industrial records. Graphs model supply routes.
+Prim’s and Kruskal’s algorithms reduce infrastructure cost.</p>
+
+<p><b>Techniques Applied:</b><br>
+Greedy selection chooses minimum-cost connections.
+Sorting arranges industries by output.</p>
+
+<p><b>Principles Followed:</b><br>
+Pruning avoids unnecessary wiring paths.
+Optimal resource utilization is ensured.</p>
 </div>
+
 <div class="card">
-<h3>♻️ Waste</h3>
-<p>Ensures timely waste collection.</p>
-<p>Improves city cleanliness.</p>
-<p><b>Algorithms/Data Structures:</b> Queues, Traversal</p>
-<p><b>Techniques Used:</b> Scheduling</p>
-<p><b>Principles:</b> Priority handling</p>
+<h3>♻️ Waste Management</h3>
+<p><b>Algorithms / Data Structures Used:</b><br>
+Queues manage garbage truck scheduling.
+Graphs map waste bins and processing units.</p>
+
+<p><b>Techniques Applied:</b><br>
+Greedy routing minimizes fuel consumption.
+Backtracking finds alternate routes when paths fail.</p>
+
+<p><b>Principles Followed:</b><br>
+BFS ensures full area coverage.
+Priority handling avoids overflow situations.</p>
 </div>
+
 <div class="card">
-<h3>☀️ Solar</h3>
-<p>Optimizes energy generation and flow.</p>
-<p>Reduces power loss.</p>
-<p><b>Algorithms/Data Structures:</b> Graphs, MST</p>
-<p><b>Techniques Used:</b> Network optimization</p>
-<p><b>Principles:</b> Sustainability</p>
+<h3>☀️ Solar Energy Management</h3>
+<p><b>Algorithms / Data Structures Used:</b><br>
+Graphs model power grids.
+Dijkstra optimizes energy transmission paths.
+Heaps prioritize energy distribution.</p>
+
+<p><b>Techniques Applied:</b><br>
+Divide & Conquer separates grids into zones.
+Greedy method reduces wiring loss.</p>
+
+<p><b>Principles Followed:</b><br>
+Edge relaxation improves power flow efficiency.
+Fault isolation improves system reliability.</p>
 </div>
+
 <div class="card">
-<h3>🏛️ Government</h3>
-<p>Speeds up citizen services.</p>
-<p>Improves transparency.</p>
-<p><b>Algorithms/Data Structures:</b> Hash Tables</p>
-<p><b>Techniques Used:</b> Fast lookup</p>
-<p><b>Principles:</b> Accountability</p>
-</div>
-</div>
-</div>
-<div class="chart-box"><canvas id="pieChart"></canvas></div>
-</div>
+<h3>🏛️ Government & Tax System</h3>
+<p><b>Algorithms / Data Structures Used:</b><br>
+Hash tables store citizen and tax records.
+Queues manage service requests.</p>
 
-<!-- ALGORITHMS & TECHNIQUES -->
-<div class="section" id="analysis">
-<h2>3. Algorithms, Techniques & Principles Used</h2>
+<p><b>Techniques Applied:</b><br>
+Fast lookup techniques ensure instant verification.
+Sorting prioritizes tax defaulters.</p>
 
-<h3>🔹 Algorithms / Data Structures Used</h3>
-<ul>
-<li><b>Arrays:</b> Linear structure storing same-type elements in contiguous memory. Used to store network nodes, IP allocations, and bandwidth records. <br><b>Space:</b> Low efficiency <b>Time:</b> O(1) fast access</li>
-
-<li><b>Linked List:</b> Nodes connected using pointers. Used to maintain dynamic lists of active users/devices. <br><b>Space:</b> Efficient insertion/deletion <b>Time:</b> O(n)</li>
-
-<li><b>Hashing:</b> Maps keys to fixed-size values. Used for customer ID, billing, and IP lookups. <br><b>Space:</b> Extra space <b>Time:</b> O(1) average</li>
-
-<li><b>Graph:</b> Vertices represent routers/towers and edges represent connections. Used for network topology. <br><b>Space:</b> Moderate <b>Time:</b> Efficient path computation</li>
-
-<li><b>Dijkstra’s Algorithm:</b> Finds shortest path from a source node. Used for optimal routing between routers/fiber nodes. <br><b>Space:</b> Low <b>Time:</b> O(E log V)</li>
-
-<li><b>Prim’s Algorithm:</b> Builds minimum spanning tree by expanding from a node. Used for fiber layout planning. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
-
-<li><b>Kruskal’s Algorithm:</b> Builds MST by selecting lowest-weight edges without cycles. Used for cost‑efficient tower wiring. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
-
-<li><b>Quick Sort / Merge Sort:</b> Sorting techniques to organize bandwidth, distance, and user data. <br><b>Space:</b> Low <b>Time:</b> O(n log n)</li>
-</ul>
-
-<h3>🔹 Techniques Used</h3>
-<ul>
-<li><b>Divide & Conquer:</b> Breaks city into zones and optimizes routing in each zone independently.</li>
-<li><b>Greedy Technique:</b> Selects lowest‑cost edge/tower at each step (used in Prim & Kruskal).</li>
-<li><b>Backtracking:</b> Explores alternate routing paths when a selected path fails.</li>
-</ul>
-
-<h3>🔹 Principles Used</h3>
-<ul>
-<li><b>Brave & Cautious Travel (DFS & BFS):</b> DFS explores deeply like a brave traveler, BFS explores level‑wise like a cautious traveler.</li>
-<li><b>Pruning:</b> Eliminates unnecessary paths that cannot produce optimal solutions.</li>
-<li><b>Edge Relaxation:</b> Updates shortest distances between nodes, core principle of Dijkstra’s algorithm.</li>
-</ul>
+<p><b>Principles Followed:</b><br>
+O(1) access ensures transparency.
+Workflow optimization minimizes delays.</p>
 </div>
 
-<footer>© 2025 Smart City Management System | Unified DAA Project</footer>
+</div>
+</div>
+
+<!-- PIE CHARTS -->
+<div class="section">
+<h2>2. Algorithm Usage Distribution</h2>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+<h3>Tourism</h3>
+<canvas id="tourismChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Industry</h3>
+<canvas id="industryChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Waste</h3>
+<canvas id="wasteChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Solar</h3>
+<canvas id="solarChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Government</h3>
+<canvas id="govChart"></canvas>
+</div>
+
+</div>
+</div>
+
+<footer>© 2025 Smart City Management System | DAA Project</footer>
 
 </div>
 
 <script>
-let chart;
-function loadChart(type){
-const dataMap={
-  tourism:{labels:['Graph','Dijkstra','Sorting','DFS/BFS'],data:[35,30,20,15]},
-  industry:{labels:['Trees','Graph','Prim/Kruskal','Hashing'],data:[25,30,25,20]},
-  waste:{labels:['Queue','BFS','Greedy','Hashing'],data:[30,25,25,20]},
-  solar:{labels:['Graph','Dijkstra','MST','Heap'],data:[30,25,25,20]},
-  gov:{labels:['Hashing','Sorting','Graph','Queue'],data:[40,25,20,15]}
-};
-const ctx=document.getElementById('pieChart');
-if(chart) chart.destroy();
-chart=new Chart(ctx,{type:'pie',data:{labels:dataMap[type].labels,datasets:[{data:dataMap[type].data,backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']}]},options:{plugins:{legend:{labels:{color:'white'}}}}});
+function pie(id, labels, data){
+new Chart(document.getElementById(id),{
+type:'pie',
+data:{
+labels:labels,
+datasets:[{
+data:data,
+backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']
+}]
+},
+options:{
+responsive:true,
+maintainAspectRatio:false,
+plugins:{legend:{labels:{color:'white'}}}
 }
-loadChart('tourism');
+});
+}
+
+pie('tourismChart',['Graphs','Dijkstra','Sorting','DFS/BFS'],[35,30,20,15]);
+pie('industryChart',['Trees','Graphs','Prim/Kruskal','Sorting'],[25,30,25,20]);
+pie('wasteChart',['Queues','BFS','Greedy','Backtracking'],[30,25,25,20]);
+pie('solarChart',['Graphs','Dijkstra','MST','Heap'],[30,25,25,20]);
+pie('govChart',['Hashing','Queues','Sorting','Graph'],[40,25,20,15]);
 </script>
 
 </body>
