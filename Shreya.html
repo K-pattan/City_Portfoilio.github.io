@@ -6,6 +6,7 @@
 <title>Smart City Management System | DAA Project</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 :root{
@@ -103,6 +104,11 @@ th,td{
 }
 th{background:#020617;color:var(--accent);}
 td{background:#020617bb;}
+canvas{
+  max-width:500px;
+  margin:auto;
+  display:block;
+}
 footer{
   text-align:center;
   color:#94a3b8;
@@ -119,6 +125,7 @@ footer{
 <li><a href="#systems">Systems</a></li>
 <li><a href="#algorithms">Algorithms</a></li>
 <li><a href="#analysis">Complexity</a></li>
+<li><a href="#charts">Charts</a></li>
 </ul>
 </nav>
 
@@ -136,169 +143,51 @@ covering tourism, industries, waste, solar energy and governance.
 <!-- SYSTEMS -->
 <div class="section" id="systems">
 <h2>1. Smart City Systems – Scenario Explanation</h2>
-
 <div class="cards">
-
-<div class="card">
-<h3>🌍 Tourism & Culture</h3>
-<p>
-Tourist locations are managed efficiently using structured storage.
-Visitor movement is optimized through shortest-path routing.
-Overcrowded locations are detected early and alternate routes are suggested.
-Dynamic ranking helps promote less-visited cultural sites.
-The system improves tourist experience while preserving heritage.
-</p>
-</div>
-
-<div class="card">
-<h3>🏭 Industries & Commercial</h3>
-<p>
-Industrial zones and businesses are organized for fast access and verification.
-Logistics routes are optimized to reduce transportation cost.
-Infrastructure planning minimizes wiring and road expenses.
-Sector-wise growth ensures scalability and economic stability.
-This system boosts productivity and investment.
-</p>
-</div>
-
-<div class="card">
-<h3>♻️ Waste Management</h3>
-<p>
-Bin levels are monitored in real time to avoid overflow.
-Collection vehicles dynamically change routes based on priority.
-Processing units are optimally connected to reduce fuel cost.
-Congested or blocked paths trigger automatic rerouting.
-The city remains clean and sustainable.
-</p>
-</div>
-
-<div class="card">
-<h3>☀️ Solar Energy</h3>
-<p>
-Energy output from solar panels is continuously tracked.
-Efficient transmission paths reduce power loss.
-Faulty panels are isolated automatically.
-Grid planning minimizes infrastructure cost.
-The system supports renewable energy adoption.
-</p>
-</div>
-
-<div class="card">
-<h3>🏛️ Government & Tax</h3>
-<p>
-Citizen records are stored securely for instant access.
-Tax payments and service requests are processed efficiently.
-Workflow routing minimizes delays.
-Priority handling ensures emergency services.
-Transparency and accountability are improved.
-</p>
-</div>
-
+<div class="card"><h3>🌍 Tourism & Culture</h3><p>Shortest paths optimize tourist flow and reduce congestion.</p></div>
+<div class="card"><h3>🏭 Industries</h3><p>Infrastructure and logistics optimized for minimal cost.</p></div>
+<div class="card"><h3>♻️ Waste Management</h3><p>Dynamic routing ensures efficient garbage collection.</p></div>
+<div class="card"><h3>☀️ Solar Energy</h3><p>Optimized power distribution with minimum loss.</p></div>
+<div class="card"><h3>🏛️ Government</h3><p>Fast record access and transparent services.</p></div>
 </div>
 </div>
 
 <!-- ALGORITHMS -->
 <div class="section" id="algorithms">
 <h2>2. Algorithms & Data Structures Used</h2>
-
 <div class="cards">
-
-<div class="card">
-<h3>Graphs</h3>
-<ul>
-<li>City zones as vertices</li>
-<li>Roads, grids, networks as edges</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Dijkstra</h3>
-<ul>
-<li>Tourist routes</li>
-<li>Waste collection paths</li>
-<li>Energy transmission</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Prim & Kruskal</h3>
-<ul>
-<li>Minimum cost infrastructure</li>
-<li>Grid & network planning</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Hashing</h3>
-<ul>
-<li>Citizen ID lookup</li>
-<li>Tax & service records</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Sorting</h3>
-<ul>
-<li>Tourist popularity</li>
-<li>Industry ranking</li>
-</ul>
-</div>
-
+<div class="card"><h3>Graphs</h3><p>City modeled as nodes and edges.</p></div>
+<div class="card"><h3>Dijkstra</h3><p>Shortest route computation.</p></div>
+<div class="card"><h3>Prim & Kruskal</h3><p>Minimum cost infrastructure.</p></div>
+<div class="card"><h3>Hashing</h3><p>Instant citizen record access.</p></div>
+<div class="card"><h3>Sorting</h3><p>Ranking and prioritization.</p></div>
 </div>
 </div>
 
 <!-- ANALYSIS -->
 <div class="section" id="analysis">
 <h2>3. Time Complexity Analysis</h2>
-
 <table>
-<tr>
-<th>System</th>
-<th>Algorithm</th>
-<th>Purpose</th>
-<th>Time Complexity</th>
-</tr>
-<tr>
-<td>Tourism</td>
-<td>Dijkstra</td>
-<td>Shortest routes</td>
-<td>O(E log V)</td>
-</tr>
-<tr>
-<td>Waste</td>
-<td>BFS</td>
-<td>Area coverage</td>
-<td>O(V + E)</td>
-</tr>
-<tr>
-<td>Industry</td>
-<td>Prim/Kruskal</td>
-<td>Cost optimization</td>
-<td>O(E log V)</td>
-</tr>
-<tr>
-<td>Solar</td>
-<td>Dijkstra</td>
-<td>Energy routing</td>
-<td>O(E log V)</td>
-</tr>
-<tr>
-<td>Gov & Tax</td>
-<td>Hashing</td>
-<td>Record lookup</td>
-<td>O(1)</td>
-</tr>
+<tr><th>Algorithm</th><th>Usage</th><th>Time</th></tr>
+<tr><td>Dijkstra</td><td>Routing</td><td>O(E log V)</td></tr>
+<tr><td>Prim/Kruskal</td><td>Infrastructure</td><td>O(E log V)</td></tr>
+<tr><td>BFS</td><td>Coverage</td><td>O(V+E)</td></tr>
+<tr><td>Hashing</td><td>Lookup</td><td>O(1)</td></tr>
 </table>
+</div>
+
+<!-- PIE CHART -->
+<div class="section" id="charts">
+<h2>4. Smart City Algorithm Usage – Pie Chart</h2>
+<canvas id="pieChart"></canvas>
 </div>
 
 <!-- CONCLUSION -->
 <div class="section">
-<h2>4. Conclusion</h2>
+<h2>5. Conclusion</h2>
 <p>
-This Smart City Management System demonstrates how
-<b>Data Structures and Algorithms</b> can solve real-world urban challenges.
-By applying graphs, shortest-path algorithms, hashing and greedy techniques,
-the system ensures efficiency, scalability, transparency and sustainability.
+This project shows how DSA concepts efficiently solve real-world smart city problems
+with scalability, optimization and transparency.
 </p>
 </div>
 
@@ -307,5 +196,38 @@ the system ensures efficiency, scalability, transparency and sustainability.
 </footer>
 
 </div>
+
+<script>
+new Chart(document.getElementById("pieChart"), {
+  type: "pie",
+  data: {
+    labels: [
+      "Tourism Routing (Dijkstra)",
+      "Waste Management (BFS)",
+      "Infrastructure (Prim/Kruskal)",
+      "Government Records (Hashing)",
+      "Sorting & Ranking"
+    ],
+    datasets: [{
+      data: [25, 20, 25, 15, 15],
+      backgroundColor: [
+        "#38bdf8",
+        "#22d3ee",
+        "#0ea5e9",
+        "#7dd3fc",
+        "#0284c7"
+      ]
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        labels: { color: "#e5e7eb" }
+      }
+    }
+  }
+});
+</script>
+
 </body>
 </html>
