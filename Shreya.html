@@ -69,89 +69,123 @@ footer{text-align:center;color:#94a3b8;margin:40px 0;}
 <div class="section">
 <h1 style="text-align:center;color:#38bdf8;">Smart City Management System</h1>
 <p style="text-align:center;color:#94a3b8;">
-Unified DAA Project demonstrating real-world use of algorithms across city services
+A unified Design and Analysis of Algorithms (DAA) project that demonstrates
+how classical algorithms solve real-world smart city problems efficiently.
 </p>
 </div>
 
 <!-- TOPIC EXPLANATION -->
 <div class="section">
-<h2>1. Smart City Modules – Algorithmic Explanation</h2>
+<h2>1. Smart City Modules – Detailed Algorithmic Elaboration</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🌍 Tourism & Culture</h3>
-<p><b>Algorithms / Data Structures Used:</b><br>
-Graphs represent tourist spots and roads. Arrays store visitor statistics.
-Dijkstra’s algorithm identifies shortest travel routes.</p>
+<p>
+<b>Algorithms / Data Structures Used:</b><br>
+Tourist locations and roads are represented using graphs where nodes denote places
+and edges denote connectivity. Arrays maintain visitor statistics, while Dijkstra’s
+algorithm computes the shortest and fastest routes between attractions.
+</p>
 
-<p><b>Techniques Applied:</b><br>
-Greedy approach selects nearest attractions. Divide & Conquer splits city zones.</p>
+<p>
+<b>Techniques Applied:</b><br>
+Greedy techniques select nearby tourist spots first to minimize travel time.
+Divide and Conquer divides the city into tourism zones for better crowd control.
+</p>
 
-<p><b>Principles Followed:</b><br>
-DFS explores deep cultural routes, BFS ensures nearby attractions are covered.
-Edge relaxation improves route efficiency.</p>
+<p>
+<b>Principles Followed:</b><br>
+DFS explores long cultural routes deeply, while BFS ensures nearby locations are
+covered systematically. Edge relaxation improves route accuracy.
+</p>
 </div>
 
 <div class="card">
 <h3>🏭 Industries & Commercial Sector</h3>
-<p><b>Algorithms / Data Structures Used:</b><br>
-Trees organize industrial records. Graphs model supply routes.
-Prim’s and Kruskal’s algorithms reduce infrastructure cost.</p>
+<p>
+<b>Algorithms / Data Structures Used:</b><br>
+Tree structures organize industrial registrations and ownership hierarchies.
+Graphs model supply chains and transportation routes. Prim’s and Kruskal’s
+algorithms generate minimum-cost infrastructure networks.
+</p>
 
-<p><b>Techniques Applied:</b><br>
-Greedy selection chooses minimum-cost connections.
-Sorting arranges industries by output.</p>
+<p>
+<b>Techniques Applied:</b><br>
+Greedy selection always chooses the least expensive connection.
+Sorting algorithms arrange industries based on production capacity.
+</p>
 
-<p><b>Principles Followed:</b><br>
-Pruning avoids unnecessary wiring paths.
-Optimal resource utilization is ensured.</p>
+<p>
+<b>Principles Followed:</b><br>
+Pruning removes unnecessary connections, ensuring efficient resource usage
+and minimal operational overhead.
+</p>
 </div>
 
 <div class="card">
 <h3>♻️ Waste Management</h3>
-<p><b>Algorithms / Data Structures Used:</b><br>
-Queues manage garbage truck scheduling.
-Graphs map waste bins and processing units.</p>
+<p>
+<b>Algorithms / Data Structures Used:</b><br>
+Queues manage scheduling of garbage collection trucks.
+Graphs map waste bins to processing plants for optimized routing.
+</p>
 
-<p><b>Techniques Applied:</b><br>
-Greedy routing minimizes fuel consumption.
-Backtracking finds alternate routes when paths fail.</p>
+<p>
+<b>Techniques Applied:</b><br>
+Greedy routing reduces fuel consumption by choosing shortest paths.
+Backtracking is used to find alternative routes if a path is blocked.
+</p>
 
-<p><b>Principles Followed:</b><br>
-BFS ensures full area coverage.
-Priority handling avoids overflow situations.</p>
+<p>
+<b>Principles Followed:</b><br>
+BFS guarantees all city zones are serviced.
+Priority handling prevents overflow of waste bins.
+</p>
 </div>
 
 <div class="card">
 <h3>☀️ Solar Energy Management</h3>
-<p><b>Algorithms / Data Structures Used:</b><br>
-Graphs model power grids.
-Dijkstra optimizes energy transmission paths.
-Heaps prioritize energy distribution.</p>
+<p>
+<b>Algorithms / Data Structures Used:</b><br>
+Graphs represent power grids connecting solar panels to substations.
+Dijkstra’s algorithm ensures minimum transmission loss.
+Heaps prioritize energy distribution based on demand.
+</p>
 
-<p><b>Techniques Applied:</b><br>
-Divide & Conquer separates grids into zones.
-Greedy method reduces wiring loss.</p>
+<p>
+<b>Techniques Applied:</b><br>
+Divide and Conquer separates grids into independent regions.
+Greedy techniques reduce wiring and maintenance costs.
+</p>
 
-<p><b>Principles Followed:</b><br>
-Edge relaxation improves power flow efficiency.
-Fault isolation improves system reliability.</p>
+<p>
+<b>Principles Followed:</b><br>
+Edge relaxation optimizes energy flow.
+Fault isolation increases reliability of the power system.
+</p>
 </div>
 
 <div class="card">
 <h3>🏛️ Government & Tax System</h3>
-<p><b>Algorithms / Data Structures Used:</b><br>
-Hash tables store citizen and tax records.
-Queues manage service requests.</p>
+<p>
+<b>Algorithms / Data Structures Used:</b><br>
+Hash tables store citizen records and tax details for constant-time access.
+Queues manage service request workflows.
+</p>
 
-<p><b>Techniques Applied:</b><br>
-Fast lookup techniques ensure instant verification.
-Sorting prioritizes tax defaulters.</p>
+<p>
+<b>Techniques Applied:</b><br>
+Fast lookup methods speed up verification.
+Sorting prioritizes tax defaulters and pending applications.
+</p>
 
-<p><b>Principles Followed:</b><br>
+<p>
+<b>Principles Followed:</b><br>
 O(1) access ensures transparency.
-Workflow optimization minimizes delays.</p>
+Workflow optimization minimizes administrative delays.
+</p>
 </div>
 
 </div>
@@ -162,32 +196,11 @@ Workflow optimization minimizes delays.</p>
 <h2>2. Algorithm Usage Distribution</h2>
 
 <div class="chart-grid">
-
-<div class="chart-card">
-<h3>Tourism</h3>
-<canvas id="tourismChart"></canvas>
-</div>
-
-<div class="chart-card">
-<h3>Industry</h3>
-<canvas id="industryChart"></canvas>
-</div>
-
-<div class="chart-card">
-<h3>Waste</h3>
-<canvas id="wasteChart"></canvas>
-</div>
-
-<div class="chart-card">
-<h3>Solar</h3>
-<canvas id="solarChart"></canvas>
-</div>
-
-<div class="chart-card">
-<h3>Government</h3>
-<canvas id="govChart"></canvas>
-</div>
-
+<div class="chart-card"><h3>Tourism</h3><canvas id="tourismChart"></canvas></div>
+<div class="chart-card"><h3>Industry</h3><canvas id="industryChart"></canvas></div>
+<div class="chart-card"><h3>Waste</h3><canvas id="wasteChart"></canvas></div>
+<div class="chart-card"><h3>Solar</h3><canvas id="solarChart"></canvas></div>
+<div class="chart-card"><h3>Government</h3><canvas id="govChart"></canvas></div>
 </div>
 </div>
 
@@ -199,21 +212,10 @@ Workflow optimization minimizes delays.</p>
 function pie(id, labels, data){
 new Chart(document.getElementById(id),{
 type:'pie',
-data:{
-labels:labels,
-datasets:[{
-data:data,
-backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']
-}]
-},
-options:{
-responsive:true,
-maintainAspectRatio:false,
-plugins:{legend:{labels:{color:'white'}}}
-}
+data:{labels:labels,datasets:[{data:data,backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'white'}}}}
 });
 }
-
 pie('tourismChart',['Graphs','Dijkstra','Sorting','DFS/BFS'],[35,30,20,15]);
 pie('industryChart',['Trees','Graphs','Prim/Kruskal','Sorting'],[25,30,25,20]);
 pie('wasteChart',['Queues','BFS','Greedy','Backtracking'],[30,25,25,20]);
