@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f3f7; /* page background: light grey-blue */
+      background-color: #f0f3f7;
       color: #1f2937;
     }
 
@@ -54,7 +54,7 @@
     }
 
     .section {
-      background: #cfd9e8; /* section background */
+      background: #cfd9e8;
       padding: 25px 30px;
       margin-bottom: 30px;
       border-radius: 10px;
@@ -69,7 +69,7 @@
     .algorithm-box {
       margin-top: 15px;
       padding: 14px;
-      background: #d5e2ff; /* soft blue */
+      background: #d5e2ff;
       border-left: 5px solid #4c6ef5;
       font-size: 14px;
       border-radius: 6px;
@@ -81,12 +81,8 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
-
-      /* Blend white backgrounds with page */
       background-color: #f0f3f7;
       mix-blend-mode: multiply;
-
-      /* Hover effect */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
@@ -114,18 +110,16 @@
   <h1>Anagha</h1>
   <h2>Smart City Services – Maharajpur</h2>
 
-  <!-- 1. Recreation & Lifestyle -->
   <div class="section">
     <img src="images/park.jpg" alt="Parks and recreation">
     <h3>Recreation & Lifestyle</h3>
     <p>
       Parks, walking tracks, and community spaces improve physical and mental well-being.
-      Facilities are distributed evenly across city zones to ensure accessibility.
+      Smart mapping ensures every zone has access. IoT lighting and fitness stations enhance safety and engagement.
     </p>
     <p>
       <b>Purpose:</b> Promote health, eco-friendly habits, and social interaction.<br>
-      <b>Implementation:</b> Smart mapping ensures equal access, IoT-enabled lighting improves safety, and fitness stations encourage activity.<br>
-      <b>Extra Point:</b> Green zones also improve air quality and biodiversity, making the city healthier overall.
+      <b>Implementation:</b> BFS algorithm ensures equal reachability from residential zones.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Breadth First Search (BFS)<br>
@@ -134,17 +128,15 @@
     </div>
   </div>
 
-  <!-- 2. Public Safety & Services -->
   <div class="section">
     <img src="images/safety.jpg" alt="Public safety services">
     <h3>Public Safety & Services</h3>
     <p>
-      AI cameras, drone monitoring, and emergency units ensure rapid response to incidents anywhere in the city.
+      AI cameras, drones, and emergency units ensure rapid response. Panic buttons and predictive analytics prevent incidents.
     </p>
     <p>
       <b>Purpose:</b> Minimize response time and monitor traffic/events.<br>
-      <b>Implementation:</b> AI detection, drone surveillance, panic buttons, and optimized routing for emergency vehicles.<br>
-      <b>Extra Point:</b> Predictive analytics forecast crowd density during festivals or traffic jams to prevent accidents.
+      <b>Implementation:</b> Dijkstra’s algorithm routes emergency vehicles efficiently.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Dijkstra’s Algorithm<br>
@@ -153,17 +145,16 @@
     </div>
   </div>
 
-  <!-- 3. Digital Services -->
   <div class="section">
     <img src="images/digital.jpg" alt="Digital services">
     <h3>Digital Services</h3>
     <p>
-      Centralized platforms like citizen portals, traffic apps, smart parking, and metro scheduling make services efficient and transparent.
+      Citizen portals, traffic apps, smart parking, and metro scheduling make services accessible and transparent.
+      AI chatbots and blockchain ensure speed and security.
     </p>
     <p>
-      <b>Purpose:</b> Deliver services quickly and transparently.<br>
-      <b>Implementation:</b> Digital dashboards with AI chatbots, multilingual support, and secure blockchain records.<br>
-      <b>Extra Point:</b> Voice-enabled services ensure accessibility for seniors and differently-abled citizens.
+      <b>Purpose:</b> Efficient and transparent service delivery.<br>
+      <b>Implementation:</b> Hashing enables fast access to records and updates.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Hashing<br>
@@ -172,17 +163,16 @@
     </div>
   </div>
 
-  <!-- 4. Senior Citizen & Disabled-Friendly Services -->
   <div class="section">
     <img src="images/senior.jpg" alt="Senior citizen services">
     <h3>Senior Citizen & Disabled-Friendly Services</h3>
     <p>
-      Priority systems ensure elderly and differently-abled individuals receive timely assistance with accessible transport, medical services, and dedicated queues.
+      Accessible transport, medical support, and priority queues ensure dignity and care.
+      Wearables and ramps improve mobility and safety.
     </p>
     <p>
       <b>Purpose:</b> Inclusivity and prompt attention.<br>
-      <b>Implementation:</b> Wheelchair ramps, tactile paths, wearable health alerts, and priority transport booking.<br>
-      <b>Extra Point:</b> Emergency alerts linked to medical wearables notify hospitals instantly during health crises.
+      <b>Implementation:</b> Priority queues handle requests based on urgency.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Priority Queue (Heap)<br>
@@ -191,17 +181,16 @@
     </div>
   </div>
 
-  <!-- 5. Smart Water Management -->
   <div class="section">
     <img src="images/water.jpg" alt="Smart water management">
     <h3>Smart Water Management</h3>
     <p>
-      Monitors water supply, detects leaks, and distributes water efficiently using sensors and smart valves.
+      Sensors detect leaks, smart valves regulate flow, and apps track usage.
+      Rainwater harvesting and predictive analytics ensure sustainability.
     </p>
     <p>
       <b>Purpose:</b> Sustainable water usage, reduce wastage, ensure supply.<br>
-      <b>Implementation:</b> Leak detection sensors, predictive analytics, rainwater harvesting, and mobile usage tracking.<br>
-      <b>Extra Point:</b> Citizens can monitor consumption via apps, encouraging conservation and lowering bills.
+      <b>Implementation:</b> Greedy allocation based on demand and priority.
     </p>
     <div class="algorithm-box">
       <b>Algorithm:</b> Greedy Technique<br>
