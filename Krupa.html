@@ -213,7 +213,7 @@
     <p>Telecommunication services involve the transmission of information over long distances
       using technologies such as phones, internet networks, satellites, and wireless systems.
         <br><br>
-        <b>1.	High speed Fiber & 5G network:</b>
+        <b>📡	High speed Fiber & 5G network:</b>
           This idea aligns with the United Nations Sustainable Development Goal (SDG) 9 – Industry,
           Innovation & Infrastructure.<br>
           It also indirectly supports:<br>
@@ -346,7 +346,7 @@
     <h3>Agriculture</h3>
     <p>Agriculture is the practice of cultivating crops, raising animals, and managing natural resources to produce food and raw materials.
     <br><br>
-    <b>1. Drone Based Crop Monitoring and spraying: </b>This idea aligns with the United nations Sustainable Development Goal (SDG) SDG 2 – Zero Hunger, SDG 12 – Responsible Consumption & Production, SDG 9 – Industry, Innovation & Infrastructure , SDG 15 – Life on Land
+    <b>🌳 Drone Based Crop Monitoring and spraying: </b>This idea aligns with the United nations Sustainable Development Goal (SDG) SDG 2 – Zero Hunger, SDG 12 – Responsible Consumption & Production, SDG 9 – Industry, Innovation & Infrastructure , SDG 15 – Life on Land
       <br><br>
       
       <b>How it Solves Citizens and Local Business Problems:</b><br>
@@ -497,7 +497,7 @@
   <div id="idea3" class="idea-section">
     <h3>Population & Data Management</h3>
     <p>Population & data management involves collecting, analyzing, and using information about people for planning, development, and decision-making.
-    <br><b>Smart Citizen Id System</b><br>
+    <br><b>📊 Smart Citizen Id System</b><br>
     The Smart Citizen ID system aligns with multiple SDGs, acting as a crucial enabler for almost all digital services in the city.<br>
     <ul>
       <li><b>SDG 16.9 (Primary Target): </b>Provide legal identity for all, including birth registration, by 2030.<br></li>
@@ -564,17 +564,137 @@
     </ul><br>
     
     
-    
+    <a href="#top" class="back-btn">Back to Top</a>
     </p>
   </div>
 
   <div id="idea4" class="idea-section">
     <h3>Utility Services</h3>
-    <p>Utility services supply essential needs such as electricity, water, gas, waste management, and sanitation.</p>
+    <p>Utility services supply essential needs such as electricity, water, gas, waste management, and sanitation.<br>
+    <b>🛵 EV Charging point</b><br>
+    It aligns with the following SDG's:<br>
+<ul>
+  <li><b>SDG 7 – Affordable and Clean Energy :</b><br>
+  Provides accessible EV charging infrastructure, promoting the use of clean and sustainable electric energy for transportation.
+  </li><br>
+
+  <li><b>SDG 11 – Sustainable Cities and Communities :</b><br>
+  Supports smart urban mobility by optimally placing charging stations to improve accessibility and reduce congestion.
+  </li><br>
+
+  <li><b>SDG 13 – Climate Action :</b><br>
+  Encourages the shift from fossil-fuel vehicles to electric vehicles, helping reduce carbon emissions and air pollution.
+  </li><br>
+</ul><br>
+
+<b>How it Solves People’s Problems :</b><br>
+<ul>
+  <li>Reduces range anxiety by ensuring charging points are available at reachable and strategic locations.</li><br>
+  <li>Saves time by minimizing travel distance to the nearest charging station.</li><br>
+  <li>Improves air quality, leading to better public health.</li><br>
+  <li>Makes electric vehicle adoption easier and more convenient for daily commuters.</li>
+</ul>
+
+    
+    <b>Algorithms/data structures used :</b><br>
+<ul>
+  <li><b>Graph (Adjacency List) :</b><br>
+  City Road Network Modeling. Nodes represent junctions/areas and edges represent roads with distances and traffic weights. Used to analyze accessibility and connectivity of EV charging points.<br>
+  <b>Space Efficiency:</b> O(V + E)<br>
+  <b>Time Efficiency :</b> O(V + E) (Traversal)<br>
+  </li><br>
+
+  <li><b>Priority Queue (Heap) :</b><br>
+  Optimal Location Selection. Ranks candidate locations based on EV demand, traffic density, and infrastructure availability to greedily select the best charging station sites.<br>
+  <b>Space Efficiency:</b> O(n)<br>
+  <b>Time Efficiency :</b> O(log n) (Insertion/Extraction)<br>
+  </li><br>
+
+  <li><b>Hash Table :</b><br>
+  Fast Location Lookup & Validation. Maps area IDs to charging station details for real-time verification of existing stations and avoidance of duplication.<br>
+  <b>Space Efficiency:</b> O(n)<br>
+  <b>Time Efficiency :</b> O(1) Average (Lookup/Insertion)<br>
+  </li><br>
+
+  <li><b>Arrays :</b><br>
+  Base Data Storage. Stores raw input data such as EV density, traffic counts, power availability, and geographical coordinates.<br>
+  <b>Space Efficiency:</b> O(n)<br>
+  <b>Time Efficiency :</b> O(1) (Access)<br>
+  </li><br>
+
+  <li><b>Union-Find (Disjoint Set) :</b><br>
+  Connectivity Analysis. Ensures charging stations are placed within connected road components and avoids isolated or unreachable locations.<br>
+  <b>Space Efficiency:</b> O(n)<br>
+  <b>Time Efficiency :</b> O(α(n)) (Almost constant)<br>
+  </li><br>
+
+  <li><b>Dijkstra’s Algorithm :</b><br>
+  Shortest Distance Calculation. Computes minimum travel distance from any location to the nearest charging station, improving user convenience and accessibility.<br>
+  <b>Space Efficiency:</b> O(V)<br>
+  <b>Time Efficiency :</b> O(E log V)<br>
+  </li><br>
+
+  <li><b>BFS / DFS :</b><br>
+  Coverage & Exploration Analysis. BFS is used to expand coverage zones level-wise, while DFS explores complete reachability within a region.<br>
+  <b>Space Efficiency:</b> O(V)<br>
+  <b>Time Efficiency :</b> O(V + E)<br>
+  </li><br>
+
+  <li><b>Prim’s Algorithm :</b><br>
+  Infrastructure Cost Optimization. Generates a minimum spanning tree to minimize wiring and power distribution cost for charging stations.<br>
+  <b>Space Efficiency:</b> O(V)<br>
+  <b>Time Efficiency :</b> O(E log V)<br>
+  </li><br>
+</ul><br>
+
+<b>Techniques used :</b><br>
+<ul>
+  <li><b>Divide and Conquer :</b><br>
+  The city is divided into zones or grids, and optimal charging points are computed independently for each zone to improve scalability and manageability.<br>
+  </li><br>
+
+  <li><b>Transform and Conquer :</b><br>
+  Real-world city maps and traffic data are transformed into weighted graphs to enable efficient algorithmic processing and optimization.<br>
+  </li><br>
+
+  <li><b>Greedy Technique :</b><br>
+  At each step, the location with the highest EV demand and best accessibility is selected to maximize immediate coverage benefits.<br>
+  </li><br>
+
+  <li><b>Space and Time Tradeoff :</b><br>
+  Additional memory (hash tables and precomputed distances) is used to significantly reduce real-time computation delays.<br>
+  </li><br>
+</ul><br>
+
+<b>Principles used :</b><br>
+<ul>
+  <li><b>Invariants :</b><br>
+  Maintains the invariant that a minimum distance must exist between any two charging stations to avoid overcrowding and ensure uniform coverage.<br>
+  </li><br>
+
+  <li><b>Shortest Path Trees :</b><br>
+  Constructs shortest path trees from charging stations to surrounding areas to guarantee minimum travel distance for EV users.<br>
+  </li><br>
+
+  <li><b>Hierarchical Data :</b><br>
+  Organizes data in a hierarchy: City → Zone → Area → Charging Station, enabling structured planning and expansion.<br>
+  </li><br>
+
+  <li><b>Pre-Computing :</b><br>
+  Pre-calculates EV demand hotspots and traffic-weighted distances to speed up decision-making during peak analysis stages.<br>
+  </li><br>
+
+  <li><b>Parental Dominance :</b><br>
+  Ensures priority queues always select the highest-priority (highest-demand) location first during station placement.<br>
+  </li><br>
+</ul><br>
+
+    <a href="#top" class="back-btn">Back to Top</a>
+    </p>
   </div>
 
   <div id="idea5" class="idea-section">
-    <h3>Startup Incubator</h3>
+    <h3> 💡 Startup Incubator</h3>
     <p>A startup incubator supports new businesses by providing mentorship, guidance, resources, and a collaborative environment.
     It aligns with the following SDG:
     <ul>
@@ -606,8 +726,159 @@
       <li> Supports sustainable, environment-friendly technologies.<br></li>
       <li> Enhances competitiveness of local businesses through training and support.<br></li>
       <li>Builds a culture of creativity, problem-solving, and entrepreneurship among youth.<br></li>
-    </ul>
+    </ul><br>
     
+    <b>Algorithms/data structures used :</b><br>
+<ul>
+
+  <li>
+    <b>Arrays :</b><br>
+    Used to store startup IDs, room numbers, and equipment inventory in the physical incubator.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(1) access<br>
+  </li><br>
+
+  <li>
+    <b>Structures :</b><br>
+    Used to store startup profiles, mentor details, and funding information in an organized manner.<br>
+    <b>Space Efficiency:</b> Efficient<br>
+    <b>Time Efficiency:</b> O(1) field access<br>
+  </li><br>
+
+  <li>
+    <b>Linked List :</b><br>
+    Maintains a dynamic list of incubated startups and a waiting list where startups frequently join or exit.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(n)<br>
+  </li><br>
+
+  <li>
+    <b>Queue :</b><br>
+    Used for application processing and room booking requests following First-Come-First-Serve order.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(1)<br>
+  </li><br>
+
+  <li>
+    <b>Hash Table :</b><br>
+    Enables fast lookup such as mapping Startup ID to room number and Mentor ID to availability.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(1) average<br>
+  </li><br>
+
+  <li>
+    <b>Heap (Priority Queue) :</b><br>
+    Used to rank startups for funding allocation, demo day selection, and priority resource access.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(log n)<br>
+  </li><br>
+
+  <li>
+    <b>Quick / Merge Sort :</b><br>
+    Sorts startups based on revenue, growth rate, or incubation duration for evaluation and reporting.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(n log n)<br>
+  </li><br>
+
+  <li>
+    <b>Rabin–Karp Algorithm :</b><br>
+    Used to detect copied or plagiarized content in startup proposals, pitch decks, and reports.<br>
+    <b>Space Efficiency:</b> O(1) extra<br>
+    <b>Time Efficiency:</b> O(n + m) average<br>
+  </li><br>
+
+  <li>
+    <b>Union–Find (Disjoint Set) :</b><br>
+    Groups startups collaborating on shared labs, mentors, co-working spaces, or joint projects.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(α(n)) ≈ O(1)<br>
+  </li><br>
+
+  <li>
+    <b>Sparse Table :</b><br>
+    Used for fast querying of historical startup performance data such as best or worst metrics over fixed time periods.<br>
+    <b>Space Efficiency:</b> O(n log n)<br>
+    <b>Time Efficiency:</b> O(1) per query<br>
+  </li><br>
+
+  <li>
+    <b>Binary Search Tree :</b><br>
+    Optionally used to maintain moderately sorted startup performance records.<br>
+    <b>Space Efficiency:</b> O(n)<br>
+    <b>Time Efficiency:</b> O(log n)<br>
+  </li><br>
+
+</ul><br>
+<b>Design Techniques used :</b><br>
+<ul>
+
+  <li>
+    <b>Decomposition :</b><br>
+    The incubator system is divided into smaller modules such as startup onboarding, mentorship management, resource allocation, funding evaluation, and performance reporting. This makes the system easier to design and manage.<br>
+  </li><br>
+
+  <li>
+    <b>Greedy Technique :</b><br>
+    A greedy approach is used while allocating limited resources such as funding, office space, and demo day slots by always selecting the highest-priority or best-performing startups first using a priority queue (heap).<br>
+  </li><br>
+
+  <li>
+    <b>Transform and Conquer :</b><br>
+    Startup performance data is transformed into sorted lists and ranked structures to make evaluation and decision-making faster and simpler.<br>
+  </li><br>
+
+  <li>
+    <b>Space–Time Tradeoff :</b><br>
+    Hash tables are used to achieve fast lookup of startup and mentor information by using extra memory, trading space for time efficiency.<br>
+  </li><br>
+
+  <li>
+    <b>Decrease and Conquer :</b><br>
+    During application filtering, weak or incomplete startup applications are removed step-by-step, reducing the dataset and improving processing efficiency.<br>
+  </li><br>
+
+</ul><br>
+<b>Principles used :</b><br>
+<ul>
+
+  <li>
+    <b>Pruning :</b><br>
+    Unqualified or duplicate startup applications are eliminated early during screening, reducing unnecessary processing and saving resources.<br>
+  </li><br>
+
+  <li>
+    <b>Pre-Computing :</b><br>
+    Historical startup performance metrics are pre-computed and stored using sparse tables so that reports and analytics can be generated instantly when required.<br>
+  </li><br>
+
+  <li>
+    <b>Hierarchical Data :</b><br>
+    The incubator follows a hierarchical structure such as Incubator → Program → Startup → Team, enabling efficient organization and management of data.<br>
+  </li><br>
+
+  <li>
+    <b>Parental Dominance :</b><br>
+    The heap (priority queue) maintains the invariant that the parent node always has higher priority than its children, ensuring correct startup ranking for funding and selection decisions.<br>
+  </li><br>
+
+  <li>
+    <b>Invariants :</b><br>
+    System rules such as unique startup IDs and fixed funding criteria remain unchanged throughout execution, ensuring consistency and correctness.<br>
+  </li><br>
+
+  <li>
+    <b>Partitioning :</b><br>
+    Startups are partitioned based on domain, stage, or performance category to simplify evaluation and reporting processes.<br>
+  </li><br>
+
+</ul><br>
+
+
+<center>
+    <img width="500" src="https://uploads.onecompiler.io/445vtyxqe/447cd77y2/startup.png"</center>
+    </center>
+
+    <a href="#top" class="back-btn">Back to Top</a>
     
     </p>
   </div>
