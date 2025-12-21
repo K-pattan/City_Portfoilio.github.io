@@ -182,28 +182,37 @@ body{
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Recreation services include parks, walking tracks, open gyms, cultural
-        spaces and community halls that enhance physical health, mental well-being
-        and social interaction in urban environments.
+        Recreation services focus on creating parks, walking tracks, open gyms,
+        cultural hubs, and community centers to enhance physical health, mental well-being,
+        and social cohesion. They ensure that all residents, regardless of age or mobility,
+        can access safe and inclusive leisure spaces.
       </p>
 
       <h4>Why this service is important</h4>
       <ul>
-        <li>Reduces stress caused by dense urban living</li>
-        <li>Encourages physical fitness across age groups</li>
-        <li>Creates inclusive public spaces</li>
+        <li>Reduces stress and improves mental health in urban areas</li>
+        <li>Promotes physical fitness across all age groups</li>
+        <li>Encourages community engagement and cultural participation</li>
+        <li>Supports environmental sustainability through green urban planning</li>
       </ul>
 
-      <h4>Data Structures Used</h4>
+      <h4>Data Structures & Techniques Used</h4>
       <ul>
-        <li>Graph – city zones and parks</li>
-        <li>Queue – level-wise traversal</li>
-        <li>Array – distance storage</li>
+        <li>Graph – city zones, parks, and walking paths</li>
+        <li>Queue – BFS traversal to measure accessibility</li>
+        <li>Heap / Priority Queue – scheduling park events efficiently</li>
+        <li>Segment Tree – tracking park usage trends over time</li>
+        <li>Arrays – distance and usage storage</li>
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithm:</b> Breadth First Search (BFS)<br>
-        Ensures equal accessibility of recreational spaces from all zones.
+        <b>Algorithms Used</b><br><br>
+        • <b>BFS (Breadth First Search)</b> – Ensures parks and recreational areas are reachable from all residential zones<br>
+        • <b>Dijkstra’s Algorithm</b> – Computes shortest routes from homes to nearest parks or gyms<br>
+        • <b>Prim / Kruskal</b> – Builds minimum-cost walking, cycling, and jogging paths connecting all parks<br>
+        • <b>Greedy Algorithm</b> – Allocates resources (equipment, maintenance, events) to parks based on priority and usage<br>
+        • <b>Segment Tree</b> – Tracks and updates park usage and footfall efficiently over time<br>
+        • <b>DFS (Depth First Search)</b> – Helps plan exploration paths and identify connected green zones
       </div>
     </div>
 
@@ -226,6 +235,12 @@ body{
       <div class="chart-row">
         <div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div>
         <div class="chart-percent">76%</div>
+      </div>
+
+      <div class="chart-label">Event Utilization</div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:81%"></div></div>
+        <div class="chart-percent">81%</div>
       </div>
     </div>
   </div>
