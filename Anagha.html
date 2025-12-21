@@ -188,6 +188,33 @@ body{
 .card:hover .chart-bar{
   background: rgba(52,211,153,0.2);
 }
+
+/* Back to Top button */
+.back-to-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#34d399;
+  color:#0b1324;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover{
+  background:#00ff99;
+  color:#111b34;
+  transform:translateY(-3px);
+}
+
+/* Smooth scroll */
+html{
+  scroll-behavior:smooth;
+}
 </style>
 </head>
 
@@ -368,10 +395,10 @@ body{
         </tr>
         <tr>
           <td>Trie</td>
-          <td>Efficient prefix search</td>
+          <td>Efficient prefix search / auto-complete</td>
           <td>O(L)</td>
-          <td>O(ALPHABET_SIZE * L)</td>
-          <td>Quick auto-complete and search</td>
+          <td>O(N × L)</td>
+          <td>Quick search and auto-complete</td>
         </tr>
         <tr>
           <td>Heap</td>
@@ -407,7 +434,7 @@ body{
   </div>
 </div>
 
-<!-- SENIOR -->
+<!-- SENIOR SERVICES -->
 <div class="section">
   <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
   <div class="grid">
@@ -425,38 +452,45 @@ body{
           <th>Benefits</th>
         </tr>
         <tr>
-          <td>Priority Queue / Heap</td>
-          <td>High-priority request handling</td>
+          <td>Priority Queue</td>
+          <td>Urgent request handling</td>
           <td>O(log N)</td>
           <td>O(N)</td>
-          <td>Urgent requests served first</td>
+          <td>High-priority requests served first</td>
+        </tr>
+        <tr>
+          <td>Heap</td>
+          <td>Scheduling emergency services</td>
+          <td>O(log N)</td>
+          <td>O(N)</td>
+          <td>Efficient resource management</td>
         </tr>
         <tr>
           <td>Greedy</td>
-          <td>Resource allocation</td>
+          <td>Assign transport/resources optimally</td>
           <td>O(N log N)</td>
           <td>O(N)</td>
-          <td>Efficiently assigns resources</td>
+          <td>Minimizes waiting times</td>
         </tr>
         <tr>
           <td>Queue</td>
-          <td>Normal request processing FIFO</td>
-          <td>O(1)</td>
+          <td>Manage service lines</td>
+          <td>O(1) per operation</td>
           <td>O(N)</td>
-          <td>Fair processing of regular requests</td>
+          <td>Organized handling of citizens</td>
         </tr>
         <tr>
-          <td>Scheduling</td>
-          <td>Optimize appointments & transport</td>
-          <td>O(N log N)</td>
-          <td>O(N)</td>
-          <td>Reduces waiting time</td>
+          <td>Scheduling Concepts</td>
+          <td>Time-based prioritization</td>
+          <td>Varies</td>
+          <td>Varies</td>
+          <td>Ensures fairness and efficiency</td>
         </tr>
       </table>
     </div>
 
     <div class="card">
-      <h4>Service Priority</h4>
+      <h4>Service Metrics</h4>
       <div class="chart-label">Urgency Handling</div>
       <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div><div class="chart-percent">93%</div></div>
       <div class="chart-label">Waiting Time Reduction</div>
@@ -471,7 +505,7 @@ body{
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
-      <p>Smart water management uses sensors, meters, and automation to monitor consumption, detect leaks, and ensure efficient distribution.</p>
+      <p>Smart meters, sensors, and automation monitor water consumption, detect leaks, and optimize distribution.</p>
 
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
@@ -484,51 +518,18 @@ body{
         </tr>
         <tr>
           <td>Greedy</td>
-          <td>Optimal water allocation</td>
+          <td>Allocate water optimally</td>
           <td>O(N log N)</td>
           <td>O(N)</td>
-          <td>Reduces wastage, allocates fairly</td>
+          <td>Minimizes wastage</td>
         </tr>
         <tr>
-          <td>Graph BFS/DFS</td>
-          <td>Connectivity & flow checks</td>
+          <td>Graph</td>
+          <td>Water distribution network</td>
           <td>O(V+E)</td>
-          <td>O(V)</td>
-          <td>Ensures all pipelines are functional</td>
+          <td>O(V+E)</td>
+          <td>Maps flow across zones</td>
         </tr>
         <tr>
           <td>Dijkstra</td>
-          <td>Pipeline routing shortest paths</td>
-          <td>O((V+E) log V)</td>
-          <td>O(V)</td>
-          <td>Efficient water flow routing</td>
-        </tr>
-        <tr>
-          <td>Segment Tree</td>
-          <td>Dynamic usage monitoring</td>
-          <td>O(log N) per query/update</td>
-          <td>O(N)</td>
-          <td>Monitors consumption trends</td>
-        </tr>
-        <tr>
-          <td>Union-Find</td>
-          <td>Detect connected pipelines</td>
-          <td>O(α(N)) per operation</td>
-          <td>O(N)</td>
-          <td>Ensures pipeline connectivity</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="card">
-      <h4>Resource Optimization</h4>
-      <div class="chart-label">Water Savings</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div><div class="chart-percent">79%</div></div>
-      <div class="chart-label">Distribution Fairness</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div><div class="chart-percent">86%</div></div>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+          <td
