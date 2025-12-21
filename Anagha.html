@@ -182,37 +182,36 @@ body{
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Recreation services focus on creating parks, walking tracks, open gyms,
-        cultural hubs, and community centers to enhance physical health, mental well-being,
-        and social cohesion. They ensure that all residents, regardless of age or mobility,
-        can access safe and inclusive leisure spaces.
+        Recreation services focus on parks, walking tracks, gyms, cultural hubs, 
+        and community centers to enhance physical health, mental well-being, 
+        and social cohesion. Accessibility and efficient resource allocation are key.
       </p>
 
       <h4>Why this service is important</h4>
       <ul>
-        <li>Reduces stress and improves mental health in urban areas</li>
-        <li>Promotes physical fitness across all age groups</li>
-        <li>Encourages community engagement and cultural participation</li>
-        <li>Supports environmental sustainability through green urban planning</li>
+        <li>Reduces stress and improves mental health</li>
+        <li>Promotes fitness across all age groups</li>
+        <li>Encourages community engagement</li>
+        <li>Supports sustainable urban green spaces</li>
       </ul>
 
       <h4>Data Structures & Techniques Used</h4>
       <ul>
-        <li>Graph – city zones, parks, and walking paths</li>
-        <li>Queue – BFS traversal to measure accessibility</li>
-        <li>Heap / Priority Queue – scheduling park events efficiently</li>
-        <li>Segment Tree – tracking park usage trends over time</li>
-        <li>Arrays – distance and usage storage</li>
+        <li>Graph – city zones, parks, paths</li>
+        <li>Queue – BFS traversal for accessibility checks</li>
+        <li>Heap / Priority Queue – event scheduling efficiently</li>
+        <li>Segment Tree – park usage tracking over time</li>
+        <li>Arrays – distances, usage metrics</li>
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithms Used</b><br><br>
-        • <b>BFS (Breadth First Search)</b> – Ensures parks and recreational areas are reachable from all residential zones<br>
-        • <b>Dijkstra’s Algorithm</b> – Computes shortest routes from homes to nearest parks or gyms<br>
-        • <b>Prim / Kruskal</b> – Builds minimum-cost walking, cycling, and jogging paths connecting all parks<br>
-        • <b>Greedy Algorithm</b> – Allocates resources (equipment, maintenance, events) to parks based on priority and usage<br>
-        • <b>Segment Tree</b> – Tracks and updates park usage and footfall efficiently over time<br>
-        • <b>DFS (Depth First Search)</b> – Helps plan exploration paths and identify connected green zones
+        <b>Algorithms & Efficiency</b><br><br>
+        • <b>BFS (Breadth First Search)</b> – Ensures all zones can reach parks. <b>Time:</b> O(V+E). <br>
+        • <b>Dijkstra’s Algorithm</b> – Finds shortest routes from homes to nearest park. <b>Time:</b> O((V+E) log V). <br>
+        • <b>Prim / Kruskal</b> – Constructs minimum-cost walking & cycling paths. <b>Time:</b> Prim O(E log V), Kruskal O(E log E). <br>
+        • <b>Greedy Algorithm</b> – Allocates park resources efficiently. <b>Time:</b> O(N log N). <br>
+        • <b>Segment Tree</b> – Tracks park usage dynamically. <b>Time:</b> O(log N) per update/query. <br>
+        • <b>DFS (Depth First Search)</b> – Identifies connected green zones. <b>Time:</b> O(V+E). <br>
       </div>
     </div>
 
@@ -255,7 +254,7 @@ body{
       <h4>Service Overview</h4>
       <p>
         Public safety services integrate AI-based surveillance cameras,
-        drone monitoring systems, emergency response units and centralized
+        drone monitoring systems, emergency response units, and centralized
         control centers.
       </p>
 
@@ -274,8 +273,11 @@ body{
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithm:</b> Dijkstra’s Algorithm<br>
-        Computes the shortest and fastest paths for emergency response.
+        <b>Algorithms & Efficiency</b><br><br>
+        • <b>Dijkstra’s Algorithm</b> – Shortest path for emergency vehicles. <b>Time:</b> O((V+E) log V). <br>
+        • <b>BFS / DFS</b> – Detects connected zones and monitors traversal. <b>Time:</b> O(V+E). <br>
+        • <b>Greedy Algorithm</b> – Fast resource allocation for alerts. <b>Time:</b> O(N log N). <br>
+        • <b>Edge Relaxation</b> – Ensures optimal path updates. <b>Time:</b> O(E). <br>
       </div>
     </div>
 
@@ -306,7 +308,7 @@ body{
       <h4>Service Overview</h4>
       <p>
         Digital services provide citizen portals, traffic management apps,
-        smart parking systems, metro schedules and online grievance platforms.
+        smart parking systems, metro schedules, and online grievance platforms.
       </p>
 
       <h4>Benefits to Citizens</h4>
@@ -319,12 +321,19 @@ body{
       <h4>Data Structures Used</h4>
       <ul>
         <li>Hash Tables – citizen records</li>
-        <li>Arrays – service requests</li>
+        <li>Trie – fast search for forms/records</li>
+        <li>Heap – prioritize service requests</li>
+        <li>Arrays – request tracking</li>
+        <li>Caching – reduces repeated queries</li>
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithm:</b> Hashing<br>
-        Enables instant and secure retrieval of digital records.
+        <b>Algorithms & Efficiency</b><br><br>
+        • <b>Hashing</b> – Instant record retrieval. <b>Time:</b> O(1) average. <br>
+        • <b>Trie</b> – Efficient prefix search. <b>Time:</b> O(L), L = string length. <br>
+        • <b>Heap</b> – Prioritized requests. <b>Time:</b> O(log N). <br>
+        • <b>Sorting</b> – Organize records for processing. <b>Time:</b> O(N log N). <br>
+        • <b>Caching / Memoization</b> – Reduces redundant operations. <b>Time:</b> O(1) retrieval. <br>
       </div>
     </div>
 
@@ -366,8 +375,11 @@ body{
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithm:</b> Priority Queue (Heap)<br>
-        High-priority requests are served before normal requests.
+        <b>Algorithms & Efficiency</b><br><br>
+        • <b>Priority Queue / Heap</b> – Serve high-priority requests first. <b>Time:</b> O(log N) per insert/extract. <br>
+        • <b>Greedy</b> – Assign resources to most urgent cases. <b>Time:</b> O(N log N). <br>
+        • <b>Queue</b> – Track normal requests in FIFO. <b>Time:</b> O(1) per operation. <br>
+        • <b>Scheduling Algorithms</b> – Optimize appointment & transport slots. <b>Time:</b> O(N log N). <br>
       </div>
     </div>
 
@@ -397,8 +409,8 @@ body{
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Smart water management uses sensors, smart meters and automated systems
-        to monitor consumption, detect leaks and ensure efficient distribution.
+        Smart water management uses sensors, smart meters, and automated systems
+        to monitor consumption, detect leaks, and ensure efficient distribution.
       </p>
 
       <h4>Key Advantages</h4>
@@ -415,8 +427,12 @@ body{
       </ul>
 
       <div class="algorithm-box">
-        <b>Algorithm:</b> Greedy Algorithm<br>
-        Allocates water optimally based on demand and priority.
+        <b>Algorithms & Efficiency</b><br><br>
+        • <b>Greedy</b> – Optimal water allocation. <b>Time:</b> O(N log N). <br>
+        • <b>Graph Algorithms (BFS/DFS)</b> – Check connectivity & flow. <b>Time:</b> O(V+E). <br>
+        • <b>Dijkstra</b> – Shortest path for pipeline routing. <b>Time:</b> O((V+E) log V). <br>
+        • <b>Segment Tree</b> – Dynamic monitoring of water usage. <b>Time:</b> O(log N) per query/update. <br>
+        • <b>Union-Find / Disjoint Set</b> – Detect isolated or connected pipelines. <b>Time:</b> O(α(N)) per operation. <br>
       </div>
     </div>
 
