@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>City Design – Anagha</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#111827;            /* dark charcoal */
+  background:#0b1324;
   color:#e5e7eb;
 }
 
 .navbar{
-  background:#1f2937;
-  padding:15px 40px;
+  background:#111b34;
+  padding:16px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
-  box-shadow:0 4px 12px rgba(0,0,0,0.6);
+  z-index:1000;
 }
 
 .logo{
   font-size:22px;
   font-weight:600;
-  color:#2dd4bf;                 /* teal accent */
+  color:#34d399;
 }
 
 .nav-links{
@@ -41,102 +41,67 @@ body{
 .nav-links a{
   text-decoration:none;
   color:#e5e7eb;
-  position:relative;
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:2px;
-  background:#2dd4bf;
-  left:0;
-  bottom:-5px;
-  transition:.3s;
-}
-
-.nav-links a:hover::after{
-  width:100%;
 }
 
 .header{
   width:85%;
   margin:60px auto;
-  background:#1f2937;
+  background:#111b34;
   padding:40px;
-  border-radius:18px;
+  border-radius:20px;
   text-align:center;
-  box-shadow:0 0 30px rgba(0,0,0,0.5);
+  box-shadow:0 0 35px rgba(0,0,0,0.6);
 }
 
 .header h1{
   font-size:40px;
-  margin-bottom:10px;
 }
 
 .header h2{
-  color:#2dd4bf;
-  font-size:22px;
+  color:#34d399;
 }
 
 .section{
   width:85%;
   margin:40px auto;
-  background:#1f2937;
+  background:#111b34;
   padding:30px;
-  border-radius:16px;
-  box-shadow:0 0 22px rgba(0,0,0,0.5);
+  border-radius:18px;
+  box-shadow:0 0 28px rgba(0,0,0,0.6);
 }
 
 .section-title{
   font-size:24px;
-  color:#2dd4bf;
+  color:#34d399;
   margin-bottom:10px;
 }
 
 .section p{
-  line-height:1.7;
+  line-height:1.8;
 }
 
 ul{
   margin-left:20px;
 }
 
+.tag{
+  color:#6ee7b7;
+  font-weight:600;
+}
+
 .algorithm-box{
   margin-top:15px;
   padding:15px;
-  background:#111827;
-  border-left:4px solid #2dd4bf;
-  border-radius:8px;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-}
-
-table th, table td{
-  border:1px solid #2dd4bf;
-  padding:10px;
-  text-align:center;
-}
-
-table tr:hover{
-  background:rgba(45,212,191,0.12);
-}
-
-@media(max-width:600px){
-  .header,.section{
-    width:92%;
-  }
+  background:#0b1324;
+  border-left:4px solid #34d399;
+  border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar">
+<div class="navbar">
   <div class="logo">CITY DESIGN</div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -144,120 +109,41 @@ table tr:hover{
     <li><a href="Anagha.html">Anagha</a></li>
     <li><a href="Shreya.html">Shreya</a></li>
   </ul>
-</nav>
+</div>
 
 <div class="header">
   <h1>Anagha</h1>
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<!-- Recreation -->
 <div class="section">
-  <div class="section-title">Recreation & Lifestyle</div>
-  <p>Parks, walking tracks, community halls and open gyms improve physical and mental well-being.</p>
-
-  <b>Problem Statement</b>
-  <ul>
-    <li>Even distribution of parks</li>
-    <li>Reduced travel distance</li>
-    <li>Accessibility for all age groups</li>
-  </ul>
-
-  <b>Data Structures Used</b>
-  <ul>
-    <li>Graph – zones and parks</li>
-    <li>Array – distance storage</li>
-    <li>Queue – traversal</li>
-  </ul>
-
-  <div class="algorithm-box">
-    <b>Algorithm:</b> Breadth First Search (BFS)
-  </div>
-
-  <table>
-    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
-    <tr><td>BFS</td><td>Equal park accessibility</td><td>O(V+E)</td><td>O(V)</td></tr>
-  </table>
+  <div class="section-title">🌿 Recreation & Lifestyle</div>
+  <p>Parks, walking tracks and cultural spaces improve physical and mental well-being.</p>
+  <div class="algorithm-box"><b>Algorithm:</b> BFS – Fair accessibility</div>
 </div>
 
-<!-- Safety -->
 <div class="section">
-  <div class="section-title">Public Safety & Services</div>
-  <p>AI cameras, drones, and emergency units ensure rapid response and city-wide security.</p>
-
-  <b>Problem Statement</b>
-  <ul>
-    <li>Real-time incident detection</li>
-    <li>Drone surveillance</li>
-    <li>Fast emergency routing</li>
-  </ul>
-
-  <b>Data Structures Used</b>
-  <ul>
-    <li>Graph</li>
-    <li>Priority Queue</li>
-    <li>Array</li>
-  </ul>
-
-  <div class="algorithm-box">
-    <b>Algorithm:</b> Dijkstra’s Algorithm
-  </div>
-
-  <table>
-    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
-    <tr><td>Dijkstra</td><td>Fastest emergency route</td><td>O(VlogV+E)</td><td>O(V)</td></tr>
-  </table>
+  <div class="section-title">🚨 Public Safety & Intelligent Surveillance</div>
+  <p>AI cameras and drones ensure real-time monitoring and rapid emergency response.</p>
+  <div class="algorithm-box"><b>Algorithm:</b> Dijkstra – Shortest emergency routes</div>
 </div>
 
-<!-- Digital -->
 <div class="section">
-  <div class="section-title">Digital Services</div>
-  <p>Citizen portals, traffic apps, smart parking, metro schedules and grievance systems.</p>
-
-  <b>Data Structures Used</b>
-  <ul>
-    <li>Hash Tables</li>
-    <li>Arrays</li>
-  </ul>
-
-  <div class="algorithm-box">
-    <b>Algorithm:</b> Hashing
-  </div>
-
-  <table>
-    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
-    <tr><td>Hashing</td><td>Instant service access</td><td>O(1)</td><td>O(n)</td></tr>
-  </table>
+  <div class="section-title">💻 Digital Governance & Mobility</div>
+  <p>Citizen portals, traffic apps and metro scheduling form a unified digital ecosystem.</p>
+  <div class="algorithm-box"><b>Algorithm:</b> Hashing – Instant data access</div>
 </div>
 
-<!-- Senior -->
 <div class="section">
-  <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
-  <p>Priority-based systems ensure urgent services for elderly and differently-abled citizens.</p>
-
-  <div class="algorithm-box">
-    <b>Algorithm:</b> Priority Queue (Heap)
-  </div>
-
-  <table>
-    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
-    <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log n)</td><td>O(n)</td></tr>
-  </table>
+  <div class="section-title">♿ Inclusive Citizen Services</div>
+  <p>Priority-based systems support senior citizens and differently-abled people.</p>
+  <div class="algorithm-box"><b>Algorithm:</b> Priority Queue</div>
 </div>
 
-<!-- Water -->
 <div class="section">
-  <div class="section-title">Smart Water Management</div>
-  <p>Sensors and smart meters monitor usage, detect leaks, and allocate water efficiently.</p>
-
-  <div class="algorithm-box">
-    <b>Algorithm:</b> Greedy Algorithm
-  </div>
-
-  <table>
-    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
-    <tr><td>Greedy</td><td>Optimal water allocation</td><td>O(n)</td><td>O(n)</td></tr>
-  </table>
+  <div class="section-title">💧 Smart Water Management</div>
+  <p>Sensors and smart meters ensure efficient and sustainable water distribution.</p>
+  <div class="algorithm-box"><b>Algorithm:</b> Greedy – Optimal allocation</div>
 </div>
 
 </body>
