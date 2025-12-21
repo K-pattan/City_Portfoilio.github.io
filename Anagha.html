@@ -1,151 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>City Design – Anagha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Design – Anagha</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: white;
-      overflow-x: hidden;
-    }
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#111827;            /* dark charcoal */
+  color:#e5e7eb;
+}
 
-    /* NAVBAR */
-    .navbar {
-      background: #1e293b;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    }
+.navbar{
+  background:#1f2937;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.6);
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 600;
-      color: #38bdf8;
-    }
+.logo{
+  font-size:22px;
+  font-weight:600;
+  color:#2dd4bf;                 /* teal accent */
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  margin:0;
+  padding:0;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      position: relative;
-    }
+.nav-links a{
+  text-decoration:none;
+  color:#e5e7eb;
+  position:relative;
+}
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #38bdf8;
-      left: 0;
-      bottom: -5px;
-      transition: 0.3s;
-    }
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#2dd4bf;
+  left:0;
+  bottom:-5px;
+  transition:.3s;
+}
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+.nav-links a:hover::after{
+  width:100%;
+}
 
-    /* HEADER */
-    .content-box {
-      width: 85%;
-      margin: 60px auto;
-      background: #1e293b;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.4);
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.6s;
-    }
+.header{
+  width:85%;
+  margin:60px auto;
+  background:#1f2937;
+  padding:40px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
 
-    .content-box.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.header h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
 
-    .content-box h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+.header h2{
+  color:#2dd4bf;
+  font-size:22px;
+}
 
-    .content-box h2 {
-      font-size: 22px;
-      color: #38bdf8;
-    }
+.section{
+  width:85%;
+  margin:40px auto;
+  background:#1f2937;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 0 22px rgba(0,0,0,0.5);
+}
 
-    /* SECTIONS */
-    .idea-section {
-      width: 80%;
-      margin: 40px auto;
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.6s;
-    }
+.section-title{
+  font-size:24px;
+  color:#2dd4bf;
+  margin-bottom:10px;
+}
 
-    .idea-section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.section p{
+  line-height:1.7;
+}
 
-    .idea-section:hover {
-      box-shadow: 0 0 35px rgba(56,189,248,0.4);
-      transform: translateY(-6px);
-    }
+ul{
+  margin-left:20px;
+}
 
-    .idea-title {
-      color: #38bdf8;
-      font-size: 24px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
+.algorithm-box{
+  margin-top:15px;
+  padding:15px;
+  background:#111827;
+  border-left:4px solid #2dd4bf;
+  border-radius:8px;
+}
 
-    .algorithm-box {
-      margin-top: 15px;
-      padding: 15px;
-      background: #0f172a;
-      border-left: 4px solid #38bdf8;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
 
-    p {
-      line-height: 1.7;
-    }
+table th, table td{
+  border:1px solid #2dd4bf;
+  padding:10px;
+  text-align:center;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+table tr:hover{
+  background:rgba(45,212,191,0.12);
+}
 
-    @media (max-width: 600px) {
-      .content-box, .idea-section {
-        width: 90%;
-      }
-    }
-  </style>
+@media(max-width:600px){
+  .header,.section{
+    width:92%;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -160,96 +146,119 @@
   </ul>
 </nav>
 
-<div class="content-box">
+<div class="header">
   <h1>Anagha</h1>
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
 <!-- Recreation -->
-<div class="idea-section">
-  <div class="idea-title">Recreation & Lifestyle</div>
-  <p>
-    This service focuses on parks, walking tracks, and community spaces that
-    improve physical and mental well-being. These spaces are planned so that
-    every residential area has easy access.
-  </p>
+<div class="section">
+  <div class="section-title">Recreation & Lifestyle</div>
+  <p>Parks, walking tracks, community halls and open gyms improve physical and mental well-being.</p>
+
+  <b>Problem Statement</b>
+  <ul>
+    <li>Even distribution of parks</li>
+    <li>Reduced travel distance</li>
+    <li>Accessibility for all age groups</li>
+  </ul>
+
+  <b>Data Structures Used</b>
+  <ul>
+    <li>Graph – zones and parks</li>
+    <li>Array – distance storage</li>
+    <li>Queue – traversal</li>
+  </ul>
+
   <div class="algorithm-box">
-    <b>Algorithm:</b> Breadth First Search (BFS)<br>
-    <b>Why:</b> Ensures equal reachability from all zones<br>
-    <b>Complexity:</b> O(V + E)
+    <b>Algorithm:</b> Breadth First Search (BFS)
   </div>
+
+  <table>
+    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
+    <tr><td>BFS</td><td>Equal park accessibility</td><td>O(V+E)</td><td>O(V)</td></tr>
+  </table>
 </div>
 
 <!-- Safety -->
-<div class="idea-section">
-  <div class="idea-title">Public Safety & Services</div>
-  <p>
-    This includes AI surveillance cameras, drone monitoring, emergency response
-    units, and control centers. AI cameras detect incidents, drones monitor large
-    areas, and emergency vehicles are routed optimally.
-  </p>
+<div class="section">
+  <div class="section-title">Public Safety & Services</div>
+  <p>AI cameras, drones, and emergency units ensure rapid response and city-wide security.</p>
+
+  <b>Problem Statement</b>
+  <ul>
+    <li>Real-time incident detection</li>
+    <li>Drone surveillance</li>
+    <li>Fast emergency routing</li>
+  </ul>
+
+  <b>Data Structures Used</b>
+  <ul>
+    <li>Graph</li>
+    <li>Priority Queue</li>
+    <li>Array</li>
+  </ul>
+
   <div class="algorithm-box">
-    <b>Algorithm:</b> Dijkstra’s Algorithm<br>
-    <b>Why:</b> Finds shortest emergency response paths<br>
-    <b>Complexity:</b> O(E log V)
+    <b>Algorithm:</b> Dijkstra’s Algorithm
   </div>
+
+  <table>
+    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
+    <tr><td>Dijkstra</td><td>Fastest emergency route</td><td>O(VlogV+E)</td><td>O(V)</td></tr>
+  </table>
 </div>
 
 <!-- Digital -->
-<div class="idea-section">
-  <div class="idea-title">Digital Services</div>
-  <p>
-    Digital services include citizen portals, traffic apps, smart parking,
-    metro schedules, and online complaints. All services are centralized into a
-    single digital platform.
-  </p>
+<div class="section">
+  <div class="section-title">Digital Services</div>
+  <p>Citizen portals, traffic apps, smart parking, metro schedules and grievance systems.</p>
+
+  <b>Data Structures Used</b>
+  <ul>
+    <li>Hash Tables</li>
+    <li>Arrays</li>
+  </ul>
+
   <div class="algorithm-box">
-    <b>Algorithm:</b> Hashing<br>
-    <b>Why:</b> Fast access to citizen data and services<br>
-    <b>Complexity:</b> O(1)
+    <b>Algorithm:</b> Hashing
   </div>
+
+  <table>
+    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
+    <tr><td>Hashing</td><td>Instant service access</td><td>O(1)</td><td>O(n)</td></tr>
+  </table>
 </div>
 
 <!-- Senior -->
-<div class="idea-section">
-  <div class="idea-title">Senior Citizen & Disabled-Friendly Services</div>
-  <p>
-    Priority-based systems ensure elderly and differently-abled citizens receive
-    faster access to healthcare, transport, and government services.
-  </p>
+<div class="section">
+  <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
+  <p>Priority-based systems ensure urgent services for elderly and differently-abled citizens.</p>
+
   <div class="algorithm-box">
-    <b>Algorithm:</b> Priority Queue (Heap)<br>
-    <b>Why:</b> Urgent requests handled first<br>
-    <b>Complexity:</b> O(log n)
+    <b>Algorithm:</b> Priority Queue (Heap)
   </div>
+
+  <table>
+    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
+    <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log n)</td><td>O(n)</td></tr>
+  </table>
 </div>
 
 <!-- Water -->
-<div class="idea-section">
-  <div class="idea-title">Smart Water Management</div>
-  <p>
-    Smart water management uses sensors to monitor supply, detect leaks, and
-    distribute water efficiently across zones.
-  </p>
+<div class="section">
+  <div class="section-title">Smart Water Management</div>
+  <p>Sensors and smart meters monitor usage, detect leaks, and allocate water efficiently.</p>
+
   <div class="algorithm-box">
-    <b>Algorithm:</b> Greedy Technique<br>
-    <b>Why:</b> Optimal allocation with minimal wastage<br>
-    <b>Complexity:</b> O(n)
+    <b>Algorithm:</b> Greedy Algorithm
   </div>
+
+  <table>
+    <tr><th>Technique</th><th>Purpose</th><th>Time</th><th>Space</th></tr>
+    <tr><td>Greedy</td><td>Optimal water allocation</td><td>O(n)</td><td>O(n)</td></tr>
+  </table>
 </div>
-
-<script>
-  const sections = document.querySelectorAll('.content-box, .idea-section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(sec => observer.observe(sec));
-</script>
 
 </body>
 </html>
