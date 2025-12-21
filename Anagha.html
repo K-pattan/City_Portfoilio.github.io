@@ -114,14 +114,29 @@ body{
   margin-left:18px;
 }
 
-/* ALGORITHM */
-.algorithm-box{
+/* ALGORITHM TABLE */
+.algorithm-table{
+  width:100%;
+  border-collapse: collapse;
   margin-top:12px;
-  padding:14px;
-  background:#020617;
-  border-left:4px solid #34d399;
-  border-radius:10px;
-  font-size:14px;
+  font-size:13px;
+}
+
+.algorithm-table th,
+.algorithm-table td{
+  border:1px solid rgba(52,211,153,0.25);
+  padding:6px 8px;
+  text-align:left;
+}
+
+.algorithm-table th{
+  background:#111b34;
+  color:#34d399;
+}
+
+.algorithm-table td{
+  background:#0b1324;
+  color:#e5e7eb;
 }
 
 /* CHARTS */
@@ -177,70 +192,64 @@ body{
 <!-- RECREATION -->
 <div class="section">
   <div class="section-title">Recreation & Lifestyle</div>
-
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Recreation services focus on parks, walking tracks, gyms, cultural hubs, 
-        and community centers to enhance physical health, mental well-being, 
-        and social cohesion. Accessibility and efficient resource allocation are key.
+        Recreation services include parks, gyms, walking tracks, cultural spaces, and community centers. Efficient routing and resource allocation are key for accessibility and utilization.
       </p>
 
-      <h4>Why this service is important</h4>
-      <ul>
-        <li>Reduces stress and improves mental health</li>
-        <li>Promotes fitness across all age groups</li>
-        <li>Encourages community engagement</li>
-        <li>Supports sustainable urban green spaces</li>
-      </ul>
-
-      <h4>Data Structures & Techniques Used</h4>
-      <ul>
-        <li>Graph – city zones, parks, paths</li>
-        <li>Queue – BFS traversal for accessibility checks</li>
-        <li>Heap / Priority Queue – event scheduling efficiently</li>
-        <li>Segment Tree – park usage tracking over time</li>
-        <li>Arrays – distances, usage metrics</li>
-      </ul>
-
-      <div class="algorithm-box">
-        <b>Algorithms & Efficiency</b><br><br>
-        • <b>BFS (Breadth First Search)</b> – Ensures all zones can reach parks. <b>Time:</b> O(V+E). <br>
-        • <b>Dijkstra’s Algorithm</b> – Finds shortest routes from homes to nearest park. <b>Time:</b> O((V+E) log V). <br>
-        • <b>Prim / Kruskal</b> – Constructs minimum-cost walking & cycling paths. <b>Time:</b> Prim O(E log V), Kruskal O(E log E). <br>
-        • <b>Greedy Algorithm</b> – Allocates park resources efficiently. <b>Time:</b> O(N log N). <br>
-        • <b>Segment Tree</b> – Tracks park usage dynamically. <b>Time:</b> O(log N) per update/query. <br>
-        • <b>DFS (Depth First Search)</b> – Identifies connected green zones. <b>Time:</b> O(V+E). <br>
-      </div>
+      <h4>Algorithm Efficiency</h4>
+      <table class="algorithm-table">
+        <tr>
+          <th>Algorithm</th>
+          <th>Purpose</th>
+          <th>Time Complexity</th>
+          <th>Space Complexity</th>
+        </tr>
+        <tr>
+          <td>BFS</td>
+          <td>Accessibility from all zones</td>
+          <td>O(V+E)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>Dijkstra</td>
+          <td>Shortest path to nearest park</td>
+          <td>O((V+E) log V)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>Prim / Kruskal</td>
+          <td>Minimum-cost walking paths</td>
+          <td>Prim: O(E log V)<br>Kruskal: O(E log E)</td>
+          <td>O(V+E)</td>
+        </tr>
+        <tr>
+          <td>Greedy</td>
+          <td>Resource allocation for events</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Segment Tree</td>
+          <td>Track park usage over time</td>
+          <td>O(log N) per query/update</td>
+          <td>O(N)</td>
+        </tr>
+      </table>
     </div>
 
     <div class="card">
       <h4>Impact Metrics</h4>
-
       <div class="chart-label">Accessibility</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div>
-        <div class="chart-percent">88%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
       <div class="chart-label">Coverage</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div>
-        <div class="chart-percent">92%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div><div class="chart-percent">92%</div></div>
       <div class="chart-label">Health Impact</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div>
-        <div class="chart-percent">76%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div><div class="chart-percent">76%</div></div>
       <div class="chart-label">Event Utilization</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:81%"></div></div>
-        <div class="chart-percent">81%</div>
-      </div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:81%"></div></div><div class="chart-percent">81%</div></div>
     </div>
   </div>
 </div>
@@ -248,53 +257,60 @@ body{
 <!-- PUBLIC SAFETY -->
 <div class="section">
   <div class="section-title">Public Safety & Services</div>
-
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Public safety services integrate AI-based surveillance cameras,
-        drone monitoring systems, emergency response units, and centralized
-        control centers.
+        AI-based surveillance, drone monitoring, emergency response, and control centers enhance public safety. Optimal routing and resource management improve response times.
       </p>
 
-      <h4>Core Objectives</h4>
-      <ul>
-        <li>Real-time incident detection</li>
-        <li>Fast routing for emergency vehicles</li>
-        <li>Continuous city-wide monitoring</li>
-      </ul>
-
-      <h4>Data Structures Used</h4>
-      <ul>
-        <li>Graph – road and junction network</li>
-        <li>Priority Queue – emergency routing</li>
-        <li>Array – distance and visited tracking</li>
-      </ul>
-
-      <div class="algorithm-box">
-        <b>Algorithms & Efficiency</b><br><br>
-        • <b>Dijkstra’s Algorithm</b> – Shortest path for emergency vehicles. <b>Time:</b> O((V+E) log V). <br>
-        • <b>BFS / DFS</b> – Detects connected zones and monitors traversal. <b>Time:</b> O(V+E). <br>
-        • <b>Greedy Algorithm</b> – Fast resource allocation for alerts. <b>Time:</b> O(N log N). <br>
-        • <b>Edge Relaxation</b> – Ensures optimal path updates. <b>Time:</b> O(E). <br>
-      </div>
+      <h4>Algorithm Efficiency</h4>
+      <table class="algorithm-table">
+        <tr>
+          <th>Algorithm</th>
+          <th>Purpose</th>
+          <th>Time Complexity</th>
+          <th>Space Complexity</th>
+        </tr>
+        <tr>
+          <td>Dijkstra</td>
+          <td>Shortest emergency routes</td>
+          <td>O((V+E) log V)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>BFS / DFS</td>
+          <td>Connected zone detection</td>
+          <td>O(V+E)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>Priority Queue</td>
+          <td>Emergency request prioritization</td>
+          <td>O(log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Greedy</td>
+          <td>Resource allocation</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Edge Relaxation</td>
+          <td>Optimal path updates</td>
+          <td>O(E)</td>
+          <td>O(V)</td>
+        </tr>
+      </table>
     </div>
 
     <div class="card">
       <h4>System Efficiency</h4>
-
       <div class="chart-label">Response Speed</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div>
-        <div class="chart-percent">90%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div><div class="chart-percent">90%</div></div>
       <div class="chart-label">Surveillance Coverage</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div>
-        <div class="chart-percent">85%</div>
-      </div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
     </div>
   </div>
 </div>
@@ -302,55 +318,60 @@ body{
 <!-- DIGITAL SERVICES -->
 <div class="section">
   <div class="section-title">Digital Services</div>
-
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Digital services provide citizen portals, traffic management apps,
-        smart parking systems, metro schedules, and online grievance platforms.
+        Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms enhance convenience. Algorithms improve search, retrieval, and request prioritization.
       </p>
 
-      <h4>Benefits to Citizens</h4>
-      <ul>
-        <li>Reduced paperwork and manual processing</li>
-        <li>Faster access to government services</li>
-        <li>Real-time transport and traffic updates</li>
-      </ul>
-
-      <h4>Data Structures Used</h4>
-      <ul>
-        <li>Hash Tables – citizen records</li>
-        <li>Trie – fast search for forms/records</li>
-        <li>Heap – prioritize service requests</li>
-        <li>Arrays – request tracking</li>
-        <li>Caching – reduces repeated queries</li>
-      </ul>
-
-      <div class="algorithm-box">
-        <b>Algorithms & Efficiency</b><br><br>
-        • <b>Hashing</b> – Instant record retrieval. <b>Time:</b> O(1) average. <br>
-        • <b>Trie</b> – Efficient prefix search. <b>Time:</b> O(L), L = string length. <br>
-        • <b>Heap</b> – Prioritized requests. <b>Time:</b> O(log N). <br>
-        • <b>Sorting</b> – Organize records for processing. <b>Time:</b> O(N log N). <br>
-        • <b>Caching / Memoization</b> – Reduces redundant operations. <b>Time:</b> O(1) retrieval. <br>
-      </div>
+      <h4>Algorithm Efficiency</h4>
+      <table class="algorithm-table">
+        <tr>
+          <th>Algorithm</th>
+          <th>Purpose</th>
+          <th>Time Complexity</th>
+          <th>Space Complexity</th>
+        </tr>
+        <tr>
+          <td>Hashing</td>
+          <td>Instant record retrieval</td>
+          <td>O(1) avg</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Trie</td>
+          <td>Efficient prefix search</td>
+          <td>O(L)</td>
+          <td>O(ALPHABET_SIZE * L)</td>
+        </tr>
+        <tr>
+          <td>Heap</td>
+          <td>Prioritize service requests</td>
+          <td>O(log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Sorting</td>
+          <td>Organize records</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Caching</td>
+          <td>Reduce redundant queries</td>
+          <td>O(1)</td>
+          <td>O(N)</td>
+        </tr>
+      </table>
     </div>
 
     <div class="card">
       <h4>Usage Metrics</h4>
-
       <div class="chart-label">Service Speed</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div>
-        <div class="chart-percent">91%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div><div class="chart-percent">91%</div></div>
       <div class="chart-label">User Convenience</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div>
-        <div class="chart-percent">87%</div>
-      </div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
     </div>
   </div>
 </div>
@@ -358,45 +379,54 @@ body{
 <!-- SENIOR -->
 <div class="section">
   <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
-
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        These services ensure priority access to healthcare, transport,
-        emergency and government facilities for elderly and differently-abled citizens.
+        Priority access to healthcare, transport, emergency and government facilities for elderly and differently-abled citizens.
       </p>
 
-      <h4>Key Outcomes</h4>
-      <ul>
-        <li>Reduced waiting time</li>
-        <li>Faster emergency handling</li>
-        <li>Inclusive city development</li>
-      </ul>
-
-      <div class="algorithm-box">
-        <b>Algorithms & Efficiency</b><br><br>
-        • <b>Priority Queue / Heap</b> – Serve high-priority requests first. <b>Time:</b> O(log N) per insert/extract. <br>
-        • <b>Greedy</b> – Assign resources to most urgent cases. <b>Time:</b> O(N log N). <br>
-        • <b>Queue</b> – Track normal requests in FIFO. <b>Time:</b> O(1) per operation. <br>
-        • <b>Scheduling Algorithms</b> – Optimize appointment & transport slots. <b>Time:</b> O(N log N). <br>
-      </div>
+      <h4>Algorithm Efficiency</h4>
+      <table class="algorithm-table">
+        <tr>
+          <th>Algorithm</th>
+          <th>Purpose</th>
+          <th>Time Complexity</th>
+          <th>Space Complexity</th>
+        </tr>
+        <tr>
+          <td>Priority Queue / Heap</td>
+          <td>High-priority request handling</td>
+          <td>O(log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Greedy</td>
+          <td>Resource allocation for urgent requests</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Queue</td>
+          <td>Normal request processing FIFO</td>
+          <td>O(1)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Scheduling</td>
+          <td>Optimize appointments & transport</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+      </table>
     </div>
 
     <div class="card">
       <h4>Service Priority</h4>
-
       <div class="chart-label">Urgency Handling</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div>
-        <div class="chart-percent">93%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div><div class="chart-percent">93%</div></div>
       <div class="chart-label">Waiting Time Reduction</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div>
-        <div class="chart-percent">82%</div>
-      </div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div><div class="chart-percent">82%</div></div>
     </div>
   </div>
 </div>
@@ -404,52 +434,60 @@ body{
 <!-- WATER -->
 <div class="section">
   <div class="section-title">Smart Water Management</div>
-
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
       <p>
-        Smart water management uses sensors, smart meters, and automated systems
-        to monitor consumption, detect leaks, and ensure efficient distribution.
+        Smart water management uses sensors, meters, and automation to monitor consumption, detect leaks, and ensure efficient distribution.
       </p>
 
-      <h4>Key Advantages</h4>
-      <ul>
-        <li>Reduced water wastage</li>
-        <li>Early leak detection</li>
-        <li>Fair water allocation</li>
-      </ul>
-
-      <h4>Data Structures Used</h4>
-      <ul>
-        <li>Array – consumption data</li>
-        <li>Graph – water distribution network</li>
-      </ul>
-
-      <div class="algorithm-box">
-        <b>Algorithms & Efficiency</b><br><br>
-        • <b>Greedy</b> – Optimal water allocation. <b>Time:</b> O(N log N). <br>
-        • <b>Graph Algorithms (BFS/DFS)</b> – Check connectivity & flow. <b>Time:</b> O(V+E). <br>
-        • <b>Dijkstra</b> – Shortest path for pipeline routing. <b>Time:</b> O((V+E) log V). <br>
-        • <b>Segment Tree</b> – Dynamic monitoring of water usage. <b>Time:</b> O(log N) per query/update. <br>
-        • <b>Union-Find / Disjoint Set</b> – Detect isolated or connected pipelines. <b>Time:</b> O(α(N)) per operation. <br>
-      </div>
+      <h4>Algorithm Efficiency</h4>
+      <table class="algorithm-table">
+        <tr>
+          <th>Algorithm</th>
+          <th>Purpose</th>
+          <th>Time Complexity</th>
+          <th>Space Complexity</th>
+        </tr>
+        <tr>
+          <td>Greedy</td>
+          <td>Optimal water allocation</td>
+          <td>O(N log N)</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Graph BFS/DFS</td>
+          <td>Connectivity & flow checks</td>
+          <td>O(V+E)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>Dijkstra</td>
+          <td>Pipeline routing shortest paths</td>
+          <td>O((V+E) log V)</td>
+          <td>O(V)</td>
+        </tr>
+        <tr>
+          <td>Segment Tree</td>
+          <td>Dynamic usage monitoring</td>
+          <td>O(log N) per query/update</td>
+          <td>O(N)</td>
+        </tr>
+        <tr>
+          <td>Union-Find</td>
+          <td>Detect connected pipelines</td>
+          <td>O(α(N)) per operation</td>
+          <td>O(N)</td>
+        </tr>
+      </table>
     </div>
 
     <div class="card">
       <h4>Resource Optimization</h4>
-
       <div class="chart-label">Water Savings</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div>
-        <div class="chart-percent">79%</div>
-      </div>
-
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div><div class="chart-percent">79%</div></div>
       <div class="chart-label">Distribution Fairness</div>
-      <div class="chart-row">
-        <div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div>
-        <div class="chart-percent">86%</div>
-      </div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div><div class="chart-percent">86%</div></div>
     </div>
   </div>
 </div>
