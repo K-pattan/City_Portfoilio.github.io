@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* BASE */
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
@@ -65,15 +64,14 @@ body{
 .header h2{
   font-size:18px;
   color:#34d399;
-  font-weight:500;
 }
 
 /* SECTION */
 .section{
   width:85%;
-  margin:50px auto;
+  margin:55px auto;
   background:#111b34;
-  padding:30px;
+  padding:32px;
   border-radius:18px;
   box-shadow:0 0 28px rgba(0,0,0,0.6);
 }
@@ -84,7 +82,7 @@ body{
   margin-bottom:12px;
 }
 
-/* GRID LAYOUT */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:2fr 1fr;
@@ -92,7 +90,7 @@ body{
   margin-top:15px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
   background:#0b1324;
   padding:18px;
@@ -116,31 +114,45 @@ body{
   margin-left:18px;
 }
 
+/* ALGORITHM */
+.algorithm-box{
+  margin-top:12px;
+  padding:14px;
+  background:#020617;
+  border-left:4px solid #34d399;
+  border-radius:10px;
+  font-size:14px;
+}
+
 /* CHARTS */
 .chart-label{
   font-size:13px;
   margin-top:10px;
 }
 
+.chart-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
 .chart-bg{
+  flex:1;
   background:#1f2937;
   border-radius:6px;
 }
 
 .chart-bar{
   height:8px;
-  border-radius:6px;
   background:#34d399;
+  border-radius:6px;
 }
 
-/* ALGORITHM BOX */
-.algorithm-box{
-  margin-top:15px;
-  padding:14px;
-  background:#020617;
-  border-left:4px solid #34d399;
-  border-radius:10px;
-  font-size:14px;
+.chart-percent{
+  font-size:12.5px;
+  color:#9ca3af;
+  min-width:32px;
+  text-align:right;
 }
 </style>
 </head>
@@ -168,99 +180,136 @@ body{
 
   <div class="grid">
     <div class="card">
-      <h4>Description</h4>
+      <h4>Service Overview</h4>
       <p>
-        Recreation services include parks, walking tracks, open gyms and community
-        spaces that improve physical health, mental well-being and social interaction.
+        Recreation services include parks, walking tracks, open gyms, cultural
+        spaces and community halls that enhance physical health, mental well-being
+        and social interaction in urban environments.
       </p>
 
-      <h4>Purpose</h4>
+      <h4>Why this service is important</h4>
       <ul>
-        <li>Improve lifestyle quality</li>
-        <li>Ensure equal access across zones</li>
-        <li>Promote healthy habits</li>
+        <li>Reduces stress caused by dense urban living</li>
+        <li>Encourages physical fitness across age groups</li>
+        <li>Creates inclusive public spaces</li>
+      </ul>
+
+      <h4>Data Structures Used</h4>
+      <ul>
+        <li>Graph – city zones and parks</li>
+        <li>Queue – level-wise traversal</li>
+        <li>Array – distance storage</li>
       </ul>
 
       <div class="algorithm-box">
         <b>Algorithm:</b> Breadth First Search (BFS)<br>
-        Ensures level-wise accessibility from all residential zones.
+        Ensures equal accessibility of recreational spaces from all zones.
       </div>
     </div>
 
     <div class="card">
-      <h4>Impact Overview</h4>
+      <h4>Impact Metrics</h4>
 
       <div class="chart-label">Accessibility</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div>
+        <div class="chart-percent">88%</div>
+      </div>
 
       <div class="chart-label">Coverage</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div>
+        <div class="chart-percent">92%</div>
+      </div>
 
       <div class="chart-label">Health Impact</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:75%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div>
+        <div class="chart-percent">76%</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- SAFETY -->
+<!-- PUBLIC SAFETY -->
 <div class="section">
   <div class="section-title">Public Safety & Services</div>
 
   <div class="grid">
     <div class="card">
-      <h4>Description</h4>
+      <h4>Service Overview</h4>
       <p>
-        Public safety integrates AI surveillance cameras, drone monitoring,
-        and optimized emergency response routing.
+        Public safety services integrate AI-based surveillance cameras,
+        drone monitoring systems, emergency response units and centralized
+        control centers.
       </p>
 
-      <h4>Key Goals</h4>
+      <h4>Core Objectives</h4>
       <ul>
-        <li>Fast emergency response</li>
         <li>Real-time incident detection</li>
-        <li>Safe routing for emergency vehicles</li>
+        <li>Fast routing for emergency vehicles</li>
+        <li>Continuous city-wide monitoring</li>
+      </ul>
+
+      <h4>Data Structures Used</h4>
+      <ul>
+        <li>Graph – road and junction network</li>
+        <li>Priority Queue – emergency routing</li>
+        <li>Array – distance and visited tracking</li>
       </ul>
 
       <div class="algorithm-box">
         <b>Algorithm:</b> Dijkstra’s Algorithm<br>
-        Finds the shortest and fastest emergency routes.
+        Computes the shortest and fastest paths for emergency response.
       </div>
     </div>
 
     <div class="card">
       <h4>System Efficiency</h4>
 
-      <div class="chart-label">Response Time</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div>
+      <div class="chart-label">Response Speed</div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div>
+        <div class="chart-percent">90%</div>
+      </div>
 
-      <div class="chart-label">Monitoring Coverage</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div>
+      <div class="chart-label">Surveillance Coverage</div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div>
+        <div class="chart-percent">85%</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- DIGITAL -->
+<!-- DIGITAL SERVICES -->
 <div class="section">
   <div class="section-title">Digital Services</div>
 
   <div class="grid">
     <div class="card">
-      <h4>Description</h4>
+      <h4>Service Overview</h4>
       <p>
-        Digital services include citizen portals, traffic apps, smart parking,
-        metro schedules and online grievance systems.
+        Digital services provide citizen portals, traffic management apps,
+        smart parking systems, metro schedules and online grievance platforms.
       </p>
 
-      <h4>Benefits</h4>
+      <h4>Benefits to Citizens</h4>
       <ul>
-        <li>Reduced paperwork</li>
-        <li>Real-time updates</li>
-        <li>Faster service delivery</li>
+        <li>Reduced paperwork and manual processing</li>
+        <li>Faster access to government services</li>
+        <li>Real-time transport and traffic updates</li>
+      </ul>
+
+      <h4>Data Structures Used</h4>
+      <ul>
+        <li>Hash Tables – citizen records</li>
+        <li>Arrays – service requests</li>
       </ul>
 
       <div class="algorithm-box">
         <b>Algorithm:</b> Hashing<br>
-        Enables instant access to citizen records and services.
+        Enables instant and secure retrieval of digital records.
       </div>
     </div>
 
@@ -268,29 +317,42 @@ body{
       <h4>Usage Metrics</h4>
 
       <div class="chart-label">Service Speed</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div>
+        <div class="chart-percent">91%</div>
+      </div>
 
       <div class="chart-label">User Convenience</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div>
+        <div class="chart-percent">87%</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- INCLUSIVE -->
+<!-- SENIOR -->
 <div class="section">
   <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
 
   <div class="grid">
     <div class="card">
-      <h4>Description</h4>
+      <h4>Service Overview</h4>
       <p>
-        Priority-based systems ensure elderly and differently-abled citizens
-        receive faster healthcare, transport and emergency services.
+        These services ensure priority access to healthcare, transport,
+        emergency and government facilities for elderly and differently-abled citizens.
       </p>
+
+      <h4>Key Outcomes</h4>
+      <ul>
+        <li>Reduced waiting time</li>
+        <li>Faster emergency handling</li>
+        <li>Inclusive city development</li>
+      </ul>
 
       <div class="algorithm-box">
         <b>Algorithm:</b> Priority Queue (Heap)<br>
-        Serves urgent requests before normal requests.
+        High-priority requests are served before normal requests.
       </div>
     </div>
 
@@ -298,10 +360,16 @@ body{
       <h4>Service Priority</h4>
 
       <div class="chart-label">Urgency Handling</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div>
+        <div class="chart-percent">93%</div>
+      </div>
 
-      <div class="chart-label">Wait Time Reduction</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:80%"></div></div>
+      <div class="chart-label">Waiting Time Reduction</div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div>
+        <div class="chart-percent">82%</div>
+      </div>
     </div>
   </div>
 </div>
@@ -312,11 +380,24 @@ body{
 
   <div class="grid">
     <div class="card">
-      <h4>Description</h4>
+      <h4>Service Overview</h4>
       <p>
-        Smart water management uses sensors and monitoring systems to detect leaks,
-        reduce wastage and distribute water efficiently.
+        Smart water management uses sensors, smart meters and automated systems
+        to monitor consumption, detect leaks and ensure efficient distribution.
       </p>
+
+      <h4>Key Advantages</h4>
+      <ul>
+        <li>Reduced water wastage</li>
+        <li>Early leak detection</li>
+        <li>Fair water allocation</li>
+      </ul>
+
+      <h4>Data Structures Used</h4>
+      <ul>
+        <li>Array – consumption data</li>
+        <li>Graph – water distribution network</li>
+      </ul>
 
       <div class="algorithm-box">
         <b>Algorithm:</b> Greedy Algorithm<br>
@@ -328,10 +409,16 @@ body{
       <h4>Resource Optimization</h4>
 
       <div class="chart-label">Water Savings</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:78%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div>
+        <div class="chart-percent">79%</div>
+      </div>
 
       <div class="chart-label">Distribution Fairness</div>
-      <div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div>
+      <div class="chart-row">
+        <div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div>
+        <div class="chart-percent">86%</div>
+      </div>
     </div>
   </div>
 </div>
