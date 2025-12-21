@@ -9,13 +9,14 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#0b1324;
+  background:#0a0f1f;
   color:#e5e7eb;
 }
 
+/* NAVBAR */
 .navbar{
-  background:#111b34;
-  padding:16px 40px;
+  background:#111827;
+  padding:18px 45px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -25,15 +26,15 @@ body{
 }
 
 .logo{
-  font-size:22px;
+  font-size:24px;
   font-weight:600;
-  color:#34d399;
+  color:#22d3ee;
 }
 
 .nav-links{
   list-style:none;
   display:flex;
-  gap:20px;
+  gap:22px;
   margin:0;
   padding:0;
 }
@@ -41,60 +42,78 @@ body{
 .nav-links a{
   text-decoration:none;
   color:#e5e7eb;
+  font-weight:500;
 }
 
+/* HEADER */
 .header{
-  width:85%;
-  margin:60px auto;
-  background:#111b34;
-  padding:40px;
-  border-radius:20px;
+  width:90%;
+  margin:80px auto;
+  padding:70px;
+  background:#111827;
+  border-radius:28px;
   text-align:center;
-  box-shadow:0 0 35px rgba(0,0,0,0.6);
+  box-shadow:0 0 50px rgba(0,0,0,0.7);
 }
 
 .header h1{
-  font-size:40px;
+  font-size:54px;
+  margin-bottom:12px;
 }
 
 .header h2{
-  color:#34d399;
+  font-size:26px;
+  color:#22d3ee;
 }
 
+/* SECTION */
 .section{
-  width:85%;
-  margin:40px auto;
-  background:#111b34;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 0 28px rgba(0,0,0,0.6);
+  width:90%;
+  margin:90px auto;
+  padding:60px;
+  background:#111827;
+  border-radius:30px;
+  box-shadow:0 0 45px rgba(0,0,0,0.7);
 }
 
 .section-title{
-  font-size:24px;
-  color:#34d399;
-  margin-bottom:10px;
+  font-size:34px;
+  color:#22d3ee;
+  margin-bottom:30px;
 }
 
-.section p{
-  line-height:1.8;
+/* BOXES */
+.box{
+  margin-top:35px;
+  padding:35px;
+  background:#0a0f1f;
+  border-radius:20px;
+  box-shadow: inset 0 0 0 1px rgba(34,211,238,0.25);
 }
 
-ul{
-  margin-left:20px;
+.box h4{
+  font-size:22px;
+  color:#67e8f9;
+  margin-bottom:15px;
 }
 
-.tag{
-  color:#6ee7b7;
-  font-weight:600;
+.box ul{
+  margin-left:22px;
+  line-height:1.9;
 }
 
+.box p{
+  line-height:1.9;
+}
+
+/* ALGORITHM BOX */
 .algorithm-box{
-  margin-top:15px;
-  padding:15px;
-  background:#0b1324;
-  border-left:4px solid #34d399;
-  border-radius:10px;
+  margin-top:40px;
+  padding:30px;
+  background:#020617;
+  border-left:6px solid #22d3ee;
+  border-radius:18px;
+  font-size:18px;
 }
 </style>
 </head>
@@ -117,33 +136,176 @@ ul{
 </div>
 
 <div class="section">
-  <div class="section-title">🌿 Recreation & Lifestyle</div>
-  <p>Parks, walking tracks and cultural spaces improve physical and mental well-being.</p>
-  <div class="algorithm-box"><b>Algorithm:</b> BFS – Fair accessibility</div>
+  <div class="section-title">Recreation & Lifestyle</div>
+
+  <div class="box">
+    <h4>Overview</h4>
+    <p>
+      Recreation and lifestyle services include parks, walking tracks, open gyms,
+      cultural spaces, and community halls that enhance physical, mental,
+      and social well-being in a smart city.
+    </p>
+  </div>
+
+  <div class="box">
+    <h4>Why this is needed</h4>
+    <ul>
+      <li>Urban lifestyle increases stress and health issues</li>
+      <li>Lack of green spaces reduces quality of life</li>
+      <li>Uneven distribution creates accessibility problems</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Data Structures Used</h4>
+    <ul>
+      <li>Graph – zones and parks as nodes</li>
+      <li>Queue – level-wise traversal</li>
+      <li>Array – distance storage</li>
+    </ul>
+  </div>
+
+  <div class="algorithm-box">
+    <b>Algorithm Used:</b> Breadth First Search (BFS)<br>
+    <b>Reason:</b> Ensures fair and equal accessibility from all zones
+  </div>
 </div>
 
 <div class="section">
-  <div class="section-title">🚨 Public Safety & Intelligent Surveillance</div>
-  <p>AI cameras and drones ensure real-time monitoring and rapid emergency response.</p>
-  <div class="algorithm-box"><b>Algorithm:</b> Dijkstra – Shortest emergency routes</div>
+  <div class="section-title">Public Safety & Intelligent Surveillance</div>
+
+  <div class="box">
+    <h4>Overview</h4>
+    <p>
+      Public safety integrates AI-based surveillance cameras, drone monitoring,
+      emergency response systems, and centralized control centers.
+    </p>
+  </div>
+
+  <div class="box">
+    <h4>How it helps the city</h4>
+    <ul>
+      <li>Real-time incident detection</li>
+      <li>Faster emergency response</li>
+      <li>Improved crime prevention</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Data Structures Used</h4>
+    <ul>
+      <li>Graph – road network</li>
+      <li>Priority Queue – emergency routing</li>
+      <li>Array – distance tracking</li>
+    </ul>
+  </div>
+
+  <div class="algorithm-box">
+    <b>Algorithm Used:</b> Dijkstra’s Algorithm<br>
+    <b>Reason:</b> Computes shortest and safest routes for emergency vehicles
+  </div>
 </div>
 
 <div class="section">
-  <div class="section-title">💻 Digital Governance & Mobility</div>
-  <p>Citizen portals, traffic apps and metro scheduling form a unified digital ecosystem.</p>
-  <div class="algorithm-box"><b>Algorithm:</b> Hashing – Instant data access</div>
+  <div class="section-title">Digital Services & Smart Mobility</div>
+
+  <div class="box">
+    <h4>Overview</h4>
+    <p>
+      Digital services include citizen portals, traffic apps, smart parking,
+      metro schedules, and online grievance systems.
+    </p>
+  </div>
+
+  <div class="box">
+    <h4>Problems Solved</h4>
+    <ul>
+      <li>Reduces paperwork and physical visits</li>
+      <li>Improves transparency</li>
+      <li>Provides real-time updates</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Data Structures Used</h4>
+    <ul>
+      <li>Hash Tables – citizen records</li>
+      <li>Arrays – service requests</li>
+    </ul>
+  </div>
+
+  <div class="algorithm-box">
+    <b>Algorithm Used:</b> Hashing<br>
+    <b>Reason:</b> Enables instant and secure access to digital records
+  </div>
 </div>
 
 <div class="section">
-  <div class="section-title">♿ Inclusive Citizen Services</div>
-  <p>Priority-based systems support senior citizens and differently-abled people.</p>
-  <div class="algorithm-box"><b>Algorithm:</b> Priority Queue</div>
+  <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
+
+  <div class="box">
+    <h4>Overview</h4>
+    <p>
+      These services prioritize elderly and differently-abled citizens in healthcare,
+      transport, emergency, and government services.
+    </p>
+  </div>
+
+  <div class="box">
+    <h4>Key Benefits</h4>
+    <ul>
+      <li>Reduced waiting time</li>
+      <li>Faster emergency handling</li>
+      <li>Inclusive city development</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Data Structures Used</h4>
+    <ul>
+      <li>Priority Queue</li>
+      <li>Heap</li>
+    </ul>
+  </div>
+
+  <div class="algorithm-box">
+    <b>Algorithm Used:</b> Priority Queue (Heap)<br>
+    <b>Reason:</b> Urgent and critical requests are handled first
+  </div>
 </div>
 
 <div class="section">
-  <div class="section-title">💧 Smart Water Management</div>
-  <p>Sensors and smart meters ensure efficient and sustainable water distribution.</p>
-  <div class="algorithm-box"><b>Algorithm:</b> Greedy – Optimal allocation</div>
+  <div class="section-title">Smart Water Management</div>
+
+  <div class="box">
+    <h4>Overview</h4>
+    <p>
+      Smart water management uses sensors, smart meters, and automated systems
+      to monitor water usage and ensure efficient distribution.
+    </p>
+  </div>
+
+  <div class="box">
+    <h4>City-Level Impact</h4>
+    <ul>
+      <li>Reduced water wastage</li>
+      <li>Early leak detection</li>
+      <li>Fair water distribution</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h4>Data Structures Used</h4>
+    <ul>
+      <li>Array – consumption data</li>
+      <li>Graph – water distribution network</li>
+    </ul>
+  </div>
+
+  <div class="algorithm-box">
+    <b>Algorithm Used:</b> Greedy Algorithm<br>
+    <b>Reason:</b> Allocates water optimally based on demand and priority
+  </div>
 </div>
 
 </body>
