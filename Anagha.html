@@ -14,7 +14,7 @@ body{
   scroll-behavior:smooth;
 }
 
-/* ================= NAVBAR ================= */
+/* ============ NAVBAR ============ */
 .navbar{
   background:#111b34;
   padding:18px 45px;
@@ -36,6 +36,8 @@ body{
   list-style:none;
   display:flex;
   gap:22px;
+  margin:0;
+  padding:0;
 }
 
 .nav-links a{
@@ -59,7 +61,7 @@ body{
   font-weight:700;
 }
 
-/* ================= TOPIC BUTTONS ================= */
+/* ============ TOPIC BUTTONS ============ */
 .topic-buttons{
   width:85%;
   margin:25px auto;
@@ -84,7 +86,7 @@ body{
   transform:translateY(-2px);
 }
 
-/* ================= HEADER ================= */
+/* ============ HEADER ============ */
 .header{
   width:85%;
   margin:30px auto 60px;
@@ -98,7 +100,7 @@ body{
 .header h1{font-size:34px;}
 .header h2{color:#34d399;font-size:18px;}
 
-/* ================= SECTION ================= */
+/* ============ SECTION ============ */
 .section{
   width:85%;
   margin:55px auto;
@@ -113,7 +115,7 @@ body{
   margin-bottom:15px;
 }
 
-/* ================= TABLE ================= */
+/* ============ TABLE ============ */
 table{
   width:100%;
   border-collapse:collapse;
@@ -140,7 +142,7 @@ th{
   cursor:pointer;
 }
 
-/* ================= MODAL ================= */
+/* ============ MODAL ============ */
 .modal{
   display:none;
   position:fixed;
@@ -176,7 +178,7 @@ th{
   font-size:20px;
 }
 
-/* ================= BACK TO TOP ================= */
+/* ============ BACK TO TOP ============ */
 .back-to-top{
   position:fixed;
   bottom:20px;
@@ -198,8 +200,8 @@ th{
   <div class="logo">CITY DESIGN</div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="Krupa.html">Krupa</a></li>
     <li><a href="Pooja.html">Pooja</a></li>
+    <li><a href="Krupa.html">Krupa</a></li>
     <li><a href="Anagha.html" class="active">Anagha</a></li>
     <li><a href="Shreya.html">Shreya</a></li>
   </ul>
@@ -219,32 +221,31 @@ th{
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<!-- ================= RECREATION ================= -->
+<!-- RECREATION -->
 <div class="section" id="recreation">
-<div class="section-title">Recreation & Lifestyle</div>
-
-<table>
-<tr>
-<th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Code</th>
-</tr>
-<tr>
-<td>BFS</td>
-<td>Equal accessibility to parks</td>
-<td>O(V+E)</td>
-<td>O(V)</td>
-<td><button class="code-btn" onclick="openCode('bfs')">View Code</button></td>
-</tr>
-<tr>
-<td>Dijkstra</td>
-<td>Nearest park routing</td>
-<td>O((V+E)logV)</td>
-<td>O(V)</td>
-<td><button class="code-btn" onclick="openCode('dijkstra')">View Code</button></td>
-</tr>
-</table>
+  <div class="section-title">Recreation & Lifestyle</div>
+  <table>
+    <tr>
+      <th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Code</th>
+    </tr>
+    <tr>
+      <td>BFS</td>
+      <td>Equal accessibility to parks</td>
+      <td>O(V+E)</td>
+      <td>O(V)</td>
+      <td><button class="code-btn" onclick="openCode('bfs')">View Code</button></td>
+    </tr>
+    <tr>
+      <td>Dijkstra</td>
+      <td>Nearest park routing</td>
+      <td>O((V+E)logV)</td>
+      <td>O(V)</td>
+      <td><button class="code-btn" onclick="openCode('dijkstra')">View Code</button></td>
+    </tr>
+  </table>
 </div>
 
-<!-- ================= MODAL ================= -->
+<!-- MODAL -->
 <div class="modal" id="codeModal">
   <div class="modal-content">
     <span class="close" onclick="closeCode()">✖</span>
