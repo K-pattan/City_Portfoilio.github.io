@@ -6,11 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== UPDATED BACKGROUND & SAME CSS AS ORIGINAL ===== */
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#1e2a47; /* Changed background color */
+  background:#1e2a47; /* background color */
   color:#e5e7eb;
   scroll-behavior:smooth;
 }
@@ -114,10 +113,8 @@ body{
   background:#34d399;
   border-radius:6px;
   position: relative;
-}
-.chart-label{
-  font-size:14px;
-  margin-top:10px;
+  width:0%; /* initial width for animation */
+  transition: width 1.5s ease-in-out;
 }
 .chart-percent{
   position:absolute;
@@ -186,7 +183,7 @@ body{
     <div class="card">
       <p>Tourist Satisfaction</p>
       <div class="chart-bar-container">
-        <div class="chart-bar" style="width:88%"><span class="chart-percent">88%</span></div>
+        <div class="chart-bar" data-percentage="88"><span class="chart-percent">88%</span></div>
       </div>
     </div>
   </div>
@@ -207,7 +204,7 @@ body{
     <div class="card">
       <p>Cleanliness Index</p>
       <div class="chart-bar-container">
-        <div class="chart-bar" style="width:85%"><span class="chart-percent">85%</span></div>
+        <div class="chart-bar" data-percentage="85"><span class="chart-percent">85%</span></div>
       </div>
     </div>
   </div>
@@ -227,7 +224,7 @@ body{
     <div class="card">
       <p>Industrial Growth</p>
       <div class="chart-bar-container">
-        <div class="chart-bar" style="width:80%"><span class="chart-percent">80%</span></div>
+        <div class="chart-bar" data-percentage="80"><span class="chart-percent">80%</span></div>
       </div>
     </div>
   </div>
@@ -247,7 +244,7 @@ body{
     <div class="card">
       <p>Energy Efficiency</p>
       <div class="chart-bar-container">
-        <div class="chart-bar" style="width:90%"><span class="chart-percent">90%</span></div>
+        <div class="chart-bar" data-percentage="90"><span class="chart-percent">90%</span></div>
       </div>
     </div>
   </div>
@@ -268,13 +265,316 @@ body{
     <div class="card">
       <p>Service Efficiency</p>
       <div class="chart-bar-container">
-        <div class="chart-bar" style="width:87%"><span class="chart-percent">87%</span></div>
+        <div class="chart-bar" data-percentage="87"><span class="chart-percent">87%</span></div>
       </div>
     </div>
   </div>
 </div>
 
 <a href="#" class="back-to-top">↑ Back to Top</a>
+
+<script>
+// Animate chart bars on page load
+window.addEventListener('load', () => {
+  const bars = document.querySelectorAll('.chart-bar');
+  bars.forEach(bar => {
+    const percentage = bar.getAttribute('data-percentage');
+    setTimeout(() => {
+      bar.style.width = percentage + '%';
+    }, 200); // slight delay for smooth effect
+  });
+});
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>City Design – Shreya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#1e2a47; /* background color */
+  color:#e5e7eb;
+  scroll-behavior:smooth;
+}
+
+.navbar{
+  background:#111b34;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#34d399;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#e5e7eb;
+  font-size:16px;
+  font-weight:600;
+}
+.topic-buttons{
+  width:95%;
+  margin:25px auto 0;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+.topic-btn{
+  padding:12px 15px;
+  background:#34d399;
+  color:#0b1324;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+.header{
+  width:85%;
+  margin:20px auto 60px;
+  background:#111b34;
+  padding:50px;
+  border-radius:20px;
+  text-align:center;
+}
+.section{
+  width:85%;
+  margin:55px auto;
+  background:#111b34;
+  padding:35px;
+  border-radius:18px;
+}
+.section-title{
+  font-size:24px;
+  color:#34d399;
+  margin-bottom:18px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:25px;
+}
+.card{
+  background:#0b1324;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(52,211,153,0.25);
+}
+.algorithm-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.algorithm-table th,.algorithm-table td{
+  border:1px solid rgba(52,211,153,0.25);
+  padding:8px;
+}
+.algorithm-table th{
+  background:#111b34;
+  color:#34d399;
+}
+.chart-bar-container{
+  position: relative;
+  background:#1f2937;
+  border-radius:6px;
+  height:20px;
+  margin-top:8px;
+}
+.chart-bar{
+  height:100%;
+  background:#34d399;
+  border-radius:6px;
+  position: relative;
+  width:0%; /* initial width for animation */
+  transition: width 1.5s ease-in-out;
+}
+.chart-percent{
+  position:absolute;
+  right:8px;
+  color:#fff;
+  font-size:12px;
+  top:0;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+.back-to-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#34d399;
+  color:#0b1324;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">CITY DESIGN</div>
+  <ul class="nav-links">
+    <li><a href="Project.html">Project</a></li>
+    <li><a href="Pooja.html">Pooja</a></li>
+    <li><a href="Krupa.html">Krupa</a></li>
+    <li><a href="Shreya.html">Shreya</a></li>
+    <li><a href="Anagha.html">Anagha</a></li>
+  </ul>
+</nav>
+
+<!-- TOPIC BUTTONS -->
+<div class="topic-buttons">
+  <a href="#tourism" class="topic-btn">Tourism</a>
+  <a href="#waste" class="topic-btn">Waste Management</a>
+  <a href="#industry" class="topic-btn">Industry</a>
+  <a href="#solar" class="topic-btn">Solar Energy</a>
+  <a href="#govt" class="topic-btn">Government</a>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Shreya</h1>
+  <h2>Smart City Services – Maharajpur</h2>
+</div>
+
+<!-- TOURISM -->
+<div class="section" id="tourism">
+  <div class="section-title">Tourism Management</div>
+  <div class="grid">
+    <div class="card">
+      <p>Tourist routes, crowd control, and attraction connectivity.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Easy travel</td></tr>
+        <tr><td>BFS</td><td>Nearby places</td><td>O(V+E)</td><td>Coverage</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Tourist Satisfaction</p>
+      <div class="chart-bar-container">
+        <div class="chart-bar" data-percentage="88"><span class="chart-percent">88%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WASTE -->
+<div class="section" id="waste">
+  <div class="section-title">Waste Management</div>
+  <div class="grid">
+    <div class="card">
+      <p>Garbage collection and optimized truck routing.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
+        <tr><td>Queue</td><td>Scheduling</td><td>O(1)</td><td>Timely pickup</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Cleanliness Index</p>
+      <div class="chart-bar-container">
+        <div class="chart-bar" data-percentage="85"><span class="chart-percent">85%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRY -->
+<div class="section" id="industry">
+  <div class="section-title">Industrial Development</div>
+  <div class="grid">
+    <div class="card">
+      <p>Industry connectivity and cost optimization.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Prim</td><td>MST</td><td>O(ElogV)</td><td>Low cost</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Industrial Growth</p>
+      <div class="chart-bar-container">
+        <div class="chart-bar" data-percentage="80"><span class="chart-percent">80%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOLAR -->
+<div class="section" id="solar">
+  <div class="section-title">Solar Energy</div>
+  <div class="grid">
+    <div class="card">
+      <p>Renewable energy distribution.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Power routing</td><td>O((V+E)logV)</td><td>Less loss</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Energy Efficiency</p>
+      <div class="chart-bar-container">
+        <div class="chart-bar" data-percentage="90"><span class="chart-percent">90%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GOVERNMENT -->
+<div class="section" id="govt">
+  <div class="section-title">Government Services</div>
+  <div class="grid">
+    <div class="card">
+      <p>Citizen portals and grievance handling.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Hashing</td><td>Records</td><td>O(1)</td><td>Fast access</td></tr>
+        <tr><td>Queue</td><td>Requests</td><td>O(1)</td><td>Fair service</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Service Efficiency</p>
+      <div class="chart-bar-container">
+        <div class="chart-bar" data-percentage="87"><span class="chart-percent">87%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="back-to-top">↑ Back to Top</a>
+
+<script>
+// Animate chart bars on page load
+window.addEventListener('load', () => {
+  const bars = document.querySelectorAll('.chart-bar');
+  bars.forEach(bar => {
+    const percentage = bar.getAttribute('data-percentage');
+    setTimeout(() => {
+      bar.style.width = percentage + '%';
+    }, 200); // slight delay for smooth effect
+  });
+});
+</script>
 
 </body>
 </html>
