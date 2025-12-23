@@ -9,7 +9,7 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#0f1c3f; /* updated background color */
+  background:#000000; /* changed background to black */
   color:#e5e7eb;
   scroll-behavior:smooth;
 }
@@ -113,7 +113,7 @@ body{
   background:#34d399;
   border-radius:6px;
   position: relative;
-  width:0%; /* initial width for animation */
+  width:0%;
   transition: width 1.5s ease-in-out;
 }
 .chart-percent{
@@ -171,14 +171,14 @@ body{
 <!-- TOURISM -->
 <div class="section" id="tourism">
   <div class="section-title">Tourism Management</div>
+  <p>Tourism management focuses on improving visitor experience by planning tourist routes, managing crowds, and promoting key attractions. It ensures efficient transportation and accessibility for all visitors. Technology is used to track tourist satisfaction and optimize services.</p>
   <div class="grid">
     <div class="card">
-      <p><strong>Overview:</strong> Manage tourist flow, optimize routes, and ensure connectivity between attractions.</p>
+      <p>Algorithms for Tourism:</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Efficient travel</td></tr>
-        <tr><td>BFS</td><td>Nearby places</td><td>O(V+E)</td><td>Coverage mapping</td></tr>
-        <tr><td>Greedy</td><td>Route planning</td><td>O(NlogN)</td><td>Quick planning</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Minimize travel time</td></tr>
+        <tr><td>BFS</td><td>Nearby attractions</td><td>O(V+E)</td><td>Quick exploration</td></tr>
       </table>
     </div>
     <div class="card">
@@ -193,14 +193,14 @@ body{
 <!-- WASTE -->
 <div class="section" id="waste">
   <div class="section-title">Waste Management</div>
+  <p>Waste management optimizes garbage collection, recycling, and disposal. Smart routing of trucks and monitoring collection points reduce costs and ensure cleanliness. Data-driven schedules improve timely pickups and sustainability.</p>
   <div class="grid">
     <div class="card">
-      <p><strong>Overview:</strong> Efficient garbage collection, routing of trucks, and optimized disposal.</p>
+      <p>Algorithms for Waste Management:</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
         <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
-        <tr><td>Queue</td><td>Scheduling</td><td>O(1)</td><td>Timely pickup</td></tr>
-        <tr><td>BFS</td><td>Route coverage</td><td>O(V+E)</td><td>Max area coverage</td></tr>
+        <tr><td>Queue</td><td>Collection scheduling</td><td>O(1)</td><td>Timely service</td></tr>
       </table>
     </div>
     <div class="card">
@@ -215,13 +215,14 @@ body{
 <!-- INDUSTRY -->
 <div class="section" id="industry">
   <div class="section-title">Industrial Development</div>
+  <p>Industrial development focuses on connecting businesses efficiently, optimizing supply chains, and minimizing operational costs. Smart city planning encourages sustainable industrial growth while reducing resource wastage and energy consumption.</p>
   <div class="grid">
     <div class="card">
-      <p><strong>Overview:</strong> Develop industry infrastructure, reduce operational costs, and improve logistics.</p>
+      <p>Algorithms for Industry:</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Prim</td><td>MST for connecting factories</td><td>O(ElogV)</td><td>Cost efficiency</td></tr>
-        <tr><td>Dijkstra</td><td>Delivery optimization</td><td>O((V+E)logV)</td><td>Fast deliveries</td></tr>
+        <tr><td>Prim</td><td>MST for connections</td><td>O(ElogV)</td><td>Minimize network cost</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest supply path</td><td>O((V+E)logV)</td><td>Efficient transport</td></tr>
       </table>
     </div>
     <div class="card">
@@ -236,12 +237,13 @@ body{
 <!-- SOLAR -->
 <div class="section" id="solar">
   <div class="section-title">Solar Energy</div>
+  <p>Solar energy management ensures efficient distribution of renewable power. Smart grids reduce energy loss and monitor consumption patterns. The city can track energy efficiency and optimize solar panel utilization for maximum output.</p>
   <div class="grid">
     <div class="card">
-      <p><strong>Overview:</strong> Plan solar panel placement, energy distribution, and minimize power loss.</p>
+      <p>Algorithms for Solar:</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>Reduce losses</td></tr>
+        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>Minimize energy loss</td></tr>
         <tr><td>Greedy</td><td>Panel placement</td><td>O(NlogN)</td><td>Max efficiency</td></tr>
       </table>
     </div>
@@ -257,14 +259,15 @@ body{
 <!-- GOVERNMENT -->
 <div class="section" id="govt">
   <div class="section-title">Government Services</div>
+  <p>Government services aim to provide fast, transparent citizen support through online portals, grievance handling, and record management. Technology ensures fairness, efficiency, and accessibility for all residents.</p>
   <div class="grid">
     <div class="card">
-      <p><strong>Overview:</strong> Manage citizen services, grievance handling, and optimize administrative workflows.</p>
+      <p>Algorithms for Government Services:</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Hashing</td><td>Record lookup</td><td>O(1)</td><td>Fast access</td></tr>
+        <tr><td>Hashing</td><td>Citizen records</td><td>O(1)</td><td>Quick access</td></tr>
         <tr><td>Queue</td><td>Request scheduling</td><td>O(1)</td><td>Fair service</td></tr>
-        <tr><td>BFS</td><td>Service coverage</td><td>O(V+E)</td><td>Max reach</td></tr>
+        <tr><td>BFS</td><td>Service mapping</td><td>O(V+E)</td><td>Coverage analysis</td></tr>
       </table>
     </div>
     <div class="card">
@@ -286,7 +289,7 @@ window.addEventListener('load', () => {
     const percentage = bar.getAttribute('data-percentage');
     setTimeout(() => {
       bar.style.width = percentage + '%';
-    }, 200); // slight delay
+    }, 200);
   });
 });
 </script>
