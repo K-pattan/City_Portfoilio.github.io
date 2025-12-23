@@ -25,33 +25,45 @@ body{
   background:linear-gradient(180deg,#020617,#0f172a);
   color:var(--text);
 }
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#020617ee;
+  padding:15px 40px;
+  border-bottom:1px solid #1e293b;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:32px;
+  font-weight:700;
+  color:white;
+  letter-spacing:1px;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:28px;
+  margin:0;
+  padding:0;
+}
+.nav-links a{
+  color:#cfeeff;
+  text-decoration:none;
+  font-weight:600;
+}
+.nav-links a:hover{color:var(--accent);}
+
+/* ===== CONTENT ===== */
 .container{
   max-width:1300px;
   margin:auto;
   padding:40px 20px 80px;
 }
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#020617ee;
-  padding:15px;
-  border-bottom:1px solid #1e293b;
-}
-nav ul{
-  display:flex;
-  justify-content:center;
-  gap:28px;
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-nav a{
-  color:#cfeeff;
-  text-decoration:none;
-  font-weight:600;
-}
-nav a:hover{color:var(--accent);}
 .hero{
   text-align:center;
   padding:60px 20px;
@@ -90,31 +102,24 @@ nav a:hover{color:var(--accent);}
 }
 .card h3{color:var(--accent2);}
 .chart-box{max-width:420px;margin:30px auto;}
-button{
-  background:var(--accent);
-  color:#020617;
-  border:none;
-  padding:10px 16px;
-  margin:6px;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
-}
-button:hover{background:var(--accent2);}
 footer{text-align:center;color:#94a3b8;margin-top:60px;}
 </style>
 </head>
 
 <body>
 
-<nav>
-<ul>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#systems">Systems</a></li>
-<li><a href="#charts">Visualization</a></li>
-<li><a href="#analysis">Complexity</a></li>
-</ul>
-</nav>
+<!-- ===== NAVBAR ===== -->
+<header>
+  <nav class="navbar">
+    <div class="logo">CITY DESIGN</div>
+    <ul class="nav-links">
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#systems">Systems</a></li>
+      <li><a href="#charts">Visualization</a></li>
+      <li><a href="#analysis">Complexity</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="container">
 
@@ -129,138 +134,52 @@ Solar Energy and Governance using Data Structures & Algorithms.
 
 <!-- SYSTEMS -->
 <div class="section" id="systems">
-<h2>1. Smart City Systems – Detailed Algorithmic Elaboration</h2>
+<h2>1. Smart City Systems</h2>
 <div class="cards">
 
 <div class="card">
-<h3>🌍 Tourism & Culture</h3>
-<p><b>Purpose:</b> Manage tourist flow, reduce congestion, and improve cultural site accessibility.</p>
-<p><b>Algorithms / Data Structures:</b> Graphs represent locations and roads, arrays store visitor counts, and shortest‑path algorithms compute optimal travel routes.</p>
-<p><b>Techniques:</b> Greedy decisions select nearby attractions, while Divide & Conquer separates the city into tourism zones.</p>
-<p><b>Principles:</b> BFS covers nearby landmarks first, DFS explores long routes, and edge relaxation continuously improves travel paths.</p>
-</div>
-
-<div class="card">
-<h3>🏭 Industries & Commercial Sector</h3>
-<p><b>Purpose:</b> Optimize industrial connectivity, logistics movement, and infrastructure cost.</p>
-<p><b>Algorithms / Data Structures:</b> Trees organize industry records, graphs model transport routes, and MST algorithms minimize wiring and road expenses.</p>
-<p><b>Techniques:</b> Greedy selection ensures minimum‑cost connections, and sorting ranks industries by production or demand.</p>
-<p><b>Principles:</b> Pruning removes inefficient routes, ensuring only optimal industrial paths are maintained.</p>
-</div>
-
-<div class="card">
-<h3>♻️ Waste Management</h3>
-<p><b>Purpose:</b> Ensure timely waste collection and maintain city cleanliness.</p>
-<p><b>Algorithms / Data Structures:</b> Queues schedule garbage trucks, graphs map bins and processing units.</p>
-<p><b>Techniques:</b> Greedy routing reduces fuel usage, while backtracking finds alternate paths during blockages.</p>
-<p><b>Principles:</b> BFS guarantees area‑wide coverage and priority handling prevents bin overflow.</p>
-</div>
-
-<div class="card">
-<h3>☀️ Solar Energy Management</h3>
-<p><b>Purpose:</b> Efficiently distribute renewable energy with minimal power loss.</p>
-<p><b>Algorithms / Data Structures:</b> Graphs model power grids, Dijkstra optimizes transmission paths, and MST minimizes cable layout.</p>
-<p><b>Techniques:</b> Divide & Conquer splits grids into zones, and greedy allocation prioritizes critical loads.</p>
-<p><b>Principles:</b> Edge relaxation improves power flow and fault isolation increases reliability.</p>
-</div>
-
-<div class="card">
-<h3>🏛️ Government & Tax System</h3>
-<p><b>Purpose:</b> Provide fast, transparent, and reliable citizen services.</p>
-<p><b>Algorithms / Data Structures:</b> Hash tables store citizen and tax records, queues manage service requests.</p>
-<p><b>Techniques:</b> Fast lookup and sorting prioritize urgent cases and defaulters.</p>
-<p><b>Principles:</b> O(1) access ensures transparency and optimized workflows reduce delays.</p>
-</div>
-
-</div>
-</div>
-</div>
-
-<!-- PIE CHART -->
-<div class="section" id="charts">
-<h2>2. Algorithm Usage – Pie Charts</h2>
-<p>Each chart below shows approximate contribution of techniques used in that city service.</p>
-<div class="chart-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
-<div class="card">
 <h3>🌍 Tourism</h3>
-<p>Optimizes visitor movement and improves travel experience.</p>
-<p>Reduces congestion and promotes attractions.</p>
-<p><b>Algorithms/Data Structures:</b> Graphs, Shortest Path</p>
-<p><b>Techniques Used:</b> Path optimization, ranking</p>
-<p><b>Principles:</b> Efficiency, scalability</p>
+<p>Uses graphs, BFS/DFS and shortest path algorithms to optimize tourist movement.</p>
 </div>
+
 <div class="card">
 <h3>🏭 Industry</h3>
-<p>Enhances logistics planning and infrastructure usage.</p>
-<p>Reduces operational cost.</p>
-<p><b>Algorithms/Data Structures:</b> Trees, Graphs</p>
-<p><b>Techniques Used:</b> Cost optimization</p>
-<p><b>Principles:</b> Resource minimization</p>
+<p>Uses MST algorithms to reduce infrastructure and logistics cost.</p>
 </div>
+
 <div class="card">
 <h3>♻️ Waste</h3>
-<p>Ensures timely waste collection.</p>
-<p>Improves city cleanliness.</p>
-<p><b>Algorithms/Data Structures:</b> Queues, Traversal</p>
-<p><b>Techniques Used:</b> Scheduling</p>
-<p><b>Principles:</b> Priority handling</p>
+<p>Uses queues and greedy routing for efficient garbage collection.</p>
 </div>
+
 <div class="card">
 <h3>☀️ Solar</h3>
-<p>Optimizes energy generation and flow.</p>
-<p>Reduces power loss.</p>
-<p><b>Algorithms/Data Structures:</b> Graphs, MST</p>
-<p><b>Techniques Used:</b> Network optimization</p>
-<p><b>Principles:</b> Sustainability</p>
+<p>Uses Dijkstra and MST to optimize power transmission.</p>
 </div>
+
 <div class="card">
 <h3>🏛️ Government</h3>
-<p>Speeds up citizen services.</p>
-<p>Improves transparency.</p>
-<p><b>Algorithms/Data Structures:</b> Hash Tables</p>
-<p><b>Techniques Used:</b> Fast lookup</p>
-<p><b>Principles:</b> Accountability</p>
-</div>
-</div>
-</div>
-<div class="chart-box"><canvas id="pieChart"></canvas></div>
+<p>Uses hashing and queues for fast and transparent services.</p>
 </div>
 
-<!-- ALGORITHMS & TECHNIQUES -->
+</div>
+</div>
+
+<!-- CHART -->
+<div class="section" id="charts">
+<h2>2. Algorithm Usage</h2>
+<div class="chart-box">
+<canvas id="pieChart"></canvas>
+</div>
+</div>
+
+<!-- ANALYSIS -->
 <div class="section" id="analysis">
-<h2>3. Algorithms, Techniques & Principles Used</h2>
-
-<h3>🔹 Algorithms / Data Structures Used</h3>
+<h2>3. Algorithms & Techniques</h2>
 <ul>
-<li><b>Arrays:</b> Linear structure storing same-type elements in contiguous memory. Used to store network nodes, IP allocations, and bandwidth records. <br><b>Space:</b> Low efficiency <b>Time:</b> O(1) fast access</li>
-
-<li><b>Linked List:</b> Nodes connected using pointers. Used to maintain dynamic lists of active users/devices. <br><b>Space:</b> Efficient insertion/deletion <b>Time:</b> O(n)</li>
-
-<li><b>Hashing:</b> Maps keys to fixed-size values. Used for customer ID, billing, and IP lookups. <br><b>Space:</b> Extra space <b>Time:</b> O(1) average</li>
-
-<li><b>Graph:</b> Vertices represent routers/towers and edges represent connections. Used for network topology. <br><b>Space:</b> Moderate <b>Time:</b> Efficient path computation</li>
-
-<li><b>Dijkstra’s Algorithm:</b> Finds shortest path from a source node. Used for optimal routing between routers/fiber nodes. <br><b>Space:</b> Low <b>Time:</b> O(E log V)</li>
-
-<li><b>Prim’s Algorithm:</b> Builds minimum spanning tree by expanding from a node. Used for fiber layout planning. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
-
-<li><b>Kruskal’s Algorithm:</b> Builds MST by selecting lowest-weight edges without cycles. Used for cost‑efficient tower wiring. <br><b>Space:</b> Moderate <b>Time:</b> O(E log V)</li>
-
-<li><b>Quick Sort / Merge Sort:</b> Sorting techniques to organize bandwidth, distance, and user data. <br><b>Space:</b> Low <b>Time:</b> O(n log n)</li>
-</ul>
-
-<h3>🔹 Techniques Used</h3>
-<ul>
-<li><b>Divide & Conquer:</b> Breaks city into zones and optimizes routing in each zone independently.</li>
-<li><b>Greedy Technique:</b> Selects lowest‑cost edge/tower at each step (used in Prim & Kruskal).</li>
-<li><b>Backtracking:</b> Explores alternate routing paths when a selected path fails.</li>
-</ul>
-
-<h3>🔹 Principles Used</h3>
-<ul>
-<li><b>Brave & Cautious Travel (DFS & BFS):</b> DFS explores deeply like a brave traveler, BFS explores level‑wise like a cautious traveler.</li>
-<li><b>Pruning:</b> Eliminates unnecessary paths that cannot produce optimal solutions.</li>
-<li><b>Edge Relaxation:</b> Updates shortest distances between nodes, core principle of Dijkstra’s algorithm.</li>
+<li>Graphs, Trees, Hash Tables</li>
+<li>Dijkstra, Prim, Kruskal</li>
+<li>Greedy, Divide & Conquer</li>
 </ul>
 </div>
 
@@ -269,20 +188,17 @@ Solar Energy and Governance using Data Structures & Algorithms.
 </div>
 
 <script>
-let chart;
-function loadChart(type){
-const dataMap={
-  tourism:{labels:['Graph','Dijkstra','Sorting','DFS/BFS'],data:[35,30,20,15]},
-  industry:{labels:['Trees','Graph','Prim/Kruskal','Hashing'],data:[25,30,25,20]},
-  waste:{labels:['Queue','BFS','Greedy','Hashing'],data:[30,25,25,20]},
-  solar:{labels:['Graph','Dijkstra','MST','Heap'],data:[30,25,25,20]},
-  gov:{labels:['Hashing','Sorting','Graph','Queue'],data:[40,25,20,15]}
-};
-const ctx=document.getElementById('pieChart');
-if(chart) chart.destroy();
-chart=new Chart(ctx,{type:'pie',data:{labels:dataMap[type].labels,datasets:[{data:dataMap[type].data,backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']}]},options:{plugins:{legend:{labels:{color:'white'}}}}});
-}
-loadChart('tourism');
+new Chart(document.getElementById('pieChart'),{
+type:'pie',
+data:{
+labels:['Graphs','Dijkstra','MST','Others'],
+datasets:[{
+data:[35,25,25,15],
+backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']
+}]
+},
+options:{plugins:{legend:{labels:{color:'white'}}}}
+});
 </script>
 
 </body>
