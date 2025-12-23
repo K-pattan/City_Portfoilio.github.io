@@ -11,13 +11,13 @@ body{
   font-family:'Poppins',sans-serif;
   background:#0b1324;
   color:#e5e7eb;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
   background:#111b34;
-  padding:16px 40px;
+  padding:18px 45px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -27,237 +27,190 @@ body{
 }
 
 .logo{
-  font-size:20px;
-  font-weight:600;
+  font-size:22px;
+  font-weight:700;
   color:#34d399;
 }
 
 .nav-links{
   list-style:none;
   display:flex;
-  gap:18px;
-  margin:0;
-  padding:0;
+  gap:22px;
 }
 
 .nav-links a{
   text-decoration:none;
   color:#e5e7eb;
-  font-size:14px;
+  font-size:16px;
+  font-weight:600;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:0.3s;
 }
 
-/* TOPIC BUTTONS */
+.nav-links a:hover{
+  color:#34d399;
+  background:rgba(52,211,153,0.15);
+}
+
+.nav-links a.active{
+  background:#34d399;
+  color:#0b1324;
+  font-weight:700;
+}
+
+/* ================= TOPIC BUTTONS ================= */
 .topic-buttons{
   width:85%;
-  margin:20px auto 0;
+  margin:25px auto;
   display:flex;
-  justify-content:flex-start;
-  gap:12px;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .topic-btn{
-  padding:10px 18px;
+  padding:12px 20px;
+  font-size:17px;
+  font-weight:700;
   background:#34d399;
   color:#0b1324;
-  border-radius:6px;
+  border-radius:8px;
   text-decoration:none;
-  font-weight:700;
-  font-size:16px;
-  transition: all 0.3s ease;
+  transition:0.3s;
 }
 
 .topic-btn:hover{
   background:#00ff99;
-  color:#111b34;
   transform:translateY(-2px);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header{
   width:85%;
-  margin:20px auto 60px;
+  margin:30px auto 60px;
   background:#111b34;
-  padding:40px;
-  border-radius:20px;
+  padding:45px;
+  border-radius:22px;
   text-align:center;
   box-shadow:0 0 35px rgba(0,0,0,0.6);
 }
 
-.header h1{
-  font-size:32px;
-  margin-bottom:6px;
-}
+.header h1{font-size:34px;}
+.header h2{color:#34d399;font-size:18px;}
 
-.header h2{
-  font-size:18px;
-  color:#34d399;
-}
-
-/* SECTION */
+/* ================= SECTION ================= */
 .section{
   width:85%;
   margin:55px auto;
   background:#111b34;
   padding:32px;
-  border-radius:18px;
-  box-shadow:0 0 28px rgba(0,0,0,0.6);
+  border-radius:20px;
 }
 
 .section-title{
-  font-size:20px;
+  font-size:22px;
   color:#34d399;
-  margin-bottom:12px;
-  transition: all 0.3s ease;
+  margin-bottom:15px;
 }
 
-.section-title:hover{
-  color:#00ff99;
-  text-shadow:0 0 8px #00ff99;
+/* ================= TABLE ================= */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+th,td{
+  border:1px solid rgba(52,211,153,0.25);
+  padding:8px;
+}
+
+th{
+  background:#0b1324;
+  color:#34d399;
+}
+
+.code-btn{
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  background:#34d399;
+  color:#0b1324;
+  font-weight:600;
   cursor:pointer;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:20px;
-  margin-top:15px;
+/* ================= MODAL ================= */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
 }
 
-/* CARD */
-.card{
-  background:#0b1324;
-  padding:18px;
+.modal-content{
+  background:#020617;
+  padding:25px;
+  width:80%;
+  max-width:700px;
   border-radius:12px;
-  border:1px solid rgba(52,211,153,0.25);
-  transition: all 0.3s ease;
 }
 
-.card:hover{
-  box-shadow:0 0 25px 3px #34d399;
-  transform: translateY(-3px);
-}
-
-.card h4{
-  font-size:15px;
-  color:#6ee7b7;
-  margin-bottom:6px;
-}
-
-.card p,
-.card ul li{
-  font-size:14px;
-  line-height:1.7;
-}
-
-.card ul{
-  margin-left:18px;
-}
-
-/* ALGORITHM TABLE */
-.algorithm-table{
-  width:100%;
-  border-collapse: collapse;
-  margin-top:12px;
-  font-size:13px;
-}
-
-.algorithm-table th,
-.algorithm-table td{
-  border:1px solid rgba(52,211,153,0.25);
-  padding:6px 8px;
-  text-align:left;
-}
-
-.algorithm-table th{
-  background:#111b34;
+.modal-content h3{
   color:#34d399;
 }
 
-.algorithm-table td{
+.modal-content pre{
   background:#0b1324;
-  color:#e5e7eb;
+  padding:15px;
+  border-radius:8px;
+  overflow-x:auto;
 }
 
-/* CHARTS */
-.chart-label{
-  font-size:13px;
-  margin-top:10px;
+.close{
+  float:right;
+  cursor:pointer;
+  font-size:20px;
 }
 
-.chart-row{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.chart-bg{
-  flex:1;
-  background:#1f2937;
-  border-radius:6px;
-}
-
-.chart-bar{
-  height:8px;
-  background:#34d399;
-  border-radius:6px;
-}
-
-.chart-percent{
-  font-size:12.5px;
-  color:#9ca3af;
-  min-width:32px;
-  text-align:right;
-}
-
-/* Hover glow on table cells and bars */
-.card:hover .algorithm-table td,
-.card:hover .chart-bar{
-  background: rgba(52,211,153,0.2);
-}
-
-/* Back to Top button */
+/* ================= BACK TO TOP ================= */
 .back-to-top{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#34d399;
   color:#0b1324;
-  padding:10px 14px;
+  padding:12px 15px;
   border-radius:8px;
   text-decoration:none;
-  font-weight:600;
-  font-size:14px;
-  box-shadow:0 0 10px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
-}
-
-.back-to-top:hover{
-  background:#00ff99;
-  color:#111b34;
-  transform:translateY(-3px);
+  font-weight:700;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">CITY DESIGN</div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="Krupa.html">Krupa</a></li>
-    <li><a href="Anagha.html">Anagha</a></li>
+    <li><a href="Pooja.html">Pooja</a></li>
+    <li><a href="Anagha.html" class="active">Anagha</a></li>
     <li><a href="Shreya.html">Shreya</a></li>
   </ul>
 </div>
 
-<!-- Topic Navigation Buttons -->
+<!-- TOPIC BUTTONS -->
 <div class="topic-buttons">
   <a href="#recreation" class="topic-btn">Recreation & Lifestyle</a>
   <a href="#safety" class="topic-btn">Public Safety & Services</a>
   <a href="#digital" class="topic-btn">Digital Services</a>
-  <a href="#senior" class="topic-btn">Senior & Disabled-Friendly Services</a>
+  <a href="#senior" class="topic-btn">Senior & Disabled Services</a>
   <a href="#water" class="topic-btn">Smart Water Management</a>
 </div>
 
@@ -266,152 +219,81 @@ body{
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<!-- RECREATION -->
+<!-- ================= RECREATION ================= -->
 <div class="section" id="recreation">
-  <div class="section-title">Recreation & Lifestyle</div>
-  <div class="grid">
-    <div class="card">
-      <h4>Service Overview</h4>
-      <p>Parks, gyms, walking tracks, cultural spaces, and community centers. Efficient routing and resource allocation are key for accessibility and utilization.</p>
+<div class="section-title">Recreation & Lifestyle</div>
 
-      <h4>Algorithm Efficiency & Benefits</h4>
-      <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>BFS</td><td>Accessibility</td><td>O(V+E)</td><td>O(V)</td><td>Fair access to parks</td></tr>
-        <tr><td>Dijkstra</td><td>Shortest path to park</td><td>O((V+E) log V)</td><td>O(V)</td><td>Quick routing</td></tr>
-        <tr><td>Prim/Kruskal</td><td>Minimum-cost paths</td><td>O(E log V)/O(E log E)</td><td>O(V+E)</td><td>Cost-effective walking/cycling paths</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient allocation of events</td></tr>
-        <tr><td>Segment Tree</td><td>Track usage</td><td>O(log N)</td><td>O(N)</td><td>Monitor park trends</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h4>Impact Metrics</h4>
-      <div class="chart-label">Accessibility</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
-      <div class="chart-label">Coverage</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div><div class="chart-percent">92%</div></div>
-      <div class="chart-label">Health Impact</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div><div class="chart-percent">76%</div></div>
-      <div class="chart-label">Event Utilization</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:81%"></div></div><div class="chart-percent">81%</div></div>
-    </div>
+<table>
+<tr>
+<th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Code</th>
+</tr>
+<tr>
+<td>BFS</td>
+<td>Equal accessibility to parks</td>
+<td>O(V+E)</td>
+<td>O(V)</td>
+<td><button class="code-btn" onclick="openCode('bfs')">View Code</button></td>
+</tr>
+<tr>
+<td>Dijkstra</td>
+<td>Nearest park routing</td>
+<td>O((V+E)logV)</td>
+<td>O(V)</td>
+<td><button class="code-btn" onclick="openCode('dijkstra')">View Code</button></td>
+</tr>
+</table>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="codeModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCode()">✖</span>
+    <h3 id="codeTitle"></h3>
+    <pre id="codeBody"></pre>
   </div>
 </div>
 
-<!-- PUBLIC SAFETY -->
-<div class="section" id="safety">
-  <div class="section-title">Public Safety & Services</div>
-  <div class="grid">
-    <div class="card">
-      <h4>Service Overview</h4>
-      <p>AI surveillance, drone monitoring, emergency response, and control centers enhance safety. Optimal routing and resource management improve response times.</p>
+<!-- BACK TO TOP -->
+<a href="#" class="back-to-top">↑ Top</a>
 
-      <h4>Algorithm Efficiency & Benefits</h4>
-      <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Dijkstra</td><td>Emergency routes</td><td>O((V+E) log V)</td><td>O(V)</td><td>Fastest response</td></tr>
-        <tr><td>BFS/DFS</td><td>Zone detection</td><td>O(V+E)</td><td>O(V)</td><td>Ensures coverage</td></tr>
-        <tr><td>Priority Queue</td><td>Request prioritization</td><td>O(log N)</td><td>O(N)</td><td>Urgent events first</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient deployment</td></tr>
-        <tr><td>Edge Relaxation</td><td>Optimal paths</td><td>O(E)</td><td>O(V)</td><td>Maintains shortest paths</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h4>System Efficiency</h4>
-      <div class="chart-label">Response Speed</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div><div class="chart-percent">90%</div></div>
-      <div class="chart-label">Surveillance Coverage</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
-    </div>
-  </div>
-</div>
+<script>
+function openCode(type){
+  const title=document.getElementById("codeTitle");
+  const body=document.getElementById("codeBody");
 
-<!-- DIGITAL SERVICES -->
-<div class="section" id="digital">
-  <div class="section-title">Digital Services</div>
-  <div class="grid">
-    <div class="card">
-      <h4>Service Overview</h4>
-      <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms enhance convenience. Algorithms improve search, retrieval, and request prioritization.</p>
+  if(type==="bfs"){
+    title.innerText="Breadth First Search (BFS)";
+    body.innerText=
+`enqueue(start)
+mark start visited
 
-      <h4>Algorithm Efficiency & Benefits</h4>
-      <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Hashing</td><td>Instant record retrieval</td><td>O(1) avg</td><td>O(N)</td><td>Fast citizen access</td></tr>
-        <tr><td>Trie</td><td>Prefix search/auto-complete</td><td>O(L)</td><td>O(N*L)</td><td>Quick search</td></tr>
-        <tr><td>Heap</td><td>Prioritize requests</td><td>O(log N)</td><td>O(N)</td><td>Urgent requests first</td></tr>
-        <tr><td>Sorting</td><td>Organize records</td><td>O(N log N)</td><td>O(N)</td><td>Maintains order</td></tr>
-        <tr><td>Caching</td><td>Reduce redundant queries</td><td>O(1)</td><td>O(N)</td><td>Speeds up access</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h4>Usage Metrics</h4>
-      <div class="chart-label">Service Speed</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div><div class="chart-percent">91%</div></div>
-      <div class="chart-label">User Convenience</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
-    </div>
-  </div>
-</div>
+while queue not empty:
+  v = dequeue
+  for each neighbor of v:
+    if not visited:
+      mark visited
+      enqueue(neighbor)`;
+  }
 
-<!-- SENIOR SERVICES -->
-<div class="section" id="senior">
-  <div class="section-title">Senior Citizen & Disabled-Friendly Services</div>
-  <div class="grid">
-    <div class="card">
-      <h4>Service Overview</h4>
-      <p>Priority access to healthcare, transport, emergency, and government facilities for elderly and differently-abled citizens.</p>
+  if(type==="dijkstra"){
+    title.innerText="Dijkstra Algorithm";
+    body.innerText=
+`initialize distance of all nodes = infinity
+distance[source] = 0
 
-      <h4>Algorithm Efficiency & Benefits</h4>
-      <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log N)</td><td>O(N)</td><td>High-priority first</td></tr>
-        <tr><td>Heap</td><td>Emergency scheduling</td><td>O(log N)</td><td>O(N)</td><td>Efficient resource management</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Reduces waiting times</td></tr>
-        <tr><td>Queue</td><td>Manage lines</td><td>O(1)</td><td>O(N)</td><td>Organized handling</td></tr>
-        <tr><td>Scheduling</td><td>Time-based priority</td><td>Varies</td><td>Varies</td><td>Fair & efficient service</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h4>Service Metrics</h4>
-      <div class="chart-label">Urgency Handling</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div><div class="chart-percent">93%</div></div>
-      <div class="chart-label">Waiting Time Reduction</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div><div class="chart-percent">82%</div></div>
-    </div>
-  </div>
-</div>
+repeat:
+  select unvisited node with smallest distance
+  mark it visited
+  update distances of neighbors`;
+  }
 
-<!-- SMART WATER -->
-<div class="section" id="water">
-  <div class="section-title">Smart Water Management</div>
-  <div class="grid">
-    <div class="card">
-      <h4>Service Overview</h4>
-      <p>Smart meters, sensors, and automation monitor water consumption, detect leaks, and optimize distribution.</p>
+  document.getElementById("codeModal").style.display="flex";
+}
 
-      <h4>Algorithm Efficiency & Benefits</h4>
-      <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Greedy</td><td>Optimal allocation</td><td>O(N log N)</td><td>O(N)</td><td>Minimizes wastage</td></tr>
-        <tr><td>Graph</td><td>Distribution network</td><td>O(V+E)</td><td>O(V+E)</td><td>Maps water flow</td></tr>
-        <tr><td>Dijkstra</td><td>Shortest path to supply</td><td>O((V+E) log V)</td><td>O(V)</td><td>Efficient pipeline routing</td></tr>
-        <tr><td>Segment Tree</td><td>Track consumption</td><td>O(log N)</td><td>O(N)</td><td>Monitors trends</td></tr>
-        <tr><td>Union-Find</td><td>Pipeline connectivity</td><td>O(α(N))</td><td>O(N)</td><td>Detects disconnected sections</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h4>Resource Optimization</h4>
-      <div class="chart-label">Water Savings</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div><div class="chart-percent">79%</div></div>
-      <div class="chart-label">Distribution Fairness</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div><div class="chart-percent">86%</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- BACK TO TOP BUTTON -->
-<a href="#" class="back-to-top">↑ Back to Top</a>
+function closeCode(){
+  document.getElementById("codeModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
