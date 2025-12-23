@@ -11,7 +11,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:#0b1324;
   color:#e5e7eb;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
@@ -27,15 +27,15 @@ body{
 }
 
 .logo{
-  font-size:22px;
-  font-weight:700;
+  font-size:28px;
+  font-weight:800;
   color:#34d399;
 }
 
 .nav-links{
   list-style:none;
   display:flex;
-  gap:22px;
+  gap:25px;
   margin:0;
   padding:0;
 }
@@ -43,25 +43,56 @@ body{
 .nav-links a{
   text-decoration:none;
   color:#e5e7eb;
-  font-size:17px;
+  font-size:16px;
   font-weight:600;
-  padding:6px 10px;
-  border-radius:6px;
 }
 
-.nav-links a:hover{
-  background:rgba(52,211,153,0.15);
-  color:#34d399;
+/* TOPIC BUTTONS */
+.topic-buttons{
+  width:85%;
+  margin:25px auto 0;
+  display:flex;
+  justify-content:flex-start;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.topic-btn{
+  padding:12px 20px;
+  background:#34d399;
+  color:#0b1324;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:18px;
+  transition: all 0.3s ease;
+}
+
+.topic-btn:hover{
+  background:#00ff99;
+  color:#111b34;
+  transform:translateY(-2px);
 }
 
 /* HEADER */
 .header{
   width:85%;
-  margin:30px auto 60px;
+  margin:20px auto 60px;
   background:#111b34;
-  padding:40px;
+  padding:50px;
   border-radius:20px;
   text-align:center;
+  box-shadow:0 0 35px rgba(0,0,0,0.6);
+}
+
+.header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.header h2{
+  font-size:22px;
+  color:#34d399;
 }
 
 /* SECTION */
@@ -69,47 +100,75 @@ body{
   width:85%;
   margin:55px auto;
   background:#111b34;
-  padding:32px;
+  padding:35px;
   border-radius:18px;
+  box-shadow:0 0 28px rgba(0,0,0,0.6);
 }
 
 .section-title{
-  font-size:22px;
+  font-size:24px;
   color:#34d399;
-  margin-bottom:15px;
+  margin-bottom:18px;
+  transition: all 0.3s ease;
+}
+
+.section-title:hover{
+  color:#00ff99;
+  text-shadow:0 0 8px #00ff99;
+  cursor:pointer;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:2fr 1fr;
-  gap:20px;
+  gap:25px;
+  margin-top:20px;
 }
 
 /* CARD */
 .card{
   background:#0b1324;
-  padding:18px;
+  padding:20px;
   border-radius:12px;
   border:1px solid rgba(52,211,153,0.25);
-  transition:0.3s;
+  transition: all 0.3s ease;
 }
 
 .card:hover{
-  box-shadow:0 0 25px #34d399;
+  box-shadow:0 0 25px 3px #34d399;
+  transform: translateY(-3px);
 }
 
-/* TABLE */
+.card h4{
+  font-size:16px;
+  color:#6ee7b7;
+  margin-bottom:8px;
+}
+
+.card p,
+.card ul li{
+  font-size:15px;
+  line-height:1.7;
+}
+
+.card ul{
+  margin-left:20px;
+}
+
+/* ALGORITHM TABLE */
 .algorithm-table{
   width:100%;
-  border-collapse:collapse;
-  font-size:13px;
+  border-collapse: collapse;
+  margin-top:12px;
+  font-size:14px;
 }
 
 .algorithm-table th,
 .algorithm-table td{
   border:1px solid rgba(52,211,153,0.25);
-  padding:6px;
+  padding:8px 10px;
+  text-align:left;
 }
 
 .algorithm-table th{
@@ -117,10 +176,15 @@ body{
   color:#34d399;
 }
 
+.algorithm-table td{
+  background:#0b1324;
+  color:#e5e7eb;
+}
+
 /* CODE BUTTON */
 .code-btn{
-  margin-top:10px;
-  padding:8px 14px;
+  margin-top:12px;
+  padding:8px 16px;
   background:#34d399;
   color:#0b1324;
   border:none;
@@ -133,6 +197,7 @@ body{
 .code-btn:hover{
   background:#00ff99;
   box-shadow:0 0 15px #34d399;
+  transform:translateY(-2px);
 }
 
 /* CODE BOX */
@@ -143,15 +208,48 @@ body{
   padding:14px;
   border-radius:8px;
   font-size:13px;
-  box-shadow:0 0 18px rgba(52,211,153,0.4);
 }
 
-pre{
-  margin:0;
-  white-space:pre-wrap;
+pre{ margin:0; white-space:pre-wrap; }
+
+/* CHARTS */
+.chart-label{
+  font-size:14px;
+  margin-top:10px;
 }
 
-/* BACK TO TOP */
+.chart-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.chart-bg{
+  flex:1;
+  background:#1f2937;
+  border-radius:6px;
+}
+
+.chart-bar{
+  height:10px;
+  background:#34d399;
+  border-radius:6px;
+}
+
+.chart-percent{
+  font-size:13px;
+  color:#9ca3af;
+  min-width:32px;
+  text-align:right;
+}
+
+/* Hover glow on table cells and bars */
+.card:hover .algorithm-table td,
+.card:hover .chart-bar{
+  background: rgba(52,211,153,0.2);
+}
+
+/* Back to Top button */
 .back-to-top{
   position:fixed;
   bottom:20px;
@@ -162,6 +260,15 @@ pre{
   border-radius:8px;
   text-decoration:none;
   font-weight:600;
+  font-size:14px;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover{
+  background:#00ff99;
+  color:#111b34;
+  transform:translateY(-3px);
 }
 </style>
 
@@ -171,19 +278,33 @@ function toggleCode(id){
   box.style.display = box.style.display==="block" ? "none" : "block";
 }
 </script>
-</head>
 
+</head>
 <body>
 
-<div class="navbar">
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
   <div class="logo">CITY DESIGN</div>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="Index.html">Home</a></li> 
+    <li><a href="About.html">About</a></li> 
+    <li><a href="Project.html">Project</a></li>
     <li><a href="Pooja.html">Pooja</a></li>
     <li><a href="Krupa.html">Krupa</a></li>
-    <li><a href="Anagha.html">Anagha</a></li>
     <li><a href="Shreya.html">Shreya</a></li>
+    <li><a href="Anagha.html">Anagha</a></li>
   </ul>
+</nav>
+</header>
+
+<!-- Topic Buttons -->
+<div class="topic-buttons">
+  <a href="#recreation" class="topic-btn">Recreation & Lifestyle</a>
+  <a href="#safety" class="topic-btn">Public Safety & Services</a>
+  <a href="#digital" class="topic-btn">Digital Services</a>
+  <a href="#senior" class="topic-btn">Senior & Disabled-Friendly Services</a>
+  <a href="#water" class="topic-btn">Smart Water Management</a>
 </div>
 
 <div class="header">
@@ -192,146 +313,118 @@ function toggleCode(id){
 </div>
 
 <!-- RECREATION -->
-<div class="section">
-<div class="section-title">Recreation & Lifestyle</div>
-<div class="grid">
-<div class="card">
-
-<table class="algorithm-table">
-<tr><th>Algorithm</th><th>Purpose</th></tr>
-<tr><td>BFS</td><td>Accessibility</td></tr>
-<tr><td>Dijkstra</td><td>Shortest path</td></tr>
-<tr><td>Prim/Kruskal</td><td>Minimum cost paths</td></tr>
-<tr><td>Greedy</td><td>Resource allocation</td></tr>
-<tr><td>Segment Tree</td><td>Usage tracking</td></tr>
-</table>
-
-<button class="code-btn" onclick="toggleCode('rec-code')">View Algorithm Codes</button>
-<div class="code-box" id="rec-code">
-<pre>
-BFS:
-enqueue start node
-while queue not empty:
- visit node
- enqueue unvisited neighbors
-
-Dijkstra:
-set all distances to infinity
-distance[source]=0
-repeat:
- pick node with min distance
- update neighbors
-
-Greedy:
-choose best local option
-repeat until solved
-
-Segment Tree:
-build tree
-query/update in log N
-</pre>
+<div class="section" id="recreation">
+  <div class="section-title">Recreation & Lifestyle</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Parks, gyms, walking tracks, cultural spaces, and community centers. Efficient routing and resource allocation are key for accessibility and utilization.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
+        <tr><td>BFS</td><td>Accessibility</td><td>O(V+E)</td><td>O(V)</td><td>Fair access to parks</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest path to park</td><td>O((V+E) log V)</td><td>O(V)</td><td>Quick routing</td></tr>
+      </table>
+      <button class="code-btn" onclick="toggleCode('recreationCode')">Show Code</button>
+      <div id="recreationCode" class="code-box"><pre>
+// BFS Example
+function BFS(graph, start){ let visited = new Set(); let queue = [start]; while(queue.length){ let node=queue.shift(); visited.add(node); for(let n of graph[node]){ if(!visited.has(n)) queue.push(n); } } return visited; }
+      </pre></div>
+    </div>
+    <div class="card">
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">Accessibility</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
+    </div>
+  </div>
 </div>
 
-</div>
-</div>
-</div>
-
-<!-- PUBLIC SAFETY -->
-<div class="section">
-<div class="section-title">Public Safety & Services</div>
-<div class="card">
-
-<button class="code-btn" onclick="toggleCode('safety-code')">View Algorithm Codes</button>
-<div class="code-box" id="safety-code">
-<pre>
-Priority Queue:
-insert with priority
-remove highest priority first
-
-DFS/BFS:
-traverse all connected zones
-
-Edge Relaxation:
-if new path is shorter
- update distance
-</pre>
-</div>
-
-</div>
+<!-- SAFETY -->
+<div class="section" id="safety">
+  <div class="section-title">Public Safety & Services</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>AI surveillance, drones, emergency response, and control centers enhance safety. Optimal routing improves response times.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
+        <tr><td>Dijkstra</td><td>Emergency routes</td><td>O((V+E) log V)</td><td>O(V)</td><td>Fastest response</td></tr>
+        <tr><td>BFS/DFS</td><td>Zone detection</td><td>O(V+E)</td><td>O(V)</td><td>Ensures coverage</td></tr>
+      </table>
+      <button class="code-btn" onclick="toggleCode('safetyCode')">Show Code</button>
+      <div id="safetyCode" class="code-box"><pre>
+// Dijkstra Example
+function dijkstra(graph, start){ let dist = {}; let visited = new Set(); /*...*/ }
+      </pre></div>
+    </div>
+  </div>
 </div>
 
 <!-- DIGITAL -->
-<div class="section">
-<div class="section-title">Digital Services</div>
-<div class="card">
-
-<button class="code-btn" onclick="toggleCode('digital-code')">View Algorithm Codes</button>
-<div class="code-box" id="digital-code">
-<pre>
-Hashing:
-compute hash
-store and retrieve data
-
-Heap:
-insert
-heapify
-remove top
-
-Sorting:
-divide
-sort
-merge
-</pre>
-</div>
-
-</div>
+<div class="section" id="digital">
+  <div class="section-title">Digital Services</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms. Algorithms improve search, retrieval, and request prioritization.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
+        <tr><td>Hashing</td><td>Instant record retrieval</td><td>O(1)</td><td>O(N)</td><td>Fast citizen access</td></tr>
+        <tr><td>Trie</td><td>Prefix search</td><td>O(L)</td><td>O(N*L)</td><td>Quick search</td></tr>
+      </table>
+      <button class="code-btn" onclick="toggleCode('digitalCode')">Show Code</button>
+      <div id="digitalCode" class="code-box"><pre>
+// Trie Example
+class TrieNode{ constructor(){ this.children={}; this.isEnd=false; } }
+      </pre></div>
+    </div>
+  </div>
 </div>
 
 <!-- SENIOR -->
-<div class="section">
-<div class="section-title">Senior & Disabled-Friendly Services</div>
-<div class="card">
-
-<button class="code-btn" onclick="toggleCode('senior-code')">View Algorithm Codes</button>
-<div class="code-box" id="senior-code">
-<pre>
-Priority Queue:
-serve urgent requests first
-
-Queue:
-enqueue
-dequeue
-
-Greedy:
-allocate nearest resources
-</pre>
-</div>
-
-</div>
+<div class="section" id="senior">
+  <div class="section-title">Senior & Disabled-Friendly Services</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Priority access to healthcare, transport, emergency, and government facilities for elderly and differently-abled citizens.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
+        <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log N)</td><td>O(N)</td><td>High-priority first</td></tr>
+        <tr><td>Heap</td><td>Emergency scheduling</td><td>O(log N)</td><td>O(N)</td><td>Efficient resource management</td></tr>
+      </table>
+      <button class="code-btn" onclick="toggleCode('seniorCode')">Show Code</button>
+      <div id="seniorCode" class="code-box"><pre>
+// Priority Queue Example
+class PriorityQueue{ constructor(){ this.items=[]; } }
+      </pre></div>
+    </div>
+  </div>
 </div>
 
 <!-- WATER -->
-<div class="section">
-<div class="section-title">Smart Water Management</div>
-<div class="card">
-
-<button class="code-btn" onclick="toggleCode('water-code')">View Algorithm Codes</button>
-<div class="code-box" id="water-code">
-<pre>
-Graph:
-nodes=pipelines
-edges=connections
-
-Union-Find:
-find parent
-union sets
-
-Dijkstra:
-shortest pipeline path
-</pre>
-</div>
-
-</div>
+<div class="section" id="water">
+  <div class="section-title">Smart Water Management</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Smart meters, sensors, and automation monitor water consumption, detect leaks, and optimize distribution.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
+        <tr><td>Greedy</td><td>Optimal allocation</td><td>O(N log N)</td><td>O(N)</td><td>Minimizes wastage</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest path to supply</td><td>O((V+E) log V)</td><td>O(V)</td><td>Efficient pipeline routing</td></tr>
+      </table>
+      <button class="code-btn" onclick="toggleCode('waterCode')">Show Code</button>
+      <div id="waterCode" class="code-box"><pre>
+// Dijkstra for Water
+function waterDijkstra(graph, start){ let dist={}; /*...*/ }
+      </pre></div>
+    </div>
+  </div>
 </div>
 
 <a href="#" class="back-to-top">↑ Back to Top</a>
