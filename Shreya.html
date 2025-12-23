@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>City Design – Shreya</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{
   margin:0;
@@ -22,56 +23,140 @@ body{
   top:0;
   z-index:1000;
 }
-.logo{ font-size:28px; font-weight:800; color:#34d399; }
-.nav-links{ list-style:none; display:flex; gap:25px; margin:0; padding:0; }
-.nav-links a{ text-decoration:none; color:#e5e7eb; font-size:16px; font-weight:600; }
-
-.topic-buttons{ width:95%; margin:25px auto 0; display:flex; gap:10px; overflow-x:auto; }
-.topic-btn{ padding:12px 15px; background:#34d399; color:#0b1324; border-radius:8px; text-decoration:none; font-weight:700; }
-
-.header{ width:85%; margin:20px auto 60px; background:#111b34; padding:50px; border-radius:20px; text-align:center; }
-
-.section{ width:85%; margin:55px auto; background:#111b34; padding:35px; border-radius:18px; }
-.section-title{ font-size:24px; color:#34d399; margin-bottom:18px; }
-.grid{ display:grid; grid-template-columns:2fr 1fr; gap:25px; }
-.card{ background:#0b1324; padding:20px; border-radius:12px; border:1px solid rgba(52,211,153,0.25); }
-
-.algorithm-table{ width:100%; border-collapse:collapse; font-size:14px; margin-bottom:10px; }
-.algorithm-table th,.algorithm-table td{ border:1px solid rgba(52,211,153,0.25); padding:8px; }
-.algorithm-table th{ background:#111b34; color:#34d399; }
-
-.chart-bar-container{ position: relative; background:#1f2937; border-radius:6px; height:20px; margin-top:8px; }
-.chart-bar{ height:100%; background:#34d399; border-radius:6px; position: relative; width:0%; transition: width 1.5s ease-in-out; }
-.chart-percent{ position:absolute; right:8px; color:#fff; font-size:12px; top:0; height:100%; display:flex; align-items:center; }
-
-.alg-button{
-  background:#34d399;
-  color:#0b1324;
-  padding:10px 12px;
-  border:none;
-  border-radius:6px;
-  margin:5px 0;
-  cursor:pointer;
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#34d399;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#e5e7eb;
+  font-size:16px;
   font-weight:600;
 }
-.alg-content{
-  max-height:0;
-  overflow:hidden;
-  transition: max-height 0.5s ease;
-  background:#111b34;
-  padding:0 10px;
-  border-radius:6px;
-  margin-bottom:10px;
+.topic-buttons{
+  width:95%;
+  margin:25px auto 0;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
 }
-.alg-content pre{
-  margin:10px 0;
+.topic-btn{
+  padding:12px 15px;
+  background:#34d399;
+  color:#0b1324;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+.header{
+  width:85%;
+  margin:20px auto 60px;
+  background:#111b34;
+  padding:50px;
+  border-radius:20px;
+  text-align:center;
+}
+.section{
+  width:85%;
+  margin:55px auto;
+  background:#111b34;
+  padding:35px;
+  border-radius:18px;
+}
+.section-title{
+  font-size:24px;
+  color:#34d399;
+  margin-bottom:18px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:25px;
+}
+.card{
+  background:#0b1324;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(52,211,153,0.25);
+}
+.algorithm-table{
+  width:100%;
+  border-collapse:collapse;
   font-size:14px;
-  color:#e5e7eb;
+}
+.algorithm-table th,.algorithm-table td{
+  border:1px solid rgba(52,211,153,0.25);
+  padding:8px;
+}
+.algorithm-table th{
+  background:#111b34;
+  color:#34d399;
+}
+.chart-bar-container{
+  position: relative;
+  background:#1f2937;
+  border-radius:6px;
+  height:20px;
+  margin-top:8px;
+}
+.chart-bar{
+  height:100%;
+  background:#34d399;
+  border-radius:6px;
+  position: relative;
+  width:0%;
+  transition: width 1.5s ease-in-out;
+}
+.chart-percent{
+  position:absolute;
+  right:8px;
+  color:#fff;
+  font-size:12px;
+  top:0;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+.back-to-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#34d399;
+  color:#0b1324;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
 }
 
-.back-to-top{ position:fixed; bottom:20px; right:20px; background:#34d399; color:#0b1324; padding:10px 14px; border-radius:8px; text-decoration:none; }
+/* Tooltip for efficiency table */
+.algorithm-table tr[title] {
+  cursor: help;
+  position: relative;
+}
+.algorithm-table tr[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: #34d399;
+  color: #0b1324;
+  padding: 6px 10px;
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  z-index: 1000;
+  font-size: 12px;
+}
 </style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -93,6 +178,7 @@ body{
   <a href="#industry" class="topic-btn">Industry</a>
   <a href="#solar" class="topic-btn">Solar Energy</a>
   <a href="#govt" class="topic-btn">Government</a>
+  <a href="#efficiency" class="topic-btn">Efficiency</a>
 </div>
 
 <!-- HEADER -->
@@ -104,36 +190,15 @@ body{
 <!-- TOURISM -->
 <div class="section" id="tourism">
   <div class="section-title">Tourism Management</div>
-  <p>Tourism management focuses on improving visitor experience by planning tourist routes, managing crowds, and promoting key attractions. Efficient algorithms ensure minimal travel time and better planning.</p>
+  <p>Tourism management improves visitor experience by planning tourist routes, managing crowds, and promoting attractions. It ensures smooth transportation and accessibility, while tracking tourist satisfaction using technology.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Tourism:</p>
-      <button class="alg-button">Dijkstra Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Find shortest paths between attractions
-// Time Complexity: O((V+E)logV)
-// Space Complexity: O(V+E)
-// Benefit: Minimizes tourist travel time and optimizes routes
-
-function dijkstra(graph, start) {
-  // implementation
-}
-</pre>
-      </div>
-      <button class="alg-button">BFS Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Explore nearby attractions quickly
-// Time Complexity: O(V+E)
-// Space Complexity: O(V)
-// Benefit: Fast exploration and visitor coverage
-
-function bfs(graph, start){
-  // implementation
-}
-</pre>
-      </div>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Minimize travel time</td></tr>
+        <tr><td>BFS</td><td>Nearby attractions</td><td>O(V+E)</td><td>Quick exploration</td></tr>
+      </table>
     </div>
     <div class="card">
       <p>Tourist Satisfaction</p>
@@ -147,38 +212,15 @@ function bfs(graph, start){
 <!-- WASTE -->
 <div class="section" id="waste">
   <div class="section-title">Waste Management</div>
-  <p>Waste management optimizes garbage collection and recycling. Algorithms improve routing and scheduling for cost and time efficiency.</p>
+  <p>Waste management optimizes garbage collection, recycling, and disposal. Smart routing of trucks and monitoring collection points reduce costs and ensure cleanliness. Data-driven schedules improve timely pickups and sustainability.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Waste Management:</p>
-      <button class="alg-button">Greedy Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Optimize truck routing
-// Time Complexity: O(NlogN)
-// Space Complexity: O(N)
-// Benefit: Reduces fuel and operational cost
-
-function greedyRoute(trucks, route){
-  // implementation
-}
-</pre>
-      </div>
-      <button class="alg-button">Queue Scheduling</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Schedule collection points
-// Time Complexity: O(1) per operation
-// Space Complexity: O(N)
-// Benefit: Ensures timely service
-
-class Queue {
-  constructor(){ this.items = []; }
-  enqueue(item){ this.items.push(item); }
-  dequeue(){ return this.items.shift(); }
-}
-</pre>
-      </div>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
+        <tr><td>Queue</td><td>Collection scheduling</td><td>O(1)</td><td>Timely service</td></tr>
+      </table>
     </div>
     <div class="card">
       <p>Cleanliness Index</p>
@@ -192,36 +234,15 @@ class Queue {
 <!-- INDUSTRY -->
 <div class="section" id="industry">
   <div class="section-title">Industrial Development</div>
-  <p>Industrial development focuses on supply chain optimization and efficient connections. Algorithms ensure minimal network cost and fast transport.</p>
+  <p>Industrial development focuses on connecting businesses efficiently, optimizing supply chains, and minimizing operational costs. Smart city planning encourages sustainable growth while reducing resource and energy waste.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Industry:</p>
-      <button class="alg-button">Prim Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Minimum Spanning Tree for industrial connections
-// Time Complexity: O(ElogV)
-// Space Complexity: O(V+E)
-// Benefit: Minimizes network cost
-
-function primMST(graph){
-  // implementation
-}
-</pre>
-      </div>
-      <button class="alg-button">Dijkstra Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Find shortest supply path
-// Time Complexity: O((V+E)logV)
-// Space Complexity: O(V+E)
-// Benefit: Efficient transportation
-
-function dijkstraSupply(graph, start){
-  // implementation
-}
-</pre>
-      </div>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Prim</td><td>MST for connections</td><td>O(ElogV)</td><td>Minimize network cost</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest supply path</td><td>O((V+E)logV)</td><td>Efficient transport</td></tr>
+      </table>
     </div>
     <div class="card">
       <p>Industrial Growth</p>
@@ -235,36 +256,15 @@ function dijkstraSupply(graph, start){
 <!-- SOLAR -->
 <div class="section" id="solar">
   <div class="section-title">Solar Energy</div>
-  <p>Solar energy management optimizes panel placement and power distribution using algorithms to maximize efficiency.</p>
+  <p>Solar energy management ensures efficient distribution of renewable power. Smart grids reduce energy loss and monitor consumption patterns. The city can track energy efficiency and optimize panel usage for maximum output.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Solar:</p>
-      <button class="alg-button">Dijkstra Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Optimal power routing
-// Time Complexity: O((V+E)logV)
-// Space Complexity: O(V+E)
-// Benefit: Minimizes energy loss
-
-function dijkstraSolar(grid, start){
-  // implementation
-}
-</pre>
-      </div>
-      <button class="alg-button">Greedy Panel Placement</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Place solar panels efficiently
-// Time Complexity: O(NlogN)
-// Space Complexity: O(N)
-// Benefit: Maximizes energy efficiency
-
-function greedySolar(panels){
-  // implementation
-}
-</pre>
-      </div>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>Minimize energy loss</td></tr>
+        <tr><td>Greedy</td><td>Panel placement</td><td>O(NlogN)</td><td>Max efficiency</td></tr>
+      </table>
     </div>
     <div class="card">
       <p>Energy Efficiency</p>
@@ -278,51 +278,16 @@ function greedySolar(panels){
 <!-- GOVERNMENT -->
 <div class="section" id="govt">
   <div class="section-title">Government Services</div>
-  <p>Government services use algorithms for record management and scheduling to improve transparency and speed.</p>
+  <p>Government services provide fast, transparent citizen support through online portals, grievance handling, and record management. Technology ensures fairness, efficiency, and accessibility for all residents.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Government Services:</p>
-      <button class="alg-button">Hashing</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Quick citizen record access
-// Time Complexity: O(1)
-// Space Complexity: O(N)
-// Benefit: Fast retrieval of records
-
-function hashRecords(records){
-  // implementation
-}
-</pre>
-      </div>
-      <button class="alg-button">Queue Scheduling</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Schedule citizen requests
-// Time Complexity: O(1)
-// Space Complexity: O(N)
-// Benefit: Ensures fairness in service
-
-class Queue {
-  constructor(){ this.items = []; }
-  enqueue(item){ this.items.push(item); }
-  dequeue(){ return this.items.shift(); }
-}
-</pre>
-      </div>
-      <button class="alg-button">BFS Algorithm</button>
-      <div class="alg-content">
-<pre>
-// Purpose: Map government service coverage
-// Time Complexity: O(V+E)
-// Space Complexity: O(V)
-// Benefit: Ensures all areas are covered
-
-function bfsGov(graph, start){
-  // implementation
-}
-</pre>
-      </div>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Hashing</td><td>Citizen records</td><td>O(1)</td><td>Quick access</td></tr>
+        <tr><td>Queue</td><td>Request scheduling</td><td>O(1)</td><td>Fair service</td></tr>
+        <tr><td>BFS</td><td>Service mapping</td><td>O(V+E)</td><td>Coverage analysis</td></tr>
+      </table>
     </div>
     <div class="card">
       <p>Service Efficiency</p>
@@ -331,6 +296,64 @@ function bfsGov(graph, start){
       </div>
     </div>
   </div>
+</div>
+
+<!-- TIME & SPACE EFFICIENCY -->
+<div class="section" id="efficiency">
+  <div class="section-title">Algorithm Efficiency – Time & Space</div>
+  <p>This table shows the time and space efficiency of algorithms used across different smart city modules and their purpose.</p>
+  
+  <table class="algorithm-table">
+    <tr>
+      <th>Algorithm</th>
+      <th>Module</th>
+      <th>Time Complexity</th>
+      <th>Space Complexity</th>
+      <th>Purpose</th>
+    </tr>
+    <tr title="Dijkstra uses a priority queue to find shortest paths efficiently. Space depends on storing distances and queue.">
+      <td>Dijkstra</td>
+      <td>Tourism / Industry / Solar</td>
+      <td>O((V+E)logV)</td>
+      <td>O(V)</td>
+      <td>Optimize travel, supply, or energy flow</td>
+    </tr>
+    <tr title="BFS explores neighbors level by level using a queue. Space is proportional to the number of nodes.">
+      <td>BFS</td>
+      <td>Tourism / Government</td>
+      <td>O(V+E)</td>
+      <td>O(V)</td>
+      <td>Explore nearby attractions or map services efficiently</td>
+    </tr>
+    <tr title="Greedy selects optimal local choices; space depends on storing list of nodes or elements.">
+      <td>Greedy</td>
+      <td>Waste / Solar</td>
+      <td>O(NlogN)</td>
+      <td>O(N)</td>
+      <td>Optimize truck routing or solar panel placement</td>
+    </tr>
+    <tr title="Queue handles scheduling of tasks or requests; space depends on queue size.">
+      <td>Queue</td>
+      <td>Waste / Government</td>
+      <td>O(1)</td>
+      <td>O(N)</td>
+      <td>Schedule collections or citizen requests fairly</td>
+    </tr>
+    <tr title="Prim builds a minimum spanning tree; space stores vertices and edges.">
+      <td>Prim</td>
+      <td>Industry</td>
+      <td>O(ElogV)</td>
+      <td>O(V)</td>
+      <td>Connect industries at minimal infrastructure cost</td>
+    </tr>
+    <tr title="Hashing allows constant-time record lookup; space proportional to number of records.">
+      <td>Hashing</td>
+      <td>Government</td>
+      <td>O(1)</td>
+      <td>O(N)</td>
+      <td>Fast retrieval of citizen records for efficient services</td>
+    </tr>
+  </table>
 </div>
 
 <a href="#" class="back-to-top">↑ Back to Top</a>
@@ -344,15 +367,6 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       bar.style.width = percentage + '%';
     }, 200);
-  });
-});
-
-// Toggle algorithm code display
-const buttons = document.querySelectorAll('.alg-button');
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
   });
 });
 </script>
