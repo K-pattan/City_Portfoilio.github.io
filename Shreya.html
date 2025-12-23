@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +7,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== SAME CSS AS YOUR FILE (UNCHANGED) ===== */
-body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;scroll-behavior:smooth;}
-.navbar{background:#111b34;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-.logo{font-size:28px;font-weight:800;color:#34d399;}
-.nav-links{list-style:none;display:flex;gap:25px;margin:0;padding:0;}
-.nav-links a{text-decoration:none;color:#e5e7eb;font-size:16px;font-weight:600;}
-.topic-buttons{width:95%;margin:25px auto 0;display:flex;gap:10px;overflow-x:auto;}
-.topic-btn{padding:12px 15px;background:#34d399;color:#0b1324;border-radius:8px;text-decoration:none;font-weight:700;}
-.header{width:85%;margin:20px auto 60px;background:#111b34;padding:50px;border-radius:20px;text-align:center;}
-.section{width:85%;margin:55px auto;background:#111b34;padding:35px;border-radius:18px;}
-.section-title{font-size:24px;color:#34d399;margin-bottom:18px;}
-.grid{display:grid;grid-template-columns:2fr 1fr;gap:25px;}
-.card{background:#0b1324;padding:20px;border-radius:12px;border:1px solid rgba(52,211,153,0.25);}
-.algorithm-table{width:100%;border-collapse:collapse;font-size:14px;}
-.algorithm-table th,.algorithm-table td{border:1px solid rgba(52,211,153,0.25);padding:8px;}
-.algorithm-table th{background:#111b34;color:#34d399;}
-.chart-bar{height:10px;background:#34d399;border-radius:6px;}
-.back-to-top{position:fixed;bottom:20px;right:20px;background:#34d399;color:#0b1324;padding:10px 14px;border-radius:8px;text-decoration:none;}
+/* ===== UPDATED BACKGROUND & SAME CSS AS ORIGINAL ===== */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#1e2a47; /* Changed background color */
+  color:#e5e7eb;
+  scroll-behavior:smooth;
+}
+
+.navbar{
+  background:#111b34;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#34d399;
+}
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#e5e7eb;
+  font-size:16px;
+  font-weight:600;
+}
+.topic-buttons{
+  width:95%;
+  margin:25px auto 0;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+.topic-btn{
+  padding:12px 15px;
+  background:#34d399;
+  color:#0b1324;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+.header{
+  width:85%;
+  margin:20px auto 60px;
+  background:#111b34;
+  padding:50px;
+  border-radius:20px;
+  text-align:center;
+}
+.section{
+  width:85%;
+  margin:55px auto;
+  background:#111b34;
+  padding:35px;
+  border-radius:18px;
+}
+.section-title{
+  font-size:24px;
+  color:#34d399;
+  margin-bottom:18px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:25px;
+}
+.card{
+  background:#0b1324;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(52,211,153,0.25);
+}
+.algorithm-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.algorithm-table th,.algorithm-table td{
+  border:1px solid rgba(52,211,153,0.25);
+  padding:8px;
+}
+.algorithm-table th{
+  background:#111b34;
+  color:#34d399;
+}
+.chart-bar-container{
+  position: relative;
+  background:#1f2937;
+  border-radius:6px;
+  height:20px;
+  margin-top:8px;
+}
+.chart-bar{
+  height:100%;
+  background:#34d399;
+  border-radius:6px;
+  position: relative;
+}
+.chart-label{
+  font-size:14px;
+  margin-top:10px;
+}
+.chart-percent{
+  position:absolute;
+  right:8px;
+  color:#fff;
+  font-size:12px;
+  top:0;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+.back-to-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#34d399;
+  color:#0b1324;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+}
 </style>
 </head>
 
@@ -70,7 +186,9 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;
     </div>
     <div class="card">
       <p>Tourist Satisfaction</p>
-      <div class="chart-bar" style="width:88%"></div>
+      <div class="chart-bar-container">
+        <div class="chart-bar" style="width:88%"><span class="chart-percent">88%</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -89,7 +207,9 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;
     </div>
     <div class="card">
       <p>Cleanliness Index</p>
-      <div class="chart-bar" style="width:85%"></div>
+      <div class="chart-bar-container">
+        <div class="chart-bar" style="width:85%"><span class="chart-percent">85%</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -107,7 +227,9 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;
     </div>
     <div class="card">
       <p>Industrial Growth</p>
-      <div class="chart-bar" style="width:80%"></div>
+      <div class="chart-bar-container">
+        <div class="chart-bar" style="width:80%"><span class="chart-percent">80%</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -125,7 +247,9 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;
     </div>
     <div class="card">
       <p>Energy Efficiency</p>
-      <div class="chart-bar" style="width:90%"></div>
+      <div class="chart-bar-container">
+        <div class="chart-bar" style="width:90%"><span class="chart-percent">90%</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -144,7 +268,9 @@ body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;
     </div>
     <div class="card">
       <p>Service Efficiency</p>
-      <div class="chart-bar" style="width:87%"></div>
+      <div class="chart-bar-container">
+        <div class="chart-bar" style="width:87%"><span class="chart-percent">87%</span></div>
+      </div>
     </div>
   </div>
 </div>
