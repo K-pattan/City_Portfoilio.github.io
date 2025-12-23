@@ -9,7 +9,7 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#1e2a47; /* background color */
+  background:#0f1c3f; /* updated background color */
   color:#e5e7eb;
   scroll-behavior:smooth;
 }
@@ -173,11 +173,12 @@ body{
   <div class="section-title">Tourism Management</div>
   <div class="grid">
     <div class="card">
-      <p>Tourist routes, crowd control, and attraction connectivity.</p>
+      <p><strong>Overview:</strong> Manage tourist flow, optimize routes, and ensure connectivity between attractions.</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Easy travel</td></tr>
-        <tr><td>BFS</td><td>Nearby places</td><td>O(V+E)</td><td>Coverage</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Efficient travel</td></tr>
+        <tr><td>BFS</td><td>Nearby places</td><td>O(V+E)</td><td>Coverage mapping</td></tr>
+        <tr><td>Greedy</td><td>Route planning</td><td>O(NlogN)</td><td>Quick planning</td></tr>
       </table>
     </div>
     <div class="card">
@@ -194,11 +195,12 @@ body{
   <div class="section-title">Waste Management</div>
   <div class="grid">
     <div class="card">
-      <p>Garbage collection and optimized truck routing.</p>
+      <p><strong>Overview:</strong> Efficient garbage collection, routing of trucks, and optimized disposal.</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
         <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
         <tr><td>Queue</td><td>Scheduling</td><td>O(1)</td><td>Timely pickup</td></tr>
+        <tr><td>BFS</td><td>Route coverage</td><td>O(V+E)</td><td>Max area coverage</td></tr>
       </table>
     </div>
     <div class="card">
@@ -215,10 +217,11 @@ body{
   <div class="section-title">Industrial Development</div>
   <div class="grid">
     <div class="card">
-      <p>Industry connectivity and cost optimization.</p>
+      <p><strong>Overview:</strong> Develop industry infrastructure, reduce operational costs, and improve logistics.</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Prim</td><td>MST</td><td>O(ElogV)</td><td>Low cost</td></tr>
+        <tr><td>Prim</td><td>MST for connecting factories</td><td>O(ElogV)</td><td>Cost efficiency</td></tr>
+        <tr><td>Dijkstra</td><td>Delivery optimization</td><td>O((V+E)logV)</td><td>Fast deliveries</td></tr>
       </table>
     </div>
     <div class="card">
@@ -235,10 +238,11 @@ body{
   <div class="section-title">Solar Energy</div>
   <div class="grid">
     <div class="card">
-      <p>Renewable energy distribution.</p>
+      <p><strong>Overview:</strong> Plan solar panel placement, energy distribution, and minimize power loss.</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Power routing</td><td>O((V+E)logV)</td><td>Less loss</td></tr>
+        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>Reduce losses</td></tr>
+        <tr><td>Greedy</td><td>Panel placement</td><td>O(NlogN)</td><td>Max efficiency</td></tr>
       </table>
     </div>
     <div class="card">
@@ -255,11 +259,12 @@ body{
   <div class="section-title">Government Services</div>
   <div class="grid">
     <div class="card">
-      <p>Citizen portals and grievance handling.</p>
+      <p><strong>Overview:</strong> Manage citizen services, grievance handling, and optimize administrative workflows.</p>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Hashing</td><td>Records</td><td>O(1)</td><td>Fast access</td></tr>
-        <tr><td>Queue</td><td>Requests</td><td>O(1)</td><td>Fair service</td></tr>
+        <tr><td>Hashing</td><td>Record lookup</td><td>O(1)</td><td>Fast access</td></tr>
+        <tr><td>Queue</td><td>Request scheduling</td><td>O(1)</td><td>Fair service</td></tr>
+        <tr><td>BFS</td><td>Service coverage</td><td>O(V+E)</td><td>Max reach</td></tr>
       </table>
     </div>
     <div class="card">
@@ -281,7 +286,7 @@ window.addEventListener('load', () => {
     const percentage = bar.getAttribute('data-percentage');
     setTimeout(() => {
       bar.style.width = percentage + '%';
-    }, 200); // slight delay for smooth effect
+    }, 200); // slight delay
   });
 });
 </script>
