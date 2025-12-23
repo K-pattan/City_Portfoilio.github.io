@@ -214,6 +214,31 @@ body{
   text-align:right;
 }
 
+/* CODE BUTTON */
+.code-btn{
+  background:#34d399;
+  color:#0b1324;
+  border:none;
+  padding:5px 8px;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.code-btn:hover{
+  background:#00ff99;
+}
+
+.code-snippet{
+  background:#111b34;
+  color:#e5e7eb;
+  padding:8px;
+  margin-top:4px;
+  border-radius:6px;
+  font-size:13px;
+  overflow-x:auto;
+}
+
 /* Back to Top button */
 .back-to-top{
   position:fixed;
@@ -269,8 +294,7 @@ body{
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<!-- Include all 5 sections exactly like your example -->
-<!-- RECREATION -->
+<!-- ================= RECREATION ================= -->
 <div class="section" id="recreation">
   <div class="section-title">Recreation & Lifestyle</div>
   <div class="grid">
@@ -279,12 +303,61 @@ body{
       <p>Parks, gyms, walking tracks, cultural spaces, and community centers. Efficient routing and resource allocation are key for accessibility and utilization.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>BFS</td><td>Accessibility</td><td>O(V+E)</td><td>O(V)</td><td>Fair access to parks</td></tr>
-        <tr><td>Dijkstra</td><td>Shortest path to park</td><td>O((V+E) log V)</td><td>O(V)</td><td>Quick routing</td></tr>
-        <tr><td>Prim/Kruskal</td><td>Minimum-cost paths</td><td>O(E log V)/O(E log E)</td><td>O(V+E)</td><td>Cost-effective walking/cycling paths</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient allocation of events</td></tr>
-        <tr><td>Segment Tree</td><td>Track usage</td><td>O(log N)</td><td>O(N)</td><td>Monitor park trends</td></tr>
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>BFS</td><td>Accessibility</td>
+          <td><button class="code-btn" onclick="toggleCode('bfsTime')">O(V+E)</button>
+<pre id="bfsTime" class="code-snippet" style="display:none;">function BFS(graph, start){
+  let visited = new Set();
+  let queue = [start];
+  while(queue.length){
+    let node = queue.shift();
+    if(!visited.has(node)){
+      visited.add(node);
+      queue.push(...graph[node]);
+    }
+  }
+}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bfsSpace')">O(V)</button>
+<pre id="bfsSpace" class="code-snippet" style="display:none;">// Stores all visited nodes</pre></td>
+          <td>Fair access to parks</td>
+        </tr>
+        <tr>
+          <td>Dijkstra</td><td>Shortest path to park</td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraTime')">O((V+E) log V)</button>
+<pre id="dijkstraTime" class="code-snippet" style="display:none;">function dijkstra(graph, start){
+  let dist = {}, pq = new MinHeap();
+  dist[start]=0; pq.insert([0,start]);
+  while(!pq.isEmpty()){let [d,node]=pq.extractMin();}
+}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSpace')">O(V)</button>
+<pre id="dijkstraSpace" class="code-snippet" style="display:none;">// Stores distances + priority queue</pre></td>
+          <td>Quick routing</td>
+        </tr>
+        <tr>
+          <td>Prim/Kruskal</td><td>Minimum-cost paths</td>
+          <td><button class="code-btn" onclick="toggleCode('primTime')">O(E log V)/O(E log E)</button>
+<pre id="primTime" class="code-snippet" style="display:none;">function primMST(graph){ /* MST from start node */ }</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('primSpace')">O(V+E)</button>
+<pre id="primSpace" class="code-snippet" style="display:none;">// Store edges + visited nodes</pre></td>
+          <td>Cost-effective paths</td>
+        </tr>
+        <tr>
+          <td>Greedy</td><td>Resource allocation</td>
+          <td><button class="code-btn" onclick="toggleCode('greedyTime')">O(N log N)</button>
+<pre id="greedyTime" class="code-snippet" style="display:none;">function allocateResources(items){ items.sort((a,b)=>b.value-a.value); }</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedySpace')">O(N)</button>
+<pre id="greedySpace" class="code-snippet" style="display:none;">// Array for allocation</pre></td>
+          <td>Efficient allocation</td>
+        </tr>
+        <tr>
+          <td>Segment Tree</td><td>Track usage</td>
+          <td><button class="code-btn" onclick="toggleCode('segTime')">O(log N)</button>
+<pre id="segTime" class="code-snippet" style="display:none;">function update(node,val){/* update usage */}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('segSpace')">O(N)</button>
+<pre id="segSpace" class="code-snippet" style="display:none;">// Tree array</pre></td>
+          <td>Monitor trends</td>
+        </tr>
       </table>
     </div>
     <div class="card">
@@ -301,7 +374,7 @@ body{
   </div>
 </div>
 
-<!-- PUBLIC SAFETY -->
+<!-- ================= PUBLIC SAFETY ================= -->
 <div class="section" id="safety">
   <div class="section-title">Public Safety & Services</div>
   <div class="grid">
@@ -310,12 +383,47 @@ body{
       <p>AI surveillance, drone monitoring, emergency response, and control centers enhance safety. Optimal routing and resource management improve response times.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Dijkstra</td><td>Emergency routes</td><td>O((V+E) log V)</td><td>O(V)</td><td>Fastest response</td></tr>
-        <tr><td>BFS/DFS</td><td>Zone detection</td><td>O(V+E)</td><td>O(V)</td><td>Ensures coverage</td></tr>
-        <tr><td>Priority Queue</td><td>Request prioritization</td><td>O(log N)</td><td>O(N)</td><td>Urgent events first</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient deployment</td></tr>
-        <tr><td>Edge Relaxation</td><td>Optimal paths</td><td>O(E)</td><td>O(V)</td><td>Maintains shortest paths</td></tr>
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Dijkstra</td><td>Emergency routes</td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSFT')">O((V+E) log V)</button>
+<pre id="dijkstraSFT" class="code-snippet" style="display:none;">// same as earlier Dijkstra</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSFS')">O(V)</button>
+<pre id="dijkstraSFS" class="code-snippet" style="display:none;">// same as earlier</pre></td>
+          <td>Fastest response</td>
+        </tr>
+        <tr>
+          <td>BFS/DFS</td><td>Zone detection</td>
+          <td><button class="code-btn" onclick="toggleCode('bfsdfsTime')">O(V+E)</button>
+<pre id="bfsdfsTime" class="code-snippet" style="display:none;">// BFS or DFS for zones</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bfsdfsSpace')">O(V)</button>
+<pre id="bfsdfsSpace" class="code-snippet" style="display:none;">// Visited nodes</pre></td>
+          <td>Ensures coverage</td>
+        </tr>
+        <tr>
+          <td>Priority Queue</td><td>Request prioritization</td>
+          <td><button class="code-btn" onclick="toggleCode('pqTime')">O(log N)</button>
+<pre id="pqTime" class="code-snippet" style="display:none;">// Insert/extract in PQ</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('pqSpace')">O(N)</button>
+<pre id="pqSpace" class="code-snippet" style="display:none;">// Stores all requests</pre></td>
+          <td>Urgent events first</td>
+        </tr>
+        <tr>
+          <td>Greedy</td><td>Resource allocation</td>
+          <td><button class="code-btn" onclick="toggleCode('greedySFT')">O(N log N)</button>
+<pre id="greedySFT" class="code-snippet" style="display:none;">// Same greedy as above</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedySFS')">O(N)</button>
+<pre id="greedySFS" class="code-snippet" style="display:none;">// Array for allocation</pre></td>
+          <td>Efficient deployment</td>
+        </tr>
+        <tr>
+          <td>Edge Relaxation</td><td>Optimal paths</td>
+          <td><button class="code-btn" onclick="toggleCode('edgeTime')">O(E)</button>
+<pre id="edgeTime" class="code-snippet" style="display:none;">// Relax edges in graph</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('edgeSpace')">O(V)</button>
+<pre id="edgeSpace" class="code-snippet" style="display:none;">// Store distances</pre></td>
+          <td>Maintains shortest paths</td>
+        </tr>
       </table>
     </div>
     <div class="card">
@@ -328,7 +436,7 @@ body{
   </div>
 </div>
 
-<!-- DIGITAL SERVICES -->
+<!-- ================= DIGITAL SERVICES ================= -->
 <div class="section" id="digital">
   <div class="section-title">Digital Services</div>
   <div class="grid">
@@ -337,80 +445,142 @@ body{
       <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms enhance convenience. Algorithms improve search, retrieval, and request prioritization.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Hashing</td><td>Instant record retrieval</td><td>O(1) avg</td><td>O(N)</td><td>Fast citizen access</td></tr>
-        <tr><td>Trie</td><td>Prefix search/auto-complete</td><td>O(L)</td><td>O(N*L)</td><td>Quick search</td></tr>
-        <tr><td>Heap</td><td>Prioritize requests</td><td>O(log N)</td><td>O(N)</td><td>Urgent requests first</td></tr>
-        <tr><td>Sorting</td><td>Organize records</td><td>O(N log N)</td><td>O(N)</td><td>Maintains order</td></tr>
-        <tr><td>Caching</td><td>Reduce redundant queries</td><td>O(1)</td><td>O(N)</td><td>Speeds up access</td></tr>
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Binary Search</td><td>Data lookup</td>
+          <td><button class="code-btn" onclick="toggleCode('bsTime')">O(log N)</button>
+<pre id="bsTime" class="code-snippet" style="display:none;">function binarySearch(arr,target){let l=0,r=arr.length-1;while(l<=r){let m=Math.floor((l+r)/2);if(arr[m]===target)return m;else if(arr[m]<target)l=m+1;else r=m-1;}return-1;}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bsSpace')">O(1)</button>
+<pre id="bsSpace" class="code-snippet" style="display:none;">// Iterative BS, constant space</pre></td>
+          <td>Quick info retrieval</td>
+        </tr>
+        <tr>
+          <td>Hashing</td><td>Search optimization</td>
+          <td><button class="code-btn" onclick="toggleCode('hashTime')">O(1)</button>
+<pre id="hashTime" class="code-snippet" style="display:none;">let map = {}; map[key]=value;</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('hashSpace')">O(N)</button>
+<pre id="hashSpace" class="code-snippet" style="display:none;">// Stores N elements</pre></td>
+          <td>Fast access</td>
+        </tr>
+        <tr>
+          <td>Greedy</td><td>Server load</td>
+          <td><button class="code-btn" onclick="toggleCode('greedyDT')">O(N log N)</button>
+<pre id="greedyDT" class="code-snippet" style="display:none;">// Same as above greedy allocation</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedyDS')">O(N)</button>
+<pre id="greedyDS" class="code-snippet" style="display:none;">// Array for allocation</pre></td>
+          <td>Efficient resource usage</td>
+        </tr>
       </table>
     </div>
     <div class="card">
-      <h4>Usage Metrics</h4>
-      <div class="chart-label">Service Speed</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div><div class="chart-percent">91%</div></div>
-      <div class="chart-label">User Convenience</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
+      <h4>System Metrics</h4>
+      <div class="chart-label">Response Time</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
+      <div class="chart-label">Service Coverage</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div><div class="chart-percent">92%</div></div>
     </div>
   </div>
 </div>
 
-<!-- SENIOR SERVICES -->
+<!-- ================= SENIOR SERVICES ================= -->
 <div class="section" id="senior">
   <div class="section-title">Senior & Disabled-Friendly Services</div>
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
-      <p>Priority access to healthcare, transport, emergency, and government facilities for elderly and differently-abled citizens.</p>
+      <p>Medical alerts, priority queues, mobility aids, and accessible infrastructure improve quality of life. Path planning and prioritization algorithms help in service delivery.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log N)</td><td>O(N)</td><td>High-priority first</td></tr>
-        <tr><td>Heap</td><td>Emergency scheduling</td><td>O(log N)</td><td>O(N)</td><td>Efficient resource management</td></tr>
-        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Reduces waiting times</td></tr>
-        <tr><td>Queue</td><td>Manage lines</td><td>O(1)</td><td>O(N)</td><td>Organized handling</td></tr>
-        <tr><td>Scheduling</td><td>Time-based priority</td><td>Varies</td><td>Varies</td><td>Fair & efficient service</td></tr>
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Dijkstra</td><td>Accessible routes</td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSTime')">O((V+E) log V)</button>
+<pre id="dijkstraSTime" class="code-snippet" style="display:none;">// same Dijkstra</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSSpace')">O(V)</button>
+<pre id="dijkstraSSpace" class="code-snippet" style="display:none;">// distances + pq</pre></td>
+          <td>Quick mobility</td>
+        </tr>
+        <tr>
+          <td>Greedy</td><td>Service allocation</td>
+          <td><button class="code-btn" onclick="toggleCode('greedySTime')">O(N log N)</button>
+<pre id="greedySTime" class="code-snippet" style="display:none;">// Prioritize services</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedySSpace')">O(N)</button>
+<pre id="greedySSpace" class="code-snippet" style="display:none;">// Array for allocation</pre></td>
+          <td>Optimal service delivery</td>
+        </tr>
+        <tr>
+          <td>BFS</td><td>Emergency zones</td>
+          <td><button class="code-btn" onclick="toggleCode('bfsSTime')">O(V+E)</button>
+<pre id="bfsSTime" class="code-snippet" style="display:none;">// BFS for area detection</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bfsSSpace')">O(V)</button>
+<pre id="bfsSSpace" class="code-snippet" style="display:none;">// visited nodes</pre></td>
+          <td>Coverage assurance</td>
+        </tr>
       </table>
     </div>
     <div class="card">
-      <h4>Service Metrics</h4>
-      <div class="chart-label">Urgency Handling</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div><div class="chart-percent">93%</div></div>
-      <div class="chart-label">Waiting Time Reduction</div>
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">Accessibility</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
+      <div class="chart-label">Service Efficiency</div>
       <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div><div class="chart-percent">82%</div></div>
     </div>
   </div>
 </div>
 
-<!-- SMART WATER -->
+<!-- ================= SMART WATER ================= -->
 <div class="section" id="water">
   <div class="section-title">Smart Water Management</div>
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
-      <p>Smart meters, sensors, and automation monitor water consumption, detect leaks, and optimize distribution.</p>
+      <p>Leak detection, pipeline monitoring, and consumption tracking. Graph algorithms and segment trees optimize water supply and track usage efficiently.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Greedy</td><td>Optimal allocation</td><td>O(N log N)</td><td>O(N)</td><td>Minimizes wastage</td></tr>
-        <tr><td>Graph</td><td>Distribution network</td><td>O(V+E)</td><td>O(V+E)</td><td>Maps water flow</td></tr>
-        <tr><td>Dijkstra</td><td>Shortest path to supply</td><td>O((V+E) log V)</td><td>O(V)</td><td>Efficient pipeline routing</td></tr>
-        <tr><td>Segment Tree</td><td>Track consumption</td><td>O(log N)</td><td>O(N)</td><td>Monitors trends</td></tr>
-        <tr><td>Union-Find</td><td>Pipeline connectivity</td><td>O(α(N))</td><td>O(N)</td><td>Detects disconnected sections</td></tr>
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>DFS</td><td>Leak path detection</td>
+          <td><button class="code-btn" onclick="toggleCode('dfsTime')">O(V+E)</button>
+<pre id="dfsTime" class="code-snippet" style="display:none;">function DFS(graph,node,visited){visited.add(node); for(let n of graph[node]){if(!visited.has(n))DFS(graph,n,visited);}}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('dfsSpace')">O(V)</button>
+<pre id="dfsSpace" class="code-snippet" style="display:none;">// Stack or recursion store nodes</pre></td>
+          <td>Trace leaks quickly</td>
+        </tr>
+        <tr>
+          <td>Segment Tree</td><td>Usage tracking</td>
+          <td><button class="code-btn" onclick="toggleCode('segWaterTime')">O(log N)</button>
+<pre id="segWaterTime" class="code-snippet" style="display:none;">function update(node,val){/* update usage */}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('segWaterSpace')">O(N)</button>
+<pre id="segWaterSpace" class="code-snippet" style="display:none;">// Tree array</pre></td>
+          <td>Efficient consumption tracking</td>
+        </tr>
+        <tr>
+          <td>Greedy</td><td>Pipeline allocation</td>
+          <td><button class="code-btn" onclick="toggleCode('greedyWaterTime')">O(N log N)</button>
+<pre id="greedyWaterTime" class="code-snippet" style="display:none;">// Allocate pipes based on priority</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedyWaterSpace')">O(N)</button>
+<pre id="greedyWaterSpace" class="code-snippet" style="display:none;">// Store allocations</pre></td>
+          <td>Optimize water distribution</td>
+        </tr>
       </table>
     </div>
     <div class="card">
-      <h4>Resource Optimization</h4>
-      <div class="chart-label">Water Savings</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div><div class="chart-percent">79%</div></div>
-      <div class="chart-label">Distribution Fairness</div>
-      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div><div class="chart-percent">86%</div></div>
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">Leak Detection Efficiency</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div><div class="chart-percent">91%</div></div>
+      <div class="chart-label">Water Utilization</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
     </div>
   </div>
 </div>
 
-<!-- BACK TO TOP BUTTON -->
 <a href="#" class="back-to-top">↑ Back to Top</a>
 
+<script>
+function toggleCode(id){
+  const elem=document.getElementById(id);
+  elem.style.display=(elem.style.display==='none')?'block':'none';
+}
+</script>
 </body>
 </html>
