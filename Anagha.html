@@ -11,13 +11,13 @@ body{
   font-family:'Poppins',sans-serif;
   background:#0b1324;
   color:#e5e7eb;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
-/* ============ NAVBAR ============ */
+/* NAVBAR */
 .navbar{
   background:#111b34;
-  padding:18px 45px;
+  padding:16px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -27,192 +27,140 @@ body{
 }
 
 .logo{
-  font-size:22px;
-  font-weight:700;
+  font-size:20px;
+  font-weight:600;
   color:#34d399;
 }
 
 .nav-links{
   list-style:none;
   display:flex;
-  gap:22px;
-  margin:0;
-  padding:0;
+  gap:18px;
 }
 
 .nav-links a{
   text-decoration:none;
   color:#e5e7eb;
-  font-size:16px;
-  font-weight:600;
-  padding:6px 12px;
-  border-radius:6px;
-  transition:0.3s;
+  font-size:14px;
 }
 
-.nav-links a:hover{
-  color:#34d399;
-  background:rgba(52,211,153,0.15);
-}
-
-.nav-links a.active{
-  background:#34d399;
-  color:#0b1324;
-  font-weight:700;
-}
-
-/* ============ TOPIC BUTTONS ============ */
+/* TOPIC BUTTONS */
 .topic-buttons{
   width:85%;
-  margin:25px auto;
+  margin:20px auto 0;
   display:flex;
-  gap:14px;
-  flex-wrap:wrap;
+  gap:12px;
 }
 
 .topic-btn{
-  padding:12px 20px;
-  font-size:17px;
-  font-weight:700;
+  padding:10px 18px;
   background:#34d399;
   color:#0b1324;
-  border-radius:8px;
+  border-radius:6px;
   text-decoration:none;
-  transition:0.3s;
+  font-weight:700;
+  font-size:16px;
 }
 
-.topic-btn:hover{
-  background:#00ff99;
-  transform:translateY(-2px);
-}
-
-/* ============ HEADER ============ */
+/* HEADER */
 .header{
   width:85%;
-  margin:30px auto 60px;
+  margin:20px auto 60px;
   background:#111b34;
-  padding:45px;
-  border-radius:22px;
+  padding:40px;
+  border-radius:20px;
   text-align:center;
-  box-shadow:0 0 35px rgba(0,0,0,0.6);
 }
 
-.header h1{font-size:34px;}
-.header h2{color:#34d399;font-size:18px;}
-
-/* ============ SECTION ============ */
+/* SECTION */
 .section{
   width:85%;
   margin:55px auto;
   background:#111b34;
   padding:32px;
-  border-radius:20px;
+  border-radius:18px;
 }
 
 .section-title{
-  font-size:22px;
+  font-size:20px;
   color:#34d399;
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 
-/* ============ TABLE ============ */
-table{
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:#0b1324;
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(52,211,153,0.25);
+}
+
+/* TABLE */
+.algorithm-table{
   width:100%;
   border-collapse:collapse;
-  font-size:14px;
+  font-size:13px;
 }
 
-th,td{
+.algorithm-table th,
+.algorithm-table td{
   border:1px solid rgba(52,211,153,0.25);
-  padding:8px;
+  padding:6px;
 }
 
-th{
-  background:#0b1324;
+.algorithm-table th{
+  background:#111b34;
   color:#34d399;
 }
 
-.code-btn{
-  padding:6px 10px;
-  border:none;
-  border-radius:6px;
-  background:#34d399;
-  color:#0b1324;
-  font-weight:600;
-  cursor:pointer;
-}
-
-/* ============ MODAL ============ */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-  z-index:2000;
-}
-
-.modal-content{
+/* CODE BLOCK */
+pre{
   background:#020617;
-  padding:25px;
-  width:80%;
-  max-width:700px;
-  border-radius:12px;
-}
-
-.modal-content h3{
-  color:#34d399;
-}
-
-.modal-content pre{
-  background:#0b1324;
   padding:15px;
   border-radius:8px;
   overflow-x:auto;
+  font-size:13px;
 }
 
-.close{
-  float:right;
-  cursor:pointer;
-  font-size:20px;
-}
-
-/* ============ BACK TO TOP ============ */
+/* BACK TO TOP */
 .back-to-top{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#34d399;
   color:#0b1324;
-  padding:12px 15px;
+  padding:10px 14px;
   border-radius:8px;
   text-decoration:none;
-  font-weight:700;
+  font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">CITY DESIGN</div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="Pooja.html">Pooja</a></li>
     <li><a href="Krupa.html">Krupa</a></li>
-    <li><a href="Anagha.html" class="active">Anagha</a></li>
+    <li><a href="Anagha.html">Anagha</a></li>
     <li><a href="Shreya.html">Shreya</a></li>
   </ul>
 </div>
 
-<!-- TOPIC BUTTONS -->
 <div class="topic-buttons">
   <a href="#recreation" class="topic-btn">Recreation & Lifestyle</a>
   <a href="#safety" class="topic-btn">Public Safety & Services</a>
   <a href="#digital" class="topic-btn">Digital Services</a>
-  <a href="#senior" class="topic-btn">Senior & Disabled Services</a>
+  <a href="#senior" class="topic-btn">Senior Services</a>
   <a href="#water" class="topic-btn">Smart Water Management</a>
 </div>
 
@@ -221,80 +169,147 @@ th{
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<!-- RECREATION -->
-<div class="section" id="recreation">
-  <div class="section-title">Recreation & Lifestyle</div>
-  <table>
-    <tr>
-      <th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Code</th>
-    </tr>
-    <tr>
-      <td>BFS</td>
-      <td>Equal accessibility to parks</td>
-      <td>O(V+E)</td>
-      <td>O(V)</td>
-      <td><button class="code-btn" onclick="openCode('bfs')">View Code</button></td>
-    </tr>
-    <tr>
-      <td>Dijkstra</td>
-      <td>Nearest park routing</td>
-      <td>O((V+E)logV)</td>
-      <td>O(V)</td>
-      <td><button class="code-btn" onclick="openCode('dijkstra')">View Code</button></td>
-    </tr>
-  </table>
-</div>
+<!-- ================= ALGORITHM CODES ================= -->
+<div class="section">
+  <div class="section-title">Algorithm Codes (Reference)</div>
 
-<!-- MODAL -->
-<div class="modal" id="codeModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeCode()">✖</span>
-    <h3 id="codeTitle"></h3>
-    <pre id="codeBody"></pre>
+  <div class="card">
+    <h4>Breadth First Search (BFS)</h4>
+<pre>
+Create an empty queue
+Mark start node as visited
+Insert start node into queue
+
+while queue is not empty:
+  remove front node
+  visit all unvisited adjacent nodes
+  mark them visited
+  insert them into queue
+</pre>
   </div>
-</div>
 
-<!-- BACK TO TOP -->
-<a href="#" class="back-to-top">↑ Top</a>
+  <div class="card">
+    <h4>Depth First Search (DFS)</h4>
+<pre>
+Mark start node as visited
+for each adjacent node:
+  if not visited:
+    perform DFS on that node
+</pre>
+  </div>
 
-<script>
-function openCode(type){
-  const title=document.getElementById("codeTitle");
-  const body=document.getElementById("codeBody");
-
-  if(type==="bfs"){
-    title.innerText="Breadth First Search (BFS)";
-    body.innerText=
-`enqueue(start)
-mark start visited
-
-while queue not empty:
-  v = dequeue
-  for each neighbor of v:
-    if not visited:
-      mark visited
-      enqueue(neighbor)`;
-  }
-
-  if(type==="dijkstra"){
-    title.innerText="Dijkstra Algorithm";
-    body.innerText=
-`initialize distance of all nodes = infinity
-distance[source] = 0
+  <div class="card">
+    <h4>Dijkstra’s Algorithm</h4>
+<pre>
+Initialize distance of all nodes as infinity
+Set distance of source node = 0
 
 repeat:
-  select unvisited node with smallest distance
+  choose unvisited node with smallest distance
   mark it visited
-  update distances of neighbors`;
-  }
+  update distances of its neighbors
+until all nodes are visited
+</pre>
+  </div>
 
-  document.getElementById("codeModal").style.display="flex";
-}
+  <div class="card">
+    <h4>Prim / Kruskal (Minimum Spanning Tree)</h4>
+<pre>
+Sort all edges by increasing weight
+Select smallest edge
+Add edge if it does not form a cycle
+Repeat until all nodes are connected
+</pre>
+  </div>
 
-function closeCode(){
-  document.getElementById("codeModal").style.display="none";
-}
-</script>
+  <div class="card">
+    <h4>Greedy Algorithm</h4>
+<pre>
+Select the locally optimal choice
+Add it to solution
+Repeat until problem is solved
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Segment Tree</h4>
+<pre>
+Build tree from input array
+Each node stores range information
+
+For query:
+  Traverse required segments
+
+For update:
+  Update value and propagate changes
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Priority Queue</h4>
+<pre>
+Insert elements with priority
+Remove element with highest priority first
+Repeat until queue is empty
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Queue</h4>
+<pre>
+Insert element at rear (enqueue)
+Remove element from front (dequeue)
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Hashing</h4>
+<pre>
+Apply hash function to key
+Store value at computed index
+Retrieve value using same hash function
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Trie</h4>
+<pre>
+Insert characters of word one by one
+Each character represents a node
+Search word by traversing characters
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Heap</h4>
+<pre>
+Insert element into heap
+Rearrange to maintain heap property
+Delete root element when required
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Sorting (General)</h4>
+<pre>
+Divide array into smaller parts
+Sort each part
+Merge sorted parts
+</pre>
+  </div>
+
+  <div class="card">
+    <h4>Union-Find</h4>
+<pre>
+Find parent of each node
+Union two sets if parents differ
+Used to check connectivity
+</pre>
+  </div>
+
+</div>
+
+<a href="#" class="back-to-top">↑ Back to Top</a>
 
 </body>
 </html>
