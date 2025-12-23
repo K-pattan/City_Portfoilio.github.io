@@ -135,13 +135,10 @@ body{
   border-radius:8px;
   text-decoration:none;
 }
-pre{
-  background:#111b34;
-  padding:12px;
-  border-radius:8px;
-  overflow-x:auto;
-  font-size:13px;
-  color:#e5e7eb;
+.summary{
+  margin-top:15px;
+  font-size:14px;
+  line-height:1.5;
 }
 </style>
 </head>
@@ -167,7 +164,6 @@ pre{
   <a href="#industry" class="topic-btn">Industry</a>
   <a href="#solar" class="topic-btn">Solar Energy</a>
   <a href="#govt" class="topic-btn">Government</a>
-  <a href="#algorithms" class="topic-btn">Algorithm Implementation</a>
 </div>
 
 <!-- HEADER -->
@@ -179,15 +175,18 @@ pre{
 <!-- TOURISM -->
 <div class="section" id="tourism">
   <div class="section-title">Tourism Management</div>
-  <p>Improving visitor experience with route planning, crowd management, and attraction promotion. Efficient transport ensures accessibility. Technology tracks tourist satisfaction and optimizes services.</p>
+  <p>Tourism management improves visitor satisfaction by planning optimal routes, reducing congestion, and promoting key attractions. Technology tracks satisfaction and ensures efficient transport for all visitors.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Tourism:</p>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Minimize travel time</td></tr>
-        <tr><td>BFS</td><td>Nearby attractions</td><td>O(V+E)</td><td>Quick exploration</td></tr>
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Space</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>O(V)</td><td>Minimizes travel time</td></tr>
+        <tr><td>BFS</td><td>Nearby attractions</td><td>O(V+E)</td><td>O(V)</td><td>Quick exploration of paths</td></tr>
       </table>
+      <div class="summary">
+        Dijkstra ensures tourists take the shortest path, reducing travel time and congestion. BFS helps identify nearby attractions quickly. Together, they improve overall satisfaction and optimize movement across the city.
+      </div>
     </div>
     <div class="card">
       <p>Tourist Satisfaction</p>
@@ -201,15 +200,18 @@ pre{
 <!-- WASTE -->
 <div class="section" id="waste">
   <div class="section-title">Waste Management</div>
-  <p>Optimizing garbage collection, recycling, and disposal. Smart truck routing reduces costs and ensures cleanliness. Data-driven schedules improve timely pickups and sustainability.</p>
+  <p>Smart waste management optimizes garbage collection routes and schedules. Trucks are routed efficiently and data-driven schedules ensure timely pickups, reducing operational costs.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Waste Management:</p>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
-        <tr><td>Queue</td><td>Collection scheduling</td><td>O(1)</td><td>Timely service</td></tr>
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Space</th><th>Benefit</th></tr>
+        <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>O(N)</td><td>Minimizes fuel consumption</td></tr>
+        <tr><td>Queue</td><td>Collection scheduling</td><td>O(1)</td><td>O(N)</td><td>Ensures timely service</td></tr>
       </table>
+      <div class="summary">
+        Greedy algorithm optimizes the order of garbage collection routes, saving fuel and time. Queue scheduling maintains timely pickups, ensuring waste is collected efficiently and city cleanliness is maintained.
+      </div>
     </div>
     <div class="card">
       <p>Cleanliness Index</p>
@@ -223,15 +225,18 @@ pre{
 <!-- INDUSTRY -->
 <div class="section" id="industry">
   <div class="section-title">Industrial Development</div>
-  <p>Connecting businesses efficiently, optimizing supply chains, and minimizing operational costs. Smart planning encourages sustainable growth and reduces resource wastage.</p>
+  <p>Smart industrial planning connects businesses efficiently, optimizes supply chains, and minimizes costs. Algorithms ensure sustainable growth and resource optimization.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Industry:</p>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Prim</td><td>MST for connections</td><td>O(ElogV)</td><td>Minimize network cost</td></tr>
-        <tr><td>Dijkstra</td><td>Shortest supply path</td><td>O((V+E)logV)</td><td>Efficient transport</td></tr>
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Space</th><th>Benefit</th></tr>
+        <tr><td>Prim</td><td>MST for connections</td><td>O(ElogV)</td><td>O(V)</td><td>Minimizes network cost</td></tr>
+        <tr><td>Dijkstra</td><td>Shortest supply path</td><td>O((V+E)logV)</td><td>O(V)</td><td>Efficient material transport</td></tr>
       </table>
+      <div class="summary">
+        Prim ensures minimum cost for connecting industries. Dijkstra finds the shortest supply routes for raw materials. Together, they reduce operational cost and optimize industrial connectivity.
+      </div>
     </div>
     <div class="card">
       <p>Industrial Growth</p>
@@ -245,15 +250,18 @@ pre{
 <!-- SOLAR -->
 <div class="section" id="solar">
   <div class="section-title">Solar Energy</div>
-  <p>Ensures efficient renewable power distribution. Smart grids reduce energy loss and monitor consumption. Optimized solar panel usage increases energy efficiency.</p>
+  <p>Solar energy management ensures efficient distribution of renewable energy. Smart grids reduce energy loss and track consumption patterns.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Solar:</p>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>Minimize energy loss</td></tr>
-        <tr><td>Greedy</td><td>Panel placement</td><td>O(NlogN)</td><td>Max efficiency</td></tr>
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Space</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Optimal power routing</td><td>O((V+E)logV)</td><td>O(V)</td><td>Reduces energy loss</td></tr>
+        <tr><td>Greedy</td><td>Panel placement</td><td>O(NlogN)</td><td>O(N)</td><td>Maximizes output efficiency</td></tr>
       </table>
+      <div class="summary">
+        Dijkstra ensures energy is routed efficiently to minimize loss. Greedy algorithm optimizes solar panel placement for maximum efficiency. Together, they improve energy reliability and sustainability.
+      </div>
     </div>
     <div class="card">
       <p>Energy Efficiency</p>
@@ -267,16 +275,19 @@ pre{
 <!-- GOVERNMENT -->
 <div class="section" id="govt">
   <div class="section-title">Government Services</div>
-  <p>Fast, transparent citizen support via online portals, grievance handling, and record management. Technology ensures fairness, efficiency, and accessibility.</p>
+  <p>Government services ensure fast, transparent citizen support through digital portals and record management. Algorithms help manage requests efficiently.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Government Services:</p>
       <table class="algorithm-table">
-        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
-        <tr><td>Hashing</td><td>Citizen records</td><td>O(1)</td><td>Quick access</td></tr>
-        <tr><td>Queue</td><td>Request scheduling</td><td>O(1)</td><td>Fair service</td></tr>
-        <tr><td>BFS</td><td>Service mapping</td><td>O(V+E)</td><td>Coverage analysis</td></tr>
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Space</th><th>Benefit</th></tr>
+        <tr><td>Hashing</td><td>Citizen records</td><td>O(1)</td><td>O(N)</td><td>Quick record lookup</td></tr>
+        <tr><td>Queue</td><td>Request scheduling</td><td>O(1)</td><td>O(N)</td><td>Maintains fairness in service</td></tr>
+        <tr><td>BFS</td><td>Service mapping</td><td>O(V+E)</td><td>O(V)</td><td>Coverage analysis of services</td></tr>
       </table>
+      <div class="summary">
+        Hashing allows fast retrieval of citizen records. Queue scheduling ensures fair service. BFS helps map services for coverage analysis. Combined, these algorithms improve efficiency and citizen satisfaction.
+      </div>
     </div>
     <div class="card">
       <p>Service Efficiency</p>
@@ -284,143 +295,6 @@ pre{
         <div class="chart-bar" data-percentage="87"><span class="chart-percent">87%</span></div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ALGORITHM IMPLEMENTATION -->
-<div class="section" id="algorithms">
-  <div class="section-title">Algorithm Implementations</div>
-
-  <!-- Dijkstra -->
-  <div class="card">
-    <p><strong>Dijkstra's Algorithm – Shortest Path</strong></p>
-    <p>Used for: Tourism routes, Industrial supply paths, Solar power routing.</p>
-    <pre><code>
-function dijkstra(graph, start) {
-  const distances = {};
-  const visited = new Set();
-  const pq = new MinPriorityQueue();
-  for (let node in graph) distances[node] = Infinity;
-  distances[start] = 0;
-  pq.enqueue(start, 0);
-
-  while (!pq.isEmpty()) {
-    let {element: node} = pq.dequeue();
-    visited.add(node);
-    for (let neighbor in graph[node]) {
-      if (!visited.has(neighbor)) {
-        let newDist = distances[node] + graph[node][neighbor];
-        if (newDist < distances[neighbor]) {
-          distances[neighbor] = newDist;
-          pq.enqueue(neighbor, newDist);
-        }
-      }
-    }
-  }
-  return distances;
-}</code></pre>
-  </div>
-
-  <!-- BFS -->
-  <div class="card">
-    <p><strong>Breadth-First Search (BFS)</strong></p>
-    <p>Used for: Finding nearby attractions, government service coverage.</p>
-    <pre><code>
-function bfs(graph, start) {
-  const visited = new Set();
-  const queue = [start];
-  const result = [];
-
-  while (queue.length) {
-    const node = queue.shift();
-    if (!visited.has(node)) {
-      visited.add(node);
-      result.push(node);
-      queue.push(...graph[node].filter(n => !visited.has(n)));
-    }
-  }
-  return result;
-}</code></pre>
-  </div>
-
-  <!-- Prim -->
-  <div class="card">
-    <p><strong>Prim's Algorithm – Minimum Spanning Tree</strong></p>
-    <p>Used for: Industrial connections, cost optimization.</p>
-    <pre><code>
-function primMST(graph) {
-  const nodes = Object.keys(graph);
-  const visited = new Set();
-  const mst = [];
-  
-  visited.add(nodes[0]);
-  while (visited.size < nodes.length) {
-    let minEdge = null;
-    for (let u of visited) {
-      for (let v in graph[u]) {
-        if (!visited.has(v)) {
-          if (!minEdge || graph[u][v] < minEdge.weight) {
-            minEdge = {u, v, weight: graph[u][v]};
-          }
-        }
-      }
-    }
-    mst.push(minEdge);
-    visited.add(minEdge.v);
-  }
-  return mst;
-}</code></pre>
-  </div>
-
-  <!-- Greedy -->
-  <div class="card">
-    <p><strong>Greedy Algorithm</strong></p>
-    <p>Used for: Waste truck routing, solar panel placement.</p>
-    <pre><code>
-function greedyJobs(jobs) {
-  jobs.sort((a,b) => b.profit - a.profit);
-  const result = [];
-  const slots = Array(jobs.length).fill(false);
-
-  for (let job of jobs) {
-    for (let j = Math.min(slots.length-1, job.deadline-1); j>=0; j--) {
-      if (!slots[j]) {
-        slots[j] = true;
-        result[j] = job;
-        break;
-      }
-    }
-  }
-  return result.filter(Boolean);
-}</code></pre>
-  </div>
-
-  <!-- Queue -->
-  <div class="card">
-    <p><strong>Queue</strong></p>
-    <p>Used for: Scheduling waste collection and citizen requests.</p>
-    <pre><code>
-class Queue {
-  constructor() { this.items = []; }
-  enqueue(item) { this.items.push(item); }
-  dequeue() { return this.items.shift(); }
-  isEmpty() { return this.items.length === 0; }
-}
-const q = new Queue();
-q.enqueue('Task1');
-q.enqueue('Task2');
-q.dequeue(); // Task1</code></pre>
-  </div>
-
-  <!-- Hashing -->
-  <div class="card">
-    <p><strong>Hashing</strong></p>
-    <p>Used for: Fast citizen record lookups.</p>
-    <pre><code>
-const hashMap = new Map();
-hashMap.set('Citizen1', {name:'John', age:30});
-hashMap.set('Citizen2', {name:'Mary', age:25});
-console.log(hashMap.get('Citizen1'));</code></pre>
   </div>
 </div>
 
