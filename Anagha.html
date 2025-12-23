@@ -305,17 +305,7 @@ body{
         <tr>
           <td>BFS</td><td>Accessibility</td>
           <td><button class="code-btn" onclick="toggleCode('bfsTime')">O(V+E)</button>
-<pre id="bfsTime" class="code-snippet" style="display:none;">function BFS(graph, start){
-  let visited = new Set();
-  let queue = [start];
-  while(queue.length){
-    let node = queue.shift();
-    if(!visited.has(node)){
-      visited.add(node);
-      queue.push(...graph[node]);
-    }
-  }
-}</pre></td>
+<pre id="bfsTime" class="code-snippet" style="display:none;">function BFS(graph, start){ let visited = new Set(); let queue = [start]; while(queue.length){ let node = queue.shift(); if(!visited.has(node)){ visited.add(node); queue.push(...graph[node]); }}}</pre></td>
           <td><button class="code-btn" onclick="toggleCode('bfsSpace')">O(V)</button>
 <pre id="bfsSpace" class="code-snippet" style="display:none;">// Stores all visited nodes</pre></td>
           <td>Fair access to parks</td>
@@ -323,10 +313,7 @@ body{
         <tr>
           <td>Dijkstra</td><td>Shortest path to park</td>
           <td><button class="code-btn" onclick="toggleCode('dijkstraTime')">O((V+E) log V)</button>
-<pre id="dijkstraTime" class="code-snippet" style="display:none;">function dijkstra(graph, start){
-  let dist = {}, pq = new MinHeap();
-  dist[start]=0; pq.insert([0,start]);
-  while(!pq.isEmpty()){let [d,node]=pq.extractMin();}</pre></td>
+<pre id="dijkstraTime" class="code-snippet" style="display:none;">function dijkstra(graph, start){ let dist = {}, pq = new MinHeap(); dist[start]=0; pq.insert([0,start]); while(!pq.isEmpty()){let [d,node]=pq.extractMin();}}</pre></td>
           <td><button class="code-btn" onclick="toggleCode('dijkstraSpace')">O(V)</button>
 <pre id="dijkstraSpace" class="code-snippet" style="display:none;">// Stores distances + priority queue</pre></td>
           <td>Quick routing</td>
@@ -428,6 +415,128 @@ body{
       <div class="chart-label">Response Speed</div>
       <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div><div class="chart-percent">90%</div></div>
       <div class="chart-label">Surveillance Coverage</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DIGITAL SERVICES ================= -->
+<div class="section" id="digital">
+  <div class="section-title">Digital Services</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms enhance convenience. Algorithms improve search, retrieval, and request prioritization.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Binary Search</td><td>Data lookup</td>
+          <td><button class="code-btn" onclick="toggleCode('binSearchTime')">O(log N)</button>
+<pre id="binSearchTime" class="code-snippet" style="display:none;">function binarySearch(arr,target){let l=0,r=arr.length-1;while(l<=r){let mid=Math.floor((l+r)/2);if(arr[mid]===target)return mid;else if(arr[mid]<target)l=mid+1;else r=mid-1;}}}</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('binSearchSpace')">O(1)</button>
+<pre id="binSearchSpace" class="code-snippet" style="display:none;">// Constant space</pre></td>
+          <td>Fast lookups</td>
+        </tr>
+        <tr>
+          <td>Heap</td><td>Priority requests</td>
+          <td><button class="code-btn" onclick="toggleCode('heapTime')">O(log N)</button>
+<pre id="heapTime" class="code-snippet" style="display:none;">// Heap insert/extract</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('heapSpace')">O(N)</button>
+<pre id="heapSpace" class="code-snippet" style="display:none;">// Store all elements</pre></td>
+          <td>Urgent requests first</td>
+        </tr>
+        <tr>
+          <td>BFS</td><td>Navigation graphs</td>
+          <td><button class="code-btn" onclick="toggleCode('bfsDigTime')">O(V+E)</button>
+<pre id="bfsDigTime" class="code-snippet" style="display:none;">// BFS for navigation</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bfsDigSpace')">O(V)</button>
+<pre id="bfsDigSpace" class="code-snippet" style="display:none;">// Visited nodes</pre></td>
+          <td>Find shortest path</td>
+        </tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">App Usage</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div><div class="chart-percent">82%</div></div>
+      <div class="chart-label">Requests Processed</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SENIOR & DISABLED SERVICES ================= -->
+<div class="section" id="senior">
+  <div class="section-title">Senior & Disabled-Friendly Services</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>Wheelchair ramps, guided paths, senior centers, and dedicated transport services. Graph traversal and shortest path algorithms ensure accessibility and minimum wait times.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Dijkstra</td><td>Shortest route</td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSeniorTime')">O((V+E) log V)</button>
+<pre id="dijkstraSeniorTime" class="code-snippet" style="display:none;">// same Dijkstra</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('dijkstraSeniorSpace')">O(V)</button>
+<pre id="dijkstraSeniorSpace" class="code-snippet" style="display:none;">// Distances array</pre></td>
+          <td>Minimal walking/wait</td>
+        </tr>
+        <tr>
+          <td>BFS</td><td>Accessible zones</td>
+          <td><button class="code-btn" onclick="toggleCode('bfsSeniorTime')">O(V+E)</button>
+<pre id="bfsSeniorTime" class="code-snippet" style="display:none;">// BFS traversal</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('bfsSeniorSpace')">O(V)</button>
+<pre id="bfsSeniorSpace" class="code-snippet" style="display:none;">// Visited nodes</pre></td>
+          <td>Identify accessible areas</td>
+        </tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">Accessibility Score</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div><div class="chart-percent">90%</div></div>
+      <div class="chart-label">Service Satisfaction</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SMART WATER MANAGEMENT ================= -->
+<div class="section" id="water">
+  <div class="section-title">Smart Water Management</div>
+  <div class="grid">
+    <div class="card">
+      <h4>Service Overview</h4>
+      <p>IoT sensors, automated pumps, leak detection, and analytics dashboards. Algorithms optimize water distribution and predict shortages.</p>
+      <h4>Algorithm Efficiency & Benefits</h4>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Purpose</th><th>Time Efficiency</th><th>Space Efficiency</th><th>Benefits</th></tr>
+        <tr>
+          <td>Greedy</td><td>Water allocation</td>
+          <td><button class="code-btn" onclick="toggleCode('greedyWaterTime')">O(N log N)</button>
+<pre id="greedyWaterTime" class="code-snippet" style="display:none;">// allocate water to high priority zones</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('greedyWaterSpace')">O(N)</button>
+<pre id="greedyWaterSpace" class="code-snippet" style="display:none;">// store zones allocation</pre></td>
+          <td>Optimized supply</td>
+        </tr>
+        <tr>
+          <td>Segment Tree</td><td>Track usage</td>
+          <td><button class="code-btn" onclick="toggleCode('segWaterTime')">O(log N)</button>
+<pre id="segWaterTime" class="code-snippet" style="display:none;">// update/track water usage</pre></td>
+          <td><button class="code-btn" onclick="toggleCode('segWaterSpace')">O(N)</button>
+<pre id="segWaterSpace" class="code-snippet" style="display:none;">// array storage</pre></td>
+          <td>Real-time monitoring</td>
+        </tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Impact Metrics</h4>
+      <div class="chart-label">Leak Detection</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:80%"></div></div><div class="chart-percent">80%</div></div>
+      <div class="chart-label">Water Efficiency</div>
       <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
     </div>
   </div>
