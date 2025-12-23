@@ -49,22 +49,24 @@ body{
 
 /* TOPIC BUTTONS */
 .topic-buttons{
-  width:85%;
+  width:95%;
   margin:25px auto 0;
   display:flex;
-  justify-content:flex-start;
-  gap:15px;
-  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
 }
 
 .topic-btn{
-  padding:12px 20px;
+  padding:12px 15px;
   background:#34d399;
   color:#0b1324;
   border-radius:8px;
   text-decoration:none;
   font-weight:700;
-  font-size:18px;
+  font-size:16px;
+  white-space:nowrap;
   transition: all 0.3s ease;
 }
 
@@ -181,37 +183,6 @@ body{
   color:#e5e7eb;
 }
 
-/* CODE BUTTON */
-.code-btn{
-  margin-top:12px;
-  padding:8px 16px;
-  background:#34d399;
-  color:#0b1324;
-  border:none;
-  border-radius:6px;
-  font-weight:700;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.code-btn:hover{
-  background:#00ff99;
-  box-shadow:0 0 15px #34d399;
-  transform:translateY(-2px);
-}
-
-/* CODE BOX */
-.code-box{
-  display:none;
-  margin-top:10px;
-  background:#020617;
-  padding:14px;
-  border-radius:8px;
-  font-size:13px;
-}
-
-pre{ margin:0; white-space:pre-wrap; }
-
 /* CHARTS */
 .chart-label{
   font-size:14px;
@@ -243,12 +214,6 @@ pre{ margin:0; white-space:pre-wrap; }
   text-align:right;
 }
 
-/* Hover glow on table cells and bars */
-.card:hover .algorithm-table td,
-.card:hover .chart-bar{
-  background: rgba(52,211,153,0.2);
-}
-
 /* Back to Top button */
 .back-to-top{
   position:fixed;
@@ -271,14 +236,6 @@ pre{ margin:0; white-space:pre-wrap; }
   transform:translateY(-3px);
 }
 </style>
-
-<script>
-function toggleCode(id){
-  const box=document.getElementById(id);
-  box.style.display = box.style.display==="block" ? "none" : "block";
-}
-</script>
-
 </head>
 <body>
 
@@ -312,6 +269,7 @@ function toggleCode(id){
   <h2>Smart City Services – Maharajpur</h2>
 </div>
 
+<!-- Include all 5 sections exactly like your example -->
 <!-- RECREATION -->
 <div class="section" id="recreation">
   <div class="section-title">Recreation & Lifestyle</div>
@@ -324,66 +282,80 @@ function toggleCode(id){
         <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
         <tr><td>BFS</td><td>Accessibility</td><td>O(V+E)</td><td>O(V)</td><td>Fair access to parks</td></tr>
         <tr><td>Dijkstra</td><td>Shortest path to park</td><td>O((V+E) log V)</td><td>O(V)</td><td>Quick routing</td></tr>
+        <tr><td>Prim/Kruskal</td><td>Minimum-cost paths</td><td>O(E log V)/O(E log E)</td><td>O(V+E)</td><td>Cost-effective walking/cycling paths</td></tr>
+        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient allocation of events</td></tr>
+        <tr><td>Segment Tree</td><td>Track usage</td><td>O(log N)</td><td>O(N)</td><td>Monitor park trends</td></tr>
       </table>
-      <button class="code-btn" onclick="toggleCode('recreationCode')">Show Code</button>
-      <div id="recreationCode" class="code-box"><pre>
-// BFS Example
-function BFS(graph, start){ let visited = new Set(); let queue = [start]; while(queue.length){ let node=queue.shift(); visited.add(node); for(let n of graph[node]){ if(!visited.has(n)) queue.push(n); } } return visited; }
-      </pre></div>
     </div>
     <div class="card">
       <h4>Impact Metrics</h4>
       <div class="chart-label">Accessibility</div>
       <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:88%"></div></div><div class="chart-percent">88%</div></div>
+      <div class="chart-label">Coverage</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:92%"></div></div><div class="chart-percent">92%</div></div>
+      <div class="chart-label">Health Impact</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:76%"></div></div><div class="chart-percent">76%</div></div>
+      <div class="chart-label">Event Utilization</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:81%"></div></div><div class="chart-percent">81%</div></div>
     </div>
   </div>
 </div>
 
-<!-- SAFETY -->
+<!-- PUBLIC SAFETY -->
 <div class="section" id="safety">
   <div class="section-title">Public Safety & Services</div>
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
-      <p>AI surveillance, drones, emergency response, and control centers enhance safety. Optimal routing improves response times.</p>
+      <p>AI surveillance, drone monitoring, emergency response, and control centers enhance safety. Optimal routing and resource management improve response times.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
         <tr><td>Dijkstra</td><td>Emergency routes</td><td>O((V+E) log V)</td><td>O(V)</td><td>Fastest response</td></tr>
         <tr><td>BFS/DFS</td><td>Zone detection</td><td>O(V+E)</td><td>O(V)</td><td>Ensures coverage</td></tr>
+        <tr><td>Priority Queue</td><td>Request prioritization</td><td>O(log N)</td><td>O(N)</td><td>Urgent events first</td></tr>
+        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Efficient deployment</td></tr>
+        <tr><td>Edge Relaxation</td><td>Optimal paths</td><td>O(E)</td><td>O(V)</td><td>Maintains shortest paths</td></tr>
       </table>
-      <button class="code-btn" onclick="toggleCode('safetyCode')">Show Code</button>
-      <div id="safetyCode" class="code-box"><pre>
-// Dijkstra Example
-function dijkstra(graph, start){ let dist = {}; let visited = new Set(); /*...*/ }
-      </pre></div>
+    </div>
+    <div class="card">
+      <h4>System Efficiency</h4>
+      <div class="chart-label">Response Speed</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:90%"></div></div><div class="chart-percent">90%</div></div>
+      <div class="chart-label">Surveillance Coverage</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:85%"></div></div><div class="chart-percent">85%</div></div>
     </div>
   </div>
 </div>
 
-<!-- DIGITAL -->
+<!-- DIGITAL SERVICES -->
 <div class="section" id="digital">
   <div class="section-title">Digital Services</div>
   <div class="grid">
     <div class="card">
       <h4>Service Overview</h4>
-      <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms. Algorithms improve search, retrieval, and request prioritization.</p>
+      <p>Citizen portals, traffic apps, smart parking, metro schedules, and grievance platforms enhance convenience. Algorithms improve search, retrieval, and request prioritization.</p>
       <h4>Algorithm Efficiency & Benefits</h4>
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
-        <tr><td>Hashing</td><td>Instant record retrieval</td><td>O(1)</td><td>O(N)</td><td>Fast citizen access</td></tr>
-        <tr><td>Trie</td><td>Prefix search</td><td>O(L)</td><td>O(N*L)</td><td>Quick search</td></tr>
+        <tr><td>Hashing</td><td>Instant record retrieval</td><td>O(1) avg</td><td>O(N)</td><td>Fast citizen access</td></tr>
+        <tr><td>Trie</td><td>Prefix search/auto-complete</td><td>O(L)</td><td>O(N*L)</td><td>Quick search</td></tr>
+        <tr><td>Heap</td><td>Prioritize requests</td><td>O(log N)</td><td>O(N)</td><td>Urgent requests first</td></tr>
+        <tr><td>Sorting</td><td>Organize records</td><td>O(N log N)</td><td>O(N)</td><td>Maintains order</td></tr>
+        <tr><td>Caching</td><td>Reduce redundant queries</td><td>O(1)</td><td>O(N)</td><td>Speeds up access</td></tr>
       </table>
-      <button class="code-btn" onclick="toggleCode('digitalCode')">Show Code</button>
-      <div id="digitalCode" class="code-box"><pre>
-// Trie Example
-class TrieNode{ constructor(){ this.children={}; this.isEnd=false; } }
-      </pre></div>
+    </div>
+    <div class="card">
+      <h4>Usage Metrics</h4>
+      <div class="chart-label">Service Speed</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:91%"></div></div><div class="chart-percent">91%</div></div>
+      <div class="chart-label">User Convenience</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:87%"></div></div><div class="chart-percent">87%</div></div>
     </div>
   </div>
 </div>
 
-<!-- SENIOR -->
+<!-- SENIOR SERVICES -->
 <div class="section" id="senior">
   <div class="section-title">Senior & Disabled-Friendly Services</div>
   <div class="grid">
@@ -395,17 +367,22 @@ class TrieNode{ constructor(){ this.children={}; this.isEnd=false; } }
         <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
         <tr><td>Priority Queue</td><td>Urgent request handling</td><td>O(log N)</td><td>O(N)</td><td>High-priority first</td></tr>
         <tr><td>Heap</td><td>Emergency scheduling</td><td>O(log N)</td><td>O(N)</td><td>Efficient resource management</td></tr>
+        <tr><td>Greedy</td><td>Resource allocation</td><td>O(N log N)</td><td>O(N)</td><td>Reduces waiting times</td></tr>
+        <tr><td>Queue</td><td>Manage lines</td><td>O(1)</td><td>O(N)</td><td>Organized handling</td></tr>
+        <tr><td>Scheduling</td><td>Time-based priority</td><td>Varies</td><td>Varies</td><td>Fair & efficient service</td></tr>
       </table>
-      <button class="code-btn" onclick="toggleCode('seniorCode')">Show Code</button>
-      <div id="seniorCode" class="code-box"><pre>
-// Priority Queue Example
-class PriorityQueue{ constructor(){ this.items=[]; } }
-      </pre></div>
+    </div>
+    <div class="card">
+      <h4>Service Metrics</h4>
+      <div class="chart-label">Urgency Handling</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:93%"></div></div><div class="chart-percent">93%</div></div>
+      <div class="chart-label">Waiting Time Reduction</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:82%"></div></div><div class="chart-percent">82%</div></div>
     </div>
   </div>
 </div>
 
-<!-- WATER -->
+<!-- SMART WATER -->
 <div class="section" id="water">
   <div class="section-title">Smart Water Management</div>
   <div class="grid">
@@ -416,17 +393,23 @@ class PriorityQueue{ constructor(){ this.items=[]; } }
       <table class="algorithm-table">
         <tr><th>Algorithm</th><th>Purpose</th><th>Time</th><th>Space</th><th>Benefits</th></tr>
         <tr><td>Greedy</td><td>Optimal allocation</td><td>O(N log N)</td><td>O(N)</td><td>Minimizes wastage</td></tr>
+        <tr><td>Graph</td><td>Distribution network</td><td>O(V+E)</td><td>O(V+E)</td><td>Maps water flow</td></tr>
         <tr><td>Dijkstra</td><td>Shortest path to supply</td><td>O((V+E) log V)</td><td>O(V)</td><td>Efficient pipeline routing</td></tr>
+        <tr><td>Segment Tree</td><td>Track consumption</td><td>O(log N)</td><td>O(N)</td><td>Monitors trends</td></tr>
+        <tr><td>Union-Find</td><td>Pipeline connectivity</td><td>O(α(N))</td><td>O(N)</td><td>Detects disconnected sections</td></tr>
       </table>
-      <button class="code-btn" onclick="toggleCode('waterCode')">Show Code</button>
-      <div id="waterCode" class="code-box"><pre>
-// Dijkstra for Water
-function waterDijkstra(graph, start){ let dist={}; /*...*/ }
-      </pre></div>
+    </div>
+    <div class="card">
+      <h4>Resource Optimization</h4>
+      <div class="chart-label">Water Savings</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:79%"></div></div><div class="chart-percent">79%</div></div>
+      <div class="chart-label">Distribution Fairness</div>
+      <div class="chart-row"><div class="chart-bg"><div class="chart-bar" style="width:86%"></div></div><div class="chart-percent">86%</div></div>
     </div>
   </div>
 </div>
 
+<!-- BACK TO TOP BUTTON -->
 <a href="#" class="back-to-top">↑ Back to Top</a>
 
 </body>
