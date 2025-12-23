@@ -9,11 +9,10 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#000000; /* changed background to black */
+  background:#000000; 
   color:#e5e7eb;
   scroll-behavior:smooth;
 }
-
 .navbar{
   background:#111b34;
   padding:16px 40px;
@@ -136,6 +135,14 @@ body{
   border-radius:8px;
   text-decoration:none;
 }
+pre{
+  background:#111b34;
+  padding:12px;
+  border-radius:8px;
+  overflow-x:auto;
+  font-size:13px;
+  color:#e5e7eb;
+}
 </style>
 </head>
 
@@ -160,6 +167,7 @@ body{
   <a href="#industry" class="topic-btn">Industry</a>
   <a href="#solar" class="topic-btn">Solar Energy</a>
   <a href="#govt" class="topic-btn">Government</a>
+  <a href="#algorithms" class="topic-btn">Algorithm Implementation</a>
 </div>
 
 <!-- HEADER -->
@@ -171,7 +179,7 @@ body{
 <!-- TOURISM -->
 <div class="section" id="tourism">
   <div class="section-title">Tourism Management</div>
-  <p>Tourism management focuses on improving visitor experience by planning tourist routes, managing crowds, and promoting key attractions. It ensures efficient transportation and accessibility for all visitors. Technology is used to track tourist satisfaction and optimize services.</p>
+  <p>Improving visitor experience with route planning, crowd management, and attraction promotion. Efficient transport ensures accessibility. Technology tracks tourist satisfaction and optimizes services.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Tourism:</p>
@@ -193,7 +201,7 @@ body{
 <!-- WASTE -->
 <div class="section" id="waste">
   <div class="section-title">Waste Management</div>
-  <p>Waste management optimizes garbage collection, recycling, and disposal. Smart routing of trucks and monitoring collection points reduce costs and ensure cleanliness. Data-driven schedules improve timely pickups and sustainability.</p>
+  <p>Optimizing garbage collection, recycling, and disposal. Smart truck routing reduces costs and ensures cleanliness. Data-driven schedules improve timely pickups and sustainability.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Waste Management:</p>
@@ -215,7 +223,7 @@ body{
 <!-- INDUSTRY -->
 <div class="section" id="industry">
   <div class="section-title">Industrial Development</div>
-  <p>Industrial development focuses on connecting businesses efficiently, optimizing supply chains, and minimizing operational costs. Smart city planning encourages sustainable industrial growth while reducing resource wastage and energy consumption.</p>
+  <p>Connecting businesses efficiently, optimizing supply chains, and minimizing operational costs. Smart planning encourages sustainable growth and reduces resource wastage.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Industry:</p>
@@ -237,7 +245,7 @@ body{
 <!-- SOLAR -->
 <div class="section" id="solar">
   <div class="section-title">Solar Energy</div>
-  <p>Solar energy management ensures efficient distribution of renewable power. Smart grids reduce energy loss and monitor consumption patterns. The city can track energy efficiency and optimize solar panel utilization for maximum output.</p>
+  <p>Ensures efficient renewable power distribution. Smart grids reduce energy loss and monitor consumption. Optimized solar panel usage increases energy efficiency.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Solar:</p>
@@ -259,7 +267,7 @@ body{
 <!-- GOVERNMENT -->
 <div class="section" id="govt">
   <div class="section-title">Government Services</div>
-  <p>Government services aim to provide fast, transparent citizen support through online portals, grievance handling, and record management. Technology ensures fairness, efficiency, and accessibility for all residents.</p>
+  <p>Fast, transparent citizen support via online portals, grievance handling, and record management. Technology ensures fairness, efficiency, and accessibility.</p>
   <div class="grid">
     <div class="card">
       <p>Algorithms for Government Services:</p>
@@ -276,6 +284,143 @@ body{
         <div class="chart-bar" data-percentage="87"><span class="chart-percent">87%</span></div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ALGORITHM IMPLEMENTATION -->
+<div class="section" id="algorithms">
+  <div class="section-title">Algorithm Implementations</div>
+
+  <!-- Dijkstra -->
+  <div class="card">
+    <p><strong>Dijkstra's Algorithm – Shortest Path</strong></p>
+    <p>Used for: Tourism routes, Industrial supply paths, Solar power routing.</p>
+    <pre><code>
+function dijkstra(graph, start) {
+  const distances = {};
+  const visited = new Set();
+  const pq = new MinPriorityQueue();
+  for (let node in graph) distances[node] = Infinity;
+  distances[start] = 0;
+  pq.enqueue(start, 0);
+
+  while (!pq.isEmpty()) {
+    let {element: node} = pq.dequeue();
+    visited.add(node);
+    for (let neighbor in graph[node]) {
+      if (!visited.has(neighbor)) {
+        let newDist = distances[node] + graph[node][neighbor];
+        if (newDist < distances[neighbor]) {
+          distances[neighbor] = newDist;
+          pq.enqueue(neighbor, newDist);
+        }
+      }
+    }
+  }
+  return distances;
+}</code></pre>
+  </div>
+
+  <!-- BFS -->
+  <div class="card">
+    <p><strong>Breadth-First Search (BFS)</strong></p>
+    <p>Used for: Finding nearby attractions, government service coverage.</p>
+    <pre><code>
+function bfs(graph, start) {
+  const visited = new Set();
+  const queue = [start];
+  const result = [];
+
+  while (queue.length) {
+    const node = queue.shift();
+    if (!visited.has(node)) {
+      visited.add(node);
+      result.push(node);
+      queue.push(...graph[node].filter(n => !visited.has(n)));
+    }
+  }
+  return result;
+}</code></pre>
+  </div>
+
+  <!-- Prim -->
+  <div class="card">
+    <p><strong>Prim's Algorithm – Minimum Spanning Tree</strong></p>
+    <p>Used for: Industrial connections, cost optimization.</p>
+    <pre><code>
+function primMST(graph) {
+  const nodes = Object.keys(graph);
+  const visited = new Set();
+  const mst = [];
+  
+  visited.add(nodes[0]);
+  while (visited.size < nodes.length) {
+    let minEdge = null;
+    for (let u of visited) {
+      for (let v in graph[u]) {
+        if (!visited.has(v)) {
+          if (!minEdge || graph[u][v] < minEdge.weight) {
+            minEdge = {u, v, weight: graph[u][v]};
+          }
+        }
+      }
+    }
+    mst.push(minEdge);
+    visited.add(minEdge.v);
+  }
+  return mst;
+}</code></pre>
+  </div>
+
+  <!-- Greedy -->
+  <div class="card">
+    <p><strong>Greedy Algorithm</strong></p>
+    <p>Used for: Waste truck routing, solar panel placement.</p>
+    <pre><code>
+function greedyJobs(jobs) {
+  jobs.sort((a,b) => b.profit - a.profit);
+  const result = [];
+  const slots = Array(jobs.length).fill(false);
+
+  for (let job of jobs) {
+    for (let j = Math.min(slots.length-1, job.deadline-1); j>=0; j--) {
+      if (!slots[j]) {
+        slots[j] = true;
+        result[j] = job;
+        break;
+      }
+    }
+  }
+  return result.filter(Boolean);
+}</code></pre>
+  </div>
+
+  <!-- Queue -->
+  <div class="card">
+    <p><strong>Queue</strong></p>
+    <p>Used for: Scheduling waste collection and citizen requests.</p>
+    <pre><code>
+class Queue {
+  constructor() { this.items = []; }
+  enqueue(item) { this.items.push(item); }
+  dequeue() { return this.items.shift(); }
+  isEmpty() { return this.items.length === 0; }
+}
+const q = new Queue();
+q.enqueue('Task1');
+q.enqueue('Task2');
+q.dequeue(); // Task1</code></pre>
+  </div>
+
+  <!-- Hashing -->
+  <div class="card">
+    <p><strong>Hashing</strong></p>
+    <p>Used for: Fast citizen record lookups.</p>
+    <pre><code>
+const hashMap = new Map();
+hashMap.set('Citizen1', {name:'John', age:30});
+hashMap.set('Citizen2', {name:'Mary', age:25});
+console.log(hashMap.get('Citizen1'));</code></pre>
   </div>
 </div>
 
