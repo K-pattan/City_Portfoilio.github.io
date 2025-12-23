@@ -2,197 +2,154 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>City Design – Shreya</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City Management System | Unified DAA Project</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-:root{
-  --bg:#0f172a;
-  --panel:#020617;
-  --accent:#38bdf8;
-  --accent2:#22d3ee;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#020617,#0f172a);
-  color:var(--text);
-}
-
-/* ===== NAVBAR ===== */
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:#020617ee;
-  padding:15px 40px;
-  border-bottom:1px solid #1e293b;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.logo{
-  font-size:32px;
-  font-weight:700;
-  color:white;
-  letter-spacing:1px;
-}
-.nav-links{
-  list-style:none;
-  display:flex;
-  gap:28px;
-  margin:0;
-  padding:0;
-}
-.nav-links a{
-  color:#cfeeff;
-  text-decoration:none;
-  font-weight:600;
-}
-.nav-links a:hover{color:var(--accent);}
-
-/* ===== CONTENT ===== */
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:40px 20px 80px;
-}
-.hero{
-  text-align:center;
-  padding:60px 20px;
-}
-.hero h1{
-  font-size:44px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p{
-  max-width:900px;
-  margin:auto;
-  color:var(--muted);
-  font-size:18px;
-}
-.section{
-  background:var(--panel);
-  border-radius:20px;
-  padding:30px;
-  margin-bottom:40px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
-}
-.section h2{color:var(--accent);}
-.section p,li{color:#d1d5db;line-height:1.8;font-size:15px;}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.card{
-  background:#020617;
-  border-radius:18px;
-  padding:22px;
-  border:1px solid #1e293b;
-}
-.card h3{color:var(--accent2);}
-.chart-box{max-width:420px;margin:30px auto;}
-footer{text-align:center;color:#94a3b8;margin-top:60px;}
+/* ===== SAME CSS AS YOUR FILE (UNCHANGED) ===== */
+body{margin:0;font-family:'Poppins',sans-serif;background:#0b1324;color:#e5e7eb;scroll-behavior:smooth;}
+.navbar{background:#111b34;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+.logo{font-size:28px;font-weight:800;color:#34d399;}
+.nav-links{list-style:none;display:flex;gap:25px;margin:0;padding:0;}
+.nav-links a{text-decoration:none;color:#e5e7eb;font-size:16px;font-weight:600;}
+.topic-buttons{width:95%;margin:25px auto 0;display:flex;gap:10px;overflow-x:auto;}
+.topic-btn{padding:12px 15px;background:#34d399;color:#0b1324;border-radius:8px;text-decoration:none;font-weight:700;}
+.header{width:85%;margin:20px auto 60px;background:#111b34;padding:50px;border-radius:20px;text-align:center;}
+.section{width:85%;margin:55px auto;background:#111b34;padding:35px;border-radius:18px;}
+.section-title{font-size:24px;color:#34d399;margin-bottom:18px;}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:25px;}
+.card{background:#0b1324;padding:20px;border-radius:12px;border:1px solid rgba(52,211,153,0.25);}
+.algorithm-table{width:100%;border-collapse:collapse;font-size:14px;}
+.algorithm-table th,.algorithm-table td{border:1px solid rgba(52,211,153,0.25);padding:8px;}
+.algorithm-table th{background:#111b34;color:#34d399;}
+.chart-bar{height:10px;background:#34d399;border-radius:6px;}
+.back-to-top{position:fixed;bottom:20px;right:20px;background:#34d399;color:#0b1324;padding:10px 14px;border-radius:8px;text-decoration:none;}
 </style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">CITY DESIGN</div>
-    <ul class="nav-links">
-      <li><a href="#intro">Introduction</a></li>
-      <li><a href="#systems">Systems</a></li>
-      <li><a href="#charts">Visualization</a></li>
-      <li><a href="#analysis">Complexity</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">CITY DESIGN</div>
+  <ul class="nav-links">
+    <li><a href="Project.html">Project</a></li>
+    <li><a href="Pooja.html">Pooja</a></li>
+    <li><a href="Krupa.html">Krupa</a></li>
+    <li><a href="Shreya.html">Shreya</a></li>
+    <li><a href="Anagha.html">Anagha</a></li>
+  </ul>
+</nav>
 
-<div class="container">
-
-
-
-<!-- SYSTEMS -->
-<div class="section" id="systems">
-<h2>1. Smart City Systems</h2>
-<div class="cards">
-
-<div class="card">
-<h3>🌍 Tourism</h3>
-<p>Uses graphs, BFS/DFS and shortest path algorithms to optimize tourist movement.</p>
+<!-- TOPIC BUTTONS -->
+<div class="topic-buttons">
+  <a href="#tourism" class="topic-btn">Tourism</a>
+  <a href="#waste" class="topic-btn">Waste Management</a>
+  <a href="#industry" class="topic-btn">Industry</a>
+  <a href="#solar" class="topic-btn">Solar Energy</a>
+  <a href="#govt" class="topic-btn">Government</a>
 </div>
 
-<div class="card">
-<h3>🏭 Industry</h3>
-<p>Uses MST algorithms to reduce infrastructure and logistics cost.</p>
+<!-- HEADER -->
+<div class="header">
+  <h1>Shreya</h1>
+  <h2>Smart City Services – Maharajpur</h2>
 </div>
 
-<div class="card">
-<h3>♻️ Waste</h3>
-<p>Uses queues and greedy routing for efficient garbage collection.</p>
+<!-- TOURISM -->
+<div class="section" id="tourism">
+  <div class="section-title">Tourism Management</div>
+  <div class="grid">
+    <div class="card">
+      <p>Tourist routes, crowd control, and attraction connectivity.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Shortest tourist path</td><td>O((V+E)logV)</td><td>Easy travel</td></tr>
+        <tr><td>BFS</td><td>Nearby places</td><td>O(V+E)</td><td>Coverage</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Tourist Satisfaction</p>
+      <div class="chart-bar" style="width:88%"></div>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>☀️ Solar</h3>
-<p>Uses Dijkstra and MST to optimize power transmission.</p>
+<!-- WASTE -->
+<div class="section" id="waste">
+  <div class="section-title">Waste Management</div>
+  <div class="grid">
+    <div class="card">
+      <p>Garbage collection and optimized truck routing.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Greedy</td><td>Truck routing</td><td>O(NlogN)</td><td>Fuel saving</td></tr>
+        <tr><td>Queue</td><td>Scheduling</td><td>O(1)</td><td>Timely pickup</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Cleanliness Index</p>
+      <div class="chart-bar" style="width:85%"></div>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>🏛️ Government</h3>
-<p>Uses hashing and queues for fast and transparent services.</p>
+<!-- INDUSTRY -->
+<div class="section" id="industry">
+  <div class="section-title">Industrial Development</div>
+  <div class="grid">
+    <div class="card">
+      <p>Industry connectivity and cost optimization.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Prim</td><td>MST</td><td>O(ElogV)</td><td>Low cost</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Industrial Growth</p>
+      <div class="chart-bar" style="width:80%"></div>
+    </div>
+  </div>
 </div>
 
-</div>
-</div>
-
-<!-- CHART -->
-<div class="section" id="charts">
-<h2>2. Algorithm Usage</h2>
-<div class="chart-box">
-<canvas id="pieChart"></canvas>
-</div>
-</div>
-
-<!-- ANALYSIS -->
-<div class="section" id="analysis">
-<h2>3. Algorithms & Techniques</h2>
-<ul>
-<li>Graphs, Trees, Hash Tables</li>
-<li>Dijkstra, Prim, Kruskal</li>
-<li>Greedy, Divide & Conquer</li>
-</ul>
+<!-- SOLAR -->
+<div class="section" id="solar">
+  <div class="section-title">Solar Energy</div>
+  <div class="grid">
+    <div class="card">
+      <p>Renewable energy distribution.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Dijkstra</td><td>Power routing</td><td>O((V+E)logV)</td><td>Less loss</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Energy Efficiency</p>
+      <div class="chart-bar" style="width:90%"></div>
+    </div>
+  </div>
 </div>
 
-<footer>© 2025 Smart City Management System | Unified DAA Project</footer>
-
+<!-- GOVERNMENT -->
+<div class="section" id="govt">
+  <div class="section-title">Government Services</div>
+  <div class="grid">
+    <div class="card">
+      <p>Citizen portals and grievance handling.</p>
+      <table class="algorithm-table">
+        <tr><th>Algorithm</th><th>Use</th><th>Time</th><th>Benefit</th></tr>
+        <tr><td>Hashing</td><td>Records</td><td>O(1)</td><td>Fast access</td></tr>
+        <tr><td>Queue</td><td>Requests</td><td>O(1)</td><td>Fair service</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <p>Service Efficiency</p>
+      <div class="chart-bar" style="width:87%"></div>
+    </div>
+  </div>
 </div>
 
-<script>
-new Chart(document.getElementById('pieChart'),{
-type:'pie',
-data:{
-labels:['Graphs','Dijkstra','MST','Others'],
-datasets:[{
-data:[35,25,25,15],
-backgroundColor:['#38bdf8','#22d3ee','#facc15','#f97316']
-}]
-},
-options:{plugins:{legend:{labels:{color:'white'}}}}
-});
-</script>
+<a href="#" class="back-to-top">↑ Back to Top</a>
 
 </body>
 </html>
