@@ -320,25 +320,32 @@ html {
 }
 
 
-  .project-img {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 30px auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  }
+  /* Image container */
+.diagram-section {
+  text-align: center;
+  margin: 30px auto;
+}
 
-  .diagram-section {
-    text-align: center;
-    padding: 40px 20px;
-  }
+/* Project diagram image */
+.project-img {
+  width: 100%;
+  max-width: 650px;
+  height: 400px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
 
-  .diagram-section h2 {
-    color: #38bdf8;
-    margin-bottom: 20px;
-  }
+/* Optional hover effect (can remove if not needed) */
+.project-img:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+table {
+  display: table;
+}
+
 
 
 
@@ -374,12 +381,13 @@ html {
     <button class="idea-btn" onclick="location.href='#idea3'">Eco-mobility</button>
     <button class="idea-btn" onclick="location.href='#idea4'">Residential</button>
     <button class="idea-btn" onclick="location.href='#idea5'">Finance</button>
+    
   </div>
 </div>
 
 <!-- IDEA 1: Educational Institutions -->
 <!-- IDEA 1: Educational Institutions -->
-<div id="idea1" class="idea-section">
+<div id="idea1" class="idea-section show">
   <div class="idea-title">
    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
   <h3>Educational Institutions</h3>
@@ -389,6 +397,14 @@ html {
     backbone of a smart city. Efficient planning ensures accessibility, reduced travel
     time, balanced resource usage, and scalable academic infrastructure.
   </p>
+  <section class="diagram-section">
+    <h2>DAA Algorithms in Smart Education</h2>
+<img
+      src="https://raw.githubusercontent.com/poojaganeshbatti/city-design/main/image_91bbb031.png"
+      alt="DAA Algorithms Diagram"
+      class="project-img"
+      loading="lazy"
+    ></section>
 
   <b>Problems Addressed:</b>
   <ul>
@@ -397,10 +413,11 @@ html {
     <li>Inefficient campus connectivity</li>
     <li>Slow access to academic records</li>
   </ul>
- <section class="diagram-section">
-  <h2>DAA Algorithms in Smart City Design</h2>
-  <img src="City_Portfoilio.github.io/image_91bbb031.png" alt="Smart City Algorithms Diagram" class="project-img">
-</section>
+ 
+
+   
+
+   
 
 
 
@@ -591,7 +608,13 @@ html {
     Healthcare and wellness infrastructure ensures timely medical assistance,
     efficient resource utilization, and overall well-being of citizens in a smart city.
   </p>
-
+<img
+      src="https://raw.githubusercontent.com/poojaganeshbatti/city-design/main/image_aed42b28.png"
+      alt="DAA Algorithms Diagram"
+      class="project-img"
+      loading="lazy"
+    >
+ 
   <b>Problems Addressed:</b>
   <ul>
     <li>Delayed emergency response</li>
@@ -705,7 +728,13 @@ html {
     🌱 Eco-mobility focuses on sustainable and efficient transportation systems
     that reduce congestion, pollution, and travel time.
   </p>
-
+<img
+      src="https://raw.githubusercontent.com/poojaganeshbatti/city-design/main/image_2a052f2d.png"
+      alt="DAA Algorithms Diagram"
+      class="project-img"
+      loading="lazy"
+    >
+ 
   <b>Problems Addressed:</b>
   <ul>
     <li>Traffic congestion</li>
@@ -807,6 +836,12 @@ html {
     Residential planning ensures balanced population distribution,
     accessibility to essential services, and sustainable housing.
   </p>
+<img
+      src="https://raw.githubusercontent.com/poojaganeshbatti/city-design/main/image_bf6d519b.png"
+      alt="DAA Algorithms Diagram"
+      class="project-img"
+      loading="lazy"
+    >
 
   <b>Problems Addressed:</b>
   <ul>
@@ -889,7 +924,13 @@ Sliding window code
     <img src="https://cdn-icons-png.flaticon.com/512/2331/2331940.png">
     </div>
   <h3>Finance & Banking</h3>
-
+<img
+      src="https://raw.githubusercontent.com/poojaganeshbatti/city-design/main/image_844921ac.png"
+      alt="DAA Algorithms Diagram"
+      class="project-img"
+      loading="lazy"
+    >
+ 
   <p>
     Smart financial infrastructure ensures secure transactions,
     optimal ATM placement, and inclusive banking services.
@@ -975,32 +1016,235 @@ Sliding window code
   <ul>
     <li>SDG 8 – Decent Work & Economic Growth</li>
     <li>SDG 9 – Industry, Innovation & Infrastructure</li>
+  </ul><br><br>
+
+<h3>Efficiency and Usage of Algorithms in Smart City Design</h3>
+  <table>
+  <tr>
+    <th>Algorithm / Data Structure</th>
+    <th>Used?</th>
+    <th>Application in Project</th>
+    <th>Time Complexity</th>
+    <th>Space Complexity</th>
+  </tr>
+
+  <tr>
+    <td>Breadth First Search (BFS)</td>
+    <td>Yes</td>
+    <td>Nearest schools, healthcare coverage</td>
+    <td>O(V + E)</td>
+    <td>O(V)</td>
+  </tr>
+
+  <tr>
+    <td>Depth First Search (DFS)</td>
+    <td>Yes</td>
+    <td>Campus and building connectivity</td>
+    <td>O(V + E)</td>
+    <td>O(V)</td>
+  </tr>
+
+  <tr>
+    <td>Dijkstra’s Algorithm</td>
+    <td>Yes</td>
+    <td>Student transport, hospital routing, eco-mobility</td>
+    <td>O((V + E) log V)</td>
+    <td>O(V)</td>
+  </tr>
+
+  <tr>
+    <td>Prim’s Algorithm</td>
+    <td>Yes</td>
+    <td>Campus infrastructure planning</td>
+    <td>O(E log V)</td>
+    <td>O(V)</td>
+  </tr>
+
+  <tr>
+    <td>Kruskal’s Algorithm</td>
+    <td>Yes</td>
+    <td>Road networks and infrastructure wiring</td>
+    <td>O(E log E)</td>
+    <td>O(V)</td>
+  </tr>
+
+  <tr>
+    <td>Floyd–Warshall Algorithm</td>
+    <td>Yes</td>
+    <td>All-pairs shortest paths in eco-mobility</td>
+    <td>O(V³)</td>
+    <td>O(V²)</td>
+  </tr>
+
+  <tr>
+    <td>Priority Queue (Min Heap)</td>
+    <td>Yes</td>
+    <td>Admissions, patient allocation, ATM search</td>
+    <td>O(log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Sorting Algorithms (Merge / Quick)</td>
+    <td>Yes</td>
+    <td>Ranking students, ATMs, institutions</td>
+    <td>O(n log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Hash Table</td>
+    <td>Yes</td>
+    <td>Student, patient, and banking record lookup</td>
+    <td>O(1) (avg)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Red-Black Tree</td>
+    <td>Yes</td>
+    <td>Balanced student and residential databases</td>
+    <td>O(log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>AVL Tree</td>
+    <td>Yes</td>
+    <td>Housing record maintenance</td>
+    <td>O(log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Fenwick Tree (Binary Indexed Tree)</td>
+    <td>Yes</td>
+    <td>Attendance, beds and equipment tracking</td>
+    <td>O(log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Segment Tree</td>
+    <td>Yes</td>
+    <td>Capacity and utilization queries</td>
+    <td>O(log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Union-Find (Disjoint Set)</td>
+    <td>Yes</td>
+    <td>Transport zone connectivity</td>
+    <td>O(α(n))</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Greedy Algorithms</td>
+    <td>Yes</td>
+    <td>Housing allocation, ATM placement, routing</td>
+    <td>O(n log n)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Dynamic Programming</td>
+    <td>Yes</td>
+    <td>Cash replenishment optimization</td>
+    <td>O(n × m)</td>
+    <td>O(n)</td>
+  </tr>
+
+  <tr>
+    <td>Sliding Window</td>
+    <td>Yes</td>
+    <td>Population density analysis</td>
+    <td>O(n)</td>
+    <td>O(1)</td>
+  </tr>
+
+  <tr>
+    <td>Stack</td>
+    <td>No</td>
+    <td>Undo/recursion not required</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+
+  <tr>
+    <td>Bubble Sort</td>
+    <td>No</td>
+    <td>Inefficient for large datasets</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table><br><br>
+<!-- REFLECTIONS -->
+
+    <h3>Reflections & Learnings</h3>
+
+
+  <p>
+    Working on the Smart City Design project provided insights into the practical
+    application of algorithms and data structures in real-world urban planning.
+  </p>
+
+  <ul>
+    <li>
+      Understanding the importance of algorithm efficiency for large-scale infrastructure planning.
+    </li>
+    <li>
+      Applying graph algorithms like BFS, DFS, Dijkstra, Prim, and Kruskal to model city connectivity.
+    </li>
+    <li>
+      Realizing the value of data structures like Hash Tables, Segment Trees, and Red-Black Trees for managing complex datasets efficiently.
+    </li>
+    <li>
+      Exploring sustainable and smart solutions for different city sectors, including education, healthcare, finance, and transportation.
+    </li>
+    <li>
+      Learning to align technological solutions with Sustainable Development Goals (SDGs) to ensure social and environmental impact.
+    </li>
   </ul>
+
+  <p>
+    Overall, this project strengthened problem-solving skills, highlighted the importance of scalable design, and emphasized the practical integration of algorithms in creating smart, sustainable cities.
+  </p>
+</div>
+
 </div>
 
 
-
 <script>
-  const sections = document.querySelectorAll('.content-box, .idea-section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-        const tables = entry.target.querySelectorAll('table');
-        tables.forEach(table => table.classList.add('show'));
-        const items = entry.target.querySelectorAll('ul li');
-        items.forEach((li,index)=>{
-          li.style.animationDelay = `${index*0.2}s`;
-        });
-      }
-    });
-  }, { threshold: 0.2 });
+const sections = document.querySelectorAll('.content-box, .idea-section');
 
-  sections.forEach(section => observer.observe(section));
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+
+      // Animate tables inside this section
+      entry.target.querySelectorAll('table').forEach(table => {
+        table.classList.add('show');
+      });
+
+      // Animate list items
+      entry.target.querySelectorAll('ul li').forEach((li,index)=>{
+        li.style.animationDelay = `${index*0.2}s`;
+        li.style.opacity = '1'; // make sure opacity works
+        li.style.transform = 'translateX(0)';
+      });
+    }
+  });
+}, { threshold: 0.1 }); // lower threshold for sections far down
+
+sections.forEach(section => observer.observe(section));
+
 </script>
-
 </body>
 </html>
+
 
 
 
